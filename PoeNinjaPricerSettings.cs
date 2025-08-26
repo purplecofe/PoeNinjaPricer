@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Windows.Forms;
 using ExileCore.Shared.Interfaces;
 using ExileCore.Shared.Nodes;
@@ -15,23 +16,15 @@ public class PoeNinjaPricerSettings : ISettings
     public ToggleNode ShowPriceChanges { get; set; } = new(true);
     public ToggleNode AutoUpdatePrices { get; set; } = new(true);
     public TextNode LeagueName { get; set; } = new("");
+    
+    // Language Settings
+    public ListNode Language { get; set; } = new() { Values = LocalizationService.GetLanguageNames().ToList(), Value = "English" };
+    
     public RangeNode<int> WindowPosX { get; set; } = new(100, 0, 2000);
     public RangeNode<int> WindowPosY { get; set; } = new(100, 0, 2000);
     public RangeNode<int> WindowWidth { get; set; } = new(600, 300, 1200);
     public RangeNode<int> WindowHeight { get; set; } = new(400, 200, 800);
     
-    // 篩選器設定
-    public ToggleNode ShowBasicCurrency { get; set; } = new(true);
-    public ToggleNode ShowFragments { get; set; } = new(true);
-    public ToggleNode ShowEssences { get; set; } = new(true);
-    public ToggleNode ShowFossils { get; set; } = new(true);
-    public ToggleNode ShowResonators { get; set; } = new(true);
-    public ToggleNode ShowOils { get; set; } = new(true);
-    public ToggleNode ShowCatalysts { get; set; } = new(true);
-    public ToggleNode ShowDeliriumOrbs { get; set; } = new(true);
-    public ToggleNode ShowScarabs { get; set; } = new(true);
-    public ToggleNode ShowOthers { get; set; } = new(true);
-    
-    // 最小價值過濾
+    // 最小價值過濾 (供主視窗使用)
     public RangeNode<float> MinChaosValue { get; set; } = new(0f, 0f, 100f);
 }

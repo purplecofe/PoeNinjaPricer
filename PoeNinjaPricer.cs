@@ -26,6 +26,44 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     private string _currentLeague = "";
     private string _errorMessage = "";
     private readonly CachedValue<string> _gameLeague;
+    private string _currentLanguage = "English";
+    
+    // Filter states (no longer in settings to hide from F12 menu)
+    private bool _showCurrency = true;
+    private bool _showFragments = true;
+    private bool _showUniqueIdols = true;
+    private bool _showRunecrafts = true;
+    private bool _showAllflameEmbers = true;
+    private bool _showTattoos = true;
+    private bool _showOmens = true;
+    private bool _showDivinationCards = true;
+    private bool _showArtifacts = true;
+    private bool _showOils = true;
+    private bool _showIncubators = true;
+    private bool _showUniqueWeapons = false;
+    private bool _showUniqueArmours = false;
+    private bool _showUniqueAccessories = false;
+    private bool _showUniqueFlasks = false;
+    private bool _showUniqueJewels = false;
+    private bool _showUniqueTinctures = false;
+    private bool _showUniqueRelics = false;
+    private bool _showSkillGems = false;
+    private bool _showClusterJewels = false;
+    private bool _showMaps = false;
+    private bool _showBlightedMaps = false;
+    private bool _showBlightRavagedMaps = false;
+    private bool _showUniqueMaps = false;
+    private bool _showDeliriumOrbs = true;
+    private bool _showInvitations = true;
+    private bool _showScarabs = true;
+    private bool _showMemories = true;
+    private bool _showBaseTypes = false;
+    private bool _showFossils = true;
+    private bool _showResonators = true;
+    private bool _showBeasts = true;
+    private bool _showEssences = true;
+    private bool _showVials = true;
+    private bool _showOthers = true;
 
     public PoeNinjaPricer()
     {
@@ -37,6 +75,9 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     {
         try
         {
+            // Initialize localization
+            InitializeLocalization();
+            
             // 偵測聯盟
             _currentLeague = GetCurrentLeague();
             DebugWindow.LogMsg($"PoeNinjaPricer: Using league '{_currentLeague}'");
@@ -45,6 +86,8 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             _apiService = new PoeNinjaApiService(_currentLeague);
             _cacheService = new PriceCacheService(DirectoryFullName);
             _filterManager = new FilterManager(Settings);
+            _filterManager.SetActiveCategoriesProvider(GetCurrentActiveCategories);
+            _filterManager.SetAllCategoriesProvider(SetAllFilterCategories);
 
             // 註冊熱鍵
             Input.RegisterKey(Settings.TogglePriceWindow.Value);
@@ -64,7 +107,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         catch (Exception ex)
         {
             DebugWindow.LogError($"PoeNinjaPricer: Initialization failed - {ex.Message}");
-            _errorMessage = $"初始化失敗: {ex.Message}";
+            _errorMessage = $"{LocalizationService.Get("init_failed")}: {ex.Message}";
             return false;
         }
     }
@@ -97,6 +140,14 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
                 _currentLeague = currentLeague;
                 _apiService = new PoeNinjaApiService(_currentLeague);
                 _ = Task.Run(UpdatePricesAsync);
+            }
+
+            // 檢查語言變化
+            var settingsLanguage = Settings.Language?.Value ?? "English";
+            if (_currentLanguage != settingsLanguage)
+            {
+                _currentLanguage = settingsLanguage;
+                OnLanguageChanged();
             }
 
             return null;
@@ -147,24 +198,24 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         ImGui.Separator();
 
-        // 篩選器控制和搜尋框
+        // 篩選器控制
         RenderFilterControls();
         
         // 搜尋框
         ImGui.SetNextItemWidth(200);
-        if (ImGui.InputText("搜尋通貨", ref _searchFilter, 100))
+        if (ImGui.InputText(LocalizationService.Get("search_currency"), ref _searchFilter, 100))
         {
             FilterPrices();
         }
 
         ImGui.SameLine();
-        if (ImGui.Button("重新整理"))
+        if (ImGui.Button(LocalizationService.Get("refresh")))
         {
             _ = Task.Run(UpdatePricesAsync);
         }
 
         ImGui.SameLine();
-        if (ImGui.Button("清除快取"))
+        if (ImGui.Button("Clear Cache"))
         {
             _cacheService.ClearCache();
             _allPrices.Clear();
@@ -182,19 +233,19 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         // 狀態資訊
         var filterSummary = _filterManager?.GetFilterSummary(_allPrices, _displayPrices) ?? $"項目: {_displayPrices?.Count ?? 0}";
-        var statusText = $"聯盟: {_currentLeague} | {filterSummary}";
+        var statusText = $"{LocalizationService.Get("league")}: {_currentLeague} | {filterSummary}";
         if (_lastUpdateTime != DateTime.MinValue)
         {
-            statusText += $" | 最後更新: {_lastUpdateTime:HH:mm:ss}";
+            statusText += $" | {LocalizationService.Get("last_update")}: {_lastUpdateTime:HH:mm:ss}";
         }
         else
         {
-            statusText += " | 尚未更新";
+            statusText += $" | {LocalizationService.Get("not_updated")}";
         }
         
         if (_isUpdating)
         {
-            statusText += " | 更新中...";
+            statusText += $" | {LocalizationService.Get("updating")}";
             ImGui.PushStyleColor(ImGuiCol.Text, new Vector4(1, 1, 0.3f, 1)); // 黃色
         }
         
@@ -205,9 +256,9 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             ImGui.PopStyleColor();
         }
 
-        // 顯示 Divine Orb 匯率
+        // Display Divine Orb rate
         ImGui.SameLine();
-        ImGui.Text($"| Divine: {CurrencyPrice.GetDivineRate():F1}c");
+        ImGui.Text($"| {LocalizationService.Get("divine_rate")}: {CurrencyPrice.GetDivineRate():F1}c");
 
         ImGui.Separator();
 
@@ -219,87 +270,112 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
     private void RenderFilterControls()
     {
-        // 分類篩選器
-        ImGui.Text("分類:");
+        // GENERAL category filters
+        ImGui.Text(LocalizationService.Get("category_general"));
         ImGui.SameLine();
         
-        var showBasic = Settings.ShowBasicCurrency.Value;
-        if (ImGui.Checkbox("基礎", ref showBasic))
+        if (ImGui.Checkbox(LocalizationService.Get("currency"), ref _showCurrency))
         {
-            Settings.ShowBasicCurrency.Value = showBasic;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showFragments = Settings.ShowFragments.Value;
-        if (ImGui.Checkbox("碎片", ref showFragments))
+        if (ImGui.Checkbox(LocalizationService.Get("fragments"), ref _showFragments))
         {
-            Settings.ShowFragments.Value = showFragments;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showEssences = Settings.ShowEssences.Value;
-        if (ImGui.Checkbox("精髓", ref showEssences))
+        if (ImGui.Checkbox(LocalizationService.Get("divination_cards"), ref _showDivinationCards))
         {
-            Settings.ShowEssences.Value = showEssences;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showOils = Settings.ShowOils.Value;
-        if (ImGui.Checkbox("聖油", ref showOils))
+        if (ImGui.Checkbox(LocalizationService.Get("oils"), ref _showOils))
         {
-            Settings.ShowOils.Value = showOils;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showScarabs = Settings.ShowScarabs.Value;
-        if (ImGui.Checkbox("聖甲蟲", ref showScarabs))
+        if (ImGui.Checkbox(LocalizationService.Get("incubators"), ref _showIncubators))
         {
-            Settings.ShowScarabs.Value = showScarabs;
             FilterPrices();
         }
         
-        // 第二行篩選器
-        ImGui.Text("     ");
+        // ATLAS category filters
+        ImGui.Text(LocalizationService.Get("category_atlas"));
         ImGui.SameLine();
         
-        var showFossils = Settings.ShowFossils.Value;
-        if (ImGui.Checkbox("化石", ref showFossils))
+        if (ImGui.Checkbox(LocalizationService.Get("scarabs"), ref _showScarabs))
         {
-            Settings.ShowFossils.Value = showFossils;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showCatalysts = Settings.ShowCatalysts.Value;
-        if (ImGui.Checkbox("催化劑", ref showCatalysts))
+        if (ImGui.Checkbox(LocalizationService.Get("delirium_orbs"), ref _showDeliriumOrbs))
         {
-            Settings.ShowCatalysts.Value = showCatalysts;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showDelirium = Settings.ShowDeliriumOrbs.Value;
-        if (ImGui.Checkbox("譫妄玉", ref showDelirium))
+        if (ImGui.Checkbox(LocalizationService.Get("invitations"), ref _showInvitations))
         {
-            Settings.ShowDeliriumOrbs.Value = showDelirium;
             FilterPrices();
         }
         
         ImGui.SameLine();
-        var showOthers = Settings.ShowOthers.Value;
-        if (ImGui.Checkbox("其他", ref showOthers))
+        if (ImGui.Checkbox(LocalizationService.Get("memories"), ref _showMemories))
         {
-            Settings.ShowOthers.Value = showOthers;
+            FilterPrices();
+        }
+        
+        // CRAFTING category filters
+        ImGui.Text(LocalizationService.Get("category_crafting"));
+        ImGui.SameLine();
+        
+        if (ImGui.Checkbox(LocalizationService.Get("fossils"), ref _showFossils))
+        {
+            FilterPrices();
+        }
+        
+        ImGui.SameLine();
+        if (ImGui.Checkbox(LocalizationService.Get("resonators"), ref _showResonators))
+        {
+            FilterPrices();
+        }
+        
+        ImGui.SameLine();
+        if (ImGui.Checkbox(LocalizationService.Get("essences"), ref _showEssences))
+        {
+            FilterPrices();
+        }
+        
+        ImGui.SameLine();
+        if (ImGui.Checkbox(LocalizationService.Get("beasts"), ref _showBeasts))
+        {
+            FilterPrices();
+        }
+        
+        ImGui.SameLine();
+        if (ImGui.Checkbox(LocalizationService.Get("vials"), ref _showVials))
+        {
+            FilterPrices();
+        }
+        
+        // Other categories
+        ImGui.Text(LocalizationService.Get("category_others"));
+        ImGui.SameLine();
+        
+        if (ImGui.Checkbox(LocalizationService.Get("others"), ref _showOthers))
+        {
             FilterPrices();
         }
         
         // 快速切換按鈕
-        ImGui.SameLine();
-        if (ImGui.Button("全選/全不選"))
+        ImGui.Separator();
+        
+        if (ImGui.Button(LocalizationService.Get("select_all_none")))
         {
             if (_filterManager != null)
             {
@@ -311,27 +387,49 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
         
         ImGui.SameLine();
-        if (ImGui.Button("高價值"))
+        if (ImGui.Button(LocalizationService.Get("high_value")))
         {
-            if (_filterManager != null)
-            {
-                _filterManager.ApplyHighValueFilter();
-                FilterPrices();
-            }
+            // 高價值過濾：只顯示通貨、碎片、聖甲蟲、譫妄、邀請函
+            SetAllFilterCategories(false);
+            _showCurrency = true;
+            _showFragments = true;
+            _showScarabs = true;
+            _showDeliriumOrbs = true;
+            _showInvitations = true;
+            Settings.MinChaosValue.Value = 1.0f;
+            FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Button("僅基礎"))
+        if (ImGui.Button(LocalizationService.Get("currency_only")))
         {
-            if (_filterManager != null)
-            {
-                _filterManager.ApplyBasicCurrencyFilter();
-                FilterPrices();
-            }
+            // 僅通貨過濾
+            SetAllFilterCategories(false);
+            _showCurrency = true;
+            Settings.MinChaosValue.Value = 0f;
+            FilterPrices();
         }
         
-        // 最小價值滑桿
-        ImGui.Text("最小價值:");
+        ImGui.SameLine();
+        if (ImGui.Button(LocalizationService.Get("common_items")))
+        {
+            // 常用物品過濾：顯示通用分類物品
+            SetAllFilterCategories(false);
+            _showCurrency = true;
+            _showFragments = true;
+            _showDivinationCards = true;
+            _showOils = true;
+            _showIncubators = true;
+            _showEssences = true;
+            _showFossils = true;
+            _showResonators = true;
+            _showScarabs = true;
+            Settings.MinChaosValue.Value = 0f;
+            FilterPrices();
+        }
+        
+        // Minimum value slider
+        ImGui.Text(LocalizationService.Get("min_value"));
         ImGui.SameLine();
         ImGui.SetNextItemWidth(120);
         var minValue = Settings.MinChaosValue.Value;
@@ -344,7 +442,10 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
     private void RenderToolbar()
     {
-        ImGui.Text("選項: ");
+        ImGui.Text(LocalizationService.Get("options"));
+        ImGui.SameLine();
+        
+        RenderLanguageSelector();
         ImGui.SameLine();
         
         var showChaos = Settings.ShowChaosValues.Value;
@@ -362,7 +463,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         ImGui.SameLine();
         var showChanges = Settings.ShowPriceChanges.Value;
-        if (ImGui.Checkbox("變化", ref showChanges))
+        if (ImGui.Checkbox(LocalizationService.Get("price_change"), ref showChanges))
         {
             Settings.ShowPriceChanges.Value = showChanges;
         }
@@ -372,7 +473,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     {
         if (_displayPrices.Count == 0)
         {
-            ImGui.Text("沒有價格資料。請點擊「重新整理」載入價格。");
+            ImGui.Text(LocalizationService.Get("no_price_data"));
             return;
         }
 
@@ -386,14 +487,14 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         if (!ImGui.BeginTable("PriceTable", columnCount, tableFlags)) return;
 
         // 表頭設定（支援所有欄位排序）
-        ImGui.TableSetupColumn("名稱", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("類型", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthFixed, 60);
+        ImGui.TableSetupColumn(LocalizationService.Get("item_name"), ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn(LocalizationService.Get("item_type"), ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthFixed, 60);
         if (Settings.ShowChaosValues.Value)
             ImGui.TableSetupColumn("Chaos", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
         if (Settings.ShowDivineValues.Value)
             ImGui.TableSetupColumn("Divine", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
         if (Settings.ShowPriceChanges.Value)
-            ImGui.TableSetupColumn("24h變化", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
+            ImGui.TableSetupColumn(LocalizationService.Get("change_24h"), ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
 
         ImGui.TableHeadersRow();
 
@@ -415,7 +516,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
             // 類型
             ImGui.TableSetColumnIndex(1);
-            ImGui.Text(price.IsFragment ? "碎片" : "通貨");
+            ImGui.Text(price.IsFragment ? LocalizationService.Get("fragment_type") : LocalizationService.Get("currency_type"));
 
             var colIndex = 2;
 
@@ -537,7 +638,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         catch (Exception ex)
         {
             DebugWindow.LogError($"PoeNinjaPricer: Price update failed - {ex.Message}");
-            _errorMessage = $"價格更新失敗: {ex.Message}";
+            _errorMessage = $"{LocalizationService.Get("price_update_failed")}: {ex.Message}";
         }
         finally
         {
@@ -629,19 +730,19 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
     public override void DrawSettings()
     {
-        ImGui.Text("PoeNinja 通貨查價器設定");
+        ImGui.Text(LocalizationService.Get("window_title"));
         ImGui.Separator();
 
         base.DrawSettings();
 
         ImGui.Separator();
-        if (ImGui.Button("立即更新價格"))
+        if (ImGui.Button(LocalizationService.Get("update_now")))
         {
             _ = Task.Run(UpdatePricesAsync);
         }
         
         ImGui.SameLine();
-        if (ImGui.Button("清除快取"))
+        if (ImGui.Button("Clear Cache"))
         {
             _cacheService?.ClearCache();
             _allPrices.Clear();
@@ -650,7 +751,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
 
         ImGui.SameLine();
-        if (ImGui.Button("測試連線"))
+        if (ImGui.Button(LocalizationService.Get("test_connection")))
         {
             _ = Task.Run(TestConnectionAsync);
         }
@@ -667,14 +768,194 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     {
         try
         {
-            _errorMessage = "測試連線中...";
+            _errorMessage = LocalizationService.Get("testing_connection");
             var result = await _apiService.TestConnectionAsync();
-            _errorMessage = result ? "連線測試成功！" : "連線測試失敗";
+            _errorMessage = result ? LocalizationService.Get("connection_test_success") : LocalizationService.Get("connection_test_failed");
         }
         catch (Exception ex)
         {
-            _errorMessage = $"連線測試失敗: {ex.Message}";
+            _errorMessage = $"{LocalizationService.Get("connection_test_failed")}: {ex.Message}";
         }
+    }
+
+    private void InitializeLocalization()
+    {
+        // Set language based on settings
+        var languageNames = LocalizationService.GetLanguageNames();
+        var currentLanguageName = Settings.Language?.Value ?? "English";
+        var languageIndex = Array.IndexOf(languageNames, currentLanguageName);
+        
+        if (languageIndex >= 0)
+        {
+            var supportedLanguages = LocalizationService.GetSupportedLanguages();
+            if (languageIndex < supportedLanguages.Length)
+            {
+                LocalizationService.SetLanguage(supportedLanguages[languageIndex]);
+            }
+        }
+        
+        // Set current language for tracking
+        _currentLanguage = currentLanguageName;
+    }
+    
+    private void OnLanguageChanged()
+    {
+        var languageNames = LocalizationService.GetLanguageNames();
+        var currentLanguageName = Settings.Language?.Value ?? "English";
+        var languageIndex = Array.IndexOf(languageNames, currentLanguageName);
+        
+        if (languageIndex >= 0)
+        {
+            var supportedLanguages = LocalizationService.GetSupportedLanguages();
+            if (languageIndex < supportedLanguages.Length)
+            {
+                LocalizationService.SetLanguage(supportedLanguages[languageIndex]);
+                DebugWindow.LogMsg($"PoeNinjaPricer: Language changed to {currentLanguageName}");
+            }
+        }
+    }
+    
+    private void RenderLanguageSelector()
+    {
+        ImGui.Text($"{LocalizationService.Get("language")}:");
+        ImGui.SameLine();
+        ImGui.SetNextItemWidth(100);
+        
+        var languageNames = LocalizationService.GetLanguageNames();
+        var currentLanguageName = Settings.Language?.Value ?? "English";
+        var currentIndex = Array.IndexOf(languageNames, currentLanguageName);
+        
+        if (currentIndex < 0) currentIndex = 0;
+        
+        if (ImGui.Combo("##Language", ref currentIndex, languageNames, languageNames.Length))
+        {
+            Settings.Language.Value = languageNames[currentIndex];
+        }
+    }
+    
+    private CurrencyCategory GetCurrentActiveCategories()
+    {
+        var activeCategories = CurrencyCategory.None;
+        
+        // GENERAL 類別
+        if (_showCurrency)
+            activeCategories |= CurrencyCategory.Currency;
+        if (_showFragments)
+            activeCategories |= CurrencyCategory.Fragments;
+        if (_showUniqueIdols)
+            activeCategories |= CurrencyCategory.UniqueIdols;
+        if (_showRunecrafts)
+            activeCategories |= CurrencyCategory.Runecrafts;
+        if (_showAllflameEmbers)
+            activeCategories |= CurrencyCategory.AllflameEmbers;
+        if (_showTattoos)
+            activeCategories |= CurrencyCategory.Tattoos;
+        if (_showOmens)
+            activeCategories |= CurrencyCategory.Omens;
+        if (_showDivinationCards)
+            activeCategories |= CurrencyCategory.DivinationCards;
+        if (_showArtifacts)
+            activeCategories |= CurrencyCategory.Artifacts;
+        if (_showOils)
+            activeCategories |= CurrencyCategory.Oils;
+        if (_showIncubators)
+            activeCategories |= CurrencyCategory.Incubators;
+            
+        // EQUIPMENT & GEMS 類別
+        if (_showUniqueWeapons)
+            activeCategories |= CurrencyCategory.UniqueWeapons;
+        if (_showUniqueArmours)
+            activeCategories |= CurrencyCategory.UniqueArmours;
+        if (_showUniqueAccessories)
+            activeCategories |= CurrencyCategory.UniqueAccessories;
+        if (_showUniqueFlasks)
+            activeCategories |= CurrencyCategory.UniqueFlasks;
+        if (_showUniqueJewels)
+            activeCategories |= CurrencyCategory.UniqueJewels;
+        if (_showUniqueTinctures)
+            activeCategories |= CurrencyCategory.UniqueTinctures;
+        if (_showUniqueRelics)
+            activeCategories |= CurrencyCategory.UniqueRelics;
+        if (_showSkillGems)
+            activeCategories |= CurrencyCategory.SkillGems;
+        if (_showClusterJewels)
+            activeCategories |= CurrencyCategory.ClusterJewels;
+            
+        // ATLAS 類別
+        if (_showMaps)
+            activeCategories |= CurrencyCategory.Maps;
+        if (_showBlightedMaps)
+            activeCategories |= CurrencyCategory.BlightedMaps;
+        if (_showBlightRavagedMaps)
+            activeCategories |= CurrencyCategory.BlightRavagedMaps;
+        if (_showUniqueMaps)
+            activeCategories |= CurrencyCategory.UniqueMaps;
+        if (_showDeliriumOrbs)
+            activeCategories |= CurrencyCategory.DeliriumOrbs;
+        if (_showInvitations)
+            activeCategories |= CurrencyCategory.Invitations;
+        if (_showScarabs)
+            activeCategories |= CurrencyCategory.Scarabs;
+        if (_showMemories)
+            activeCategories |= CurrencyCategory.Memories;
+            
+        // CRAFTING 類別
+        if (_showBaseTypes)
+            activeCategories |= CurrencyCategory.BaseTypes;
+        if (_showFossils)
+            activeCategories |= CurrencyCategory.Fossils;
+        if (_showResonators)
+            activeCategories |= CurrencyCategory.Resonators;
+        if (_showBeasts)
+            activeCategories |= CurrencyCategory.Beasts;
+        if (_showEssences)
+            activeCategories |= CurrencyCategory.Essences;
+        if (_showVials)
+            activeCategories |= CurrencyCategory.Vials;
+            
+        if (_showOthers)
+            activeCategories |= CurrencyCategory.Others;
+            
+        return activeCategories;
+    }
+    
+    private void SetAllFilterCategories(bool enabled)
+    {
+        _showCurrency = enabled;
+        _showFragments = enabled;
+        _showUniqueIdols = enabled;
+        _showRunecrafts = enabled;
+        _showAllflameEmbers = enabled;
+        _showTattoos = enabled;
+        _showOmens = enabled;
+        _showDivinationCards = enabled;
+        _showArtifacts = enabled;
+        _showOils = enabled;
+        _showIncubators = enabled;
+        _showUniqueWeapons = enabled;
+        _showUniqueArmours = enabled;
+        _showUniqueAccessories = enabled;
+        _showUniqueFlasks = enabled;
+        _showUniqueJewels = enabled;
+        _showUniqueTinctures = enabled;
+        _showUniqueRelics = enabled;
+        _showSkillGems = enabled;
+        _showClusterJewels = enabled;
+        _showMaps = enabled;
+        _showBlightedMaps = enabled;
+        _showBlightRavagedMaps = enabled;
+        _showUniqueMaps = enabled;
+        _showDeliriumOrbs = enabled;
+        _showInvitations = enabled;
+        _showScarabs = enabled;
+        _showMemories = enabled;
+        _showBaseTypes = enabled;
+        _showFossils = enabled;
+        _showResonators = enabled;
+        _showBeasts = enabled;
+        _showEssences = enabled;
+        _showVials = enabled;
+        _showOthers = enabled;
     }
 
     public override void OnClose()

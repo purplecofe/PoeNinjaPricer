@@ -1,66 +1,105 @@
 # PoeNinja Pricer Plugin
 
-一個用於查詢 Path of Exile 通貨價格的 ExileCore 插件，資料來源為 poe.ninja API。
+An ExileCore plugin for querying Path of Exile currency prices using the poe.ninja API.
 
-## 功能特性
+## Features
 
-- **即時價格查詢**: 從 poe.ninja 獲取當前聯盟的通貨和碎片價格
-- **自動更新**: 可設定自動更新間隔（預設 5 分鐘）
-- **智慧快取**: 本地快取系統，減少 API 請求並支援離線使用
-- **搜尋過濾**: 快速搜尋特定通貨
-- **動態 Divine 匯率**: 自動計算和更新 Divine Orb 匯率
-- **可自訂 UI**: 可調整顯示欄位和視窗大小
+- **Real-time Price Queries**: Fetch current league currency and fragment prices from poe.ninja
+- **Auto Update**: Configurable auto-update interval (default 5 minutes)
+- **Smart Caching**: Local cache system to reduce API requests and support offline usage
+- **Advanced Filter System**: Multiple category filters with quick preset options
+- **Search Filtering**: Quick search for specific currencies
+- **Dynamic Divine Rate**: Auto-calculated and updated Divine Orb exchange rates
+- **Customizable UI**: Adjustable display columns and window sizing
 
-## 使用方法
+## Usage
 
-1. 按 **F8** 開啟/關閉價格視窗
-2. 在搜尋框輸入通貨名稱進行過濾
-3. 點擊「重新整理」手動更新價格
-4. 在設定中調整更新間隔和顯示選項
+1. Press **F8** to toggle the price window
+2. Use category checkboxes to filter different item types (currency, fragments, scarabs, etc.)
+3. Use quick filter buttons:
+   - **Select All/None**: Toggle all filters quickly
+   - **High Value**: Show only valuable items (≥1c)
+   - **Currency Only**: Show only basic currencies
+   - **Common Items**: Show commonly traded items
+4. Enter item names in the search box for instant filtering
+5. Drag the "Min Value" slider to set value threshold
+6. Click "Refresh" to manually update prices
+7. Adjust basic settings in F12 panel (update interval, display options, etc.)
 
-## 設定選項
+## Configuration Options
 
-- **Toggle Price Window**: 開啟價格視窗的快捷鍵（預設 F8）
-- **Update Interval**: 自動更新間隔（分鐘）
-- **League Name**: 聯盟名稱（留空自動偵測，預設 Mercenaries）
-- **Show Chaos/Divine Values**: 顯示 Chaos/Divine 價值
-- **Show Price Changes**: 顯示 24 小時價格變化
-- **Auto Update Prices**: 啟用自動更新
+**Main Settings (F12 Settings Panel)**:
+- **Toggle Price Window**: Hotkey to open price window (default F8)
+- **Update Interval**: Auto-update interval (1-30 minutes, default 5 minutes)
+- **League Name**: League name (leave empty for auto-detection, default Mercenaries)
+- **Show Chaos/Divine Values**: Display Chaos/Divine value columns
+- **Show Price Changes**: Display 24-hour price changes
+- **Auto Update Prices**: Enable automatic updates
+- **Language**: Interface language selection
+- **Window Position/Size**: Window position and size settings
 
-## 支援的資料類型
+**Filter Controls (Main Window Only)**:
+- Item category display toggles (not shown in F12 settings)
+- Minimum value filter slider
+- Quick preset filter buttons
 
-- **Currency**: 基本通貨（Chaos Orb, Exalted Orb, Divine Orb 等）
-- **Fragment**: 地圖碎片和其他碎片類物品
+## Supported Data Types
 
-## 建置指南
+**Main Categories**:
+- **Currency**: Basic currencies (Chaos Orb, Exalted Orb, Divine Orb, etc.)
+- **Fragments**: Map fragments and other fragment items
+- **Divination Cards**: Divination cards
+- **Oils**: Oils (for enchanting)
+- **Incubators**: Incubators
 
-確保已設定環境變數：
+**Atlas Related**:
+- **Scarabs**: Scarabs
+- **Delirium Orbs**: Delirium orbs
+- **Invitations**: Invitations
+- **Memories**: Memories
+
+**Crafting Related**:
+- **Fossils**: Fossils
+- **Resonators**: Resonators
+- **Essences**: Essences
+- **Beasts**: Beasts
+- **Vials**: Vials
+
+## Build Guide
+
+Ensure environment variable is set:
 ```bash
 setx exapiPackage "C:\Users\user\Downloads\ExileApi-Compiled-3.26.last"
 ```
 
-在插件目錄執行：
+Run in plugin directory:
 ```bash
 dotnet build
 ```
 
-## 故障排除
+## Troubleshooting
 
-1. **無法獲取價格資料**: 檢查網路連線和防火牆設定
-2. **聯盟名稱錯誤**: 在設定中手動指定正確的聯盟名稱
-3. **插件載入失敗**: 檢查 ExileCore 日誌檔案中的錯誤訊息
+1. **Cannot fetch price data**: Check network connection and firewall settings
+2. **Wrong league name**: Manually specify the correct league name in settings
+3. **Plugin load failure**: Check ExileCore log files for error messages
 
-## 技術資訊
+## Technical Information
 
-- **框架**: ExileCore (ExileAPI)
+- **Framework**: ExileCore (ExileAPI)
 - **UI**: ImGui.NET
 - **HTTP**: .NET HttpClient
-- **序列化**: Newtonsoft.Json
-- **資料來源**: poe.ninja API
+- **Serialization**: Newtonsoft.Json
+- **Data Source**: poe.ninja API
 
-## 版本資訊
+## Version History
 
-- **v1.0.0**: 基礎功能實作
-  - 通貨和碎片價格查詢
-  - 自動更新和快取系統
-  - 基本 UI 和搜尋功能
+- **v1.1.0** (2025-08-27): Filter System Redesign
+  - Redesigned filter system, removed complex options from F12 settings
+  - Fully integrated filter controls into main window
+  - Added quick preset filters (High Value, Currency Only, Common Items)
+  - Improved user interface and experience
+  
+- **v1.0.0**: Initial Implementation
+  - Currency and fragment price queries
+  - Auto-update and cache system
+  - Basic UI and search functionality
