@@ -1,0 +1,4 @@
+Build failed:
+[2025/8/27 上午 12:08:26, C:\Users\user\Downloads\ExileApi-Compiled-3.26.last\Plugins\Source\PoeNinjaPricer\PoeNinjaPricer.cs(304, 42)] CS1061: 'ButtonNode' 未包含 'Press' 的定義，也找不到可接受類型 'ButtonNode' 第一個引數的可存取擴充方法 'Press' (是否遺漏 using 指示詞或組件參考?)
+[2025/8/27 上午 12:08:26, C:\Users\user\Downloads\ExileApi-Compiled-3.26.last\Plugins\Source\PoeNinjaPricer\PoeNinjaPricer.cs(311, 42)] CS1061: 'ButtonNode' 未包含 'Press' 的定義，也找不到可接受類型 'ButtonNode' 第一個引數的可存取擴充方法 'Press' (是否遺漏 using 指示詞或組件參考?)
+[2025/8/27 上午 12:08:26, C:\Users\user\Downloads\ExileApi-Compiled-3.26.last\Plugins\Source\PoeNinjaPricer\PoeNinjaPricer.cs(318, 46)] CS1061: 'ButtonNode' 未包含 'Press' 的定義，也找不到可接受類型 'ButtonNode' 第一個引數的可存取擴充方法 'Press' (是否遺漏 using 指示詞或組件參考?)
