@@ -45,25 +45,51 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 
 ## Supported Data Types
 
-**Main Categories**:
-- **Currency**: Basic currencies (Chaos Orb, Exalted Orb, Divine Orb, etc.)
-- **Fragments**: Map fragments and other fragment items
-- **Divination Cards**: Divination cards
-- **Oils**: Oils (for enchanting)
-- **Incubators**: Incubators
+**Currently Implemented**:
+- **Currency**: Basic currencies (Chaos Orb, Exalted Orb, Divine Orb, etc.) ✅
+- **Fragments**: Map fragments and other fragment items ✅
 
-**Atlas Related**:
-- **Scarabs**: Scarabs
-- **Delirium Orbs**: Delirium orbs
-- **Invitations**: Invitations
-- **Memories**: Memories
+**TODO - Requires Additional API Integration**:
 
-**Crafting Related**:
-- **Fossils**: Fossils
-- **Resonators**: Resonators
-- **Essences**: Essences
-- **Beasts**: Beasts
-- **Vials**: Vials
+*Main Categories*:
+- **Divination Cards**: TODO - Requires divination card API endpoint
+- **Oils**: TODO - Requires oils API endpoint 
+- **Incubators**: TODO - Requires incubators API endpoint
+- **Unique Idols**: TODO - Requires unique idols API endpoint
+- **Runecrafts**: TODO - Requires runecrafts API endpoint
+- **Allflame Embers**: TODO - Requires allflame embers API endpoint
+- **Tattoos**: TODO - Requires tattoos API endpoint
+- **Omens**: TODO - Requires omens API endpoint
+- **Artifacts**: TODO - Requires artifacts API endpoint
+
+*Equipment & Gems*:
+- **Unique Weapons**: TODO - Requires unique weapons API endpoint
+- **Unique Armours**: TODO - Requires unique armours API endpoint
+- **Unique Accessories**: TODO - Requires unique accessories API endpoint
+- **Unique Flasks**: TODO - Requires unique flasks API endpoint
+- **Unique Jewels**: TODO - Requires unique jewels API endpoint
+- **Unique Tinctures**: TODO - Requires unique tinctures API endpoint
+- **Unique Relics**: TODO - Requires unique relics API endpoint
+- **Skill Gems**: TODO - Requires skill gems API endpoint
+- **Cluster Jewels**: TODO - Requires cluster jewels API endpoint
+
+*Atlas Related*:
+- **Maps**: TODO - Requires maps API endpoint
+- **Blighted Maps**: TODO - Requires blighted maps API endpoint
+- **Blight Ravaged Maps**: TODO - Requires blight ravaged maps API endpoint
+- **Unique Maps**: TODO - Requires unique maps API endpoint
+- **Scarabs**: TODO - Requires scarabs API endpoint
+- **Delirium Orbs**: TODO - Requires delirium orbs API endpoint
+- **Invitations**: TODO - Requires invitations API endpoint
+- **Memories**: TODO - Requires memories API endpoint
+
+*Crafting Related*:
+- **Fossils**: TODO - Requires fossils API endpoint
+- **Resonators**: TODO - Requires resonators API endpoint
+- **Essences**: TODO - Requires essences API endpoint
+- **Beasts**: TODO - Requires beasts API endpoint
+- **Vials**: TODO - Requires vials API endpoint
+- **Base Types**: TODO - Requires base types API endpoint
 
 ## Build Guide
 
@@ -93,6 +119,11 @@ dotnet build
 
 ## Version History
 
+- **v1.1.1** (2025-08-27): Documentation Correction
+  - Corrected README to accurately reflect only Currency and Fragments are implemented
+  - Clarified that all other categories require additional API integration
+  - Removed misleading checkmarks from unimplemented features
+  
 - **v1.1.0** (2025-08-27): Filter System Redesign
   - Redesigned filter system, removed complex options from F12 settings
   - Fully integrated filter controls into main window
