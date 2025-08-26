@@ -17,9 +17,6 @@ public class PoeNinjaPricerSettings : ISettings
     public ToggleNode AutoUpdatePrices { get; set; } = new(true);
     public TextNode LeagueName { get; set; } = new("");
     
-    // Language Settings
-    public ListNode Language { get; set; } = new() { Values = LocalizationService.GetLanguageNames().ToList(), Value = "English" };
-    
     public RangeNode<int> WindowPosX { get; set; } = new(100, 0, 2000);
     public RangeNode<int> WindowPosY { get; set; } = new(100, 0, 2000);
     public RangeNode<int> WindowWidth { get; set; } = new(600, 300, 1200);

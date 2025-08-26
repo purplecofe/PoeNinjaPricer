@@ -112,13 +112,13 @@ public class FilterManager
         var activeCategories = GetActiveCategories();
         
         if (activeCategories == CurrencyCategory.None)
-            return LocalizationService.Get("no_items_displayed");
+            return "No items displayed";
         
         if (activeCategories == CurrencyCategory.All && _settings.MinChaosValue.Value == 0f)
-            return LocalizationService.Get("showing_all", totalItems);
+            return $"Showing all {totalItems} items";
             
         var categoryCount = CountEnabledCategories(activeCategories);
-        var summary = LocalizationService.Get("showing_filtered", filteredItems, totalItems, categoryCount);
+        var summary = $"Showing {filteredItems}/{totalItems} items ({categoryCount} categories)";
         
         if (_settings.MinChaosValue.Value > 0f)
             summary += $" (≥{_settings.MinChaosValue.Value:F1}c)";

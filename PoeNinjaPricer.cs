@@ -26,7 +26,6 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     private string _currentLeague = "";
     private string _errorMessage = "";
     private readonly CachedValue<string> _gameLeague;
-    private string _currentLanguage = "English";
     
     // Filter states (no longer in settings to hide from F12 menu)
     private bool _showCurrency = true;
@@ -76,7 +75,6 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         try
         {
             // Initialize localization
-            InitializeLocalization();
             
             // 偵測聯盟
             _currentLeague = GetCurrentLeague();
@@ -107,7 +105,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         catch (Exception ex)
         {
             DebugWindow.LogError($"PoeNinjaPricer: Initialization failed - {ex.Message}");
-            _errorMessage = $"{LocalizationService.Get("init_failed")}: {ex.Message}";
+            _errorMessage = $"Initialization failed: {ex.Message}";
             return false;
         }
     }
@@ -132,7 +130,6 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
                 }
             }
 
-            // 檢查聯盟變化
             var currentLeague = GetCurrentLeague();
             if (_currentLeague != currentLeague)
             {
@@ -142,13 +139,6 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
                 _ = Task.Run(UpdatePricesAsync);
             }
 
-            // 檢查語言變化
-            var settingsLanguage = Settings.Language?.Value ?? "English";
-            if (_currentLanguage != settingsLanguage)
-            {
-                _currentLanguage = settingsLanguage;
-                OnLanguageChanged();
-            }
 
             return null;
         }
@@ -203,13 +193,13 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         
         // 搜尋框
         ImGui.SetNextItemWidth(200);
-        if (ImGui.InputText(LocalizationService.Get("search_currency"), ref _searchFilter, 100))
+        if (ImGui.InputText("Search Currency", ref _searchFilter, 100))
         {
             FilterPrices();
         }
 
         ImGui.SameLine();
-        if (ImGui.Button(LocalizationService.Get("refresh")))
+        if (ImGui.Button("Refresh"))
         {
             _ = Task.Run(UpdatePricesAsync);
         }
@@ -233,19 +223,19 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         // 狀態資訊
         var filterSummary = _filterManager?.GetFilterSummary(_allPrices, _displayPrices) ?? $"項目: {_displayPrices?.Count ?? 0}";
-        var statusText = $"{LocalizationService.Get("league")}: {_currentLeague} | {filterSummary}";
+        var statusText = $"League: {_currentLeague} | {filterSummary}";
         if (_lastUpdateTime != DateTime.MinValue)
         {
-            statusText += $" | {LocalizationService.Get("last_update")}: {_lastUpdateTime:HH:mm:ss}";
+            statusText += $" | Last update: {_lastUpdateTime:HH:mm:ss}";
         }
         else
         {
-            statusText += $" | {LocalizationService.Get("not_updated")}";
+            statusText += $" | Not updated yet";
         }
         
         if (_isUpdating)
         {
-            statusText += $" | {LocalizationService.Get("updating")}";
+            statusText += $" | Updating...";
             ImGui.PushStyleColor(ImGuiCol.Text, new Vector4(1, 1, 0.3f, 1)); // 黃色
         }
         
@@ -258,7 +248,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         // Display Divine Orb rate
         ImGui.SameLine();
-        ImGui.Text($"| {LocalizationService.Get("divine_rate")}: {CurrencyPrice.GetDivineRate():F1}c");
+        ImGui.Text($"| Divine: {CurrencyPrice.GetDivineRate():F1}c");
 
         ImGui.Separator();
 
@@ -271,103 +261,103 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     private void RenderFilterControls()
     {
         // GENERAL category filters
-        ImGui.Text(LocalizationService.Get("category_general"));
+        ImGui.Text("GENERAL:");
         ImGui.SameLine();
         
-        if (ImGui.Checkbox(LocalizationService.Get("currency"), ref _showCurrency))
+        if (ImGui.Checkbox("Currency", ref _showCurrency))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("fragments"), ref _showFragments))
+        if (ImGui.Checkbox("Fragments", ref _showFragments))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("divination_cards"), ref _showDivinationCards))
+        if (ImGui.Checkbox("Divination Cards", ref _showDivinationCards))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("oils"), ref _showOils))
+        if (ImGui.Checkbox("Oils", ref _showOils))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("incubators"), ref _showIncubators))
+        if (ImGui.Checkbox("Incubators", ref _showIncubators))
         {
             FilterPrices();
         }
         
         // ATLAS category filters
-        ImGui.Text(LocalizationService.Get("category_atlas"));
+        ImGui.Text("ATLAS:");
         ImGui.SameLine();
         
-        if (ImGui.Checkbox(LocalizationService.Get("scarabs"), ref _showScarabs))
+        if (ImGui.Checkbox("Scarabs", ref _showScarabs))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("delirium_orbs"), ref _showDeliriumOrbs))
+        if (ImGui.Checkbox("Delirium Orbs", ref _showDeliriumOrbs))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("invitations"), ref _showInvitations))
+        if (ImGui.Checkbox("Invitations", ref _showInvitations))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("memories"), ref _showMemories))
+        if (ImGui.Checkbox("Memories", ref _showMemories))
         {
             FilterPrices();
         }
         
         // CRAFTING category filters
-        ImGui.Text(LocalizationService.Get("category_crafting"));
+        ImGui.Text("CRAFT:");
         ImGui.SameLine();
         
-        if (ImGui.Checkbox(LocalizationService.Get("fossils"), ref _showFossils))
+        if (ImGui.Checkbox("Fossils", ref _showFossils))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("resonators"), ref _showResonators))
+        if (ImGui.Checkbox("Resonators", ref _showResonators))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("essences"), ref _showEssences))
+        if (ImGui.Checkbox("Essences", ref _showEssences))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("beasts"), ref _showBeasts))
+        if (ImGui.Checkbox("Beasts", ref _showBeasts))
         {
             FilterPrices();
         }
         
         ImGui.SameLine();
-        if (ImGui.Checkbox(LocalizationService.Get("vials"), ref _showVials))
+        if (ImGui.Checkbox("Vials", ref _showVials))
         {
             FilterPrices();
         }
         
         // Other categories
-        ImGui.Text(LocalizationService.Get("category_others"));
+        ImGui.Text("Others:");
         ImGui.SameLine();
         
-        if (ImGui.Checkbox(LocalizationService.Get("others"), ref _showOthers))
+        if (ImGui.Checkbox("Others", ref _showOthers))
         {
             FilterPrices();
         }
@@ -375,7 +365,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         // 快速切換按鈕
         ImGui.Separator();
         
-        if (ImGui.Button(LocalizationService.Get("select_all_none")))
+        if (ImGui.Button("Select All/None"))
         {
             if (_filterManager != null)
             {
@@ -387,7 +377,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
         
         ImGui.SameLine();
-        if (ImGui.Button(LocalizationService.Get("high_value")))
+        if (ImGui.Button("High Value"))
         {
             // 高價值過濾：只顯示通貨、碎片、聖甲蟲、譫妄、邀請函
             SetAllFilterCategories(false);
@@ -401,7 +391,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
         
         ImGui.SameLine();
-        if (ImGui.Button(LocalizationService.Get("currency_only")))
+        if (ImGui.Button("Currency Only"))
         {
             // 僅通貨過濾
             SetAllFilterCategories(false);
@@ -411,7 +401,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
         
         ImGui.SameLine();
-        if (ImGui.Button(LocalizationService.Get("common_items")))
+        if (ImGui.Button("Common Items"))
         {
             // 常用物品過濾：顯示通用分類物品
             SetAllFilterCategories(false);
@@ -429,7 +419,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
         
         // Minimum value slider
-        ImGui.Text(LocalizationService.Get("min_value"));
+        ImGui.Text("Min Value:");
         ImGui.SameLine();
         ImGui.SetNextItemWidth(120);
         var minValue = Settings.MinChaosValue.Value;
@@ -442,10 +432,9 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
     private void RenderToolbar()
     {
-        ImGui.Text(LocalizationService.Get("options"));
+        ImGui.Text("Options:");
         ImGui.SameLine();
         
-        RenderLanguageSelector();
         ImGui.SameLine();
         
         var showChaos = Settings.ShowChaosValues.Value;
@@ -463,7 +452,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         ImGui.SameLine();
         var showChanges = Settings.ShowPriceChanges.Value;
-        if (ImGui.Checkbox(LocalizationService.Get("price_change"), ref showChanges))
+        if (ImGui.Checkbox("Price Change", ref showChanges))
         {
             Settings.ShowPriceChanges.Value = showChanges;
         }
@@ -473,13 +462,13 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     {
         if (_displayPrices.Count == 0)
         {
-            ImGui.Text(LocalizationService.Get("no_price_data"));
+            ImGui.Text("No price data. Click 'Refresh' to load prices.");
             return;
         }
 
         var tableFlags = ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg | ImGuiTableFlags.ScrollY | ImGuiTableFlags.Sortable;
         
-        var columnCount = 2; // Name, Type
+        var columnCount = 2;
         if (Settings.ShowChaosValues.Value) columnCount++;
         if (Settings.ShowDivineValues.Value) columnCount++;
         if (Settings.ShowPriceChanges.Value) columnCount++;
@@ -487,14 +476,14 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         if (!ImGui.BeginTable("PriceTable", columnCount, tableFlags)) return;
 
         // 表頭設定（支援所有欄位排序）
-        ImGui.TableSetupColumn(LocalizationService.Get("item_name"), ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn(LocalizationService.Get("item_type"), ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthFixed, 60);
+        ImGui.TableSetupColumn("Name", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("Type", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthFixed, 60);
         if (Settings.ShowChaosValues.Value)
             ImGui.TableSetupColumn("Chaos", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
         if (Settings.ShowDivineValues.Value)
             ImGui.TableSetupColumn("Divine", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
         if (Settings.ShowPriceChanges.Value)
-            ImGui.TableSetupColumn(LocalizationService.Get("change_24h"), ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
+            ImGui.TableSetupColumn("24h Change", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
 
         ImGui.TableHeadersRow();
 
@@ -510,13 +499,12 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         {
             ImGui.TableNextRow();
 
-            // 名稱
             ImGui.TableSetColumnIndex(0);
             ImGui.Text(price.Name);
 
             // 類型
             ImGui.TableSetColumnIndex(1);
-            ImGui.Text(price.IsFragment ? LocalizationService.Get("fragment_type") : LocalizationService.Get("currency_type"));
+            ImGui.Text(price.IsFragment ? "Fragment" : "Currency");
 
             var colIndex = 2;
 
@@ -566,7 +554,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         // 根據當前顯示的欄位計算實際欄位索引
         var currentColumnIndex = 0;
         
-        if (columnIndex == 0) // 名稱
+        if (columnIndex == 0)
         {
             _displayPrices = ascending
                 ? _displayPrices.OrderBy(p => p.Name).ToList()
@@ -638,7 +626,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         catch (Exception ex)
         {
             DebugWindow.LogError($"PoeNinjaPricer: Price update failed - {ex.Message}");
-            _errorMessage = $"{LocalizationService.Get("price_update_failed")}: {ex.Message}";
+            _errorMessage = $"Price update failed: {ex.Message}";
         }
         finally
         {
@@ -661,13 +649,11 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             return;
         }
 
-        // 先應用搜尋過濾
         var searchFiltered = string.IsNullOrWhiteSpace(_searchFilter)
             ? _allPrices
             : _allPrices.Where(p => p != null && !string.IsNullOrEmpty(p.Name) && 
-                p.Name.Contains(_searchFilter, StringComparison.OrdinalIgnoreCase)).ToList();
+                p.Name.IndexOf(_searchFilter, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
         
-        // 再應用分類和價值過濾
         if (_filterManager != null)
         {
             _displayPrices = _filterManager.ApplyFilters(searchFiltered);
@@ -730,13 +716,13 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
     public override void DrawSettings()
     {
-        ImGui.Text(LocalizationService.Get("window_title"));
+        ImGui.Text("PoeNinja Pricer");
         ImGui.Separator();
 
         base.DrawSettings();
 
         ImGui.Separator();
-        if (ImGui.Button(LocalizationService.Get("update_now")))
+        if (ImGui.Button("Update Now"))
         {
             _ = Task.Run(UpdatePricesAsync);
         }
@@ -751,7 +737,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         }
 
         ImGui.SameLine();
-        if (ImGui.Button(LocalizationService.Get("test_connection")))
+        if (ImGui.Button("Test Connection"))
         {
             _ = Task.Run(TestConnectionAsync);
         }
@@ -768,70 +754,16 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     {
         try
         {
-            _errorMessage = LocalizationService.Get("testing_connection");
+            _errorMessage = "Testing connection...";
             var result = await _apiService.TestConnectionAsync();
-            _errorMessage = result ? LocalizationService.Get("connection_test_success") : LocalizationService.Get("connection_test_failed");
+            _errorMessage = result ? "Connection test successful!" : "Connection test failed";
         }
         catch (Exception ex)
         {
-            _errorMessage = $"{LocalizationService.Get("connection_test_failed")}: {ex.Message}";
+            _errorMessage = $"Connection test failed: {ex.Message}";
         }
     }
 
-    private void InitializeLocalization()
-    {
-        // Set language based on settings
-        var languageNames = LocalizationService.GetLanguageNames();
-        var currentLanguageName = Settings.Language?.Value ?? "English";
-        var languageIndex = Array.IndexOf(languageNames, currentLanguageName);
-        
-        if (languageIndex >= 0)
-        {
-            var supportedLanguages = LocalizationService.GetSupportedLanguages();
-            if (languageIndex < supportedLanguages.Length)
-            {
-                LocalizationService.SetLanguage(supportedLanguages[languageIndex]);
-            }
-        }
-        
-        // Set current language for tracking
-        _currentLanguage = currentLanguageName;
-    }
-    
-    private void OnLanguageChanged()
-    {
-        var languageNames = LocalizationService.GetLanguageNames();
-        var currentLanguageName = Settings.Language?.Value ?? "English";
-        var languageIndex = Array.IndexOf(languageNames, currentLanguageName);
-        
-        if (languageIndex >= 0)
-        {
-            var supportedLanguages = LocalizationService.GetSupportedLanguages();
-            if (languageIndex < supportedLanguages.Length)
-            {
-                LocalizationService.SetLanguage(supportedLanguages[languageIndex]);
-                DebugWindow.LogMsg($"PoeNinjaPricer: Language changed to {currentLanguageName}");
-            }
-        }
-    }
-    
-    private void RenderLanguageSelector()
-    {
-        ImGui.Text($"{LocalizationService.Get("language")}:");
-        ImGui.SameLine();
-        ImGui.SetNextItemWidth(100);
-        
-        var languageNames = LocalizationService.GetLanguageNames();
-        var currentLanguageName = Settings.Language?.Value ?? "English";
-        var currentIndex = Array.IndexOf(languageNames, currentLanguageName);
-        
-        if (currentIndex < 0) currentIndex = 0;
-        
-        if (ImGui.Combo("##Language", ref currentIndex, languageNames, languageNames.Length))
-        {
-            Settings.Language.Value = languageNames[currentIndex];
-        }
-    }
     
     private CurrencyCategory GetCurrentActiveCategories()
     {

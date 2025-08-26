@@ -53,7 +53,7 @@ public class PriceCacheService
     }
 
     /// <summary>
-    /// 檢查快取是否過期
+    /// Check if cache has expired
     /// </summary>
     public bool IsCacheExpired(int expireMinutes)
     {
