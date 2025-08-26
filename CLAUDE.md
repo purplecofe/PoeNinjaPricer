@@ -187,9 +187,56 @@ public override void Render()
 
 ## Recent Changes
 
+### Hover Item Price Display Feature (2025-08-27)
+- **新增 Hover 價格顯示功能**: 滑鼠懸停在物品上時顯示即時價格資訊
+- **中文客戶端支援**: 實作完整的中文到英文物品名稱映射系統
+- **智能名稱識別**: 使用多層次方法進行物品名稱識別：
+  1. 反射檢測：嘗試從 BaseItemType 獲取英文屬性
+  2. 完整路徑映射：超過 50 種常見通貨和碎片的精確映射
+  3. 智能路徑解析：從 Metadata 路徑自動提取名稱
+- **即時 Tooltip**: 在滑鼠游標附近顯示半透明價格提示窗
+- **效能優化**: 100ms 節流機制避免過度檢測
+
 ### Filter System Redesign (2025-08-27)
 - 移除了設定檔案中的種類過濾器屬性，避免 F12 設定面板過於複雜
 - 過濾器狀態改為使用主程式中的私有變數管理
 - `FilterManager` 完全依賴主程式提供的回調函數
 - 快速過濾器按鈕直接在主程式中處理，提供更好的用戶體驗
+
+## Hover Feature Implementation Details
+
+### Item Detection System
+```csharp
+private Entity GetHoveredItem()
+{
+    var uiHover = GameController.IngameState.UIHover;
+    if (uiHover == null || uiHover.Address == 0)
+        uiHover = GameController.IngameState.UIHoverElement;
+    
+    var hoverItemIcon = uiHover.AsObject<HoverItemIcon>();
+    return hoverItemIcon?.Item;
+}
+```
+
+### Name Mapping Architecture
+1. **反射檢測** (`TryGetEnglishNameFromBaseItemType`): 使用反射檢查可能的英文屬性
+2. **靜態映射** (`GetMappedEnglishName`): 基於 Metadata 路徑的完整映射表
+3. **路徑解析** (`ExtractNameFromPath`): 從路徑中智能提取名稱作為最後備選
+
+### Settings Integration
+- `EnableHoverPricing`: 控制 hover 功能開關的設定節點（預設開啟）
+- 與現有顯示設定整合：支援 ShowChaosValues, ShowDivineValues, ShowPriceChanges
+
+## 已知的中文客戶端映射
+- 神聖石 → Divine Orb
+- 混沌石 → Chaos Orb  
+- 崇高石 → Exalted Orb
+- 祝福石 → Blessed Orb
+- 以及 50+ 種其他通貨和對應碎片
+
+## Future Improvements (參見 ROADMAP.md)
+- API 反向映射：從 poe.ninja 數據建立對照表
+- poedb.tw 整合：使用社群多語言資料庫
+- 動態學習映射：根據成功匹配建立本地快取
+- 模糊匹配：處理名稱變體和拼寫差異
 

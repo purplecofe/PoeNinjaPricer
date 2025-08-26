@@ -24,4 +24,7 @@ public class PoeNinjaPricerSettings : ISettings
     
     // 最小價值過濾 (供主視窗使用)
     public RangeNode<float> MinChaosValue { get; set; } = new(0f, 0f, 100f);
+    
+    // Hover item price display settings
+    public ToggleNode EnableHoverPricing { get; set; } = new(true);
 }

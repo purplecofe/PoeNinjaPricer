@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExileCore;
 using ExileCore.PoEMemory.MemoryObjects;
+using ExileCore.PoEMemory.Elements;
+using ExileCore.PoEMemory.Elements.InventoryElements;
 using ExileCore.Shared.Cache;
 using PoeNinjaPricer.Models;
 using PoeNinjaPricer.Services;
@@ -26,6 +28,11 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     private string _currentLeague = "";
     private string _errorMessage = "";
     private readonly CachedValue<string> _gameLeague;
+    
+    // Hover item price display variables
+    private Entity _lastHoveredItem;
+    private CurrencyPrice _hoveredItemPrice;
+    private DateTime _lastHoverCheck = DateTime.MinValue;
     
     // Filter states (no longer in settings to hide from F12 menu)
     private bool _showCurrency = true;
@@ -151,11 +158,19 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
     public override void Render()
     {
-        if (!Settings.Enable.Value || !_showPriceWindow) return;
+        if (!Settings.Enable.Value) return;
 
         try
         {
-            RenderPriceWindow();
+            // Always check for hover item pricing if enabled
+            CheckHoveredItem();
+            RenderHoveredItemPrice();
+            
+            // Only render main window if visible
+            if (_showPriceWindow)
+            {
+                RenderPriceWindow();
+            }
         }
         catch (Exception ex)
         {
@@ -888,6 +903,357 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         _showEssences = enabled;
         _showVials = enabled;
         _showOthers = enabled;
+    }
+    
+    private void CheckHoveredItem()
+    {
+        // Skip if hover pricing is disabled
+        if (!Settings.EnableHoverPricing.Value)
+        {
+            _hoveredItemPrice = null;
+            _lastHoveredItem = null;
+            return;
+        }
+        
+        // Throttle checks to avoid performance issues
+        if (DateTime.Now - _lastHoverCheck < TimeSpan.FromMilliseconds(100))
+            return;
+            
+        _lastHoverCheck = DateTime.Now;
+        
+        try
+        {
+            var currentHoveredItem = GetHoveredItem();
+            
+            // Debug logging to see if we're getting hover items
+            if (currentHoveredItem != _lastHoveredItem)
+            {
+                if (currentHoveredItem != null)
+                {
+                    var itemName = GetItemBaseName(currentHoveredItem);
+                    var englishName = GetEnglishItemName(currentHoveredItem);
+                    DebugWindow.LogMsg($"PoeNinjaPricer: Hovering item: {itemName} (Path: {currentHoveredItem.Path}) English: {englishName}");
+                }
+                else if (_lastHoveredItem != null)
+                {
+                    DebugWindow.LogMsg($"PoeNinjaPricer: No longer hovering item");
+                }
+            }
+            
+            // Check if hovered item changed
+            if (currentHoveredItem != _lastHoveredItem)
+            {
+                _lastHoveredItem = currentHoveredItem;
+                _hoveredItemPrice = null;
+                
+                if (currentHoveredItem != null)
+                {
+                    var itemName = GetEnglishItemName(currentHoveredItem);
+                    if (!string.IsNullOrEmpty(itemName))
+                    {
+                        _hoveredItemPrice = FindPriceByName(itemName);
+                        if (_hoveredItemPrice != null)
+                        {
+                            DebugWindow.LogMsg($"PoeNinjaPricer: Found price for {itemName}: {_hoveredItemPrice.ChaosValue}c");
+                        }
+                        else
+                        {
+                            DebugWindow.LogMsg($"PoeNinjaPricer: No price found for {itemName}");
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: CheckHoveredItem error - {ex.Message}");
+        }
+    }
+    
+    private Entity GetHoveredItem()
+    {
+        try
+        {
+            var gameController = GameController;
+            if (gameController?.IngameState == null)
+                return null;
+                
+            // Use the same approach as ItemFilterLibInspector
+            var uiHover = gameController.IngameState.UIHover;
+            if (uiHover == null || uiHover.Address == 0)
+                uiHover = gameController.IngameState.UIHoverElement;
+                
+            if (uiHover == null || uiHover.Address == 0)
+                return null;
+
+            // Check if this is an item hover
+            var hoverItemIcon = uiHover.AsObject<HoverItemIcon>();
+            return hoverItemIcon?.Item;
+        }
+        catch (Exception ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: GetHoveredItem error - {ex.Message}");
+            return null;
+        }
+    }
+    
+    private string GetItemBaseName(Entity item)
+    {
+        try
+        {
+            return GameController?.Files?.BaseItemTypes?.Translate(item?.Path)?.BaseName ?? string.Empty;
+        }
+        catch
+        {
+            return string.Empty;
+        }
+    }
+    
+    private string GetEnglishItemName(Entity item)
+    {
+        try
+        {
+            var path = item?.Path;
+            if (string.IsNullOrEmpty(path))
+                return string.Empty;
+                
+            // First try: Use BaseItemTypes to get the item record
+            var baseItemType = GameController?.Files?.BaseItemTypes?.Translate(path);
+            if (baseItemType != null)
+            {
+                // Try different approaches to get English name
+                
+                // Method 1: Check if there's an English version available
+                // Some versions of ExileCore expose the English name directly
+                var englishName = TryGetEnglishNameFromBaseItemType(baseItemType);
+                if (!string.IsNullOrEmpty(englishName))
+                    return englishName;
+                    
+                // Method 2: Use a comprehensive path-to-name mapping
+                var mappedName = GetMappedEnglishName(path);
+                if (!string.IsNullOrEmpty(mappedName))
+                    return mappedName;
+                    
+                // Method 3: Extract name from path as fallback
+                var pathBasedName = ExtractNameFromPath(path);
+                if (!string.IsNullOrEmpty(pathBasedName))
+                    return pathBasedName;
+            }
+            
+            return string.Empty;
+        }
+        catch (Exception ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: GetEnglishItemName error - {ex.Message}");
+            return string.Empty;
+        }
+    }
+    
+    private string TryGetEnglishNameFromBaseItemType(object baseItemType)
+    {
+        try
+        {
+            // Try to access potential English name properties
+            var type = baseItemType.GetType();
+            
+            // Some potential property names for English version
+            var potentialProperties = new[] { "EnglishName", "OriginalName", "InternalName", "Name" };
+            foreach (var propName in potentialProperties)
+            {
+                var prop = type.GetProperty(propName);
+                if (prop != null)
+                {
+                    var value = prop.GetValue(baseItemType) as string;
+                    if (!string.IsNullOrEmpty(value) && !IsChineseName(value))
+                        return value;
+                }
+            }
+        }
+        catch
+        {
+            // Ignore reflection errors
+        }
+        return string.Empty;
+    }
+    
+    private string GetMappedEnglishName(string path)
+    {
+        // Comprehensive mapping based on paths found in logs
+        var pathToEnglishName = new Dictionary<string, string>
+        {
+            // Basic Currency
+            { "Metadata/Items/Currency/CurrencyModValues", "Divine Orb" },
+            { "Metadata/Items/Currency/CurrencyRerollRare", "Chaos Orb" },
+            { "Metadata/Items/Currency/CurrencyUpgradeToRare", "Regal Orb" },
+            { "Metadata/Items/Currency/CurrencyUpgradeMagicToRare", "Regal Orb" },
+            { "Metadata/Items/Currency/CurrencyAddModToRare", "Exalted Orb" },
+            { "Metadata/Items/Currency/CurrencyRerollMagic", "Orb of Alteration" },
+            { "Metadata/Items/Currency/CurrencyUpgradeToMagic", "Orb of Alchemy" },
+            { "Metadata/Items/Currency/CurrencyRerollSocketNumbers", "Jeweller's Orb" },
+            { "Metadata/Items/Currency/CurrencyRerollSocketLinks", "Orb of Fusing" },
+            { "Metadata/Items/Currency/CurrencyRerollSocketColours", "Chromatic Orb" },
+            { "Metadata/Items/Currency/CurrencyRerollImplicit", "Blessed Orb" },
+            { "Metadata/Items/Currency/CurrencyUpgradeRandomly", "Orb of Chance" },
+            { "Metadata/Items/Currency/CurrencyConvertToNormal", "Orb of Scouring" },
+            { "Metadata/Items/Currency/CurrencyAddModToMagic", "Orb of Augmentation" },
+            { "Metadata/Items/Currency/CurrencyRemoveMod", "Orb of Annulment" },
+            { "Metadata/Items/Currency/CurrencyInstillingOrb", "Instilling Orb" },
+            { "Metadata/Items/Currency/CurrencyEnkindlingOrb", "Enkindling Orb" },
+            { "Metadata/Items/Currency/CurrencyRerollUnique", "Ancient Orb" },
+            { "Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets", "Binding Orb" },
+            { "Metadata/Items/Currency/CurrencyPassiveRefund", "Orb of Regret" },
+            { "Metadata/Items/Currency/CurrencyAtlasPassiveRefund", "Orb of Unmaking" },
+            { "Metadata/Items/Currency/CurrencyRerollDefences", "Orb of Horizons" },
+            { "Metadata/Items/Currency/CurrencyRerollMapType", "Orb of Horizons" },
+            { "Metadata/Items/Currency/CurrencyUpgradeMapTier", "Harbinger's Orb" },
+            { "Metadata/Items/Currency/CurrencyHinekorasLock", "Hinekora's Lock" },
+            
+            // Shards
+            { "Metadata/Items/Currency/CurrencyAddModToRareShard", "Exalted Shard" },
+            { "Metadata/Items/Currency/CurrencyModValuesShard", "Divine Shard" },
+            { "Metadata/Items/Currency/CurrencyRerollRareShard", "Chaos Shard" },
+            { "Metadata/Items/Currency/CurrencyUpgradeToRareShard", "Regal Shard" },
+            { "Metadata/Items/Currency/CurrencyRerollMagicShard", "Alteration Shard" },
+            { "Metadata/Items/Currency/CurrencyUpgradeToMagicShard", "Alchemy Shard" },
+            { "Metadata/Items/Currency/CurrencyRerollSocketNumbersShard", "Jeweller's Shard" },
+            { "Metadata/Items/Currency/CurrencyRerollSocketLinksShard", "Fusing Shard" },
+            { "Metadata/Items/Currency/CurrencyUpgradeRandomlyShard", "Chance Shard" },
+            { "Metadata/Items/Currency/CurrencyConvertToNormalShard", "Scouring Shard" },
+            { "Metadata/Items/Currency/CurrencyDuplicateShard", "Mirror Shard" },
+            { "Metadata/Items/Currency/CurrencyRerollUniqueShard", "Ancient Shard" },
+            { "Metadata/Items/Currency/CurrencyUpgradeMagicToRareShard", "Regal Shard" },
+            { "Metadata/Items/Currency/CurrencyRemoveModShard", "Annulment Shard" },
+            { "Metadata/Items/Currency/CurrencyFractureRareShard", "Fracturing Shard" },
+            { "Metadata/Items/Currency/CurrencyIdentificationShard", "Scroll Fragment" },
+            { "Metadata/Items/Currency/CurrencyRerollMapTypeShard", "Horizon Shard" },
+            
+            // Quality Currency
+            { "Metadata/Items/Currency/CurrencyFlaskQuality", "Glassblower's Bauble" },
+            { "Metadata/Items/Currency/CurrencyGemQuality", "Gemcutter's Prism" },
+            { "Metadata/Items/Currency/CurrencyMapQuality", "Cartographer's Chisel" },
+            { "Metadata/Items/Currency/CurrencyWeaponQuality", "Blacksmith's Whetstone" },
+            { "Metadata/Items/Currency/CurrencyArmourQuality", "Armourer's Scrap" },
+            
+            // Basic Items
+            { "Metadata/Items/Currency/CurrencyIdentification", "Scroll of Wisdom" },
+            { "Metadata/Items/Currency/CurrencyPortal", "Portal Scroll" },
+            
+            // High-tier Currency
+            { "Metadata/Items/Currency/CurrencyImprintOrb", "Eternal Orb" },
+            { "Metadata/Items/Currency/CurrencyDuplicate", "Mirror of Kalandra" },
+            { "Metadata/Items/Currency/CurrencyVaal", "Vaal Orb" },
+            { "Metadata/Items/Currency/CurrencyLowToHigh", "Ancient Orb" },
+            { "Metadata/Items/Currency/CurrencyCorrupt", "Vaal Orb" },
+            
+            // Special items from logs
+            { "Metadata/Items/Currency/CurrencyValdoPuzzleBox", "Valdo's Puzzle Box" },
+            { "Metadata/Items/DivinationCards/DivinationCardDeck", "Stacked Deck" },
+        };
+        
+        return pathToEnglishName.TryGetValue(path, out var englishName) ? englishName : string.Empty;
+    }
+    
+    private string ExtractNameFromPath(string path)
+    {
+        // As a last resort, try to extract a meaningful name from the path
+        if (string.IsNullOrEmpty(path)) return string.Empty;
+        
+        var parts = path.Split('/');
+        if (parts.Length > 0)
+        {
+            var lastName = parts[parts.Length - 1];
+            // Remove "Currency" prefix if present
+            if (lastName.StartsWith("Currency"))
+                lastName = lastName.Substring(8);
+            
+            // Add spaces before capital letters
+            return System.Text.RegularExpressions.Regex.Replace(lastName, "([A-Z])", " $1").Trim();
+        }
+        
+        return string.Empty;
+    }
+    
+    private bool IsChineseName(string name)
+    {
+        // Simple check to see if string contains Chinese characters
+        return !string.IsNullOrEmpty(name) && name.Any(c => c >= 0x4e00 && c <= 0x9fff);
+    }
+    
+    private CurrencyPrice FindPriceByName(string itemName)
+    {
+        if (string.IsNullOrEmpty(itemName) || _allPrices == null)
+            return null;
+            
+        // Try exact match first
+        var exactMatch = _allPrices.FirstOrDefault(p => 
+            string.Equals(p.Name, itemName, StringComparison.OrdinalIgnoreCase));
+        if (exactMatch != null)
+            return exactMatch;
+            
+        // Try partial match for items that might have different variations
+        var partialMatch = _allPrices.FirstOrDefault(p => 
+            p.Name.IndexOf(itemName, StringComparison.OrdinalIgnoreCase) >= 0 ||
+            itemName.IndexOf(p.Name, StringComparison.OrdinalIgnoreCase) >= 0);
+            
+        return partialMatch;
+    }
+    
+    private void RenderHoveredItemPrice()
+    {
+        if (!Settings.EnableHoverPricing.Value)
+            return;
+            
+        if (_hoveredItemPrice == null || _lastHoveredItem?.Address == 0)
+            return;
+            
+        try
+        {
+            var mousePos = Input.MousePosition;
+            ImGui.SetNextWindowPos(new Vector2(mousePos.X + 20, mousePos.Y), ImGuiCond.Always);
+            
+            var flags = ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | 
+                       ImGuiWindowFlags.AlwaysAutoResize | ImGuiWindowFlags.NoMove | 
+                       ImGuiWindowFlags.NoSavedSettings | ImGuiWindowFlags.NoDocking |
+                       ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoInputs;
+            
+            if (ImGui.Begin("##HoverPriceTooltip", flags))
+            {
+                // Background with slight transparency
+                ImGui.PushStyleColor(ImGuiCol.WindowBg, new Vector4(0.1f, 0.1f, 0.1f, 0.9f));
+                ImGui.PushStyleColor(ImGuiCol.Border, new Vector4(0.5f, 0.5f, 0.5f, 1.0f));
+                
+                ImGui.Text($"{_hoveredItemPrice.Name}");
+                ImGui.Separator();
+                
+                if (Settings.ShowChaosValues.Value)
+                {
+                    ImGui.Text($"Chaos: {_hoveredItemPrice.GetFormattedChaosValue()}c");
+                }
+                
+                if (Settings.ShowDivineValues.Value && _hoveredItemPrice.DivineValue >= 0.01)
+                {
+                    ImGui.Text($"Divine: {_hoveredItemPrice.GetFormattedDivineValue()}d");
+                }
+                
+                if (Settings.ShowPriceChanges.Value && _hoveredItemPrice.Change24h != 0)
+                {
+                    var changeColor = _hoveredItemPrice.Change24h > 0 ? 
+                        new Vector4(0f, 1f, 0f, 1f) : // Green for positive
+                        new Vector4(1f, 0f, 0f, 1f);  // Red for negative
+                        
+                    ImGui.PushStyleColor(ImGuiCol.Text, changeColor);
+                    ImGui.Text($"24h: {(_hoveredItemPrice.Change24h > 0 ? "+" : "")}{_hoveredItemPrice.Change24h:F1}%");
+                    ImGui.PopStyleColor();
+                }
+                
+                ImGui.PopStyleColor(2);
+            }
+            ImGui.End();
+        }
+        catch (Exception ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: RenderHoveredItemPrice error - {ex.Message}");
+        }
     }
 
     public override void OnClose()

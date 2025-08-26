@@ -5,6 +5,8 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 ## Features
 
 - **Real-time Price Queries**: Fetch current league currency and fragment prices from poe.ninja
+- **Hover Item Price Display**: Show item prices instantly when hovering over items in-game
+- **Chinese Client Support**: Full support for Chinese game client with intelligent name mapping
 - **Auto Update**: Configurable auto-update interval (default 5 minutes)
 - **Smart Caching**: Local cache system to reduce API requests and support offline usage
 - **Advanced Filter System**: Multiple category filters with quick preset options
@@ -14,8 +16,9 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 
 ## Usage
 
+### Main Window
 1. Press **F8** to toggle the price window
-2. Use category checkboxes to filter different item types (currency, fragments, scarabs, etc.)
+2. Use category checkboxes to filter different item types (currency, fragments, etc.)
 3. Use quick filter buttons:
    - **Select All/None**: Toggle all filters quickly
    - **High Value**: Show only valuable items (≥1c)
@@ -26,16 +29,26 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 6. Click "Refresh" to manually update prices
 7. Adjust basic settings in F12 panel (update interval, display options, etc.)
 
+### Hover Price Display
+1. Hover your mouse over any currency or fragment in your inventory
+2. A tooltip will appear showing:
+   - Item name
+   - Chaos Orb value
+   - Divine Orb value (if applicable)  
+   - 24-hour price change (if available)
+3. The feature automatically works with Chinese and English game clients
+4. Can be disabled in F12 settings panel via "Enable Hover Pricing"
+
 ## Configuration Options
 
 **Main Settings (F12 Settings Panel)**:
 - **Toggle Price Window**: Hotkey to open price window (default F8)
+- **Enable Hover Pricing**: Enable/disable hover tooltip price display (default enabled)
 - **Update Interval**: Auto-update interval (1-30 minutes, default 5 minutes)
 - **League Name**: League name (leave empty for auto-detection, default Mercenaries)
 - **Show Chaos/Divine Values**: Display Chaos/Divine value columns
 - **Show Price Changes**: Display 24-hour price changes
 - **Auto Update Prices**: Enable automatic updates
-- **Language**: Interface language selection
 - **Window Position/Size**: Window position and size settings
 
 **Filter Controls (Main Window Only)**:
@@ -119,6 +132,15 @@ dotnet build
 
 ## Version History
 
+- **v1.2.0** (2025-08-27): Hover Item Price Display
+  - **NEW**: Hover tooltip price display for items in-game
+  - **NEW**: Full Chinese game client support with intelligent name mapping
+  - Added comprehensive currency and fragment name mapping (50+ items)
+  - Implemented multi-layer name detection system (reflection, static mapping, path parsing)
+  - Added EnableHoverPricing setting with performance optimization
+  - Enhanced tooltip UI with price change indicators
+  - Created detailed roadmap for future improvements (see ROADMAP.md)
+
 - **v1.1.1** (2025-08-27): Documentation Correction
   - Corrected README to accurately reflect only Currency and Fragments are implemented
   - Clarified that all other categories require additional API integration
@@ -134,3 +156,11 @@ dotnet build
   - Currency and fragment price queries
   - Auto-update and cache system
   - Basic UI and search functionality
+
+## Future Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for detailed future improvement plans including:
+- Enhanced name mapping with API reverse mapping and community databases
+- Additional item type support (equipment, gems, maps)
+- Advanced features (price alerts, profit calculator, market analysis)
+- Performance optimizations and code quality improvements

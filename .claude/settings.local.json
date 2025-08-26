@@ -11,7 +11,22 @@
       "mcp__playwright__browser_press_key",
       "mcp__playwright__browser_close",
       "mcp__playwright__browser_click",
-      "WebFetch(domain:poedb.tw)"
+      "WebFetch(domain:poedb.tw)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\PickItV2/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\WheresMyCraftAt\\Handlers/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)",
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)"
     ],
     "deny": [],
     "ask": []
