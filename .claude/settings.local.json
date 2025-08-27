@@ -27,7 +27,9 @@
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)",
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "mcp__playwright__browser_wait_for",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []

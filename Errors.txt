@@ -1,2 +1,0 @@
-Build failed:
-[2025/8/27 上午 04:39:05, C:\Users\user\Downloads\ExileApi-Compiled-3.26.last\Plugins\Source\PoeNinjaPricer\PoeNinjaPricer.cs(994, 54)] CS0246: 找不到類型或命名空間名稱 'InventoryItemIcon' (是否遺漏了 using 指示詞或組件參考?)

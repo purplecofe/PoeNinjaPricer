@@ -18,6 +18,7 @@ obj/
 *.user
 *.userosscache
 *.sln.docstates
+scraper/
 
 # Build Results
 [Dd]ebug/
@@ -68,3 +69,4 @@ artifacts/
 .Trashes
 ehthumbs.db
 Thumbs.db
+.claude/

@@ -1,0 +1,986 @@
+[
+  {
+    "name_zh": "聖甲蟲·裂痕",
+    "name_en": "Breach Scarab",
+    "base_type_zh": "聖甲蟲·裂痕",
+    "base_type_en": "Breach Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabBreachNew1",
+    "url": "https://poedb.tw/tw/Breach_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：築夢裂痕",
+    "name_en": "Breach Scarab of the Dreamer",
+    "base_type_zh": "聖甲蟲：築夢裂痕",
+    "base_type_en": "Breach Scarab of the Dreamer",
+    "type": "Metadata/Items/Scarabs/ScarabBreachNew2",
+    "url": "https://poedb.tw/tw/Breach_Scarab_of_the_Dreamer"
+  },
+  {
+    "name_zh": "聖甲蟲：統領裂痕",
+    "name_en": "Breach Scarab of Lordship",
+    "base_type_zh": "聖甲蟲：統領裂痕",
+    "base_type_en": "Breach Scarab of Lordship",
+    "type": "Metadata/Items/Scarabs/ScarabBreachNew3",
+    "url": "https://poedb.tw/tw/Breach_Scarab_of_Lordship"
+  },
+  {
+    "name_zh": "聖甲蟲：破碎裂痕",
+    "name_en": "Breach Scarab of Splintering",
+    "base_type_zh": "聖甲蟲：破碎裂痕",
+    "base_type_en": "Breach Scarab of Splintering",
+    "type": "Metadata/Items/Scarabs/ScarabBreachNew4",
+    "url": "https://poedb.tw/tw/Breach_Scarab_of_Splintering"
+  },
+  {
+    "name_zh": "聖甲蟲：誘捕裂痕",
+    "name_en": "Breach Scarab of Snares",
+    "base_type_zh": "聖甲蟲：誘捕裂痕",
+    "base_type_en": "Breach Scarab of Snares",
+    "type": "Metadata/Items/Scarabs/ScarabBreachNew5",
+    "url": "https://poedb.tw/tw/Breach_Scarab_of_Snares"
+  },
+  {
+    "name_zh": "聖甲蟲：共鳴浪湧裂痕",
+    "name_en": "Breach Scarab of Resonant Cascade",
+    "base_type_zh": "聖甲蟲：共鳴浪湧裂痕",
+    "base_type_en": "Breach Scarab of Resonant Cascade",
+    "type": "Metadata/Items/Scarabs/ScarabBreachNew6",
+    "url": "https://poedb.tw/tw/Breach_Scarab_of_Resonant_Cascade"
+  },
+  {
+    "name_zh": "聖甲蟲：惡化製圖",
+    "name_en": "Cartography Scarab of Escalation",
+    "base_type_zh": "聖甲蟲：惡化製圖",
+    "base_type_en": "Cartography Scarab of Escalation",
+    "type": "Metadata/Items/Scarabs/ScarabMapsNew1",
+    "url": "https://poedb.tw/tw/Cartography_Scarab_of_Escalation"
+  },
+  {
+    "name_zh": "聖甲蟲：風險製圖",
+    "name_en": "Cartography Scarab of Risk",
+    "base_type_zh": "聖甲蟲：風險製圖",
+    "base_type_en": "Cartography Scarab of Risk",
+    "type": "Metadata/Items/Scarabs/ScarabMapsNew2",
+    "url": "https://poedb.tw/tw/Cartography_Scarab_of_Risk"
+  },
+  {
+    "name_zh": "聖甲蟲：極寶製圖",
+    "name_en": "Cartography Scarab of Singularity",
+    "base_type_zh": "聖甲蟲：極寶製圖",
+    "base_type_en": "Cartography Scarab of Singularity",
+    "type": "Metadata/Items/Scarabs/ScarabMapsNew3",
+    "url": "https://poedb.tw/tw/Cartography_Scarab_of_Singularity"
+  },
+  {
+    "name_zh": "聖甲蟲：腐化製圖",
+    "name_en": "Cartography Scarab of Corruption",
+    "base_type_zh": "聖甲蟲：腐化製圖",
+    "base_type_en": "Cartography Scarab of Corruption",
+    "type": "Metadata/Items/Scarabs/ScarabMapsNew4",
+    "url": "https://poedb.tw/tw/Cartography_Scarab_of_Corruption"
+  },
+  {
+    "name_zh": "聖甲蟲：增生製圖",
+    "name_en": "Cartography Scarab of the Multitude",
+    "base_type_zh": "聖甲蟲：增生製圖",
+    "base_type_en": "Cartography Scarab of the Multitude",
+    "type": "Metadata/Items/Scarabs/ScarabMapsNew5",
+    "url": "https://poedb.tw/tw/Cartography_Scarab_of_the_Multitude"
+  },
+  {
+    "name_zh": "聖甲蟲．泰坦",
+    "name_en": "Titanic Scarab",
+    "base_type_zh": "聖甲蟲．泰坦",
+    "base_type_en": "Titanic Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabUniquesNew1",
+    "url": "https://poedb.tw/tw/Titanic_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：珍寶泰坦",
+    "name_en": "Titanic Scarab of Treasures",
+    "base_type_zh": "聖甲蟲：珍寶泰坦",
+    "base_type_en": "Titanic Scarab of Treasures",
+    "type": "Metadata/Items/Scarabs/ScarabUniquesNew2",
+    "url": "https://poedb.tw/tw/Titanic_Scarab_of_Treasures"
+  },
+  {
+    "name_zh": "聖甲蟲：傳說泰坦",
+    "name_en": "Titanic Scarab of Legend",
+    "base_type_zh": "聖甲蟲：傳說泰坦",
+    "base_type_en": "Titanic Scarab of Legend",
+    "type": "Metadata/Items/Scarabs/ScarabUniquesNew3",
+    "url": "https://poedb.tw/tw/Titanic_Scarab_of_Legend"
+  },
+  {
+    "name_zh": "聖甲蟲·獸獵",
+    "name_en": "Bestiary Scarab",
+    "base_type_zh": "聖甲蟲·獸獵",
+    "base_type_en": "Bestiary Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabBeastsNew1",
+    "url": "https://poedb.tw/tw/Bestiary_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：牧群獸獵",
+    "name_en": "Bestiary Scarab of the Herd",
+    "base_type_zh": "聖甲蟲：牧群獸獵",
+    "base_type_en": "Bestiary Scarab of the Herd",
+    "type": "Metadata/Items/Scarabs/ScarabBeastsNew2",
+    "url": "https://poedb.tw/tw/Bestiary_Scarab_of_the_Herd"
+  },
+  {
+    "name_zh": "聖甲蟲：增生獸獵",
+    "name_en": "Bestiary Scarab of Duplicating",
+    "base_type_zh": "聖甲蟲：增生獸獵",
+    "base_type_en": "Bestiary Scarab of Duplicating",
+    "type": "Metadata/Items/Scarabs/ScarabBeastsNew3",
+    "url": "https://poedb.tw/tw/Bestiary_Scarab_of_Duplicating"
+  },
+  {
+    "name_zh": "聖甲蟲：暗影烏鴉獸獵",
+    "name_en": "Bestiary Scarab of the Shadowed Crow",
+    "base_type_zh": "聖甲蟲：暗影烏鴉獸獵",
+    "base_type_en": "Bestiary Scarab of the Shadowed Crow",
+    "type": "Metadata/Items/Scarabs/ScarabBeastsNew4",
+    "url": "https://poedb.tw/tw/Bestiary_Scarab_of_the_Shadowed_Crow"
+  },
+  {
+    "name_zh": "聖甲蟲：",
+    "name_en": "Influencing Scarab of the Shaper",
+    "base_type_zh": "聖甲蟲：",
+    "base_type_en": "Influencing Scarab of the Shaper",
+    "type": "Metadata/Items/Scarabs/ScarabInfluenceNew1",
+    "url": "https://poedb.tw/tw/Influencing_Scarab_of_the_Shaper"
+  },
+  {
+    "name_zh": "聖甲蟲：",
+    "name_en": "Influencing Scarab of the Elder",
+    "base_type_zh": "聖甲蟲：",
+    "base_type_en": "Influencing Scarab of the Elder",
+    "type": "Metadata/Items/Scarabs/ScarabInfluenceNew2",
+    "url": "https://poedb.tw/tw/Influencing_Scarab_of_the_Elder"
+  },
+  {
+    "name_zh": "聖甲蟲：",
+    "name_en": "Influencing Scarab of Hordes",
+    "base_type_zh": "聖甲蟲：",
+    "base_type_en": "Influencing Scarab of Hordes",
+    "type": "Metadata/Items/Scarabs/ScarabInfluenceNew3",
+    "url": "https://poedb.tw/tw/Influencing_Scarab_of_Hordes"
+  },
+  {
+    "name_zh": "聖甲蟲：",
+    "name_en": "Influencing Scarab of Conversion",
+    "base_type_zh": "聖甲蟲：",
+    "base_type_en": "Influencing Scarab of Conversion",
+    "type": "Metadata/Items/Scarabs/ScarabInfluenceNew4",
+    "url": "https://poedb.tw/tw/Influencing_Scarab_of_Conversion"
+  },
+  {
+    "name_zh": "聖甲蟲·硫酸",
+    "name_en": "Sulphite Scarab",
+    "base_type_zh": "聖甲蟲·硫酸",
+    "base_type_en": "Sulphite Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabSulphiteNew1",
+    "url": "https://poedb.tw/tw/Sulphite_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：貪婪硫酸",
+    "name_en": "Sulphite Scarab of Greed",
+    "base_type_zh": "聖甲蟲：貪婪硫酸",
+    "base_type_en": "Sulphite Scarab of Greed",
+    "type": "Metadata/Items/Scarabs/ScarabSulphiteNew2",
+    "url": "https://poedb.tw/tw/Sulphite_Scarab_of_Greed"
+  },
+  {
+    "name_zh": "聖甲蟲：煙毒硫酸",
+    "name_en": "Sulphite Scarab of Fumes",
+    "base_type_zh": "聖甲蟲：煙毒硫酸",
+    "base_type_en": "Sulphite Scarab of Fumes",
+    "type": "Metadata/Items/Scarabs/ScarabSulphiteNew3",
+    "url": "https://poedb.tw/tw/Sulphite_Scarab_of_Fumes"
+  },
+  {
+    "name_zh": "神殿廟之命運聖甲蟲",
+    "name_en": "Divination Scarab of The Cloister",
+    "base_type_zh": "神殿廟之命運聖甲蟲",
+    "base_type_en": "Divination Scarab of The Cloister",
+    "type": "Metadata/Items/Scarabs/ScarabDivinationCardsNew1",
+    "url": "https://poedb.tw/tw/Divination_Scarab_of_The_Cloister"
+  },
+  {
+    "name_zh": "豐富之命運聖甲蟲",
+    "name_en": "Divination Scarab of Plenty",
+    "base_type_zh": "豐富之命運聖甲蟲",
+    "base_type_en": "Divination Scarab of Plenty",
+    "type": "Metadata/Items/Scarabs/ScarabDivinationCardsNew2",
+    "url": "https://poedb.tw/tw/Divination_Scarab_of_Plenty"
+  },
+  {
+    "name_zh": "盜竊之命運聖甲蟲",
+    "name_en": "Divination Scarab of Pilfering",
+    "base_type_zh": "盜竊之命運聖甲蟲",
+    "base_type_en": "Divination Scarab of Pilfering",
+    "type": "Metadata/Items/Scarabs/ScarabDivinationCardsNew3",
+    "url": "https://poedb.tw/tw/Divination_Scarab_of_Pilfering"
+  },
+  {
+    "name_zh": "聖甲蟲·苦痛",
+    "name_en": "Torment Scarab",
+    "base_type_zh": "聖甲蟲·苦痛",
+    "base_type_en": "Torment Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabTormentNew1",
+    "url": "https://poedb.tw/tw/Torment_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：特異苦痛",
+    "name_en": "Torment Scarab of Peculiarity",
+    "base_type_zh": "聖甲蟲：特異苦痛",
+    "base_type_en": "Torment Scarab of Peculiarity",
+    "type": "Metadata/Items/Scarabs/ScarabTormentNew2",
+    "url": "https://poedb.tw/tw/Torment_Scarab_of_Peculiarity"
+  },
+  {
+    "name_zh": "聖甲蟲：釋放苦痛",
+    "name_en": "Torment Scarab of Release",
+    "base_type_zh": "聖甲蟲：釋放苦痛",
+    "base_type_en": "Torment Scarab of Release",
+    "type": "Metadata/Items/Scarabs/ScarabTormentNew3",
+    "url": "https://poedb.tw/tw/Torment_Scarab_of_Release"
+  },
+  {
+    "name_zh": "聖甲蟲：附身苦痛",
+    "name_en": "Torment Scarab of Possession",
+    "base_type_zh": "聖甲蟲：附身苦痛",
+    "base_type_en": "Torment Scarab of Possession",
+    "type": "Metadata/Items/Scarabs/ScarabTormentNew4",
+    "url": "https://poedb.tw/tw/Torment_Scarab_of_Possession"
+  },
+  {
+    "name_zh": "聖甲蟲·伏擊",
+    "name_en": "Ambush Scarab",
+    "base_type_zh": "聖甲蟲·伏擊",
+    "base_type_en": "Ambush Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabStrongboxNew1",
+    "url": "https://poedb.tw/tw/Ambush_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：暗室伏擊",
+    "name_en": "Ambush Scarab of Hidden Compartments",
+    "base_type_zh": "聖甲蟲：暗室伏擊",
+    "base_type_en": "Ambush Scarab of Hidden Compartments",
+    "type": "Metadata/Items/Scarabs/ScarabStrongboxNew2",
+    "url": "https://poedb.tw/tw/Ambush_Scarab_of_Hidden_Compartments"
+  },
+  {
+    "name_zh": "聖甲蟲：爆發伏擊",
+    "name_en": "Ambush Scarab of Potency",
+    "base_type_zh": "聖甲蟲：爆發伏擊",
+    "base_type_en": "Ambush Scarab of Potency",
+    "type": "Metadata/Items/Scarabs/ScarabStrongboxNew3",
+    "url": "https://poedb.tw/tw/Ambush_Scarab_of_Potency"
+  },
+  {
+    "name_zh": "聖甲蟲：遏制伏擊",
+    "name_en": "Ambush Scarab of Containment",
+    "base_type_zh": "聖甲蟲：遏制伏擊",
+    "base_type_en": "Ambush Scarab of Containment",
+    "type": "Metadata/Items/Scarabs/ScarabStrongboxNew4",
+    "url": "https://poedb.tw/tw/Ambush_Scarab_of_Containment"
+  },
+  {
+    "name_zh": "聖甲蟲：洞察伏擊",
+    "name_en": "Ambush Scarab of Discernment",
+    "base_type_zh": "聖甲蟲：洞察伏擊",
+    "base_type_en": "Ambush Scarab of Discernment",
+    "type": "Metadata/Items/Scarabs/ScarabStrongboxNew5",
+    "url": "https://poedb.tw/tw/Ambush_Scarab_of_Discernment"
+  },
+  {
+    "name_zh": "聖甲蟲·神諭",
+    "name_en": "Harbinger Scarab",
+    "base_type_zh": "聖甲蟲·神諭",
+    "base_type_en": "Harbinger Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabHarbingerNew1",
+    "url": "https://poedb.tw/tw/Harbinger_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：石碑神諭",
+    "name_en": "Harbinger Scarab of Obelisks",
+    "base_type_zh": "聖甲蟲：石碑神諭",
+    "base_type_en": "Harbinger Scarab of Obelisks",
+    "type": "Metadata/Items/Scarabs/ScarabHarbingerNew2",
+    "url": "https://poedb.tw/tw/Harbinger_Scarab_of_Obelisks"
+  },
+  {
+    "name_zh": "聖甲蟲：攝政神諭",
+    "name_en": "Harbinger Scarab of Regency",
+    "base_type_zh": "聖甲蟲：攝政神諭",
+    "base_type_en": "Harbinger Scarab of Regency",
+    "type": "Metadata/Items/Scarabs/ScarabHarbingerNew3",
+    "url": "https://poedb.tw/tw/Harbinger_Scarab_of_Regency"
+  },
+  {
+    "name_zh": "聖甲蟲：戰儲神諭",
+    "name_en": "Harbinger Scarab of Warhoards",
+    "base_type_zh": "聖甲蟲：戰儲神諭",
+    "base_type_en": "Harbinger Scarab of Warhoards",
+    "type": "Metadata/Items/Scarabs/ScarabHarbingerNew4",
+    "url": "https://poedb.tw/tw/Harbinger_Scarab_of_Warhoards"
+  },
+  {
+    "name_zh": "探險聖甲蟲",
+    "name_en": "Expedition Scarab",
+    "base_type_zh": "探險聖甲蟲",
+    "base_type_en": "Expedition Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabExpedition1",
+    "url": "https://poedb.tw/tw/Expedition_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：尋符探險",
+    "name_en": "Expedition Scarab of Runefinding",
+    "base_type_zh": "聖甲蟲：尋符探險",
+    "base_type_en": "Expedition Scarab of Runefinding",
+    "type": "Metadata/Items/Scarabs/ScarabExpedition2",
+    "url": "https://poedb.tw/tw/Expedition_Scarab_of_Runefinding"
+  },
+  {
+    "name_zh": "聖甲蟲：維里西姆粉末探險",
+    "name_en": "Expedition Scarab of Verisium Powder",
+    "base_type_zh": "聖甲蟲：維里西姆粉末探險",
+    "base_type_en": "Expedition Scarab of Verisium Powder",
+    "type": "Metadata/Items/Scarabs/ScarabExpedition3",
+    "url": "https://poedb.tw/tw/Expedition_Scarab_of_Verisium_Powder"
+  },
+  {
+    "name_zh": "聖甲蟲：詩人探險",
+    "name_en": "Expedition Scarab of the Skald",
+    "base_type_zh": "聖甲蟲：詩人探險",
+    "base_type_en": "Expedition Scarab of the Skald",
+    "type": "Metadata/Items/Scarabs/ScarabExpedition4",
+    "url": "https://poedb.tw/tw/Expedition_Scarab_of_the_Skald"
+  },
+  {
+    "name_zh": "聖甲蟲：考古探險",
+    "name_en": "Expedition Scarab of Archaeology",
+    "base_type_zh": "聖甲蟲：考古探險",
+    "base_type_en": "Expedition Scarab of Archaeology",
+    "type": "Metadata/Items/Scarabs/ScarabExpedition5",
+    "url": "https://poedb.tw/tw/Expedition_Scarab_of_Archaeology"
+  },
+  {
+    "name_zh": "戰亂聖甲蟲",
+    "name_en": "Legion Scarab",
+    "base_type_zh": "戰亂聖甲蟲",
+    "base_type_en": "Legion Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabLegionNew1",
+    "url": "https://poedb.tw/tw/Legion_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：幹部戰亂",
+    "name_en": "Legion Scarab of Officers",
+    "base_type_zh": "聖甲蟲：幹部戰亂",
+    "base_type_en": "Legion Scarab of Officers",
+    "type": "Metadata/Items/Scarabs/ScarabLegionNew2",
+    "url": "https://poedb.tw/tw/Legion_Scarab_of_Officers"
+  },
+  {
+    "name_zh": "聖甲蟲：命令戰亂",
+    "name_en": "Legion Scarab of Command",
+    "base_type_zh": "聖甲蟲：命令戰亂",
+    "base_type_en": "Legion Scarab of Command",
+    "type": "Metadata/Items/Scarabs/ScarabLegionNew3",
+    "url": "https://poedb.tw/tw/Legion_Scarab_of_Command"
+  },
+  {
+    "name_zh": "聖甲蟲：絲克瑪戰亂",
+    "name_en": "Legion Scarab of The Sekhema",
+    "base_type_zh": "聖甲蟲：絲克瑪戰亂",
+    "base_type_en": "Legion Scarab of The Sekhema",
+    "type": "Metadata/Items/Scarabs/ScarabLegionNew4",
+    "url": "https://poedb.tw/tw/Legion_Scarab_of_The_Sekhema"
+  },
+  {
+    "name_zh": "聖甲蟲：永恆鬥爭戰亂",
+    "name_en": "Legion Scarab of Eternal Conflict",
+    "base_type_zh": "聖甲蟲：永恆鬥爭戰亂",
+    "base_type_en": "Legion Scarab of Eternal Conflict",
+    "type": "Metadata/Items/Scarabs/ScarabLegionNew5",
+    "url": "https://poedb.tw/tw/Legion_Scarab_of_Eternal_Conflict"
+  },
+  {
+    "name_zh": "深淵聖甲蟲",
+    "name_en": "Abyss Scarab",
+    "base_type_zh": "深淵聖甲蟲",
+    "base_type_en": "Abyss Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabAbyssNew1",
+    "url": "https://poedb.tw/tw/Abyss_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：眾生深淵",
+    "name_en": "Abyss Scarab of Multitudes",
+    "base_type_zh": "聖甲蟲：眾生深淵",
+    "base_type_en": "Abyss Scarab of Multitudes",
+    "type": "Metadata/Items/Scarabs/ScarabAbyssNew2",
+    "url": "https://poedb.tw/tw/Abyss_Scarab_of_Multitudes"
+  },
+  {
+    "name_zh": "聖甲蟲：宏偉深淵",
+    "name_en": "Abyss Scarab of Edifice",
+    "base_type_zh": "聖甲蟲：宏偉深淵",
+    "base_type_en": "Abyss Scarab of Edifice",
+    "type": "Metadata/Items/Scarabs/ScarabAbyssNew4",
+    "url": "https://poedb.tw/tw/Abyss_Scarab_of_Edifice"
+  },
+  {
+    "name_zh": "聖甲蟲：空虛深淵",
+    "name_en": "Abyss Scarab of Emptiness",
+    "base_type_zh": "聖甲蟲：空虛深淵",
+    "base_type_en": "Abyss Scarab of Emptiness",
+    "type": "Metadata/Items/Scarabs/ScarabAbyssNew3",
+    "url": "https://poedb.tw/tw/Abyss_Scarab_of_Emptiness"
+  },
+  {
+    "name_zh": "聖甲蟲：深沉深淵",
+    "name_en": "Abyss Scarab of Profound Depth",
+    "base_type_zh": "聖甲蟲：深沉深淵",
+    "base_type_en": "Abyss Scarab of Profound Depth",
+    "type": "Metadata/Items/Scarabs/ScarabAbyssNew5",
+    "url": "https://poedb.tw/tw/Abyss_Scarab_of_Profound_Depth"
+  },
+  {
+    "name_zh": "混亂聖甲蟲",
+    "name_en": "Anarchy Scarab",
+    "base_type_zh": "混亂聖甲蟲",
+    "base_type_en": "Anarchy Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabAnarchy1",
+    "url": "https://poedb.tw/tw/Anarchy_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：浩瀚混亂",
+    "name_en": "Anarchy Scarab of Gigantification",
+    "base_type_zh": "聖甲蟲：浩瀚混亂",
+    "base_type_en": "Anarchy Scarab of Gigantification",
+    "type": "Metadata/Items/Scarabs/ScarabAnarchy2",
+    "url": "https://poedb.tw/tw/Anarchy_Scarab_of_Gigantification"
+  },
+  {
+    "name_zh": "聖甲蟲：結夥混亂",
+    "name_en": "Anarchy Scarab of Partnership",
+    "base_type_zh": "聖甲蟲：結夥混亂",
+    "base_type_en": "Anarchy Scarab of Partnership",
+    "type": "Metadata/Items/Scarabs/ScarabAnarchy3",
+    "url": "https://poedb.tw/tw/Anarchy_Scarab_of_Partnership"
+  },
+  {
+    "name_zh": "精髓聖甲蟲",
+    "name_en": "Essence Scarab",
+    "base_type_zh": "精髓聖甲蟲",
+    "base_type_en": "Essence Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabEssence1",
+    "url": "https://poedb.tw/tw/Essence_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：上升精髓",
+    "name_en": "Essence Scarab of Ascent",
+    "base_type_zh": "聖甲蟲：上升精髓",
+    "base_type_en": "Essence Scarab of Ascent",
+    "type": "Metadata/Items/Scarabs/ScarabEssence2",
+    "url": "https://poedb.tw/tw/Essence_Scarab_of_Ascent"
+  },
+  {
+    "name_zh": "聖甲蟲：穩定精髓",
+    "name_en": "Essence Scarab of Stability",
+    "base_type_zh": "聖甲蟲：穩定精髓",
+    "base_type_en": "Essence Scarab of Stability",
+    "type": "Metadata/Items/Scarabs/ScarabEssence3",
+    "url": "https://poedb.tw/tw/Essence_Scarab_of_Stability"
+  },
+  {
+    "name_zh": "聖甲蟲：鈣化精髓",
+    "name_en": "Essence Scarab of Calcification",
+    "base_type_zh": "聖甲蟲：鈣化精髓",
+    "base_type_en": "Essence Scarab of Calcification",
+    "type": "Metadata/Items/Scarabs/ScarabEssence4",
+    "url": "https://poedb.tw/tw/Essence_Scarab_of_Calcification"
+  },
+  {
+    "name_zh": "聖甲蟲：適性精髓",
+    "name_en": "Essence Scarab of Adaptation",
+    "base_type_zh": "聖甲蟲：適性精髓",
+    "base_type_en": "Essence Scarab of Adaptation",
+    "type": "Metadata/Items/Scarabs/ScarabEssence5",
+    "url": "https://poedb.tw/tw/Essence_Scarab_of_Adaptation"
+  },
+  {
+    "name_zh": "支配聖甲蟲",
+    "name_en": "Domination Scarab",
+    "base_type_zh": "支配聖甲蟲",
+    "base_type_en": "Domination Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabDomination1",
+    "url": "https://poedb.tw/tw/Domination_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：映像支配",
+    "name_en": "Domination Scarab of Apparitions",
+    "base_type_zh": "聖甲蟲：映像支配",
+    "base_type_en": "Domination Scarab of Apparitions",
+    "type": "Metadata/Items/Scarabs/ScarabDomination2",
+    "url": "https://poedb.tw/tw/Domination_Scarab_of_Apparitions"
+  },
+  {
+    "name_zh": "聖甲蟲：進化支配",
+    "name_en": "Domination Scarab of Evolution",
+    "base_type_zh": "聖甲蟲：進化支配",
+    "base_type_en": "Domination Scarab of Evolution",
+    "type": "Metadata/Items/Scarabs/ScarabDomination3",
+    "url": "https://poedb.tw/tw/Domination_Scarab_of_Evolution"
+  },
+  {
+    "name_zh": "聖甲蟲：惡懼支配",
+    "name_en": "Domination Scarab of Terrors",
+    "base_type_zh": "聖甲蟲：惡懼支配",
+    "base_type_en": "Domination Scarab of Terrors",
+    "type": "Metadata/Items/Scarabs/ScarabDomination4",
+    "url": "https://poedb.tw/tw/Domination_Scarab_of_Terrors"
+  },
+  {
+    "name_zh": "聖甲蟲：揀選祭祀",
+    "name_en": "Ritual Scarab of Selectiveness",
+    "base_type_zh": "聖甲蟲：揀選祭祀",
+    "base_type_en": "Ritual Scarab of Selectiveness",
+    "type": "Metadata/Items/Scarabs/ScarabRitual1",
+    "url": "https://poedb.tw/tw/Ritual_Scarab_of_Selectiveness"
+  },
+  {
+    "name_zh": "聖甲蟲：妖精祭祀",
+    "name_en": "Ritual Scarab of Wisps",
+    "base_type_zh": "聖甲蟲：妖精祭祀",
+    "base_type_en": "Ritual Scarab of Wisps",
+    "type": "Metadata/Items/Scarabs/ScarabRitual2",
+    "url": "https://poedb.tw/tw/Ritual_Scarab_of_Wisps"
+  },
+  {
+    "name_zh": "聖甲蟲：繁榮祭祀",
+    "name_en": "Ritual Scarab of Abundance",
+    "base_type_zh": "聖甲蟲：繁榮祭祀",
+    "base_type_en": "Ritual Scarab of Abundance",
+    "type": "Metadata/Items/Scarabs/ScarabRitual3",
+    "url": "https://poedb.tw/tw/Ritual_Scarab_of_Abundance"
+  },
+  {
+    "name_zh": "豐收聖甲蟲",
+    "name_en": "Harvest Scarab",
+    "base_type_zh": "豐收聖甲蟲",
+    "base_type_en": "Harvest Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabHarvest1",
+    "url": "https://poedb.tw/tw/Harvest_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：倍增豐收",
+    "name_en": "Harvest Scarab of Doubling",
+    "base_type_zh": "聖甲蟲：倍增豐收",
+    "base_type_en": "Harvest Scarab of Doubling",
+    "type": "Metadata/Items/Scarabs/ScarabHarvest2",
+    "url": "https://poedb.tw/tw/Harvest_Scarab_of_Doubling"
+  },
+  {
+    "name_zh": "聖甲蟲：富饒豐收",
+    "name_en": "Harvest Scarab of Cornucopia",
+    "base_type_zh": "聖甲蟲：富饒豐收",
+    "base_type_en": "Harvest Scarab of Cornucopia",
+    "type": "Metadata/Items/Scarabs/ScarabHarvest3",
+    "url": "https://poedb.tw/tw/Harvest_Scarab_of_Cornucopia"
+  },
+  {
+    "name_zh": "穿越聖甲蟲",
+    "name_en": "Incursion Scarab",
+    "base_type_zh": "穿越聖甲蟲",
+    "base_type_en": "Incursion Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabIncursion1",
+    "url": "https://poedb.tw/tw/Incursion_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：侵略穿越",
+    "name_en": "Incursion Scarab of Invasion",
+    "base_type_zh": "聖甲蟲：侵略穿越",
+    "base_type_en": "Incursion Scarab of Invasion",
+    "type": "Metadata/Items/Scarabs/ScarabIncursion2",
+    "url": "https://poedb.tw/tw/Incursion_Scarab_of_Invasion"
+  },
+  {
+    "name_zh": "聖甲蟲：鬥士穿越",
+    "name_en": "Incursion Scarab of Champions",
+    "base_type_zh": "聖甲蟲：鬥士穿越",
+    "base_type_en": "Incursion Scarab of Champions",
+    "type": "Metadata/Items/Scarabs/ScarabIncursion3",
+    "url": "https://poedb.tw/tw/Incursion_Scarab_of_Champions"
+  },
+  {
+    "name_zh": "聖甲蟲：時間線穿越",
+    "name_en": "Incursion Scarab of Timelines",
+    "base_type_zh": "聖甲蟲：時間線穿越",
+    "base_type_en": "Incursion Scarab of Timelines",
+    "type": "Metadata/Items/Scarabs/ScarabIncursion4",
+    "url": "https://poedb.tw/tw/Incursion_Scarab_of_Timelines"
+  },
+  {
+    "name_zh": "反叛聖甲蟲",
+    "name_en": "Betrayal Scarab",
+    "base_type_zh": "反叛聖甲蟲",
+    "base_type_en": "Betrayal Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabBetrayal1",
+    "url": "https://poedb.tw/tw/Betrayal_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：不滅之火反叛",
+    "name_en": "Betrayal Scarab of the Allflame",
+    "base_type_zh": "聖甲蟲：不滅之火反叛",
+    "base_type_en": "Betrayal Scarab of the Allflame",
+    "type": "Metadata/Items/Scarabs/ScarabBetrayal2",
+    "url": "https://poedb.tw/tw/Betrayal_Scarab_of_the_Allflame"
+  },
+  {
+    "name_zh": "聖甲蟲：支援反叛",
+    "name_en": "Betrayal Scarab of Reinforcements",
+    "base_type_zh": "聖甲蟲：支援反叛",
+    "base_type_en": "Betrayal Scarab of Reinforcements",
+    "type": "Metadata/Items/Scarabs/ScarabBetrayal3",
+    "url": "https://poedb.tw/tw/Betrayal_Scarab_of_Reinforcements"
+  },
+  {
+    "name_zh": "聖甲蟲：永存反叛",
+    "name_en": "Betrayal Scarab of Perpetuation",
+    "base_type_zh": "聖甲蟲：永存反叛",
+    "base_type_en": "Betrayal Scarab of Perpetuation",
+    "type": "Metadata/Items/Scarabs/ScarabBetrayal4",
+    "url": "https://poedb.tw/tw/Betrayal_Scarab_of_Perpetuation"
+  },
+  {
+    "name_zh": "超越聖甲蟲",
+    "name_en": "Beyond Scarab",
+    "base_type_zh": "超越聖甲蟲",
+    "base_type_en": "Beyond Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabBeyond1",
+    "url": "https://poedb.tw/tw/Beyond_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：腐化超越",
+    "name_en": "Beyond Scarab of Corruption",
+    "base_type_zh": "聖甲蟲：腐化超越",
+    "base_type_en": "Beyond Scarab of Corruption",
+    "type": "Metadata/Items/Scarabs/ScarabBeyond2",
+    "url": "https://poedb.tw/tw/Beyond_Scarab_of_Corruption"
+  },
+  {
+    "name_zh": "聖甲蟲：血病超越",
+    "name_en": "Beyond Scarab of Haemophilia",
+    "base_type_zh": "聖甲蟲：血病超越",
+    "base_type_en": "Beyond Scarab of Haemophilia",
+    "type": "Metadata/Items/Scarabs/ScarabBeyond3",
+    "url": "https://poedb.tw/tw/Beyond_Scarab_of_Haemophilia"
+  },
+  {
+    "name_zh": "聖甲蟲：復興超越",
+    "name_en": "Beyond Scarab of Resurgence",
+    "base_type_zh": "聖甲蟲：復興超越",
+    "base_type_en": "Beyond Scarab of Resurgence",
+    "type": "Metadata/Items/Scarabs/ScarabBeyond4",
+    "url": "https://poedb.tw/tw/Beyond_Scarab_of_Resurgence"
+  },
+  {
+    "name_zh": "聖甲蟲：侵略超越",
+    "name_en": "Beyond Scarab of the Invasion",
+    "base_type_zh": "聖甲蟲：侵略超越",
+    "base_type_en": "Beyond Scarab of the Invasion",
+    "type": "Metadata/Items/Scarabs/ScarabBeyond5",
+    "url": "https://poedb.tw/tw/Beyond_Scarab_of_the_Invasion"
+  },
+  {
+    "name_zh": "通牒聖甲蟲",
+    "name_en": "Ultimatum Scarab",
+    "base_type_zh": "通牒聖甲蟲",
+    "base_type_en": "Ultimatum Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabUltimatum1",
+    "url": "https://poedb.tw/tw/Ultimatum_Scarab"
+  },
+  {
+    "name_zh": "通牒賄賂之聖甲蟲",
+    "name_en": "Ultimatum Scarab of Bribing",
+    "base_type_zh": "通牒賄賂之聖甲蟲",
+    "base_type_en": "Ultimatum Scarab of Bribing",
+    "type": "Metadata/Items/Scarabs/ScarabUltimatum2",
+    "url": "https://poedb.tw/tw/Ultimatum_Scarab_of_Bribing"
+  },
+  {
+    "name_zh": "通牒決鬥之聖甲蟲",
+    "name_en": "Ultimatum Scarab of Dueling",
+    "base_type_zh": "通牒決鬥之聖甲蟲",
+    "base_type_en": "Ultimatum Scarab of Dueling",
+    "type": "Metadata/Items/Scarabs/ScarabUltimatum3",
+    "url": "https://poedb.tw/tw/Ultimatum_Scarab_of_Dueling"
+  },
+  {
+    "name_zh": "通牒催化的聖甲蟲",
+    "name_en": "Ultimatum Scarab of Catalysing",
+    "base_type_zh": "通牒催化的聖甲蟲",
+    "base_type_en": "Ultimatum Scarab of Catalysing",
+    "type": "Metadata/Items/Scarabs/ScarabUltimatum4",
+    "url": "https://poedb.tw/tw/Ultimatum_Scarab_of_Catalysing"
+  },
+  {
+    "name_zh": "通牒銘文之聖甲蟲",
+    "name_en": "Ultimatum Scarab of Inscription",
+    "base_type_zh": "通牒銘文之聖甲蟲",
+    "base_type_en": "Ultimatum Scarab of Inscription",
+    "type": "Metadata/Items/Scarabs/ScarabUltimatum5",
+    "url": "https://poedb.tw/tw/Ultimatum_Scarab_of_Inscription"
+  },
+  {
+    "name_zh": "譫妄聖甲蟲",
+    "name_en": "Delirium Scarab",
+    "base_type_zh": "譫妄聖甲蟲",
+    "base_type_en": "Delirium Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabDelirium1",
+    "url": "https://poedb.tw/tw/Delirium_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：狂熱譫妄",
+    "name_en": "Delirium Scarab of Mania",
+    "base_type_zh": "聖甲蟲：狂熱譫妄",
+    "base_type_en": "Delirium Scarab of Mania",
+    "type": "Metadata/Items/Scarabs/ScarabDelirium2",
+    "url": "https://poedb.tw/tw/Delirium_Scarab_of_Mania"
+  },
+  {
+    "name_zh": "聖甲蟲：偏執譫妄",
+    "name_en": "Delirium Scarab of Paranoia",
+    "base_type_zh": "聖甲蟲：偏執譫妄",
+    "base_type_en": "Delirium Scarab of Paranoia",
+    "type": "Metadata/Items/Scarabs/ScarabDelirium3",
+    "url": "https://poedb.tw/tw/Delirium_Scarab_of_Paranoia"
+  },
+  {
+    "name_zh": "聖甲蟲：神經譫妄",
+    "name_en": "Delirium Scarab of Neuroses",
+    "base_type_zh": "聖甲蟲：神經譫妄",
+    "base_type_en": "Delirium Scarab of Neuroses",
+    "type": "Metadata/Items/Scarabs/ScarabDelirium4",
+    "url": "https://poedb.tw/tw/Delirium_Scarab_of_Neuroses"
+  },
+  {
+    "name_zh": "聖甲蟲：幻覺譫妄",
+    "name_en": "Delirium Scarab of Delusions",
+    "base_type_zh": "聖甲蟲：幻覺譫妄",
+    "base_type_en": "Delirium Scarab of Delusions",
+    "type": "Metadata/Items/Scarabs/ScarabDelirium5",
+    "url": "https://poedb.tw/tw/Delirium_Scarab_of_Delusions"
+  },
+  {
+    "name_zh": "凋落聖甲蟲",
+    "name_en": "Blight Scarab",
+    "base_type_zh": "凋落聖甲蟲",
+    "base_type_en": "Blight Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabBlightNew1",
+    "url": "https://poedb.tw/tw/Blight_Scarab"
+  },
+  {
+    "name_zh": "聖甲蟲：珍寶凋落",
+    "name_en": "Blight Scarab of Bounty",
+    "base_type_zh": "聖甲蟲：珍寶凋落",
+    "base_type_en": "Blight Scarab of Bounty",
+    "type": "Metadata/Items/Scarabs/ScarabBlightNew2",
+    "url": "https://poedb.tw/tw/Blight_Scarab_of_Bounty"
+  },
+  {
+    "name_zh": "聖甲蟲：枯萎之心凋落",
+    "name_en": "Blight Scarab of the Blightheart",
+    "base_type_zh": "聖甲蟲：枯萎之心凋落",
+    "base_type_en": "Blight Scarab of the Blightheart",
+    "type": "Metadata/Items/Scarabs/ScarabBlightNew3",
+    "url": "https://poedb.tw/tw/Blight_Scarab_of_the_Blightheart"
+  },
+  {
+    "name_zh": "聖甲蟲：綻放凋落",
+    "name_en": "Blight Scarab of Blooming",
+    "base_type_zh": "聖甲蟲：綻放凋落",
+    "base_type_en": "Blight Scarab of Blooming",
+    "type": "Metadata/Items/Scarabs/ScarabBlightNew4",
+    "url": "https://poedb.tw/tw/Blight_Scarab_of_Blooming"
+  },
+  {
+    "name_zh": "聖甲蟲：振奮凋落",
+    "name_en": "Blight Scarab of Invigoration",
+    "base_type_zh": "聖甲蟲：振奮凋落",
+    "base_type_en": "Blight Scarab of Invigoration",
+    "type": "Metadata/Items/Scarabs/ScarabBlightNew5",
+    "url": "https://poedb.tw/tw/Blight_Scarab_of_Invigoration"
+  },
+  {
+    "name_zh": "卡爾葛聖甲蟲",
+    "name_en": "Kalguuran Scarab",
+    "base_type_zh": "卡爾葛聖甲蟲",
+    "base_type_en": "Kalguuran Scarab",
+    "type": "Metadata/Items/Scarabs/ScarabSettlers1",
+    "url": "https://poedb.tw/tw/Kalguuran_Scarab"
+  },
+  {
+    "name_zh": "卡爾葛聖甲蟲：守衛財寶",
+    "name_en": "Kalguuran Scarab of Guarded Riches",
+    "base_type_zh": "卡爾葛聖甲蟲：守衛財寶",
+    "base_type_en": "Kalguuran Scarab of Guarded Riches",
+    "type": "Metadata/Items/Scarabs/ScarabSettlers2",
+    "url": "https://poedb.tw/tw/Kalguuran_Scarab_of_Guarded_Riches"
+  },
+  {
+    "name_zh": "卡爾葛聖甲蟲：精化",
+    "name_en": "Kalguuran Scarab of Refinement",
+    "base_type_zh": "卡爾葛聖甲蟲：精化",
+    "base_type_en": "Kalguuran Scarab of Refinement",
+    "type": "Metadata/Items/Scarabs/ScarabSettlers3",
+    "url": "https://poedb.tw/tw/Kalguuran_Scarab_of_Refinement"
+  },
+  {
+    "name_zh": "聖甲蟲：畸形血脈",
+    "name_en": "Scarab of Monstrous Lineage",
+    "base_type_zh": "聖甲蟲：畸形血脈",
+    "base_type_en": "Scarab of Monstrous Lineage",
+    "type": "Metadata/Items/Scarabs/ScarabMisc1",
+    "url": "https://poedb.tw/tw/Scarab_of_Monstrous_Lineage"
+  },
+  {
+    "name_zh": "聖甲蟲：敵手",
+    "name_en": "Scarab of Adversaries",
+    "base_type_zh": "聖甲蟲：敵手",
+    "base_type_en": "Scarab of Adversaries",
+    "type": "Metadata/Items/Scarabs/ScarabMisc2",
+    "url": "https://poedb.tw/tw/Scarab_of_Adversaries"
+  },
+  {
+    "name_zh": "聖甲蟲：神聖",
+    "name_en": "Scarab of Divinity",
+    "base_type_zh": "聖甲蟲：神聖",
+    "base_type_en": "Scarab of Divinity",
+    "type": "Metadata/Items/Scarabs/ScarabMisc3",
+    "url": "https://poedb.tw/tw/Scarab_of_Divinity"
+  },
+  {
+    "name_zh": "聖甲蟲：通緝叛徒",
+    "name_en": "Scarab of Hunted Traitors",
+    "base_type_zh": "聖甲蟲：通緝叛徒",
+    "base_type_en": "Scarab of Hunted Traitors",
+    "type": "Metadata/Items/Scarabs/ScarabMisc4",
+    "url": "https://poedb.tw/tw/Scarab_of_Hunted_Traitors"
+  },
+  {
+    "name_zh": "聖甲蟲：穩定",
+    "name_en": "Scarab of Stability",
+    "base_type_zh": "聖甲蟲：穩定",
+    "base_type_en": "Scarab of Stability",
+    "type": "Metadata/Items/Scarabs/ScarabMisc5",
+    "url": "https://poedb.tw/tw/Scarab_of_Stability"
+  },
+  {
+    "name_zh": "聖甲蟲：指揮官",
+    "name_en": "Scarab of the Commander",
+    "base_type_zh": "聖甲蟲：指揮官",
+    "base_type_en": "Scarab of the Commander",
+    "type": "Metadata/Items/Scarabs/ScarabMisc6",
+    "url": "https://poedb.tw/tw/Scarab_of_the_Commander"
+  },
+  {
+    "name_zh": "聖甲蟲：進化",
+    "name_en": "Scarab of Evolution",
+    "base_type_zh": "聖甲蟲：進化",
+    "base_type_en": "Scarab of Evolution",
+    "type": "Metadata/Items/Scarabs/ScarabMisc7",
+    "url": "https://poedb.tw/tw/Scarab_of_Evolution"
+  },
+  {
+    "name_zh": "聖甲蟲：妖精",
+    "name_en": "Scarab of Wisps",
+    "base_type_zh": "聖甲蟲：妖精",
+    "base_type_en": "Scarab of Wisps",
+    "type": "Metadata/Items/Scarabs/ScarabMisc8",
+    "url": "https://poedb.tw/tw/Scarab_of_Wisps"
+  },
+  {
+    "name_zh": "聖甲蟲：二分法",
+    "name_en": "Scarab of Bisection",
+    "base_type_zh": "聖甲蟲：二分法",
+    "base_type_en": "Scarab of Bisection",
+    "type": "Metadata/Items/Scarabs/ScarabMisc9",
+    "url": "https://poedb.tw/tw/Scarab_of_Bisection"
+  },
+  {
+    "name_zh": "聖甲蟲：團結",
+    "name_en": "Scarab of Unity",
+    "base_type_zh": "聖甲蟲：團結",
+    "base_type_en": "Scarab of Unity",
+    "type": "Metadata/Items/Scarabs/ScarabMisc10",
+    "url": "https://poedb.tw/tw/Scarab_of_Unity"
+  },
+  {
+    "name_zh": "聖甲蟲：光輝風暴",
+    "name_en": "Scarab of Radiant Storms",
+    "base_type_zh": "聖甲蟲：光輝風暴",
+    "base_type_en": "Scarab of Radiant Storms",
+    "type": "Metadata/Items/Scarabs/ScarabMisc11",
+    "url": "https://poedb.tw/tw/Scarab_of_Radiant_Storms"
+  },
+  {
+    "name_zh": "聖甲蟲：血統犄角",
+    "name_en": "Horned Scarab of Bloodlines",
+    "base_type_zh": "聖甲蟲：血統犄角",
+    "base_type_en": "Horned Scarab of Bloodlines",
+    "type": "Metadata/Items/Scarabs/ScarabUber1",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Bloodlines"
+  },
+  {
+    "name_zh": "聖甲蟲：復仇犄角",
+    "name_en": "Horned Scarab of Nemeses",
+    "base_type_zh": "聖甲蟲：復仇犄角",
+    "base_type_en": "Horned Scarab of Nemeses",
+    "type": "Metadata/Items/Scarabs/ScarabUber2",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Nemeses"
+  },
+  {
+    "name_zh": "聖甲蟲：庇護犄角",
+    "name_en": "Horned Scarab of Preservation",
+    "base_type_zh": "聖甲蟲：庇護犄角",
+    "base_type_en": "Horned Scarab of Preservation",
+    "type": "Metadata/Items/Scarabs/ScarabUber3",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Preservation"
+  },
+  {
+    "name_zh": "聖甲蟲：覺醒犄角",
+    "name_en": "Horned Scarab of Awakening",
+    "base_type_zh": "聖甲蟲：覺醒犄角",
+    "base_type_en": "Horned Scarab of Awakening",
+    "type": "Metadata/Items/Scarabs/ScarabUber4",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Awakening"
+  },
+  {
+    "name_zh": "聖甲蟲：傳統犄角",
+    "name_en": "Horned Scarab of Tradition",
+    "base_type_zh": "聖甲蟲：傳統犄角",
+    "base_type_en": "Horned Scarab of Tradition",
+    "type": "Metadata/Items/Scarabs/ScarabUber5",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Tradition"
+  },
+  {
+    "name_zh": "聖甲蟲：閃亮犄角",
+    "name_en": "Horned Scarab of Glittering",
+    "base_type_zh": "聖甲蟲：閃亮犄角",
+    "base_type_en": "Horned Scarab of Glittering",
+    "type": "Metadata/Items/Scarabs/ScarabUber6",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Glittering"
+  },
+  {
+    "name_zh": "聖甲蟲：萬劫犄角",
+    "name_en": "Horned Scarab of Pandemonium",
+    "base_type_zh": "聖甲蟲：萬劫犄角",
+    "base_type_en": "Horned Scarab of Pandemonium",
+    "type": "Metadata/Items/Scarabs/ScarabUber7",
+    "url": "https://poedb.tw/tw/Horned_Scarab_of_Pandemonium"
+  }
+]
