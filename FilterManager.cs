@@ -48,7 +48,6 @@ public class FilterManager
             return new List<CurrencyPrice>();
         
         var activeCategories = GetActiveCategories();
-        var minChaosValue = _settings?.MinChaosValue?.Value ?? 0f;
         
         return prices.Where(price => 
         {
@@ -58,10 +57,6 @@ public class FilterManager
             // 分類篩選
             var itemCategory = CurrencyClassifier.GetCategory(price.Name);
             if (!activeCategories.HasFlag(itemCategory))
-                return false;
-            
-            // 最小價值篩選
-            if (price.ChaosValue < minChaosValue)
                 return false;
             
             return true;
@@ -77,32 +72,6 @@ public class FilterManager
         }
     }
     
-    public void ApplyHighValueFilter()
-    {
-        // 這些方法現在由主程式直接處理，這裡只設置最小價值
-        if (_settings != null)
-        {
-            _settings.MinChaosValue.Value = 1.0f; // 只顯示 1c 以上的物品
-        }
-    }
-    
-    public void ApplyCurrencyOnlyFilter()
-    {
-        // 這些方法現在由主程式直接處理，這裡只設置最小價值
-        if (_settings != null)
-        {
-            _settings.MinChaosValue.Value = 0f;
-        }
-    }
-    
-    public void ApplyGeneralItemsFilter()
-    {
-        // 這些方法現在由主程式直接處理，這裡只設置最小價值
-        if (_settings != null)
-        {
-            _settings.MinChaosValue.Value = 0f;
-        }
-    }
     
     
     public string GetFilterSummary(List<CurrencyPrice> originalPrices, List<CurrencyPrice> filteredPrices)
@@ -114,14 +83,11 @@ public class FilterManager
         if (activeCategories == CurrencyCategory.None)
             return "No items displayed";
         
-        if (activeCategories == CurrencyCategory.All && _settings.MinChaosValue.Value == 0f)
+        if (activeCategories == CurrencyCategory.All)
             return $"Showing all {totalItems} items";
             
         var categoryCount = CountEnabledCategories(activeCategories);
         var summary = $"Showing {filteredItems}/{totalItems} items ({categoryCount} categories)";
-        
-        if (_settings.MinChaosValue.Value > 0f)
-            summary += $" (≥{_settings.MinChaosValue.Value:F1}c)";
             
         return summary;
     }

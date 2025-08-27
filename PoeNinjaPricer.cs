@@ -35,17 +35,18 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     private DateTime _lastHoverCheck = DateTime.MinValue;
     
     // Filter states (no longer in settings to hide from F12 menu)
+    // Default: Currency Only preset
     private bool _showCurrency = true;
-    private bool _showFragments = true;
-    private bool _showUniqueIdols = true;
-    private bool _showRunecrafts = true;
-    private bool _showAllflameEmbers = true;
-    private bool _showTattoos = true;
-    private bool _showOmens = true;
-    private bool _showDivinationCards = true;
-    private bool _showArtifacts = true;
-    private bool _showOils = true;
-    private bool _showIncubators = true;
+    private bool _showFragments = false;
+    private bool _showUniqueIdols = false;
+    private bool _showRunecrafts = false;
+    private bool _showAllflameEmbers = false;
+    private bool _showTattoos = false;
+    private bool _showOmens = false;
+    private bool _showDivinationCards = false;
+    private bool _showArtifacts = false;
+    private bool _showOils = false;
+    private bool _showIncubators = false;
     private bool _showUniqueWeapons = false;
     private bool _showUniqueArmours = false;
     private bool _showUniqueAccessories = false;
@@ -59,17 +60,17 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
     private bool _showBlightedMaps = false;
     private bool _showBlightRavagedMaps = false;
     private bool _showUniqueMaps = false;
-    private bool _showDeliriumOrbs = true;
-    private bool _showInvitations = true;
-    private bool _showScarabs = true;
-    private bool _showMemories = true;
+    private bool _showDeliriumOrbs = false;
+    private bool _showInvitations = false;
+    private bool _showScarabs = false;
+    private bool _showMemories = false;
     private bool _showBaseTypes = false;
-    private bool _showFossils = true;
-    private bool _showResonators = true;
-    private bool _showBeasts = true;
-    private bool _showEssences = true;
-    private bool _showVials = true;
-    private bool _showOthers = true;
+    private bool _showFossils = false;
+    private bool _showResonators = false;
+    private bool _showBeasts = false;
+    private bool _showEssences = false;
+    private bool _showVials = false;
+    private bool _showOthers = false;
 
     public PoeNinjaPricer()
     {
@@ -393,58 +394,6 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             }
         }
         
-        ImGui.SameLine();
-        if (ImGui.Button("High Value"))
-        {
-            // 高價值過濾：只顯示通貨、碎片、聖甲蟲、譫妄、邀請函
-            SetAllFilterCategories(false);
-            _showCurrency = true;
-            _showFragments = true;
-            _showScarabs = true;
-            _showDeliriumOrbs = true;
-            _showInvitations = true;
-            Settings.MinChaosValue.Value = 1.0f;
-            FilterPrices();
-        }
-        
-        ImGui.SameLine();
-        if (ImGui.Button("Currency Only"))
-        {
-            // 僅通貨過濾
-            SetAllFilterCategories(false);
-            _showCurrency = true;
-            Settings.MinChaosValue.Value = 0f;
-            FilterPrices();
-        }
-        
-        ImGui.SameLine();
-        if (ImGui.Button("Common Items"))
-        {
-            // 常用物品過濾：顯示通用分類物品
-            SetAllFilterCategories(false);
-            _showCurrency = true;
-            _showFragments = true;
-            _showDivinationCards = true;
-            _showOils = true;
-            _showIncubators = true;
-            _showEssences = true;
-            _showFossils = true;
-            _showResonators = true;
-            _showScarabs = true;
-            Settings.MinChaosValue.Value = 0f;
-            FilterPrices();
-        }
-        
-        // Minimum value slider
-        ImGui.Text("Min Value:");
-        ImGui.SameLine();
-        ImGui.SetNextItemWidth(120);
-        var minValue = Settings.MinChaosValue.Value;
-        if (ImGui.SliderFloat("##MinChaosValue", ref minValue, 0f, 50f, "%.1fc"))
-        {
-            Settings.MinChaosValue.Value = minValue;
-            FilterPrices();
-        }
     }
 
     private void RenderToolbar()

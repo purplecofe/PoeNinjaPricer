@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Windows.Forms;
+using ExileCore.Shared.Attributes;
 using ExileCore.Shared.Interfaces;
 using ExileCore.Shared.Nodes;
 
@@ -15,6 +16,7 @@ public class PoeNinjaPricerSettings : ISettings
     public ToggleNode ShowDivineValues { get; set; } = new(true);
     public ToggleNode ShowPriceChanges { get; set; } = new(true);
     public ToggleNode AutoUpdatePrices { get; set; } = new(true);
+    [Menu("League Name (leave blank for auto-detection)")]
     public TextNode LeagueName { get; set; } = new("");
     
     public RangeNode<int> WindowPosX { get; set; } = new(100, 0, 2000);
@@ -22,8 +24,6 @@ public class PoeNinjaPricerSettings : ISettings
     public RangeNode<int> WindowWidth { get; set; } = new(600, 300, 1200);
     public RangeNode<int> WindowHeight { get; set; } = new(400, 200, 800);
     
-    // 最小價值過濾 (供主視窗使用)
-    public RangeNode<float> MinChaosValue { get; set; } = new(0f, 0f, 100f);
     
     // Hover item price display settings
     public ToggleNode EnableHoverPricing { get; set; } = new(true);
