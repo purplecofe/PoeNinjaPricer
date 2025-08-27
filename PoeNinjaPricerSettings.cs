@@ -27,4 +27,7 @@ public class PoeNinjaPricerSettings : ISettings
     
     // Hover item price display settings
     public ToggleNode EnableHoverPricing { get; set; } = new(true);
+    
+    // Debug settings
+    public ToggleNode EnableDebugLogging { get; set; } = new(false);
 }

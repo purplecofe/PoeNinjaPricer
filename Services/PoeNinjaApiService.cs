@@ -17,10 +17,12 @@ public class PoeNinjaApiService : IDisposable
 
     private const string BaseUrl = "https://poe.ninja/api/data/currencyoverview";
     private readonly string _leagueName;
+    private readonly Func<bool> _isDebugEnabled;
 
-    public PoeNinjaApiService(string leagueName)
+    public PoeNinjaApiService(string leagueName, Func<bool> isDebugEnabled = null)
     {
         _leagueName = leagueName;
+        _isDebugEnabled = isDebugEnabled;
     }
 
     /// <summary>
@@ -60,14 +62,16 @@ public class PoeNinjaApiService : IDisposable
         try
         {
             var url = $"{BaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type={type}";
-            DebugWindow.LogMsg($"PoeNinjaPricer: Fetching {type} data from {url}");
+            if (_isDebugEnabled?.Invoke() == true)
+                DebugWindow.LogMsg($"PoeNinjaPricer: Fetching {type} data from {url}");
 
             var response = await _httpClient.GetStringAsync(url);
             var data = JsonConvert.DeserializeObject<PoeNinjaResponse>(response);
 
             if (data?.Lines?.Count > 0)
             {
-                DebugWindow.LogMsg($"PoeNinjaPricer: Successfully fetched {data.Lines.Count} {type} entries");
+                if (_isDebugEnabled?.Invoke() == true)
+                    DebugWindow.LogMsg($"PoeNinjaPricer: Successfully fetched {data.Lines.Count} {type} entries");
                 return data;
             }
             else
@@ -121,7 +125,8 @@ public class PoeNinjaApiService : IDisposable
             if (line.CurrencyTypeName.Equals("Divine Orb", StringComparison.OrdinalIgnoreCase))
             {
                 CurrencyPrice.UpdateDivineRate(price.ChaosValue);
-                DebugWindow.LogMsg($"PoeNinjaPricer: Updated Divine Orb rate to {price.ChaosValue} chaos");
+                if (_isDebugEnabled?.Invoke() == true)
+                    DebugWindow.LogMsg($"PoeNinjaPricer: Updated Divine Orb rate to {price.ChaosValue} chaos");
             }
 
             // 嘗試從詳細資料獲取圖示

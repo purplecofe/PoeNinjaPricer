@@ -14,13 +14,15 @@ public class PriceCacheService
     private List<CurrencyPrice> _cachedPrices = new();
     private DateTime _lastUpdateTime = DateTime.MinValue;
     private readonly object _lockObject = new();
+    private readonly Func<bool> _isDebugEnabled;
 
     public DateTime LastUpdateTime => _lastUpdateTime;
     public bool HasValidCache => _cachedPrices.Count > 0 && _lastUpdateTime > DateTime.MinValue;
 
-    public PriceCacheService(string pluginDirectory)
+    public PriceCacheService(string pluginDirectory, Func<bool> isDebugEnabled = null)
     {
         _cacheFilePath = Path.Combine(pluginDirectory, "price_cache.json");
+        _isDebugEnabled = isDebugEnabled;
         LoadCacheFromFile();
     }
 
@@ -49,7 +51,8 @@ public class PriceCacheService
             SaveCacheToFile();
         }
 
-        DebugWindow.LogMsg($"PoeNinjaPricer: Cache updated with {prices.Count} items at {_lastUpdateTime:HH:mm:ss}");
+        if (_isDebugEnabled?.Invoke() == true)
+            DebugWindow.LogMsg($"PoeNinjaPricer: Cache updated with {prices.Count} items at {_lastUpdateTime:HH:mm:ss}");
     }
 
     /// <summary>
@@ -160,7 +163,8 @@ public class PriceCacheService
                 _cachedPrices = cacheData.Prices;
                 _lastUpdateTime = cacheData.LastUpdateTime;
                 
-                DebugWindow.LogMsg($"PoeNinjaPricer: Loaded {_cachedPrices.Count} items from cache (last update: {_lastUpdateTime:yyyy-MM-dd HH:mm:ss})");
+                if (_isDebugEnabled?.Invoke() == true)
+                    DebugWindow.LogMsg($"PoeNinjaPricer: Loaded {_cachedPrices.Count} items from cache (last update: {_lastUpdateTime:yyyy-MM-dd HH:mm:ss})");
             }
         }
         catch (Exception ex)

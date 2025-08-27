@@ -26,7 +26,8 @@
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\ItemFilterLibInspector/**)",
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)",
-      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)"
+      "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []

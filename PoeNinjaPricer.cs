@@ -85,11 +85,12 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             
             // 偵測聯盟
             _currentLeague = GetCurrentLeague();
-            DebugWindow.LogMsg($"PoeNinjaPricer: Using league '{_currentLeague}'");
+            if (Settings.EnableDebugLogging.Value)
+                DebugWindow.LogMsg($"PoeNinjaPricer: Using league '{_currentLeague}'");
 
             // 初始化服務
-            _apiService = new PoeNinjaApiService(_currentLeague);
-            _cacheService = new PriceCacheService(DirectoryFullName);
+            _apiService = new PoeNinjaApiService(_currentLeague, () => Settings.EnableDebugLogging.Value);
+            _cacheService = new PriceCacheService(DirectoryFullName, () => Settings.EnableDebugLogging.Value);
             _filterManager = new FilterManager(Settings);
             _filterManager.SetActiveCategoriesProvider(GetCurrentActiveCategories);
             _filterManager.SetAllCategoriesProvider(SetAllFilterCategories);
@@ -140,9 +141,10 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             var currentLeague = GetCurrentLeague();
             if (_currentLeague != currentLeague)
             {
-                DebugWindow.LogMsg($"PoeNinjaPricer: League changed from '{_currentLeague}' to '{currentLeague}'");
+                if (Settings.EnableDebugLogging.Value)
+                    DebugWindow.LogMsg($"PoeNinjaPricer: League changed from '{_currentLeague}' to '{currentLeague}'");
                 _currentLeague = currentLeague;
-                _apiService = new PoeNinjaApiService(_currentLeague);
+                _apiService = new PoeNinjaApiService(_currentLeague, () => Settings.EnableDebugLogging.Value);
                 _ = Task.Run(UpdatePricesAsync);
             }
 
@@ -628,7 +630,8 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         try
         {
-            DebugWindow.LogMsg("PoeNinjaPricer: Starting price update");
+            if (Settings.EnableDebugLogging.Value)
+                DebugWindow.LogMsg("PoeNinjaPricer: Starting price update");
             var prices = await _apiService.GetCurrencyPricesAsync();
             
             _cacheService.UpdateCache(prices);
@@ -636,7 +639,8 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             
             _allPrices = prices;
             FilterPrices();
-            DebugWindow.LogMsg($"PoeNinjaPricer: Price update completed with {prices.Count} items");
+            if (Settings.EnableDebugLogging.Value)
+                DebugWindow.LogMsg($"PoeNinjaPricer: Price update completed with {prices.Count} items");
         }
         catch (Exception ex)
         {
@@ -932,11 +936,13 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
                 {
                     var itemName = GetItemBaseName(currentHoveredItem);
                     var englishName = GetEnglishItemName(currentHoveredItem);
-                    DebugWindow.LogMsg($"PoeNinjaPricer: Hovering item: {itemName} (Path: {currentHoveredItem.Path}) English: {englishName}");
+                    if (Settings.EnableDebugLogging.Value)
+                        DebugWindow.LogMsg($"PoeNinjaPricer: Hovering item: {itemName} (Path: {currentHoveredItem.Path}) English: {englishName}");
                 }
                 else if (_lastHoveredItem != null)
                 {
-                    DebugWindow.LogMsg($"PoeNinjaPricer: No longer hovering item");
+                    if (Settings.EnableDebugLogging.Value)
+                        DebugWindow.LogMsg($"PoeNinjaPricer: No longer hovering item");
                 }
             }
             
@@ -954,11 +960,13 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
                         _hoveredItemPrice = FindPriceByName(itemName);
                         if (_hoveredItemPrice != null)
                         {
-                            DebugWindow.LogMsg($"PoeNinjaPricer: Found price for {itemName}: {_hoveredItemPrice.ChaosValue}c");
+                            if (Settings.EnableDebugLogging.Value)
+                                DebugWindow.LogMsg($"PoeNinjaPricer: Found price for {itemName}: {_hoveredItemPrice.ChaosValue}c");
                         }
                         else
                         {
-                            DebugWindow.LogMsg($"PoeNinjaPricer: No price found for {itemName}");
+                            if (Settings.EnableDebugLogging.Value)
+                                DebugWindow.LogMsg($"PoeNinjaPricer: No price found for {itemName}");
                         }
                     }
                 }
