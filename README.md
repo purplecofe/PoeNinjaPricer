@@ -9,7 +9,7 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 - **Chinese Client Support**: Full support for Chinese game client with intelligent name mapping
 - **Auto Update**: Configurable auto-update interval (default 5 minutes)
 - **Smart Caching**: Local cache system to reduce API requests and support offline usage
-- **Advanced Filter System**: Multiple category filters with quick preset options
+- **Advanced Filter System**: Multiple category filters for different item types
 - **Search Filtering**: Quick search for specific currencies
 - **Dynamic Divine Rate**: Auto-calculated and updated Divine Orb exchange rates
 - **Customizable UI**: Adjustable display columns and window sizing
@@ -19,15 +19,10 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 ### Main Window
 1. Press **F8** to toggle the price window
 2. Use category checkboxes to filter different item types (currency, fragments, etc.)
-3. Use quick filter buttons:
-   - **Select All/None**: Toggle all filters quickly
-   - **High Value**: Show only valuable items (≥1c)
-   - **Currency Only**: Show only basic currencies
-   - **Common Items**: Show commonly traded items
+3. Use the **Select All/None** button to toggle all filters quickly
 4. Enter item names in the search box for instant filtering
-5. Drag the "Min Value" slider to set value threshold
-6. Click "Refresh" to manually update prices
-7. Adjust basic settings in F12 panel (update interval, display options, etc.)
+5. Click "Refresh" to manually update prices
+6. Adjust basic settings in F12 panel (update interval, display options, etc.)
 
 ### Hover Price Display
 1. Hover your mouse over any currency or fragment in your inventory
@@ -45,7 +40,7 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 - **Toggle Price Window**: Hotkey to open price window (default F8)
 - **Enable Hover Pricing**: Enable/disable hover tooltip price display (default enabled)
 - **Update Interval**: Auto-update interval (1-30 minutes, default 5 minutes)
-- **League Name**: League name (leave empty for auto-detection, default Mercenaries)
+- **League Name**: League name (leave empty for auto-detection)
 - **Show Chaos/Divine Values**: Display Chaos/Divine value columns
 - **Show Price Changes**: Display 24-hour price changes
 - **Auto Update Prices**: Enable automatic updates
@@ -53,8 +48,7 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 
 **Filter Controls (Main Window Only)**:
 - Item category display toggles (not shown in F12 settings)
-- Minimum value filter slider
-- Quick preset filter buttons
+- Search filter for item names
 
 ## Supported Data Types
 

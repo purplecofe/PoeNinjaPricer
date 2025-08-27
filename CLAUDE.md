@@ -141,13 +141,12 @@ public override void Render()
 - `TogglePriceWindow`: 切換視窗顯示的快捷鍵（預設 F8）
 - `UpdateIntervalMinutes`: 自動更新間隔（1-30分鐘）
 - `LeagueName`: 聯盟名稱（空白時自動偵測）
-- `MinChaosValue`: 最小價值過濾（0-100c）
 - `ShowChaosValues`/`ShowDivineValues`/`ShowPriceChanges`: 顯示選項
 
 **Filter System**:
 - 過濾器控制只在主視窗中顯示，F12 設定面板不顯示種類篩選
 - 使用私有變數管理過濾器狀態，不持久化到設定檔
-- 支援快速預設過濾器：高價值、僅通貨、常用物品
+- 預設啟動時只顯示通貨類別
 
 **Window State Persistence**:
 - 視窗位置和大小自動儲存
