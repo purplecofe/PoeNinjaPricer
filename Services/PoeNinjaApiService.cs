@@ -15,7 +15,8 @@ public class PoeNinjaApiService : IDisposable
         Timeout = TimeSpan.FromSeconds(30)
     };
 
-    private const string BaseUrl = "https://poe.ninja/api/data/currencyoverview";
+    private const string CurrencyBaseUrl = "https://poe.ninja/api/data/currencyoverview";
+    private const string ItemBaseUrl = "https://poe.ninja/api/data/itemoverview";
     private readonly string _leagueName;
     private readonly Func<bool> _isDebugEnabled;
 
@@ -38,14 +39,21 @@ public class PoeNinjaApiService : IDisposable
             var currencyData = await GetCurrencyDataAsync("Currency");
             if (currencyData != null)
             {
-                prices.AddRange(ConvertToCurrencyPrices(currencyData, false));
+                prices.AddRange(ConvertToCurrencyPrices(currencyData));
             }
 
             // 獲取碎片
             var fragmentData = await GetCurrencyDataAsync("Fragment");
             if (fragmentData != null)
             {
-                prices.AddRange(ConvertToCurrencyPrices(fragmentData, true));
+                prices.AddRange(ConvertToCurrencyPrices(fragmentData));
+            }
+
+            // 獲取聖甲蟲
+            var scarabData = await GetScarabDataAsync();
+            if (scarabData != null)
+            {
+                prices.AddRange(ConvertScarabToCurrencyPrices(scarabData));
             }
         }
         catch (Exception ex)
@@ -61,7 +69,7 @@ public class PoeNinjaApiService : IDisposable
     {
         try
         {
-            var url = $"{BaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type={type}";
+            var url = $"{CurrencyBaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type={type}";
             if (_isDebugEnabled?.Invoke() == true)
                 DebugWindow.LogMsg($"PoeNinjaPricer: Fetching {type} data from {url}");
 
@@ -97,7 +105,7 @@ public class PoeNinjaApiService : IDisposable
         }
     }
 
-    private List<CurrencyPrice> ConvertToCurrencyPrices(PoeNinjaResponse data, bool isFragment)
+    private List<CurrencyPrice> ConvertToCurrencyPrices(PoeNinjaResponse data)
     {
         var prices = new List<CurrencyPrice>();
         var detailsDict = new Dictionary<int, CurrencyDetail>();
@@ -118,7 +126,7 @@ public class PoeNinjaApiService : IDisposable
                 Name = line.CurrencyTypeName,
                 ChaosValue = Math.Round(line.ChaosEquivalent, 2),
                 Change24h = Math.Round(line.ReceiveSparkLine.TotalChange, 2),
-                IsFragment = isFragment
+                Category = CurrencyClassifier.GetCategory(line.CurrencyTypeName)
             };
 
             // 更新 Divine Orb 匯率
@@ -146,13 +154,83 @@ public class PoeNinjaApiService : IDisposable
     }
 
     /// <summary>
+    /// 獲取聖甲蟲資料
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetScarabDataAsync()
+    {
+        try
+        {
+            var url = $"{ItemBaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type=Scarab";
+            if (_isDebugEnabled?.Invoke() == true)
+                DebugWindow.LogMsg($"PoeNinjaPricer: Fetching Scarab data from {url}");
+
+            var response = await _httpClient.GetStringAsync(url);
+            var data = JsonConvert.DeserializeObject<ItemOverviewResponse>(response);
+
+            if (data?.Lines?.Count > 0)
+            {
+                if (_isDebugEnabled?.Invoke() == true)
+                    DebugWindow.LogMsg($"PoeNinjaPricer: Successfully fetched {data.Lines.Count} Scarab entries");
+                return data;
+            }
+            else
+            {
+                DebugWindow.LogError($"PoeNinjaPricer: No data received for Scarab");
+                return null;
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: HTTP error fetching Scarab - {ex.Message}");
+            throw;
+        }
+        catch (JsonException ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: JSON parsing error for Scarab - {ex.Message}");
+            throw;
+        }
+        catch (TaskCanceledException ex)
+        {
+            DebugWindow.LogError($"PoeNinjaPricer: Request timeout for Scarab - {ex.Message}");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// 將聖甲蟲資料轉換為價格資料
+    /// </summary>
+    private List<CurrencyPrice> ConvertScarabToCurrencyPrices(ItemOverviewResponse data)
+    {
+        var prices = new List<CurrencyPrice>();
+
+        foreach (var line in data.Lines)
+        {
+            if (line.ChaosValue <= 0) continue; // 跳過無效價格
+
+            var price = new CurrencyPrice
+            {
+                Name = line.Name,
+                ChaosValue = Math.Round(line.ChaosValue, 2),
+                Change24h = Math.Round(line.Sparkline.TotalChange, 2),
+                Icon = line.Icon,
+                StackSize = line.StackSize,
+                Category = CurrencyClassifier.GetCategory(line.Name)
+            };
+
+            prices.Add(price);
+        }
+
+        return prices;
+    }
+
+    /// <summary>
     /// 測試與 poe.ninja API 的連接
     /// </summary>
     public async Task<bool> TestConnectionAsync()
     {
         try
         {
-            var url = $"{BaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type=Currency";
+            var url = $"{CurrencyBaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type=Currency";
             var response = await _httpClient.GetStringAsync(url);
             return !string.IsNullOrEmpty(response);
         }

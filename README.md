@@ -60,7 +60,8 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 
 **Currently Implemented**:
 - **Currency**: Basic currencies (Chaos Orb, Exalted Orb, Divine Orb, etc.) ✅
-- **Fragments**: Map fragments and other fragment items ✅
+- **Fragments**: Map fragments and other fragment items ✅  
+- **Scarabs**: All scarab types with detailed category classification ✅
 
 **TODO - Requires Additional API Integration**:
 
@@ -91,7 +92,6 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 - **Blighted Maps**: TODO - Requires blighted maps API endpoint
 - **Blight Ravaged Maps**: TODO - Requires blight ravaged maps API endpoint
 - **Unique Maps**: TODO - Requires unique maps API endpoint
-- **Scarabs**: TODO - Requires scarabs API endpoint
 - **Delirium Orbs**: TODO - Requires delirium orbs API endpoint
 - **Invitations**: TODO - Requires invitations API endpoint
 - **Memories**: TODO - Requires memories API endpoint
@@ -131,6 +131,15 @@ dotnet build
 - **Data Source**: poe.ninja API
 
 ## Version History
+
+- **v1.3.0** (2025-08-27): Enhanced Category Display & Scarab Support
+  - **NEW**: Complete item category classification system (30+ categories)
+  - **NEW**: Scarab price support with detailed category mapping
+  - **IMPROVED**: Type column now displays specific categories instead of generic "Currency/Fragment"
+  - **ENHANCED**: Proper category-based sorting and filtering
+  - **REMOVED**: Deprecated IsFragment property in favor of comprehensive Category system
+  - Added 125+ scarab name mappings for hover feature
+  - Improved data architecture for future category expansions
 
 - **v1.2.0** (2025-08-27): Hover Item Price Display
   - **NEW**: Hover tooltip price display for items in-game

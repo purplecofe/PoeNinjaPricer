@@ -77,7 +77,7 @@ public class PriceCacheService
         {
             return _cachedPrices
                 .Where(p => p.Name.ToLowerInvariant().Contains(searchTerm.ToLowerInvariant()) &&
-                           (includeFragments || !p.IsFragment))
+                           (includeFragments || p.Category != CurrencyCategory.Fragments))
                 .OrderBy(p => p.Name)
                 .ToList();
         }
@@ -91,8 +91,8 @@ public class PriceCacheService
         lock (_lockObject)
         {
             return _cachedPrices
-                .Where(p => includeFragments || !p.IsFragment)
-                .OrderBy(p => p.IsFragment)
+                .Where(p => includeFragments || p.Category != CurrencyCategory.Fragments)
+                .OrderBy(p => p.Category)
                 .ThenBy(p => p.Name)
                 .ToList();
         }

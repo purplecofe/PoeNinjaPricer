@@ -102,6 +102,55 @@ public class CurrencyDetail
     public string TradeId { get; set; } = "";
 }
 
+// itemoverview API 回應結構（用於聖甲蟲等物品）
+public class ItemOverviewResponse
+{
+    [JsonProperty("lines")]
+    public List<ItemLine> Lines { get; set; } = new();
+}
+
+public class ItemLine
+{
+    [JsonProperty("id")]
+    public int Id { get; set; }
+
+    [JsonProperty("name")]
+    public string Name { get; set; } = "";
+
+    [JsonProperty("icon")]
+    public string Icon { get; set; } = "";
+
+    [JsonProperty("baseType")]
+    public string BaseType { get; set; } = "";
+
+    [JsonProperty("stackSize")]
+    public int StackSize { get; set; }
+
+    [JsonProperty("itemClass")]
+    public int ItemClass { get; set; }
+
+    [JsonProperty("sparkline")]
+    public SparkLine Sparkline { get; set; } = new();
+
+    [JsonProperty("chaosValue")]
+    public double ChaosValue { get; set; }
+
+    [JsonProperty("exaltedValue")]
+    public double ExaltedValue { get; set; }
+
+    [JsonProperty("divineValue")]
+    public double DivineValue { get; set; }
+
+    [JsonProperty("count")]
+    public int Count { get; set; }
+
+    [JsonProperty("detailsId")]
+    public string DetailsId { get; set; } = "";
+
+    [JsonProperty("listingCount")]
+    public int ListingCount { get; set; }
+}
+
 // 簡化的價格資料用於 UI 顯示
 public class CurrencyPrice
 {
@@ -109,7 +158,8 @@ public class CurrencyPrice
     public double ChaosValue { get; set; }
     public double Change24h { get; set; }
     public string Icon { get; set; } = "";
-    public bool IsFragment { get; set; }
+    public int StackSize { get; set; } = 1;
+    public CurrencyCategory Category { get; set; } = CurrencyCategory.Others;
 
     private static double _divineRate = 250.0; // 預設值
 

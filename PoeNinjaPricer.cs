@@ -494,7 +494,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
         // 表頭設定（支援所有欄位排序）
         ImGui.TableSetupColumn("Name", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Type", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthFixed, 60);
+        ImGui.TableSetupColumn("Type", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.WidthFixed, 120);
         if (Settings.ShowChaosValues.Value)
             ImGui.TableSetupColumn("Chaos", ImGuiTableColumnFlags.DefaultSort | ImGuiTableColumnFlags.PreferSortDescending | ImGuiTableColumnFlags.WidthFixed, 80);
         if (Settings.ShowDivineValues.Value)
@@ -521,7 +521,7 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
 
             // 類型
             ImGui.TableSetColumnIndex(1);
-            ImGui.Text(price.IsFragment ? "Fragment" : "Currency");
+            ImGui.Text(price.Category.GetDisplayName());
 
             var colIndex = 2;
 
@@ -580,8 +580,8 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
         else if (columnIndex == 1) // 類型
         {
             _displayPrices = ascending
-                ? _displayPrices.OrderBy(p => p.IsFragment).ThenBy(p => p.Name).ToList()
-                : _displayPrices.OrderByDescending(p => p.IsFragment).ThenBy(p => p.Name).ToList();
+                ? _displayPrices.OrderBy(p => p.Category).ThenBy(p => p.Name).ToList()
+                : _displayPrices.OrderByDescending(p => p.Category).ThenBy(p => p.Name).ToList();
         }
         else
         {
@@ -1156,6 +1156,131 @@ public class PoeNinjaPricer : BaseSettingsPlugin<PoeNinjaPricerSettings>
             // Special items from logs
             { "Metadata/Items/Currency/CurrencyValdoPuzzleBox", "Valdo's Puzzle Box" },
             { "Metadata/Items/DivinationCards/DivinationCardDeck", "Stacked Deck" },
+            
+            // Scarabs - from complete_scarab_data.json
+            { "Metadata/Items/Scarabs/ScarabBreachNew1", "Breach Scarab" },
+            { "Metadata/Items/Scarabs/ScarabBreachNew2", "Breach Scarab of the Dreamer" },
+            { "Metadata/Items/Scarabs/ScarabBreachNew3", "Breach Scarab of Lordship" },
+            { "Metadata/Items/Scarabs/ScarabBreachNew4", "Breach Scarab of Splintering" },
+            { "Metadata/Items/Scarabs/ScarabBreachNew5", "Breach Scarab of Snares" },
+            { "Metadata/Items/Scarabs/ScarabBreachNew6", "Breach Scarab of Resonant Cascade" },
+            { "Metadata/Items/Scarabs/ScarabMapsNew1", "Cartography Scarab of Escalation" },
+            { "Metadata/Items/Scarabs/ScarabMapsNew2", "Cartography Scarab of Risk" },
+            { "Metadata/Items/Scarabs/ScarabMapsNew3", "Cartography Scarab of Singularity" },
+            { "Metadata/Items/Scarabs/ScarabMapsNew4", "Cartography Scarab of Corruption" },
+            { "Metadata/Items/Scarabs/ScarabMapsNew5", "Cartography Scarab of the Multitude" },
+            { "Metadata/Items/Scarabs/ScarabUniquesNew1", "Titanic Scarab" },
+            { "Metadata/Items/Scarabs/ScarabUniquesNew2", "Titanic Scarab of Treasures" },
+            { "Metadata/Items/Scarabs/ScarabUniquesNew3", "Titanic Scarab of Legend" },
+            { "Metadata/Items/Scarabs/ScarabBeastsNew1", "Bestiary Scarab" },
+            { "Metadata/Items/Scarabs/ScarabBeastsNew2", "Bestiary Scarab of the Herd" },
+            { "Metadata/Items/Scarabs/ScarabBeastsNew3", "Bestiary Scarab of Duplicating" },
+            { "Metadata/Items/Scarabs/ScarabBeastsNew4", "Bestiary Scarab of the Shadowed Crow" },
+            { "Metadata/Items/Scarabs/ScarabInfluenceNew1", "Influencing Scarab of the Shaper" },
+            { "Metadata/Items/Scarabs/ScarabInfluenceNew2", "Influencing Scarab of the Elder" },
+            { "Metadata/Items/Scarabs/ScarabInfluenceNew3", "Influencing Scarab of Hordes" },
+            { "Metadata/Items/Scarabs/ScarabInfluenceNew4", "Influencing Scarab of Conversion" },
+            { "Metadata/Items/Scarabs/ScarabSulphiteNew1", "Sulphite Scarab" },
+            { "Metadata/Items/Scarabs/ScarabSulphiteNew2", "Sulphite Scarab of Greed" },
+            { "Metadata/Items/Scarabs/ScarabSulphiteNew3", "Sulphite Scarab of Fumes" },
+            { "Metadata/Items/Scarabs/ScarabDivinationCardsNew1", "Divination Scarab of The Cloister" },
+            { "Metadata/Items/Scarabs/ScarabDivinationCardsNew2", "Divination Scarab of Plenty" },
+            { "Metadata/Items/Scarabs/ScarabDivinationCardsNew3", "Divination Scarab of Pilfering" },
+            { "Metadata/Items/Scarabs/ScarabTormentNew1", "Torment Scarab" },
+            { "Metadata/Items/Scarabs/ScarabTormentNew2", "Torment Scarab of Peculiarity" },
+            { "Metadata/Items/Scarabs/ScarabTormentNew3", "Torment Scarab of Release" },
+            { "Metadata/Items/Scarabs/ScarabTormentNew4", "Torment Scarab of Possession" },
+            { "Metadata/Items/Scarabs/ScarabStrongboxNew1", "Ambush Scarab" },
+            { "Metadata/Items/Scarabs/ScarabStrongboxNew2", "Ambush Scarab of Hidden Compartments" },
+            { "Metadata/Items/Scarabs/ScarabStrongboxNew3", "Ambush Scarab of Potency" },
+            { "Metadata/Items/Scarabs/ScarabStrongboxNew4", "Ambush Scarab of Containment" },
+            { "Metadata/Items/Scarabs/ScarabStrongboxNew5", "Ambush Scarab of Discernment" },
+            { "Metadata/Items/Scarabs/ScarabHarbingerNew1", "Harbinger Scarab" },
+            { "Metadata/Items/Scarabs/ScarabHarbingerNew2", "Harbinger Scarab of Obelisks" },
+            { "Metadata/Items/Scarabs/ScarabHarbingerNew3", "Harbinger Scarab of Regency" },
+            { "Metadata/Items/Scarabs/ScarabHarbingerNew4", "Harbinger Scarab of Warhoards" },
+            { "Metadata/Items/Scarabs/ScarabExpedition1", "Expedition Scarab" },
+            { "Metadata/Items/Scarabs/ScarabExpedition2", "Expedition Scarab of Runefinding" },
+            { "Metadata/Items/Scarabs/ScarabExpedition3", "Expedition Scarab of Verisium Powder" },
+            { "Metadata/Items/Scarabs/ScarabExpedition4", "Expedition Scarab of the Skald" },
+            { "Metadata/Items/Scarabs/ScarabExpedition5", "Expedition Scarab of Archaeology" },
+            { "Metadata/Items/Scarabs/ScarabLegionNew1", "Legion Scarab" },
+            { "Metadata/Items/Scarabs/ScarabLegionNew2", "Legion Scarab of Officers" },
+            { "Metadata/Items/Scarabs/ScarabLegionNew3", "Legion Scarab of Command" },
+            { "Metadata/Items/Scarabs/ScarabLegionNew4", "Legion Scarab of The Sekhema" },
+            { "Metadata/Items/Scarabs/ScarabLegionNew5", "Legion Scarab of Eternal Conflict" },
+            { "Metadata/Items/Scarabs/ScarabAbyssNew1", "Abyss Scarab" },
+            { "Metadata/Items/Scarabs/ScarabAbyssNew2", "Abyss Scarab of Multitudes" },
+            { "Metadata/Items/Scarabs/ScarabAbyssNew4", "Abyss Scarab of Edifice" },
+            { "Metadata/Items/Scarabs/ScarabAbyssNew3", "Abyss Scarab of Emptiness" },
+            { "Metadata/Items/Scarabs/ScarabAbyssNew5", "Abyss Scarab of Profound Depth" },
+            { "Metadata/Items/Scarabs/ScarabAnarchy1", "Anarchy Scarab" },
+            { "Metadata/Items/Scarabs/ScarabAnarchy2", "Anarchy Scarab of Gigantification" },
+            { "Metadata/Items/Scarabs/ScarabAnarchy3", "Anarchy Scarab of Partnership" },
+            { "Metadata/Items/Scarabs/ScarabEssence1", "Essence Scarab" },
+            { "Metadata/Items/Scarabs/ScarabEssence2", "Essence Scarab of Ascent" },
+            { "Metadata/Items/Scarabs/ScarabEssence3", "Essence Scarab of Stability" },
+            { "Metadata/Items/Scarabs/ScarabEssence4", "Essence Scarab of Calcification" },
+            { "Metadata/Items/Scarabs/ScarabEssence5", "Essence Scarab of Adaptation" },
+            { "Metadata/Items/Scarabs/ScarabDomination1", "Domination Scarab" },
+            { "Metadata/Items/Scarabs/ScarabDomination2", "Domination Scarab of Apparitions" },
+            { "Metadata/Items/Scarabs/ScarabDomination3", "Domination Scarab of Evolution" },
+            { "Metadata/Items/Scarabs/ScarabDomination4", "Domination Scarab of Terrors" },
+            { "Metadata/Items/Scarabs/ScarabRitual1", "Ritual Scarab of Selectiveness" },
+            { "Metadata/Items/Scarabs/ScarabRitual2", "Ritual Scarab of Wisps" },
+            { "Metadata/Items/Scarabs/ScarabRitual3", "Ritual Scarab of Abundance" },
+            { "Metadata/Items/Scarabs/ScarabHarvest1", "Harvest Scarab" },
+            { "Metadata/Items/Scarabs/ScarabHarvest2", "Harvest Scarab of Doubling" },
+            { "Metadata/Items/Scarabs/ScarabHarvest3", "Harvest Scarab of Cornucopia" },
+            { "Metadata/Items/Scarabs/ScarabIncursion1", "Incursion Scarab" },
+            { "Metadata/Items/Scarabs/ScarabIncursion2", "Incursion Scarab of Invasion" },
+            { "Metadata/Items/Scarabs/ScarabIncursion3", "Incursion Scarab of Champions" },
+            { "Metadata/Items/Scarabs/ScarabIncursion4", "Incursion Scarab of Timelines" },
+            { "Metadata/Items/Scarabs/ScarabBetrayal1", "Betrayal Scarab" },
+            { "Metadata/Items/Scarabs/ScarabBetrayal2", "Betrayal Scarab of the Allflame" },
+            { "Metadata/Items/Scarabs/ScarabBetrayal3", "Betrayal Scarab of Reinforcements" },
+            { "Metadata/Items/Scarabs/ScarabBetrayal4", "Betrayal Scarab of Perpetuation" },
+            { "Metadata/Items/Scarabs/ScarabBeyond1", "Beyond Scarab" },
+            { "Metadata/Items/Scarabs/ScarabBeyond2", "Beyond Scarab of Corruption" },
+            { "Metadata/Items/Scarabs/ScarabBeyond3", "Beyond Scarab of Haemophilia" },
+            { "Metadata/Items/Scarabs/ScarabBeyond4", "Beyond Scarab of Resurgence" },
+            { "Metadata/Items/Scarabs/ScarabBeyond5", "Beyond Scarab of the Invasion" },
+            { "Metadata/Items/Scarabs/ScarabUltimatum1", "Ultimatum Scarab" },
+            { "Metadata/Items/Scarabs/ScarabUltimatum2", "Ultimatum Scarab of Bribing" },
+            { "Metadata/Items/Scarabs/ScarabUltimatum3", "Ultimatum Scarab of Dueling" },
+            { "Metadata/Items/Scarabs/ScarabUltimatum4", "Ultimatum Scarab of Catalysing" },
+            { "Metadata/Items/Scarabs/ScarabUltimatum5", "Ultimatum Scarab of Inscription" },
+            { "Metadata/Items/Scarabs/ScarabDelirium1", "Delirium Scarab" },
+            { "Metadata/Items/Scarabs/ScarabDelirium2", "Delirium Scarab of Mania" },
+            { "Metadata/Items/Scarabs/ScarabDelirium3", "Delirium Scarab of Paranoia" },
+            { "Metadata/Items/Scarabs/ScarabDelirium4", "Delirium Scarab of Neuroses" },
+            { "Metadata/Items/Scarabs/ScarabDelirium5", "Delirium Scarab of Delusions" },
+            { "Metadata/Items/Scarabs/ScarabBlightNew1", "Blight Scarab" },
+            { "Metadata/Items/Scarabs/ScarabBlightNew2", "Blight Scarab of Bounty" },
+            { "Metadata/Items/Scarabs/ScarabBlightNew3", "Blight Scarab of the Blightheart" },
+            { "Metadata/Items/Scarabs/ScarabBlightNew4", "Blight Scarab of Blooming" },
+            { "Metadata/Items/Scarabs/ScarabBlightNew5", "Blight Scarab of Invigoration" },
+            { "Metadata/Items/Scarabs/ScarabSettlers1", "Kalguuran Scarab" },
+            { "Metadata/Items/Scarabs/ScarabSettlers2", "Kalguuran Scarab of Guarded Riches" },
+            { "Metadata/Items/Scarabs/ScarabSettlers3", "Kalguuran Scarab of Refinement" },
+            { "Metadata/Items/Scarabs/ScarabMisc1", "Scarab of Monstrous Lineage" },
+            { "Metadata/Items/Scarabs/ScarabMisc2", "Scarab of Adversaries" },
+            { "Metadata/Items/Scarabs/ScarabMisc3", "Scarab of Divinity" },
+            { "Metadata/Items/Scarabs/ScarabMisc4", "Scarab of Hunted Traitors" },
+            { "Metadata/Items/Scarabs/ScarabMisc5", "Scarab of Stability" },
+            { "Metadata/Items/Scarabs/ScarabMisc6", "Scarab of the Commander" },
+            { "Metadata/Items/Scarabs/ScarabMisc7", "Scarab of Evolution" },
+            { "Metadata/Items/Scarabs/ScarabMisc8", "Scarab of Wisps" },
+            { "Metadata/Items/Scarabs/ScarabMisc9", "Scarab of Bisection" },
+            { "Metadata/Items/Scarabs/ScarabMisc10", "Scarab of Unity" },
+            { "Metadata/Items/Scarabs/ScarabMisc11", "Scarab of Radiant Storms" },
+            { "Metadata/Items/Scarabs/ScarabUber1", "Horned Scarab of Bloodlines" },
+            { "Metadata/Items/Scarabs/ScarabUber2", "Horned Scarab of Nemeses" },
+            { "Metadata/Items/Scarabs/ScarabUber3", "Horned Scarab of Preservation" },
+            { "Metadata/Items/Scarabs/ScarabUber4", "Horned Scarab of Awakening" },
+            { "Metadata/Items/Scarabs/ScarabUber5", "Horned Scarab of Tradition" },
+            { "Metadata/Items/Scarabs/ScarabUber6", "Horned Scarab of Glittering" },
+            { "Metadata/Items/Scarabs/ScarabUber7", "Horned Scarab of Pandemonium" },
         };
         
         return pathToEnglishName.TryGetValue(path, out var englishName) ? englishName : string.Empty;
