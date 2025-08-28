@@ -1,0 +1,2874 @@
+[
+  {
+    "name_zh": "磨刀石",
+    "name_en": "Blacksmith's Whetstone",
+    "base_type_zh": "磨刀石",
+    "base_type_en": "Blacksmith's Whetstone",
+    "type": "Metadata/Items/Currency/CurrencyWeaponQuality",
+    "url": "https://poedb.tw/tw/Blacksmiths_Whetstone"
+  },
+  {
+    "name_zh": "知識卷軸",
+    "name_en": "Scroll of Wisdom",
+    "base_type_zh": "知識卷軸",
+    "base_type_en": "Scroll of Wisdom",
+    "type": "Metadata/Items/Currency/CurrencyIdentification",
+    "url": "https://poedb.tw/tw/Scroll_of_Wisdom"
+  },
+  {
+    "name_zh": "混沌石",
+    "name_en": "Chaos Orb",
+    "base_type_zh": "混沌石",
+    "base_type_en": "Chaos Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollRare",
+    "url": "https://poedb.tw/tw/Chaos_Orb"
+  },
+  {
+    "name_zh": "隱匿崇高石",
+    "name_en": "Veiled Exalted Orb",
+    "base_type_zh": "隱匿崇高石",
+    "base_type_en": "Veiled Exalted Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollRareVeiled",
+    "url": "https://poedb.tw/tw/Veiled_Exalted_Orb"
+  },
+  {
+    "name_zh": "隱匿混沌石",
+    "name_en": "Veiled Chaos Orb",
+    "base_type_zh": "隱匿混沌石",
+    "base_type_en": "Veiled Chaos Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollRareVeiledChaos",
+    "url": "https://poedb.tw/tw/Veiled_Chaos_Orb"
+  },
+  {
+    "name_zh": "護甲片",
+    "name_en": "Armourer's Scrap",
+    "base_type_zh": "護甲片",
+    "base_type_en": "Armourer's Scrap",
+    "type": "Metadata/Items/Currency/CurrencyArmourQuality",
+    "url": "https://poedb.tw/tw/Armourers_Scrap"
+  },
+  {
+    "name_zh": "卡蘭德的魔鏡",
+    "name_en": "Mirror of Kalandra",
+    "base_type_zh": "卡蘭德的魔鏡",
+    "base_type_en": "Mirror of Kalandra",
+    "type": "Metadata/Items/Currency/CurrencyDuplicate",
+    "url": "https://poedb.tw/tw/Mirror_of_Kalandra"
+  },
+  {
+    "name_zh": "點金石",
+    "name_en": "Orb of Alchemy",
+    "base_type_zh": "點金石",
+    "base_type_en": "Orb of Alchemy",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeToRare",
+    "url": "https://poedb.tw/tw/Orb_of_Alchemy"
+  },
+  {
+    "name_zh": "機會石",
+    "name_en": "Orb of Chance",
+    "base_type_zh": "機會石",
+    "base_type_en": "Orb of Chance",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeRandomly",
+    "url": "https://poedb.tw/tw/Orb_of_Chance"
+  },
+  {
+    "name_zh": "後悔石",
+    "name_en": "Orb of Regret",
+    "base_type_zh": "後悔石",
+    "base_type_en": "Orb of Regret",
+    "type": "Metadata/Items/Currency/CurrencyPassiveRefund",
+    "url": "https://poedb.tw/tw/Orb_of_Regret"
+  },
+  {
+    "name_zh": "撤銷石",
+    "name_en": "Orb of Unmaking",
+    "base_type_zh": "撤銷石",
+    "base_type_en": "Orb of Unmaking",
+    "type": "Metadata/Items/Currency/CurrencyAtlasPassiveRefund",
+    "url": "https://poedb.tw/tw/Orb_of_Unmaking"
+  },
+  {
+    "name_zh": "蛻變石",
+    "name_en": "Orb of Transmutation",
+    "base_type_zh": "蛻變石",
+    "base_type_en": "Orb of Transmutation",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeToMagic",
+    "url": "https://poedb.tw/tw/Orb_of_Transmutation"
+  },
+  {
+    "name_zh": "改造石",
+    "name_en": "Orb of Alteration",
+    "base_type_zh": "改造石",
+    "base_type_en": "Orb of Alteration",
+    "type": "Metadata/Items/Currency/CurrencyRerollMagic",
+    "url": "https://poedb.tw/tw/Orb_of_Alteration"
+  },
+  {
+    "name_zh": "重鑄石",
+    "name_en": "Orb of Scouring",
+    "base_type_zh": "重鑄石",
+    "base_type_en": "Orb of Scouring",
+    "type": "Metadata/Items/Currency/CurrencyConvertToNormal",
+    "url": "https://poedb.tw/tw/Orb_of_Scouring"
+  },
+  {
+    "name_zh": "崇高石",
+    "name_en": "Exalted Orb",
+    "base_type_zh": "崇高石",
+    "base_type_en": "Exalted Orb",
+    "type": "Metadata/Items/Currency/CurrencyAddModToRare",
+    "url": "https://poedb.tw/tw/Exalted_Orb"
+  },
+  {
+    "name_zh": "富豪石",
+    "name_en": "Regal Orb",
+    "base_type_zh": "富豪石",
+    "base_type_en": "Regal Orb",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeMagicToRare",
+    "url": "https://poedb.tw/tw/Regal_Orb"
+  },
+  {
+    "name_zh": "增幅石",
+    "name_en": "Orb of Augmentation",
+    "base_type_zh": "增幅石",
+    "base_type_en": "Orb of Augmentation",
+    "type": "Metadata/Items/Currency/CurrencyAddModToMagic",
+    "url": "https://poedb.tw/tw/Orb_of_Augmentation"
+  },
+  {
+    "name_zh": "傳送卷軸",
+    "name_en": "Portal Scroll",
+    "base_type_zh": "傳送卷軸",
+    "base_type_en": "Portal Scroll",
+    "type": "Metadata/Items/Currency/CurrencyPortal",
+    "url": "https://poedb.tw/tw/Portal_Scroll"
+  },
+  {
+    "name_zh": "玻璃彈珠",
+    "name_en": "Glassblower's Bauble",
+    "base_type_zh": "玻璃彈珠",
+    "base_type_en": "Glassblower's Bauble",
+    "type": "Metadata/Items/Currency/CurrencyFlaskQuality",
+    "url": "https://poedb.tw/tw/Glassblowers_Bauble"
+  },
+  {
+    "name_zh": "寶石匠的稜鏡",
+    "name_en": "Gemcutter's Prism",
+    "base_type_zh": "寶石匠的稜鏡",
+    "base_type_en": "Gemcutter's Prism",
+    "type": "Metadata/Items/Currency/CurrencyGemQuality",
+    "url": "https://poedb.tw/tw/Gemcutters_Prism"
+  },
+  {
+    "name_zh": "幻色石",
+    "name_en": "Chromatic Orb",
+    "base_type_zh": "幻色石",
+    "base_type_en": "Chromatic Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollSocketColours",
+    "url": "https://poedb.tw/tw/Chromatic_Orb"
+  },
+  {
+    "name_zh": "鏈結石",
+    "name_en": "Orb of Fusing",
+    "base_type_zh": "鏈結石",
+    "base_type_en": "Orb of Fusing",
+    "type": "Metadata/Items/Currency/CurrencyRerollSocketLinks",
+    "url": "https://poedb.tw/tw/Orb_of_Fusing"
+  },
+  {
+    "name_zh": "工匠石",
+    "name_en": "Jeweller's Orb",
+    "base_type_zh": "工匠石",
+    "base_type_en": "Jeweller's Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollSocketNumbers",
+    "url": "https://poedb.tw/tw/Jewellers_Orb"
+  },
+  {
+    "name_zh": "神聖石",
+    "name_en": "Divine Orb",
+    "base_type_zh": "神聖石",
+    "base_type_en": "Divine Orb",
+    "type": "Metadata/Items/Currency/CurrencyModValues",
+    "url": "https://poedb.tw/tw/Divine_Orb"
+  },
+  {
+    "name_zh": "祝福石",
+    "name_en": "Blessed Orb",
+    "base_type_zh": "祝福石",
+    "base_type_en": "Blessed Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollImplicit",
+    "url": "https://poedb.tw/tw/Blessed_Orb"
+  },
+  {
+    "name_zh": "聖玉",
+    "name_en": "Sacred Orb",
+    "base_type_zh": "聖玉",
+    "base_type_en": "Sacred Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollDefences",
+    "url": "https://poedb.tw/tw/Sacred_Orb"
+  },
+  {
+    "name_zh": "製圖釘",
+    "name_en": "Cartographer's Chisel",
+    "base_type_zh": "製圖釘",
+    "base_type_en": "Cartographer's Chisel",
+    "type": "Metadata/Items/Currency/CurrencyMapQuality",
+    "url": "https://poedb.tw/tw/Cartographers_Chisel"
+  },
+  {
+    "name_zh": "釋界之採購鑿",
+    "name_en": "Maven's Chisel of Procurement",
+    "base_type_zh": "釋界之採購鑿",
+    "base_type_en": "Maven's Chisel of Procurement",
+    "type": "Metadata/Items/Currency/CurrencyMapQualityRarity",
+    "url": "https://poedb.tw/tw/Mavens_Chisel_of_Procurement"
+  },
+  {
+    "name_zh": "釋界之增值鑿",
+    "name_en": "Maven's Chisel of Proliferation",
+    "base_type_zh": "釋界之增值鑿",
+    "base_type_en": "Maven's Chisel of Proliferation",
+    "type": "Metadata/Items/Currency/CurrencyMapQualityPackSize",
+    "url": "https://poedb.tw/tw/Mavens_Chisel_of_Proliferation"
+  },
+  {
+    "name_zh": "釋界之占卜鑿",
+    "name_en": "Maven's Chisel of Divination",
+    "base_type_zh": "釋界之占卜鑿",
+    "base_type_en": "Maven's Chisel of Divination",
+    "type": "Metadata/Items/Currency/CurrencyMapQualityDivinationCards",
+    "url": "https://poedb.tw/tw/Mavens_Chisel_of_Divination"
+  },
+  {
+    "name_zh": "釋界之聖甲蟲鑿",
+    "name_en": "Maven's Chisel of Scarabs",
+    "base_type_zh": "釋界之聖甲蟲鑿",
+    "base_type_en": "Maven's Chisel of Scarabs",
+    "type": "Metadata/Items/Currency/CurrencyMapQualityScarabs",
+    "url": "https://poedb.tw/tw/Mavens_Chisel_of_Scarabs"
+  },
+  {
+    "name_zh": "釋界之貪婪鑿",
+    "name_en": "Maven's Chisel of Avarice",
+    "base_type_zh": "釋界之貪婪鑿",
+    "base_type_en": "Maven's Chisel of Avarice",
+    "type": "Metadata/Items/Currency/CurrencyMapQualityCurrency",
+    "url": "https://poedb.tw/tw/Mavens_Chisel_of_Avarice"
+  },
+  {
+    "name_zh": "卷軸碎片",
+    "name_en": "Scroll Fragment",
+    "base_type_zh": "卷軸碎片",
+    "base_type_en": "Scroll Fragment",
+    "type": "Metadata/Items/Currency/CurrencyIdentificationShard",
+    "url": "https://poedb.tw/tw/Scroll_Fragment"
+  },
+  {
+    "name_zh": "蛻變石碎片",
+    "name_en": "Transmutation Shard",
+    "base_type_zh": "蛻變石碎片",
+    "base_type_en": "Transmutation Shard",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeToMagicShard",
+    "url": "https://poedb.tw/tw/Transmutation_Shard"
+  },
+  {
+    "name_zh": "改造石碎片",
+    "name_en": "Alteration Shard",
+    "base_type_zh": "改造石碎片",
+    "base_type_en": "Alteration Shard",
+    "type": "Metadata/Items/Currency/CurrencyRerollMagicShard",
+    "url": "https://poedb.tw/tw/Alteration_Shard"
+  },
+  {
+    "name_zh": "點金石碎片",
+    "name_en": "Alchemy Shard",
+    "base_type_zh": "點金石碎片",
+    "base_type_en": "Alchemy Shard",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeToRareShard",
+    "url": "https://poedb.tw/tw/Alchemy_Shard"
+  },
+  {
+    "name_zh": "白化的羽毛",
+    "name_en": "Albino Rhoa Feather",
+    "base_type_zh": "白化的羽毛",
+    "base_type_en": "Albino Rhoa Feather",
+    "type": "Metadata/Items/Currency/CurrencyRhoaFeather",
+    "url": "https://poedb.tw/tw/Albino_Rhoa_Feather"
+  },
+  {
+    "name_zh": "永恆寶珠",
+    "name_en": "Eternal Orb",
+    "base_type_zh": "永恆寶珠",
+    "base_type_en": "Eternal Orb",
+    "type": "Metadata/Items/Currency/CurrencyImprintOrb",
+    "url": "https://poedb.tw/tw/Eternal_Orb"
+  },
+  {
+    "name_zh": "印記",
+    "name_en": "Imprint",
+    "base_type_zh": "印記",
+    "base_type_en": "Imprint",
+    "type": "Metadata/Items/Currency/CurrencyImprint",
+    "url": "https://poedb.tw/tw/Imprint"
+  },
+  {
+    "name_zh": "瓦爾寶珠",
+    "name_en": "Vaal Orb",
+    "base_type_zh": "瓦爾寶珠",
+    "base_type_en": "Vaal Orb",
+    "type": "Metadata/Items/Currency/CurrencyCorrupt",
+    "url": "https://poedb.tw/tw/Vaal_Orb"
+  },
+  {
+    "name_zh": "符咒",
+    "name_en": "Enchant",
+    "base_type_zh": "符咒",
+    "base_type_en": "Enchant",
+    "type": "Metadata/Items/Currency/CurrencyLabyrinthEnchant",
+    "url": "https://poedb.tw/tw/Enchant"
+  },
+  {
+    "name_zh": "玷污的祝福",
+    "name_en": "Tainted Blessing",
+    "base_type_zh": "玷污的祝福",
+    "base_type_en": "Tainted Blessing",
+    "type": "Metadata/Items/Currency/CurrencyLabyrinthEnchantCorrupt",
+    "url": "https://poedb.tw/tw/Tainted_Blessing"
+  },
+  {
+    "name_zh": "腐化",
+    "name_en": "Corrupt",
+    "base_type_zh": "腐化",
+    "base_type_en": "Corrupt",
+    "type": "Metadata/Items/Currency/CurrencyIncursionCorrupt1",
+    "url": "https://poedb.tw/tw/Corrupt"
+  },
+  {
+    "name_zh": "普蘭德斯金幣",
+    "name_en": "Perandus Coin",
+    "base_type_zh": "普蘭德斯金幣",
+    "base_type_en": "Perandus Coin",
+    "type": "Metadata/Items/Currency/CurrencyPerandusCoin",
+    "url": "https://poedb.tw/tw/Perandus_Coin"
+  },
+  {
+    "name_zh": "預言",
+    "name_en": "Prophecy",
+    "base_type_zh": "預言",
+    "base_type_en": "Prophecy",
+    "type": "Metadata/Items/Currency/CurrencyItemisedProphecy",
+    "url": "https://poedb.tw/tw/Prophecy"
+  },
+  {
+    "name_zh": "獸魂玉",
+    "name_en": "Bestiary Orb",
+    "base_type_zh": "獸魂玉",
+    "base_type_en": "Bestiary Orb",
+    "type": "Metadata/Items/Currency/CurrencyItemiseCapturedMonster",
+    "url": "https://poedb.tw/tw/Bestiary_Orb"
+  },
+  {
+    "name_zh": "拓印獸魂玉",
+    "name_en": "Imprinted Bestiary Orb",
+    "base_type_zh": "拓印獸魂玉",
+    "base_type_en": "Imprinted Bestiary Orb",
+    "type": "Metadata/Items/Currency/CurrencyItemisedCapturedMonster",
+    "url": "https://poedb.tw/tw/Imprinted_Bestiary_Orb"
+  },
+  {
+    "name_zh": "空靈柩",
+    "name_en": "Empty Coffin",
+    "base_type_zh": "空靈柩",
+    "base_type_en": "Empty Coffin",
+    "type": "Metadata/Items/Currency/CurrencyItemiseNecropolisCorpse",
+    "url": "https://poedb.tw/tw/Empty_Coffin"
+  },
+  {
+    "name_zh": "滿靈柩",
+    "name_en": "Filled Coffin",
+    "base_type_zh": "滿靈柩",
+    "base_type_en": "Filled Coffin",
+    "type": "Metadata/Items/Currency/CurrencyItemisedNecropolisCorpse",
+    "url": "https://poedb.tw/tw/Filled_Coffin"
+  },
+  {
+    "name_zh": "塑界者的崇高石",
+    "name_en": "Shaper's Exalted Orb",
+    "base_type_zh": "塑界者的崇高石",
+    "base_type_en": "Shaper's Exalted Orb",
+    "type": "Metadata/Items/Currency/CurrencyAddModToRareShaper",
+    "url": "https://poedb.tw/tw/Shapers_Exalted_Orb"
+  },
+  {
+    "name_zh": "尊師的崇高石",
+    "name_en": "Elder's Exalted Orb",
+    "base_type_zh": "尊師的崇高石",
+    "base_type_en": "Elder's Exalted Orb",
+    "type": "Metadata/Items/Currency/CurrencyAddModToRareElder",
+    "url": "https://poedb.tw/tw/Elders_Exalted_Orb"
+  },
+  {
+    "name_zh": "回想石",
+    "name_en": "Orb of Remembrance",
+    "base_type_zh": "回想石",
+    "base_type_en": "Orb of Remembrance",
+    "type": "Metadata/Items/Currency/CurrencyAddZanaInfluence",
+    "url": "https://poedb.tw/tw/Orb_of_Remembrance"
+  },
+  {
+    "name_zh": "拆解石",
+    "name_en": "Orb of Unravelling",
+    "base_type_zh": "拆解石",
+    "base_type_en": "Orb of Unravelling",
+    "type": "Metadata/Items/Currency/CurrencyRemoveZanaInfluence",
+    "url": "https://poedb.tw/tw/Orb_of_Unravelling"
+  },
+  {
+    "name_zh": "意志石",
+    "name_en": "Orb of Intention",
+    "base_type_zh": "意志石",
+    "base_type_en": "Orb of Intention",
+    "type": "Metadata/Items/Currency/CurrencyMoreZanaInfluencedItems",
+    "url": "https://poedb.tw/tw/Orb_of_Intention"
+  },
+  {
+    "name_zh": "調查員的羅盤",
+    "name_en": "Surveyor's Compass",
+    "base_type_zh": "調查員的羅盤",
+    "base_type_en": "Surveyor's Compass",
+    "type": "Metadata/Items/Currency/CurrencyItemiseSextantModifier",
+    "url": "https://poedb.tw/tw/Surveyors_Compass"
+  },
+  {
+    "name_zh": "初階篩分之鏡",
+    "name_en": "Prime Regrading Lens",
+    "base_type_zh": "初階篩分之鏡",
+    "base_type_en": "Prime Regrading Lens",
+    "type": "Metadata/Items/Currency/CurrencyRerollSkillQualityType",
+    "url": "https://poedb.tw/tw/Prime_Regrading_Lens"
+  },
+  {
+    "name_zh": "次階篩分之鏡",
+    "name_en": "Secondary Regrading Lens",
+    "base_type_zh": "次階篩分之鏡",
+    "base_type_en": "Secondary Regrading Lens",
+    "type": "Metadata/Items/Currency/CurrencyRerollSupportQualityType",
+    "url": "https://poedb.tw/tw/Secondary_Regrading_Lens"
+  },
+  {
+    "name_zh": "淬鍊石",
+    "name_en": "Tempering Orb",
+    "base_type_zh": "淬鍊石",
+    "base_type_en": "Tempering Orb",
+    "type": "Metadata/Items/Currency/CurrencyHeistWeaponEnchant",
+    "url": "https://poedb.tw/tw/Tempering_Orb"
+  },
+  {
+    "name_zh": "裁縫石",
+    "name_en": "Tailoring Orb",
+    "base_type_zh": "裁縫石",
+    "base_type_en": "Tailoring Orb",
+    "type": "Metadata/Items/Currency/CurrencyHeistArmourEnchant",
+    "url": "https://poedb.tw/tw/Tailoring_Orb"
+  },
+  {
+    "name_zh": "隱匿聖甲蟲",
+    "name_en": "Veiled Scarab",
+    "base_type_zh": "隱匿聖甲蟲",
+    "base_type_en": "Veiled Scarab",
+    "type": "Metadata/Items/Currency/CurrencyStackedScarab",
+    "url": "https://poedb.tw/tw/Veiled_Scarab"
+  },
+  {
+    "name_zh": "製圖封印．見習",
+    "name_en": "Apprentice Cartographer's Seal",
+    "base_type_zh": "製圖封印．見習",
+    "base_type_en": "Apprentice Cartographer's Seal",
+    "type": "Metadata/Items/Currency/CurrencySealMapLow",
+    "url": "https://poedb.tw/tw/Apprentice_Cartographers_Seal"
+  },
+  {
+    "name_zh": "製圖封印．學者",
+    "name_en": "Journeyman Cartographer's Seal",
+    "base_type_zh": "製圖封印．學者",
+    "base_type_en": "Journeyman Cartographer's Seal",
+    "type": "Metadata/Items/Currency/CurrencySealMapMid",
+    "url": "https://poedb.tw/tw/Journeyman_Cartographers_Seal"
+  },
+  {
+    "name_zh": "製圖封印．大師",
+    "name_en": "Master Cartographer's Seal",
+    "base_type_zh": "製圖封印．大師",
+    "base_type_en": "Master Cartographer's Seal",
+    "type": "Metadata/Items/Currency/CurrencySealMapHigh",
+    "url": "https://poedb.tw/tw/Master_Cartographers_Seal"
+  },
+  {
+    "name_zh": "還原玉",
+    "name_en": "Unshaping Orb",
+    "base_type_zh": "還原玉",
+    "base_type_en": "Unshaping Orb",
+    "type": "Metadata/Items/Currency/CurrencyRespecShapersOrb",
+    "url": "https://poedb.tw/tw/Unshaping_Orb"
+  },
+  {
+    "name_zh": "無效石",
+    "name_en": "Orb of Annulment",
+    "base_type_zh": "無效石",
+    "base_type_en": "Orb of Annulment",
+    "type": "Metadata/Items/Currency/CurrencyRemoveMod",
+    "url": "https://poedb.tw/tw/Orb_of_Annulment"
+  },
+  {
+    "name_zh": "束縛石",
+    "name_en": "Orb of Binding",
+    "base_type_zh": "束縛石",
+    "base_type_en": "Orb of Binding",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",
+    "url": "https://poedb.tw/tw/Orb_of_Binding"
+  },
+  {
+    "name_zh": "地平石",
+    "name_en": "Orb of Horizons",
+    "base_type_zh": "地平石",
+    "base_type_en": "Orb of Horizons",
+    "type": "Metadata/Items/Currency/CurrencyRerollMapType",
+    "url": "https://poedb.tw/tw/Orb_of_Horizons"
+  },
+  {
+    "name_zh": "神諭石",
+    "name_en": "Harbinger's Orb",
+    "base_type_zh": "神諭石",
+    "base_type_en": "Harbinger's Orb",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeMapTier",
+    "url": "https://poedb.tw/tw/Harbingers_Orb"
+  },
+  {
+    "name_zh": "工程石",
+    "name_en": "Engineer's Orb",
+    "base_type_zh": "工程石",
+    "base_type_en": "Engineer's Orb",
+    "type": "Metadata/Items/Currency/CurrencyStrongboxQuality",
+    "url": "https://poedb.tw/tw/Engineers_Orb"
+  },
+  {
+    "name_zh": "充能的工程石",
+    "name_en": "Infused Engineer's Orb",
+    "base_type_zh": "充能的工程石",
+    "base_type_en": "Infused Engineer's Orb",
+    "type": "Metadata/Items/Currency/CurrencyStrongboxQualityInfused",
+    "url": "https://poedb.tw/tw/Infused_Engineers_Orb"
+  },
+  {
+    "name_zh": "古變石",
+    "name_en": "Ancient Orb",
+    "base_type_zh": "古變石",
+    "base_type_en": "Ancient Orb",
+    "type": "Metadata/Items/Currency/CurrencyRerollUnique",
+    "url": "https://poedb.tw/tw/Ancient_Orb"
+  },
+  {
+    "name_zh": "破裂石",
+    "name_en": "Fracturing Orb",
+    "base_type_zh": "破裂石",
+    "base_type_en": "Fracturing Orb",
+    "type": "Metadata/Items/Currency/CurrencyFractureRare",
+    "url": "https://poedb.tw/tw/Fracturing_Orb"
+  },
+  {
+    "name_zh": "無效石碎片",
+    "name_en": "Annulment Shard",
+    "base_type_zh": "無效石碎片",
+    "base_type_en": "Annulment Shard",
+    "type": "Metadata/Items/Currency/CurrencyRemoveModShard",
+    "url": "https://poedb.tw/tw/Annulment_Shard"
+  },
+  {
+    "name_zh": "束縛石碎片",
+    "name_en": "Binding Shard",
+    "base_type_zh": "束縛石碎片",
+    "base_type_en": "Binding Shard",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSocketsShard",
+    "url": "https://poedb.tw/tw/Binding_Shard"
+  },
+  {
+    "name_zh": "地平石碎片",
+    "name_en": "Horizon Shard",
+    "base_type_zh": "地平石碎片",
+    "base_type_en": "Horizon Shard",
+    "type": "Metadata/Items/Currency/CurrencyRerollMapTypeShard",
+    "url": "https://poedb.tw/tw/Horizon_Shard"
+  },
+  {
+    "name_zh": "神諭石碎片",
+    "name_en": "Harbinger's Shard",
+    "base_type_zh": "神諭石碎片",
+    "base_type_en": "Harbinger's Shard",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeMapTierShard",
+    "url": "https://poedb.tw/tw/Harbingers_Shard"
+  },
+  {
+    "name_zh": "工程石碎片",
+    "name_en": "Engineer's Shard",
+    "base_type_zh": "工程石碎片",
+    "base_type_en": "Engineer's Shard",
+    "type": "Metadata/Items/Currency/CurrencyStrongboxQualityShard",
+    "url": "https://poedb.tw/tw/Engineers_Shard"
+  },
+  {
+    "name_zh": "古變石碎片",
+    "name_en": "Ancient Shard",
+    "base_type_zh": "古變石碎片",
+    "base_type_en": "Ancient Shard",
+    "type": "Metadata/Items/Currency/CurrencyRerollUniqueShard",
+    "url": "https://poedb.tw/tw/Ancient_Shard"
+  },
+  {
+    "name_zh": "混沌石碎片",
+    "name_en": "Chaos Shard",
+    "base_type_zh": "混沌石碎片",
+    "base_type_en": "Chaos Shard",
+    "type": "Metadata/Items/Currency/CurrencyRerollRareShard",
+    "url": "https://poedb.tw/tw/Chaos_Shard"
+  },
+  {
+    "name_zh": "魔鏡碎片",
+    "name_en": "Mirror Shard",
+    "base_type_zh": "魔鏡碎片",
+    "base_type_en": "Mirror Shard",
+    "type": "Metadata/Items/Currency/CurrencyDuplicateShard",
+    "url": "https://poedb.tw/tw/Mirror_Shard"
+  },
+  {
+    "name_zh": "崇高石碎片",
+    "name_en": "Exalted Shard",
+    "base_type_zh": "崇高石碎片",
+    "base_type_en": "Exalted Shard",
+    "type": "Metadata/Items/Currency/CurrencyAddModToRareShard",
+    "url": "https://poedb.tw/tw/Exalted_Shard"
+  },
+  {
+    "name_zh": "富豪石碎片",
+    "name_en": "Regal Shard",
+    "base_type_zh": "富豪石碎片",
+    "base_type_en": "Regal Shard",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeMagicToRareShard",
+    "url": "https://poedb.tw/tw/Regal_Shard"
+  },
+  {
+    "name_zh": "破裂石碎片",
+    "name_en": "Fracturing Shard",
+    "base_type_zh": "破裂石碎片",
+    "base_type_en": "Fracturing Shard",
+    "type": "Metadata/Items/Currency/CurrencyFractureRareShard",
+    "url": "https://poedb.tw/tw/Fracturing_Shard"
+  },
+  {
+    "name_zh": "時光卷軸",
+    "name_en": "Time-light Scroll",
+    "base_type_zh": "時光卷軸",
+    "base_type_en": "Time-light Scroll",
+    "type": "Metadata/Items/Currency/CurrencyHarbingerBlessingBelt",
+    "url": "https://poedb.tw/tw/Time-light_Scroll"
+  },
+  {
+    "name_zh": "碎片卷軸",
+    "name_en": "Fragmentation Scroll",
+    "base_type_zh": "碎片卷軸",
+    "base_type_en": "Fragmentation Scroll",
+    "type": "Metadata/Items/Currency/CurrencyHarbingerBlessingQuiver",
+    "url": "https://poedb.tw/tw/Fragmentation_Scroll"
+  },
+  {
+    "name_zh": "反常卷軸",
+    "name_en": "Deregulation Scroll",
+    "base_type_zh": "反常卷軸",
+    "base_type_en": "Deregulation Scroll",
+    "type": "Metadata/Items/Currency/CurrencyHarbingerBlessingHelmet",
+    "url": "https://poedb.tw/tw/Deregulation_Scroll"
+  },
+  {
+    "name_zh": "電擊卷軸",
+    "name_en": "Electroshock Scroll",
+    "base_type_zh": "電擊卷軸",
+    "base_type_en": "Electroshock Scroll",
+    "type": "Metadata/Items/Currency/CurrencyHarbingerBlessingSword",
+    "url": "https://poedb.tw/tw/Electroshock_Scroll"
+  },
+  {
+    "name_zh": "爆燃卷軸",
+    "name_en": "Haemocombustion Scroll",
+    "base_type_zh": "爆燃卷軸",
+    "base_type_en": "Haemocombustion Scroll",
+    "type": "Metadata/Items/Currency/CurrencyHarbingerBlessingStaff",
+    "url": "https://poedb.tw/tw/Haemocombustion_Scroll"
+  },
+  {
+    "name_zh": "反射卷軸",
+    "name_en": "Specularity Scroll",
+    "base_type_zh": "反射卷軸",
+    "base_type_en": "Specularity Scroll",
+    "type": "Metadata/Items/Currency/CurrencyHarbingerBlessingShield",
+    "url": "https://poedb.tw/tw/Specularity_Scroll"
+  },
+  {
+    "name_zh": "費斯特之鏡",
+    "name_en": "Facetor's Lens",
+    "base_type_zh": "費斯特之鏡",
+    "base_type_en": "Facetor's Lens",
+    "type": "Metadata/Items/Currency/CurrencyAddGemExperience",
+    "url": "https://poedb.tw/tw/Facetors_Lens"
+  },
+  {
+    "name_zh": "岩礦",
+    "name_en": "Magmatic Ore",
+    "base_type_zh": "岩礦",
+    "base_type_en": "Magmatic Ore",
+    "type": "Metadata/Items/Currency/CurrencyAddCrucibleExperience",
+    "url": "https://poedb.tw/tw/Magmatic_Ore"
+  },
+  {
+    "name_zh": "祭祀碑器",
+    "name_en": "Ritual Vessel",
+    "base_type_zh": "祭祀碑器",
+    "base_type_en": "Ritual Vessel",
+    "type": "Metadata/Items/Currency/CurrencyRitualStone",
+    "url": "https://poedb.tw/tw/Ritual_Vessel"
+  },
+  {
+    "name_zh": "低階異能灰燼",
+    "name_en": "Lesser Eldritch Ember",
+    "base_type_zh": "低階異能灰燼",
+    "base_type_en": "Lesser Eldritch Ember",
+    "type": "Metadata/Items/Currency/CurrencyEldritchEmber1",
+    "url": "https://poedb.tw/tw/Lesser_Eldritch_Ember"
+  },
+  {
+    "name_zh": "高階異能灰燼",
+    "name_en": "Greater Eldritch Ember",
+    "base_type_zh": "高階異能灰燼",
+    "base_type_en": "Greater Eldritch Ember",
+    "type": "Metadata/Items/Currency/CurrencyEldritchEmber2",
+    "url": "https://poedb.tw/tw/Greater_Eldritch_Ember"
+  },
+  {
+    "name_zh": "宏偉異能灰燼",
+    "name_en": "Grand Eldritch Ember",
+    "base_type_zh": "宏偉異能灰燼",
+    "base_type_en": "Grand Eldritch Ember",
+    "type": "Metadata/Items/Currency/CurrencyEldritchEmber3",
+    "url": "https://poedb.tw/tw/Grand_Eldritch_Ember"
+  },
+  {
+    "name_zh": "卓越異能灰燼",
+    "name_en": "Exceptional Eldritch Ember",
+    "base_type_zh": "卓越異能灰燼",
+    "base_type_en": "Exceptional Eldritch Ember",
+    "type": "Metadata/Items/Currency/CurrencyEldritchEmber4",
+    "url": "https://poedb.tw/tw/Exceptional_Eldritch_Ember"
+  },
+  {
+    "name_zh": "低階異能靈液",
+    "name_en": "Lesser Eldritch Ichor",
+    "base_type_zh": "低階異能靈液",
+    "base_type_en": "Lesser Eldritch Ichor",
+    "type": "Metadata/Items/Currency/CurrencyEldritchIchor1",
+    "url": "https://poedb.tw/tw/Lesser_Eldritch_Ichor"
+  },
+  {
+    "name_zh": "高階異能靈液",
+    "name_en": "Greater Eldritch Ichor",
+    "base_type_zh": "高階異能靈液",
+    "base_type_en": "Greater Eldritch Ichor",
+    "type": "Metadata/Items/Currency/CurrencyEldritchIchor2",
+    "url": "https://poedb.tw/tw/Greater_Eldritch_Ichor"
+  },
+  {
+    "name_zh": "宏偉異能靈液",
+    "name_en": "Grand Eldritch Ichor",
+    "base_type_zh": "宏偉異能靈液",
+    "base_type_en": "Grand Eldritch Ichor",
+    "type": "Metadata/Items/Currency/CurrencyEldritchIchor3",
+    "url": "https://poedb.tw/tw/Grand_Eldritch_Ichor"
+  },
+  {
+    "name_zh": "卓越異能靈液",
+    "name_en": "Exceptional Eldritch Ichor",
+    "base_type_zh": "卓越異能靈液",
+    "base_type_en": "Exceptional Eldritch Ichor",
+    "type": "Metadata/Items/Currency/CurrencyEldritchIchor4",
+    "url": "https://poedb.tw/tw/Exceptional_Eldritch_Ichor"
+  },
+  {
+    "name_zh": "衝突寶珠",
+    "name_en": "Orb of Conflict",
+    "base_type_zh": "衝突寶珠",
+    "base_type_en": "Orb of Conflict",
+    "type": "Metadata/Items/Currency/CurrencyConflictOrb",
+    "url": "https://poedb.tw/tw/Orb_of_Conflict"
+  },
+  {
+    "name_zh": "未雕刻寶石",
+    "name_en": "Uncarved Gemstone",
+    "base_type_zh": "未雕刻寶石",
+    "base_type_en": "Uncarved Gemstone",
+    "type": "Metadata/Items/Currency/CurrencySkillGemToken",
+    "url": "https://poedb.tw/tw/Uncarved_Gemstone"
+  },
+  {
+    "name_zh": "瓦爾多的謎盒",
+    "name_en": "Valdo's Puzzle Box",
+    "base_type_zh": "瓦爾多的謎盒",
+    "base_type_en": "Valdo's Puzzle Box",
+    "type": "Metadata/Items/Currency/CurrencyValdoPuzzleBox",
+    "url": "https://poedb.tw/tw/Valdos_Puzzle_Box"
+  },
+  {
+    "name_zh": "豐裕牌組",
+    "name_en": "Stacked Deck",
+    "base_type_zh": "豐裕牌組",
+    "base_type_en": "Stacked Deck",
+    "type": "Metadata/Items/DivinationCards/DivinationCardDeck",
+    "url": "https://poedb.tw/tw/Stacked_Deck"
+  },
+  {
+    "name_zh": "聖戰士的崇高石",
+    "name_en": "Crusader's Exalted Orb",
+    "base_type_zh": "聖戰士的崇高石",
+    "base_type_en": "Crusader's Exalted Orb",
+    "type": "Metadata/Items/AtlasExiles/AddModToRareCrusader",
+    "url": "https://poedb.tw/tw/Crusaders_Exalted_Orb"
+  },
+  {
+    "name_zh": "救贖者的崇高石",
+    "name_en": "Redeemer's Exalted Orb",
+    "base_type_zh": "救贖者的崇高石",
+    "base_type_en": "Redeemer's Exalted Orb",
+    "type": "Metadata/Items/AtlasExiles/AddModToRareRedeemer",
+    "url": "https://poedb.tw/tw/Redeemers_Exalted_Orb"
+  },
+  {
+    "name_zh": "狩獵者的崇高石",
+    "name_en": "Hunter's Exalted Orb",
+    "base_type_zh": "狩獵者的崇高石",
+    "base_type_en": "Hunter's Exalted Orb",
+    "type": "Metadata/Items/AtlasExiles/AddModToRareHunter",
+    "url": "https://poedb.tw/tw/Hunters_Exalted_Orb"
+  },
+  {
+    "name_zh": "總督軍的崇高石",
+    "name_en": "Warlord's Exalted Orb",
+    "base_type_zh": "總督軍的崇高石",
+    "base_type_en": "Warlord's Exalted Orb",
+    "type": "Metadata/Items/AtlasExiles/AddModToRareWarlord",
+    "url": "https://poedb.tw/tw/Warlords_Exalted_Orb"
+  },
+  {
+    "name_zh": "喚醒者之玉",
+    "name_en": "Awakener's Orb",
+    "base_type_zh": "喚醒者之玉",
+    "base_type_en": "Awakener's Orb",
+    "type": "Metadata/Items/AtlasExiles/ApplyInfluence",
+    "url": "https://poedb.tw/tw/Awakeners_Orb"
+  },
+  {
+    "name_zh": "盜賊之印",
+    "name_en": "Rogue's Marker",
+    "base_type_zh": "盜賊之印",
+    "base_type_en": "Rogue's Marker",
+    "type": "Metadata/Items/Heist/HeistCoin",
+    "url": "https://poedb.tw/tw/Rogues_Marker"
+  },
+  {
+    "name_zh": "支配之玉",
+    "name_en": "Orb of Dominance",
+    "base_type_zh": "支配之玉",
+    "base_type_en": "Orb of Dominance",
+    "type": "Metadata/Items/Currency/CurrencyUpgradeInfluenceMod",
+    "url": "https://poedb.tw/tw/Orb_of_Dominance"
+  },
+  {
+    "name_zh": "點燃石",
+    "name_en": "Enkindling Orb",
+    "base_type_zh": "點燃石",
+    "base_type_en": "Enkindling Orb",
+    "type": "Metadata/Items/Currency/CurrencyEnkindlingOrb",
+    "url": "https://poedb.tw/tw/Enkindling_Orb"
+  },
+  {
+    "name_zh": "滴注石",
+    "name_en": "Instilling Orb",
+    "base_type_zh": "滴注石",
+    "base_type_en": "Instilling Orb",
+    "type": "Metadata/Items/Currency/CurrencyInstillingOrb",
+    "url": "https://poedb.tw/tw/Instilling_Orb"
+  },
+  {
+    "name_zh": "異域幣鑄",
+    "name_en": "Exotic Coinage",
+    "base_type_zh": "異域幣鑄",
+    "base_type_en": "Exotic Coinage",
+    "type": "Metadata/Items/Currency/CurrencyRefreshBarter",
+    "url": "https://poedb.tw/tw/Exotic_Coinage"
+  },
+  {
+    "name_zh": "廢金屬",
+    "name_en": "Scrap Metal",
+    "base_type_zh": "廢金屬",
+    "base_type_en": "Scrap Metal",
+    "type": "Metadata/Items/Currency/CurrencyRefreshDealer",
+    "url": "https://poedb.tw/tw/Scrap_Metal"
+  },
+  {
+    "name_zh": "骰子",
+    "name_en": "Astragali",
+    "base_type_zh": "骰子",
+    "base_type_en": "Astragali",
+    "type": "Metadata/Items/Currency/CurrencyRefreshGambler",
+    "url": "https://poedb.tw/tw/Astragali"
+  },
+  {
+    "name_zh": "埋葬獎章",
+    "name_en": "Burial Medallion",
+    "base_type_zh": "埋葬獎章",
+    "base_type_en": "Burial Medallion",
+    "type": "Metadata/Items/Currency/CurrencyRefreshSaga",
+    "url": "https://poedb.tw/tw/Burial_Medallion"
+  },
+  {
+    "name_zh": "低階破碎之環文物",
+    "name_en": "Lesser Broken Circle Artifact",
+    "base_type_zh": "低階破碎之環文物",
+    "base_type_en": "Lesser Broken Circle Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction1_1",
+    "url": "https://poedb.tw/tw/Lesser_Broken_Circle_Artifact"
+  },
+  {
+    "name_zh": "高階破碎之環文物",
+    "name_en": "Greater Broken Circle Artifact",
+    "base_type_zh": "高階破碎之環文物",
+    "base_type_en": "Greater Broken Circle Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction1_2",
+    "url": "https://poedb.tw/tw/Greater_Broken_Circle_Artifact"
+  },
+  {
+    "name_zh": "宏偉破碎之環文物",
+    "name_en": "Grand Broken Circle Artifact",
+    "base_type_zh": "宏偉破碎之環文物",
+    "base_type_en": "Grand Broken Circle Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction1_3",
+    "url": "https://poedb.tw/tw/Grand_Broken_Circle_Artifact"
+  },
+  {
+    "name_zh": "卓越破碎之環文物",
+    "name_en": "Exceptional Broken Circle Artifact",
+    "base_type_zh": "卓越破碎之環文物",
+    "base_type_en": "Exceptional Broken Circle Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction1_4",
+    "url": "https://poedb.tw/tw/Exceptional_Broken_Circle_Artifact"
+  },
+  {
+    "name_zh": "低階黑暗血鐮文物",
+    "name_en": "Lesser Black Scythe Artifact",
+    "base_type_zh": "低階黑暗血鐮文物",
+    "base_type_en": "Lesser Black Scythe Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction2_1",
+    "url": "https://poedb.tw/tw/Lesser_Black_Scythe_Artifact"
+  },
+  {
+    "name_zh": "高階黑暗血鐮文物",
+    "name_en": "Greater Black Scythe Artifact",
+    "base_type_zh": "高階黑暗血鐮文物",
+    "base_type_en": "Greater Black Scythe Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction2_2",
+    "url": "https://poedb.tw/tw/Greater_Black_Scythe_Artifact"
+  },
+  {
+    "name_zh": "宏偉黑暗血鐮文物",
+    "name_en": "Grand Black Scythe Artifact",
+    "base_type_zh": "宏偉黑暗血鐮文物",
+    "base_type_en": "Grand Black Scythe Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction2_3",
+    "url": "https://poedb.tw/tw/Grand_Black_Scythe_Artifact"
+  },
+  {
+    "name_zh": "卓越黑暗血鐮文物",
+    "name_en": "Exceptional Black Scythe Artifact",
+    "base_type_zh": "卓越黑暗血鐮文物",
+    "base_type_en": "Exceptional Black Scythe Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction2_4",
+    "url": "https://poedb.tw/tw/Exceptional_Black_Scythe_Artifact"
+  },
+  {
+    "name_zh": "低階秩序文物",
+    "name_en": "Lesser Order Artifact",
+    "base_type_zh": "低階秩序文物",
+    "base_type_en": "Lesser Order Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction3_1",
+    "url": "https://poedb.tw/tw/Lesser_Order_Artifact"
+  },
+  {
+    "name_zh": "高階秩序文物",
+    "name_en": "Greater Order Artifact",
+    "base_type_zh": "高階秩序文物",
+    "base_type_en": "Greater Order Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction3_2",
+    "url": "https://poedb.tw/tw/Greater_Order_Artifact"
+  },
+  {
+    "name_zh": "宏偉秩序文物",
+    "name_en": "Grand Order Artifact",
+    "base_type_zh": "宏偉秩序文物",
+    "base_type_en": "Grand Order Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction3_3",
+    "url": "https://poedb.tw/tw/Grand_Order_Artifact"
+  },
+  {
+    "name_zh": "卓越秩序文物",
+    "name_en": "Exceptional Order Artifact",
+    "base_type_zh": "卓越秩序文物",
+    "base_type_en": "Exceptional Order Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction3_4",
+    "url": "https://poedb.tw/tw/Exceptional_Order_Artifact"
+  },
+  {
+    "name_zh": "低階豔陽文物",
+    "name_en": "Lesser Sun Artifact",
+    "base_type_zh": "低階豔陽文物",
+    "base_type_en": "Lesser Sun Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction4_1",
+    "url": "https://poedb.tw/tw/Lesser_Sun_Artifact"
+  },
+  {
+    "name_zh": "高階豔陽文物",
+    "name_en": "Greater Sun Artifact",
+    "base_type_zh": "高階豔陽文物",
+    "base_type_en": "Greater Sun Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction4_2",
+    "url": "https://poedb.tw/tw/Greater_Sun_Artifact"
+  },
+  {
+    "name_zh": "宏偉豔陽文物",
+    "name_en": "Grand Sun Artifact",
+    "base_type_zh": "宏偉豔陽文物",
+    "base_type_en": "Grand Sun Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction4_3",
+    "url": "https://poedb.tw/tw/Grand_Sun_Artifact"
+  },
+  {
+    "name_zh": "卓越豔陽文物",
+    "name_en": "Exceptional Sun Artifact",
+    "base_type_zh": "卓越豔陽文物",
+    "base_type_en": "Exceptional Sun Artifact",
+    "type": "Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction4_4",
+    "url": "https://poedb.tw/tw/Exceptional_Sun_Artifact"
+  },
+  {
+    "name_zh": "玷污的幻色石",
+    "name_en": "Tainted Chromatic Orb",
+    "base_type_zh": "玷污的幻色石",
+    "base_type_en": "Tainted Chromatic Orb",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeRerollSocketColours",
+    "url": "https://poedb.tw/tw/Tainted_Chromatic_Orb"
+  },
+  {
+    "name_zh": "玷污的鏈結石",
+    "name_en": "Tainted Orb of Fusing",
+    "base_type_zh": "玷污的鏈結石",
+    "base_type_en": "Tainted Orb of Fusing",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeRerollSocketLinks",
+    "url": "https://poedb.tw/tw/Tainted_Orb_of_Fusing"
+  },
+  {
+    "name_zh": "玷污的工匠石",
+    "name_en": "Tainted Jeweller's Orb",
+    "base_type_zh": "玷污的工匠石",
+    "base_type_en": "Tainted Jeweller's Orb",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeRerollSocketNumbers",
+    "url": "https://poedb.tw/tw/Tainted_Jewellers_Orb"
+  },
+  {
+    "name_zh": "玷污的混沌石",
+    "name_en": "Tainted Chaos Orb",
+    "base_type_zh": "玷污的混沌石",
+    "base_type_en": "Tainted Chaos Orb",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeRerollRare",
+    "url": "https://poedb.tw/tw/Tainted_Chaos_Orb"
+  },
+  {
+    "name_zh": "玷污的崇高石",
+    "name_en": "Tainted Exalted Orb",
+    "base_type_zh": "玷污的崇高石",
+    "base_type_en": "Tainted Exalted Orb",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeAddModToRare",
+    "url": "https://poedb.tw/tw/Tainted_Exalted_Orb"
+  },
+  {
+    "name_zh": "玷污的神話石",
+    "name_en": "Tainted Mythic Orb",
+    "base_type_zh": "玷污的神話石",
+    "base_type_en": "Tainted Mythic Orb",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeUpgradeToUnique",
+    "url": "https://poedb.tw/tw/Tainted_Mythic_Orb"
+  },
+  {
+    "name_zh": "玷污的護甲片",
+    "name_en": "Tainted Armourer's Scrap",
+    "base_type_zh": "玷污的護甲片",
+    "base_type_en": "Tainted Armourer's Scrap",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeArmourQuality",
+    "url": "https://poedb.tw/tw/Tainted_Armourers_Scrap"
+  },
+  {
+    "name_zh": "玷污的磨刀石",
+    "name_en": "Tainted Blacksmith's Whetstone",
+    "base_type_zh": "玷污的磨刀石",
+    "base_type_en": "Tainted Blacksmith's Whetstone",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeWeaponQuality",
+    "url": "https://poedb.tw/tw/Tainted_Blacksmiths_Whetstone"
+  },
+  {
+    "name_zh": "玷污的神聖淚珠",
+    "name_en": "Tainted Divine Teardrop",
+    "base_type_zh": "玷污的神聖淚珠",
+    "base_type_en": "Tainted Divine Teardrop",
+    "type": "Metadata/Items/Currency/CurrencyHellscapeUpgradeModTier",
+    "url": "https://poedb.tw/tw/Tainted_Divine_Teardrop"
+  },
+  {
+    "name_zh": "異能混沌石",
+    "name_en": "Eldritch Chaos Orb",
+    "base_type_zh": "異能混沌石",
+    "base_type_en": "Eldritch Chaos Orb",
+    "type": "Metadata/Items/Currency/CurrencyEldritchRerollRare",
+    "url": "https://poedb.tw/tw/Eldritch_Chaos_Orb"
+  },
+  {
+    "name_zh": "異能崇高石",
+    "name_en": "Eldritch Exalted Orb",
+    "base_type_zh": "異能崇高石",
+    "base_type_en": "Eldritch Exalted Orb",
+    "type": "Metadata/Items/Currency/CurrencyEldritchAddModToRare",
+    "url": "https://poedb.tw/tw/Eldritch_Exalted_Orb"
+  },
+  {
+    "name_zh": "異能無效石",
+    "name_en": "Eldritch Orb of Annulment",
+    "base_type_zh": "異能無效石",
+    "base_type_en": "Eldritch Orb of Annulment",
+    "type": "Metadata/Items/Currency/CurrencyEldritchRemoveMod",
+    "url": "https://poedb.tw/tw/Eldritch_Orb_of_Annulment"
+  },
+  {
+    "name_zh": "卓越偵查報告",
+    "name_en": "Singular Scouting Report",
+    "base_type_zh": "卓越偵查報告",
+    "base_type_en": "Singular Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportUnique",
+    "url": "https://poedb.tw/tw/Singular_Scouting_Report"
+  },
+  {
+    "name_zh": "超凡偵查報告",
+    "name_en": "Otherworldly Scouting Report",
+    "base_type_zh": "超凡偵查報告",
+    "base_type_en": "Otherworldly Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportBreachstone",
+    "url": "https://poedb.tw/tw/Otherworldly_Scouting_Report"
+  },
+  {
+    "name_zh": "全面偵查報告",
+    "name_en": "Comprehensive Scouting Report",
+    "base_type_zh": "全面偵查報告",
+    "base_type_en": "Comprehensive Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportMoreHidden",
+    "url": "https://poedb.tw/tw/Comprehensive_Scouting_Report"
+  },
+  {
+    "name_zh": "瓦爾偵查報告",
+    "name_en": "Vaal Scouting Report",
+    "base_type_zh": "瓦爾偵查報告",
+    "base_type_en": "Vaal Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportCorrupted",
+    "url": "https://poedb.tw/tw/Vaal_Scouting_Report"
+  },
+  {
+    "name_zh": "譫妄偵查報告",
+    "name_en": "Delirious Scouting Report",
+    "base_type_zh": "譫妄偵查報告",
+    "base_type_en": "Delirious Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportDelirium",
+    "url": "https://poedb.tw/tw/Delirious_Scouting_Report"
+  },
+  {
+    "name_zh": "技工偵查報告",
+    "name_en": "Operative's Scouting Report",
+    "base_type_zh": "技工偵查報告",
+    "base_type_en": "Operative's Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportJuiced",
+    "url": "https://poedb.tw/tw/Operatives_Scouting_Report"
+  },
+  {
+    "name_zh": "凋落偵查報告",
+    "name_en": "Blighted Scouting Report",
+    "base_type_zh": "凋落偵查報告",
+    "base_type_en": "Blighted Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportBlighted",
+    "url": "https://poedb.tw/tw/Blighted_Scouting_Report"
+  },
+  {
+    "name_zh": "勢力偵查報告",
+    "name_en": "Influenced Scouting Report",
+    "base_type_zh": "勢力偵查報告",
+    "base_type_en": "Influenced Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportGuardian",
+    "url": "https://poedb.tw/tw/Influenced_Scouting_Report"
+  },
+  {
+    "name_zh": "探險家偵查報告",
+    "name_en": "Explorer's Scouting Report",
+    "base_type_zh": "探險家偵查報告",
+    "base_type_en": "Explorer's Scouting Report",
+    "type": "Metadata/Items/Currency/ScoutingReports/AtlasScoutingReportExplorers",
+    "url": "https://poedb.tw/tw/Explorers_Scouting_Report"
+  },
+  {
+    "name_zh": "精油淬鍊",
+    "name_en": "Oil Extractor",
+    "base_type_zh": "精油淬鍊",
+    "base_type_en": "Oil Extractor",
+    "type": "Metadata/Items/Currency/CurrencyExtractOil",
+    "url": "https://poedb.tw/tw/Oil_Extractor"
+  },
+  {
+    "name_zh": "動力核心",
+    "name_en": "Power Core",
+    "base_type_zh": "動力核心",
+    "base_type_en": "Power Core",
+    "type": "Metadata/Items/Currency/SentinelCurrencyBasic",
+    "url": "https://poedb.tw/tw/Power_Core"
+  },
+  {
+    "name_zh": "改造動力核心",
+    "name_en": "Transforming Power Core",
+    "base_type_zh": "改造動力核心",
+    "base_type_en": "Transforming Power Core",
+    "type": "Metadata/Items/Currency/SentinelCurrencyMutate",
+    "url": "https://poedb.tw/tw/Transforming_Power_Core"
+  },
+  {
+    "name_zh": "增強動力核心",
+    "name_en": "Amplifying Power Core",
+    "base_type_zh": "增強動力核心",
+    "base_type_en": "Amplifying Power Core",
+    "type": "Metadata/Items/Currency/SentinelCurrencyUpgradeMod",
+    "url": "https://poedb.tw/tw/Amplifying_Power_Core"
+  },
+  {
+    "name_zh": "提升動力核心",
+    "name_en": "Augmenting Power Core",
+    "base_type_zh": "提升動力核心",
+    "base_type_en": "Augmenting Power Core",
+    "type": "Metadata/Items/Currency/SentinelCurrencyAddMod",
+    "url": "https://poedb.tw/tw/Augmenting_Power_Core"
+  },
+  {
+    "name_zh": "護甲重組裝置",
+    "name_en": "Armour Recombinator",
+    "base_type_zh": "護甲重組裝置",
+    "base_type_en": "Armour Recombinator",
+    "type": "Metadata/Items/Currency/SentinelCurrencyArmour",
+    "url": "https://poedb.tw/tw/Armour_Recombinator"
+  },
+  {
+    "name_zh": "武器重組裝置",
+    "name_en": "Weapon Recombinator",
+    "base_type_zh": "武器重組裝置",
+    "base_type_en": "Weapon Recombinator",
+    "type": "Metadata/Items/Currency/SentinelCurrencyWeapon",
+    "url": "https://poedb.tw/tw/Weapon_Recombinator"
+  },
+  {
+    "name_zh": "飾品重組裝置",
+    "name_en": "Jewellery Recombinator",
+    "base_type_zh": "飾品重組裝置",
+    "base_type_en": "Jewellery Recombinator",
+    "type": "Metadata/Items/Currency/SentinelCurrencyJewellery",
+    "url": "https://poedb.tw/tw/Jewellery_Recombinator"
+  },
+  {
+    "name_zh": "野性結晶生靈之力",
+    "name_en": "Wild Crystallised Lifeforce",
+    "base_type_zh": "野性結晶生靈之力",
+    "base_type_en": "Wild Crystallised Lifeforce",
+    "type": "Metadata/Items/Currency/HarvestSeedRed",
+    "url": "https://poedb.tw/tw/Wild_Crystallised_Lifeforce"
+  },
+  {
+    "name_zh": "靈現結晶生靈之力",
+    "name_en": "Vivid Crystallised Lifeforce",
+    "base_type_zh": "靈現結晶生靈之力",
+    "base_type_en": "Vivid Crystallised Lifeforce",
+    "type": "Metadata/Items/Currency/HarvestSeedGreen",
+    "url": "https://poedb.tw/tw/Vivid_Crystallised_Lifeforce"
+  },
+  {
+    "name_zh": "原始結晶生靈之力",
+    "name_en": "Primal Crystallised Lifeforce",
+    "base_type_zh": "原始結晶生靈之力",
+    "base_type_en": "Primal Crystallised Lifeforce",
+    "type": "Metadata/Items/Currency/HarvestSeedBlue",
+    "url": "https://poedb.tw/tw/Primal_Crystallised_Lifeforce"
+  },
+  {
+    "name_zh": "神聖結晶生靈之力",
+    "name_en": "Sacred Crystallised Lifeforce",
+    "base_type_zh": "神聖結晶生靈之力",
+    "base_type_en": "Sacred Crystallised Lifeforce",
+    "type": "Metadata/Items/Currency/HarvestSeedBoss",
+    "url": "https://poedb.tw/tw/Sacred_Crystallised_Lifeforce"
+  },
+  {
+    "name_zh": "利希亞祈禱之復仇之靈",
+    "name_en": "Lycia's Invocation of Minion Instability",
+    "base_type_zh": "利希亞祈禱之復仇之靈",
+    "base_type_en": "Lycia's Invocation of Minion Instability",
+    "type": "Metadata/Items/Currency/SanctumCurrencyMinionInstability",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Minion_Instability"
+  },
+  {
+    "name_zh": "利希亞祈禱之堅毅之心",
+    "name_en": "Lycia's Invocation of Resolute Technique",
+    "base_type_zh": "利希亞祈禱之堅毅之心",
+    "base_type_en": "Lycia's Invocation of Resolute Technique",
+    "type": "Metadata/Items/Currency/SanctumCurrencyResoluteTechnique",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Resolute_Technique"
+  },
+  {
+    "name_zh": "利希亞祈禱之祭血術",
+    "name_en": "Lycia's Invocation of Blood Magic",
+    "base_type_zh": "利希亞祈禱之祭血術",
+    "base_type_en": "Lycia's Invocation of Blood Magic",
+    "type": "Metadata/Items/Currency/SanctumCurrencyBloodMagic",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Blood_Magic"
+  },
+  {
+    "name_zh": "利希亞祈禱之苦痛靈曲",
+    "name_en": "Lycia's Invocation of Pain Attunement",
+    "base_type_zh": "利希亞祈禱之苦痛靈曲",
+    "base_type_en": "Lycia's Invocation of Pain Attunement",
+    "type": "Metadata/Items/Currency/SanctumCurrencyPainAttunement",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Pain_Attunement"
+  },
+  {
+    "name_zh": "利希亞祈禱之元素之相",
+    "name_en": "Lycia's Invocation of Elemental Equilibrium",
+    "base_type_zh": "利希亞祈禱之元素之相",
+    "base_type_en": "Lycia's Invocation of Elemental Equilibrium",
+    "type": "Metadata/Items/Currency/SanctumCurrencyElementalEquilibrium",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Elemental_Equilibrium"
+  },
+  {
+    "name_zh": "利希亞祈禱之堅鐵之力",
+    "name_en": "Lycia's Invocation of Iron Grip",
+    "base_type_zh": "利希亞祈禱之堅鐵之力",
+    "base_type_en": "Lycia's Invocation of Iron Grip",
+    "type": "Metadata/Items/Currency/SanctumCurrencyIronGrip",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Iron_Grip"
+  },
+  {
+    "name_zh": "利希亞祈禱之零點射擊",
+    "name_en": "Lycia's Invocation of Point Blank",
+    "base_type_zh": "利希亞祈禱之零點射擊",
+    "base_type_en": "Lycia's Invocation of Point Blank",
+    "type": "Metadata/Items/Currency/SanctumCurrencyPointBlank",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Point_Blank"
+  },
+  {
+    "name_zh": "利希亞祈禱之移形換影",
+    "name_en": "Lycia's Invocation of Acrobatics",
+    "base_type_zh": "利希亞祈禱之移形換影",
+    "base_type_en": "Lycia's Invocation of Acrobatics",
+    "type": "Metadata/Items/Currency/SanctumCurrencyAcrobatics",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Acrobatics"
+  },
+  {
+    "name_zh": "利希亞祈禱之靈能護體",
+    "name_en": "Lycia's Invocation of Ghost Reaver",
+    "base_type_zh": "利希亞祈禱之靈能護體",
+    "base_type_en": "Lycia's Invocation of Ghost Reaver",
+    "type": "Metadata/Items/Currency/SanctumCurrencyGhostReaver",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Ghost_Reaver"
+  },
+  {
+    "name_zh": "利希亞祈禱之瓦爾冥約",
+    "name_en": "Lycia's Invocation of Vaal Pact",
+    "base_type_zh": "利希亞祈禱之瓦爾冥約",
+    "base_type_en": "Lycia's Invocation of Vaal Pact",
+    "type": "Metadata/Items/Currency/SanctumCurrencyVaalPact",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Vaal_Pact"
+  },
+  {
+    "name_zh": "利希亞祈禱之元素超載",
+    "name_en": "Lycia's Invocation of Elemental Overload",
+    "base_type_zh": "利希亞祈禱之元素超載",
+    "base_type_en": "Lycia's Invocation of Elemental Overload",
+    "type": "Metadata/Items/Currency/SanctumCurrencyElementalOverload",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Elemental_Overload"
+  },
+  {
+    "name_zh": "利希亞祈禱之火之化身",
+    "name_en": "Lycia's Invocation of Avatar of Fire",
+    "base_type_zh": "利希亞祈禱之火之化身",
+    "base_type_en": "Lycia's Invocation of Avatar of Fire",
+    "type": "Metadata/Items/Currency/SanctumCurrencyAvatarOfFire",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Avatar_of_Fire"
+  },
+  {
+    "name_zh": "利希亞祈禱之異能魔力",
+    "name_en": "Lycia's Invocation of Eldritch Battery",
+    "base_type_zh": "利希亞祈禱之異能魔力",
+    "base_type_en": "Lycia's Invocation of Eldritch Battery",
+    "type": "Metadata/Items/Currency/SanctumCurrencyEldritchBattery",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Eldritch_Battery"
+  },
+  {
+    "name_zh": "利希亞祈禱之先祖魂約",
+    "name_en": "Lycia's Invocation of Ancestral Bond",
+    "base_type_zh": "利希亞祈禱之先祖魂約",
+    "base_type_en": "Lycia's Invocation of Ancestral Bond",
+    "type": "Metadata/Items/Currency/SanctumCurrencyAncestralBond",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Ancestral_Bond"
+  },
+  {
+    "name_zh": "利希亞祈禱之緋紅舞蹈",
+    "name_en": "Lycia's Invocation of Crimson Dance",
+    "base_type_zh": "利希亞祈禱之緋紅舞蹈",
+    "base_type_en": "Lycia's Invocation of Crimson Dance",
+    "type": "Metadata/Items/Currency/SanctumCurrencyCrimsonDance",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Crimson_Dance"
+  },
+  {
+    "name_zh": "利希亞祈禱之絕對受難",
+    "name_en": "Lycia's Invocation of Perfect Agony",
+    "base_type_zh": "利希亞祈禱之絕對受難",
+    "base_type_en": "Lycia's Invocation of Perfect Agony",
+    "type": "Metadata/Items/Currency/SanctumCurrencyPerfectAgony",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Perfect_Agony"
+  },
+  {
+    "name_zh": "利希亞祈禱之束縛印",
+    "name_en": "Lycia's Invocation of Runebinder",
+    "base_type_zh": "利希亞祈禱之束縛印",
+    "base_type_en": "Lycia's Invocation of Runebinder",
+    "type": "Metadata/Items/Currency/SanctumCurrencyRunebinder",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Runebinder"
+  },
+  {
+    "name_zh": "利希亞祈禱之側身之擊",
+    "name_en": "Lycia's Invocation of Glancing Blows",
+    "base_type_zh": "利希亞祈禱之側身之擊",
+    "base_type_en": "Lycia's Invocation of Glancing Blows",
+    "type": "Metadata/Items/Currency/SanctumCurrencyGlancingBlows",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Glancing_Blows"
+  },
+  {
+    "name_zh": "利希亞祈禱之武裝召喚",
+    "name_en": "Lycia's Invocation of Call to Arms",
+    "base_type_zh": "利希亞祈禱之武裝召喚",
+    "base_type_en": "Lycia's Invocation of Call to Arms",
+    "type": "Metadata/Items/Currency/SanctumCurrencyCallToArms",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Call_to_Arms"
+  },
+  {
+    "name_zh": "利希亞祈禱之不可知論",
+    "name_en": "Lycia's Invocation of the Agnostic",
+    "base_type_zh": "利希亞祈禱之不可知論",
+    "base_type_en": "Lycia's Invocation of the Agnostic",
+    "type": "Metadata/Items/Currency/SanctumCurrencyTheAgnostic",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_the_Agnostic"
+  },
+  {
+    "name_zh": "利希亞祈禱之至高．自我",
+    "name_en": "Lycia's Invocation of Supreme Ego",
+    "base_type_zh": "利希亞祈禱之至高．自我",
+    "base_type_en": "Lycia's Invocation of Supreme Ego",
+    "type": "Metadata/Items/Currency/SanctumCurrencySupremeEgo",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Supreme_Ego"
+  },
+  {
+    "name_zh": "利希亞祈禱之穿刺者",
+    "name_en": "Lycia's Invocation of the Impaler",
+    "base_type_zh": "利希亞祈禱之穿刺者",
+    "base_type_en": "Lycia's Invocation of the Impaler",
+    "type": "Metadata/Items/Currency/SanctumCurrencyTheImpaler",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_the_Impaler"
+  },
+  {
+    "name_zh": "利希亞祈禱之咒術大師",
+    "name_en": "Lycia's Invocation of Hex Master",
+    "base_type_zh": "利希亞祈禱之咒術大師",
+    "base_type_en": "Lycia's Invocation of Hex Master",
+    "type": "Metadata/Items/Currency/SanctumCurrencyDoomsday",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Hex_Master"
+  },
+  {
+    "name_zh": "利希亞祈禱之忘卻陰影",
+    "name_en": "Lycia's Invocation of Lethe Shade",
+    "base_type_zh": "利希亞祈禱之忘卻陰影",
+    "base_type_en": "Lycia's Invocation of Lethe Shade",
+    "type": "Metadata/Items/Currency/SanctumCurrencyLetheShade",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Lethe_Shade"
+  },
+  {
+    "name_zh": "利希亞祈禱之鬼舞",
+    "name_en": "Lycia's Invocation of Ghost Dance",
+    "base_type_zh": "利希亞祈禱之鬼舞",
+    "base_type_en": "Lycia's Invocation of Ghost Dance",
+    "type": "Metadata/Items/Currency/SanctumCurrencyGhostDance",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Ghost_Dance"
+  },
+  {
+    "name_zh": "利希亞祈禱之多重戰",
+    "name_en": "Lycia's Invocation of Versatile Combatant",
+    "base_type_zh": "利希亞祈禱之多重戰",
+    "base_type_en": "Lycia's Invocation of Versatile Combatant",
+    "type": "Metadata/Items/Currency/SanctumCurrencyVersatileCombatant",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Versatile_Combatant"
+  },
+  {
+    "name_zh": "利希亞祈禱之咒術災厄",
+    "name_en": "Lycia's Invocation of Magebane",
+    "base_type_zh": "利希亞祈禱之咒術災厄",
+    "base_type_en": "Lycia's Invocation of Magebane",
+    "type": "Metadata/Items/Currency/SanctumCurrencyMagebane",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Magebane"
+  },
+  {
+    "name_zh": "利希亞祈禱之唯我論",
+    "name_en": "Lycia's Invocation of Solipsism",
+    "base_type_zh": "利希亞祈禱之唯我論",
+    "base_type_en": "Lycia's Invocation of Solipsism",
+    "type": "Metadata/Items/Currency/SanctumCurrencySolipsism",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Solipsism"
+  },
+  {
+    "name_zh": "利希亞祈禱之聖盾",
+    "name_en": "Lycia's Invocation of Divine Shield",
+    "base_type_zh": "利希亞祈禱之聖盾",
+    "base_type_en": "Lycia's Invocation of Divine Shield",
+    "type": "Metadata/Items/Currency/SanctumCurrencyDivineShield",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Divine_Shield"
+  },
+  {
+    "name_zh": "利希亞祈禱之鋼鐵意志",
+    "name_en": "Lycia's Invocation of Iron Will",
+    "base_type_zh": "利希亞祈禱之鋼鐵意志",
+    "base_type_en": "Lycia's Invocation of Iron Will",
+    "type": "Metadata/Items/Currency/SanctumCurrencyIronWill",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Iron_Will"
+  },
+  {
+    "name_zh": "利希亞祈禱之惡毒牢房",
+    "name_en": "Lycia's Invocation of Wicked Ward",
+    "base_type_zh": "利希亞祈禱之惡毒牢房",
+    "base_type_en": "Lycia's Invocation of Wicked Ward",
+    "type": "Metadata/Items/Currency/SanctumCurrencyWickedWard",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Wicked_Ward"
+  },
+  {
+    "name_zh": "利希亞祈禱之風魔舞者",
+    "name_en": "Lycia's Invocation of Wind Dancer",
+    "base_type_zh": "利希亞祈禱之風魔舞者",
+    "base_type_en": "Lycia's Invocation of Wind Dancer",
+    "type": "Metadata/Items/Currency/SanctumCurrencyWindDancer",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Wind_Dancer"
+  },
+  {
+    "name_zh": "利希亞祈禱之能量連結",
+    "name_en": "Lycia's Invocation of Conduit",
+    "base_type_zh": "利希亞祈禱之能量連結",
+    "base_type_en": "Lycia's Invocation of Conduit",
+    "type": "Metadata/Items/Currency/SanctumCurrencyConduit",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Conduit"
+  },
+  {
+    "name_zh": "利希亞祈禱之箭矢閃躍",
+    "name_en": "Lycia's Invocation of Arrow Dancing",
+    "base_type_zh": "利希亞祈禱之箭矢閃躍",
+    "base_type_en": "Lycia's Invocation of Arrow Dancing",
+    "type": "Metadata/Items/Currency/SanctumCurrencyArrowDancing",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Arrow_Dancing"
+  },
+  {
+    "name_zh": "利希亞祈禱之精準科技",
+    "name_en": "Lycia's Invocation of Precise Technique",
+    "base_type_zh": "利希亞祈禱之精準科技",
+    "base_type_en": "Lycia's Invocation of Precise Technique",
+    "type": "Metadata/Items/Currency/SanctumCurrencyPreciseTechnique",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Precise_Technique"
+  },
+  {
+    "name_zh": "利希亞祈禱之霸體",
+    "name_en": "Lycia's Invocation of Iron Reflexes",
+    "base_type_zh": "利希亞祈禱之霸體",
+    "base_type_en": "Lycia's Invocation of Iron Reflexes",
+    "type": "Metadata/Items/Currency/SanctumCurrencyIronReflexes",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Iron_Reflexes"
+  },
+  {
+    "name_zh": "利希亞祈禱之烈士意志",
+    "name_en": "Lycia's Invocation of Unwavering Stance",
+    "base_type_zh": "利希亞祈禱之烈士意志",
+    "base_type_en": "Lycia's Invocation of Unwavering Stance",
+    "type": "Metadata/Items/Currency/SanctumCurrencyUnwaveringStance",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Unwavering_Stance"
+  },
+  {
+    "name_zh": "利希亞祈禱之不平衡守衛",
+    "name_en": "Lycia's Invocation of Imbalanced Guard",
+    "base_type_zh": "利希亞祈禱之不平衡守衛",
+    "base_type_en": "Lycia's Invocation of Imbalanced Guard",
+    "type": "Metadata/Items/Currency/SanctumCurrencyImbalancedGuard",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Imbalanced_Guard"
+  },
+  {
+    "name_zh": "利希亞祈禱之青春永駐",
+    "name_en": "Lycia's Invocation of Eternal Youth",
+    "base_type_zh": "利希亞祈禱之青春永駐",
+    "base_type_en": "Lycia's Invocation of Eternal Youth",
+    "type": "Metadata/Items/Currency/SanctumCurrencyEternalYouth",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Eternal_Youth"
+  },
+  {
+    "name_zh": "利希亞祈禱之心靈昇華",
+    "name_en": "Lycia's Invocation of Mind over Matter",
+    "base_type_zh": "利希亞祈禱之心靈昇華",
+    "base_type_en": "Lycia's Invocation of Mind over Matter",
+    "type": "Metadata/Items/Currency/SanctumCurrencyMindoverMatter",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Mind_over_Matter"
+  },
+  {
+    "name_zh": "利希亞祈禱之狂熱誓言",
+    "name_en": "Lycia's Invocation of Zealot's Oath",
+    "base_type_zh": "利希亞祈禱之狂熱誓言",
+    "base_type_en": "Lycia's Invocation of Zealot's Oath",
+    "type": "Metadata/Items/Currency/SanctumCurrencyZealotsOath",
+    "url": "https://poedb.tw/tw/Lycias_Invocation_of_Zealots_Oath"
+  },
+  {
+    "name_zh": "火炎精晶",
+    "name_en": "Igneous Geode",
+    "base_type_zh": "火炎精晶",
+    "base_type_en": "Igneous Geode",
+    "type": "Metadata/Items/Currency/CrucibleGeode",
+    "url": "https://poedb.tw/tw/Igneous_Geode"
+  },
+  {
+    "name_zh": "水晶精晶",
+    "name_en": "Crystalline Geode",
+    "base_type_zh": "水晶精晶",
+    "base_type_en": "Crystalline Geode",
+    "type": "Metadata/Items/Currency/CrucibleGeodeUber",
+    "url": "https://poedb.tw/tw/Crystalline_Geode"
+  },
+  {
+    "name_zh": "銀幣",
+    "name_en": "Silver Coin",
+    "base_type_zh": "銀幣",
+    "base_type_en": "Silver Coin",
+    "type": "Metadata/Items/Currency/CurrencyAncestralSilverCoin",
+    "url": "https://poedb.tw/tw/Silver_Coin"
+  },
+  {
+    "name_zh": "悉妮蔻拉的髮絲",
+    "name_en": "Hinekora's Lock",
+    "base_type_zh": "悉妮蔻拉的髮絲",
+    "base_type_en": "Hinekora's Lock",
+    "type": "Metadata/Items/Currency/CurrencyHinekorasLock",
+    "url": "https://poedb.tw/tw/Hinekoras_Lock"
+  },
+  {
+    "name_zh": "改善之預兆",
+    "name_en": "Omen of Amelioration",
+    "base_type_zh": "改善之預兆",
+    "base_type_en": "Omen of Amelioration",
+    "type": "Metadata/Items/Currency/AncestralOmenOnDeathPreventExpLoss",
+    "url": "https://poedb.tw/tw/Omen_of_Amelioration"
+  },
+  {
+    "name_zh": "返回之預兆",
+    "name_en": "Omen of Return",
+    "base_type_zh": "返回之預兆",
+    "base_type_en": "Omen of Return",
+    "type": "Metadata/Items/Currency/AncestralOmenOnDeathCreatePortal",
+    "url": "https://poedb.tw/tw/Omen_of_Return"
+  },
+  {
+    "name_zh": "死舞之預兆",
+    "name_en": "Omen of Death-dancing",
+    "base_type_zh": "死舞之預兆",
+    "base_type_en": "Omen of Death-dancing",
+    "type": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeAvoidDamage",
+    "url": "https://poedb.tw/tw/Omen_of_Death-dancing"
+  },
+  {
+    "name_zh": "提神之預兆",
+    "name_en": "Omen of Refreshment",
+    "base_type_zh": "提神之預兆",
+    "base_type_en": "Omen of Refreshment",
+    "type": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeRecoverFlaskCharges",
+    "url": "https://poedb.tw/tw/Omen_of_Refreshment"
+  },
+  {
+    "name_zh": "嗜魂者之預兆",
+    "name_en": "Omen of the Soul Devourer",
+    "base_type_zh": "嗜魂者之預兆",
+    "base_type_en": "Omen of the Soul Devourer",
+    "type": "Metadata/Items/Currency/AncestralOmenOnLevelingUpGainSoulEater",
+    "url": "https://poedb.tw/tw/Omen_of_the_Soul_Devourer"
+  },
+  {
+    "name_zh": "加速之預兆",
+    "name_en": "Omen of Acceleration",
+    "base_type_zh": "加速之預兆",
+    "base_type_en": "Omen of Acceleration",
+    "type": "Metadata/Items/Currency/AncestralOmenOnLevelingUpSpawnAccelerationShrine",
+    "url": "https://poedb.tw/tw/Omen_of_Acceleration"
+  },
+  {
+    "name_zh": "財富之預兆",
+    "name_en": "Omen of Fortune",
+    "base_type_zh": "財富之預兆",
+    "base_type_en": "Omen of Fortune",
+    "type": "Metadata/Items/Currency/AncestralOmenOnChanceMakeUnique",
+    "url": "https://poedb.tw/tw/Omen_of_Fortune"
+  },
+  {
+    "name_zh": "工匠之預兆",
+    "name_en": "Omen of the Jeweller",
+    "base_type_zh": "工匠之預兆",
+    "base_type_en": "Omen of the Jeweller",
+    "type": "Metadata/Items/Currency/AncestralOmenOnJewellersMakeFullSockets",
+    "url": "https://poedb.tw/tw/Omen_of_the_Jeweller"
+  },
+  {
+    "name_zh": "連結之預兆",
+    "name_en": "Omen of Connections",
+    "base_type_zh": "連結之預兆",
+    "base_type_en": "Omen of Connections",
+    "type": "Metadata/Items/Currency/AncestralOmenOnFusingMakeFullLinks",
+    "url": "https://poedb.tw/tw/Omen_of_Connections"
+  },
+  {
+    "name_zh": "白化之預兆",
+    "name_en": "Omen of Blanching",
+    "base_type_zh": "白化之預兆",
+    "base_type_en": "Omen of Blanching",
+    "type": "Metadata/Items/Currency/AncestralOmenOnChromaticAddWhiteSockets",
+    "url": "https://poedb.tw/tw/Omen_of_Blanching"
+  },
+  {
+    "name_zh": "復仇之預兆",
+    "name_en": "Omen of Revenge",
+    "base_type_zh": "復仇之預兆",
+    "base_type_en": "Omen of Revenge",
+    "type": "Metadata/Items/Currency/AncestralOmenOnDeathNearbyEnemiesMoreDamage",
+    "url": "https://poedb.tw/tw/Omen_of_Revenge"
+  },
+  {
+    "name_zh": "傳承之預兆",
+    "name_en": "Omen of Bequeathal",
+    "base_type_zh": "傳承之預兆",
+    "base_type_en": "Omen of Bequeathal",
+    "type": "Metadata/Items/Currency/AncestralOmenOnDeathGemsGainExperience",
+    "url": "https://poedb.tw/tw/Omen_of_Bequeathal"
+  },
+  {
+    "name_zh": "復甦之預兆",
+    "name_en": "Omen of Resurgence",
+    "base_type_zh": "復甦之預兆",
+    "base_type_en": "Omen of Resurgence",
+    "type": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeRecoupLife",
+    "url": "https://poedb.tw/tw/Omen_of_Resurgence"
+  },
+  {
+    "name_zh": "腎上腺素之預兆",
+    "name_en": "Omen of Adrenaline",
+    "base_type_zh": "腎上腺素之預兆",
+    "base_type_en": "Omen of Adrenaline",
+    "type": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeGainAdrenaline",
+    "url": "https://poedb.tw/tw/Omen_of_Adrenaline"
+  },
+  {
+    "name_zh": "死者大門之預兆",
+    "name_en": "Omen of Death's Door",
+    "base_type_zh": "死者大門之預兆",
+    "base_type_en": "Omen of Death's Door",
+    "type": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeGainShadeForm",
+    "url": "https://poedb.tw/tw/Omen_of_Deaths_Door"
+  },
+  {
+    "name_zh": "光輝之預兆",
+    "name_en": "Omen of Brilliance",
+    "base_type_zh": "光輝之預兆",
+    "base_type_en": "Omen of Brilliance",
+    "type": "Metadata/Items/Currency/AncestralOmenOnLevelingUpGainExperienceBuff",
+    "url": "https://poedb.tw/tw/Omen_of_Brilliance"
+  },
+  {
+    "name_zh": "努葛瑪呼火行者的紋身",
+    "name_en": "Tattoo of the Ngamahu Firewalker",
+    "base_type_zh": "努葛瑪呼火行者的紋身",
+    "base_type_en": "Tattoo of the Ngamahu Firewalker",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ngamahu_Firewalker"
+  },
+  {
+    "name_zh": "努葛瑪呼薩滿的紋身",
+    "name_en": "Tattoo of the Ngamahu Shaman",
+    "base_type_zh": "努葛瑪呼薩滿的紋身",
+    "base_type_en": "Tattoo of the Ngamahu Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ngamahu_Shaman"
+  },
+  {
+    "name_zh": "努葛瑪呼戰士的紋身",
+    "name_en": "Tattoo of the Ngamahu Warrior",
+    "base_type_zh": "努葛瑪呼戰士的紋身",
+    "base_type_en": "Tattoo of the Ngamahu Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ngamahu_Warrior"
+  },
+  {
+    "name_zh": "努葛瑪呼戰鬥王的紋身",
+    "name_en": "Tattoo of the Ngamahu Warmonger",
+    "base_type_zh": "努葛瑪呼戰鬥王的紋身",
+    "base_type_en": "Tattoo of the Ngamahu Warmonger",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ngamahu_Warmonger"
+  },
+  {
+    "name_zh": "努葛瑪呼木工的紋身",
+    "name_en": "Tattoo of the Ngamahu Woodcarver",
+    "base_type_zh": "努葛瑪呼木工的紋身",
+    "base_type_en": "Tattoo of the Ngamahu Woodcarver",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ngamahu_Woodcarver"
+  },
+  {
+    "name_zh": "岡姆的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Kaom",
+    "base_type_zh": "岡姆的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Kaom",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Kaom"
+  },
+  {
+    "name_zh": "努葛瑪呼馬坎加的紋身",
+    "name_en": "Tattoo of the Ngamahu Makanga",
+    "base_type_zh": "努葛瑪呼馬坎加的紋身",
+    "base_type_en": "Tattoo of the Ngamahu Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooNgamahu7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ngamahu_Makanga"
+  },
+  {
+    "name_zh": "奇塔弗飲血者的紋身",
+    "name_en": "Tattoo of the Kitava Blood Drinker",
+    "base_type_zh": "奇塔弗飲血者的紋身",
+    "base_type_en": "Tattoo of the Kitava Blood Drinker",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Kitava_Blood_Drinker"
+  },
+  {
+    "name_zh": "奇塔弗叛亂的紋身",
+    "name_en": "Tattoo of the Kitava Rebel",
+    "base_type_zh": "奇塔弗叛亂的紋身",
+    "base_type_en": "Tattoo of the Kitava Rebel",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Kitava_Rebel"
+  },
+  {
+    "name_zh": "奇塔弗戰士的紋身",
+    "name_en": "Tattoo of the Kitava Warrior",
+    "base_type_zh": "奇塔弗戰士的紋身",
+    "base_type_en": "Tattoo of the Kitava Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Kitava_Warrior"
+  },
+  {
+    "name_zh": "奇塔弗嗜心者的紋身",
+    "name_en": "Tattoo of the Kitava Heart Eater",
+    "base_type_zh": "奇塔弗嗜心者的紋身",
+    "base_type_en": "Tattoo of the Kitava Heart Eater",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Kitava_Heart_Eater"
+  },
+  {
+    "name_zh": "奇塔弗薩滿的紋身",
+    "name_en": "Tattoo of the Kitava Shaman",
+    "base_type_zh": "奇塔弗薩滿的紋身",
+    "base_type_en": "Tattoo of the Kitava Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Kitava_Shaman"
+  },
+  {
+    "name_zh": "烏圖拉的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Utula",
+    "base_type_zh": "烏圖拉的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Utula",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Utula"
+  },
+  {
+    "name_zh": "奇塔弗馬坎加的紋身",
+    "name_en": "Tattoo of the Kitava Makanga",
+    "base_type_zh": "奇塔弗馬坎加的紋身",
+    "base_type_en": "Tattoo of the Kitava Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooKitava7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Kitava_Makanga"
+  },
+  {
+    "name_zh": "圖克哈瑪薩滿的紋身",
+    "name_en": "Tattoo of the Tukohama Shaman",
+    "base_type_zh": "圖克哈瑪薩滿的紋身",
+    "base_type_en": "Tattoo of the Tukohama Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tukohama_Shaman"
+  },
+  {
+    "name_zh": "圖克哈瑪戰士的紋身",
+    "name_en": "Tattoo of the Tukohama Warrior",
+    "base_type_zh": "圖克哈瑪戰士的紋身",
+    "base_type_en": "Tattoo of the Tukohama Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tukohama_Warrior"
+  },
+  {
+    "name_zh": "圖克哈瑪鬥士的紋身",
+    "name_en": "Tattoo of the Tukohama Brawler",
+    "base_type_zh": "圖克哈瑪鬥士的紋身",
+    "base_type_en": "Tattoo of the Tukohama Brawler",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tukohama_Brawler"
+  },
+  {
+    "name_zh": "圖克哈瑪戰鬥王的紋身",
+    "name_en": "Tattoo of the Tukohama Warmonger",
+    "base_type_zh": "圖克哈瑪戰鬥王的紋身",
+    "base_type_en": "Tattoo of the Tukohama Warmonger",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tukohama_Warmonger"
+  },
+  {
+    "name_zh": "圖克哈瑪戰爭喚者的紋身",
+    "name_en": "Tattoo of the Tukohama Warcaller",
+    "base_type_zh": "圖克哈瑪戰爭喚者的紋身",
+    "base_type_en": "Tattoo of the Tukohama Warcaller",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tukohama_Warcaller"
+  },
+  {
+    "name_zh": "艾古亞的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Akoya",
+    "base_type_zh": "艾古亞的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Akoya",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Akoya"
+  },
+  {
+    "name_zh": "圖克哈瑪馬坎加的紋身",
+    "name_en": "Tattoo of the Tukohama Makanga",
+    "base_type_zh": "圖克哈瑪馬坎加的紋身",
+    "base_type_en": "Tattoo of the Tukohama Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooTukohama7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tukohama_Makanga"
+  },
+  {
+    "name_zh": "隆格庫萊戰士的紋身",
+    "name_en": "Tattoo of the Rongokurai Warrior",
+    "base_type_zh": "隆格庫萊戰士的紋身",
+    "base_type_en": "Tattoo of the Rongokurai Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Rongokurai_Warrior"
+  },
+  {
+    "name_zh": "隆格庫萊暴徒的紋身",
+    "name_en": "Tattoo of the Rongokurai Brute",
+    "base_type_zh": "隆格庫萊暴徒的紋身",
+    "base_type_en": "Tattoo of the Rongokurai Brute",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Rongokurai_Brute"
+  },
+  {
+    "name_zh": "隆格庫萊巨獸的紋身",
+    "name_en": "Tattoo of the Rongokurai Goliath",
+    "base_type_zh": "隆格庫萊巨獸的紋身",
+    "base_type_en": "Tattoo of the Rongokurai Goliath",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Rongokurai_Goliath"
+  },
+  {
+    "name_zh": "隆格庫萊巨龜的紋身",
+    "name_en": "Tattoo of the Rongokurai Turtle",
+    "base_type_zh": "隆格庫萊巨龜的紋身",
+    "base_type_en": "Tattoo of the Rongokurai Turtle",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Rongokurai_Turtle"
+  },
+  {
+    "name_zh": "隆格庫萊守衛的紋身",
+    "name_en": "Tattoo of the Rongokurai Guard",
+    "base_type_zh": "隆格庫萊守衛的紋身",
+    "base_type_en": "Tattoo of the Rongokurai Guard",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Rongokurai_Guard"
+  },
+  {
+    "name_zh": "卡胡圖羅亞的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Kahuturoa",
+    "base_type_zh": "卡胡圖羅亞的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Kahuturoa",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Kahuturoa"
+  },
+  {
+    "name_zh": "隆格庫萊馬坎加的紋身",
+    "name_en": "Tattoo of the Rongokurai Makanga",
+    "base_type_zh": "隆格庫萊馬坎加的紋身",
+    "base_type_en": "Tattoo of the Rongokurai Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooRongokurai7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Rongokurai_Makanga"
+  },
+  {
+    "name_zh": "塔薩里奧舞劍者的紋身",
+    "name_en": "Tattoo of the Tasalio Bladedancer",
+    "base_type_zh": "塔薩里奧舞劍者的紋身",
+    "base_type_en": "Tattoo of the Tasalio Bladedancer",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tasalio_Bladedancer"
+  },
+  {
+    "name_zh": "塔薩里奧潮汐變幻者的紋身",
+    "name_en": "Tattoo of the Tasalio Tideshifter",
+    "base_type_zh": "塔薩里奧潮汐變幻者的紋身",
+    "base_type_en": "Tattoo of the Tasalio Tideshifter",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tasalio_Tideshifter"
+  },
+  {
+    "name_zh": "塔薩里奧薩滿的紋身",
+    "name_en": "Tattoo of the Tasalio Shaman",
+    "base_type_zh": "塔薩里奧薩滿的紋身",
+    "base_type_en": "Tattoo of the Tasalio Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tasalio_Shaman"
+  },
+  {
+    "name_zh": "塔薩里奧戰士的紋身",
+    "name_en": "Tattoo of the Tasalio Warrior",
+    "base_type_zh": "塔薩里奧戰士的紋身",
+    "base_type_en": "Tattoo of the Tasalio Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tasalio_Warrior"
+  },
+  {
+    "name_zh": "塔薩里奧哨兵的紋身",
+    "name_en": "Tattoo of the Tasalio Scout",
+    "base_type_zh": "塔薩里奧哨兵的紋身",
+    "base_type_en": "Tattoo of the Tasalio Scout",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tasalio_Scout"
+  },
+  {
+    "name_zh": "萊基亞塔的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Rakiata",
+    "base_type_zh": "萊基亞塔的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Rakiata",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Rakiata"
+  },
+  {
+    "name_zh": "塔薩里奧馬坎加的紋身",
+    "name_en": "Tattoo of the Tasalio Makanga",
+    "base_type_zh": "塔薩里奧馬坎加的紋身",
+    "base_type_en": "Tattoo of the Tasalio Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooTasalio7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tasalio_Makanga"
+  },
+  {
+    "name_zh": "艾蘿紅薇月護衛的紋身",
+    "name_en": "Tattoo of the Arohongui Moonwarden",
+    "base_type_zh": "艾蘿紅薇月護衛的紋身",
+    "base_type_en": "Tattoo of the Arohongui Moonwarden",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Arohongui_Moonwarden"
+  },
+  {
+    "name_zh": "艾蘿紅薇哨兵的紋身",
+    "name_en": "Tattoo of the Arohongui Scout",
+    "base_type_zh": "艾蘿紅薇哨兵的紋身",
+    "base_type_en": "Tattoo of the Arohongui Scout",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Arohongui_Scout"
+  },
+  {
+    "name_zh": "艾蘿紅薇戰士的紋身",
+    "name_en": "Tattoo of the Arohongui Warrior",
+    "base_type_zh": "艾蘿紅薇戰士的紋身",
+    "base_type_en": "Tattoo of the Arohongui Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Arohongui_Warrior"
+  },
+  {
+    "name_zh": "艾蘿紅薇戰鬥王的紋身",
+    "name_en": "Tattoo of the Arohongui Warmonger",
+    "base_type_zh": "艾蘿紅薇戰鬥王的紋身",
+    "base_type_en": "Tattoo of the Arohongui Warmonger",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Arohongui_Warmonger"
+  },
+  {
+    "name_zh": "艾蘿紅薇薩滿的紋身",
+    "name_en": "Tattoo of the Arohongui Shaman",
+    "base_type_zh": "艾蘿紅薇薩滿的紋身",
+    "base_type_en": "Tattoo of the Arohongui Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Arohongui_Shaman"
+  },
+  {
+    "name_zh": "伊基亞呼的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Ikiaho",
+    "base_type_zh": "伊基亞呼的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Ikiaho",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Ikiaho"
+  },
+  {
+    "name_zh": "艾蘿紅薇馬坎加的紋身",
+    "name_en": "Tattoo of the Arohongui Makanga",
+    "base_type_zh": "艾蘿紅薇馬坎加的紋身",
+    "base_type_en": "Tattoo of the Arohongui Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooArohongui7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Arohongui_Makanga"
+  },
+  {
+    "name_zh": "雷默科哨兵的紋身",
+    "name_en": "Tattoo of the Ramako Scout",
+    "base_type_zh": "雷默科哨兵的紋身",
+    "base_type_en": "Tattoo of the Ramako Scout",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ramako_Scout"
+  },
+  {
+    "name_zh": "雷默科射手的紋身",
+    "name_en": "Tattoo of the Ramako Archer",
+    "base_type_zh": "雷默科射手的紋身",
+    "base_type_en": "Tattoo of the Ramako Archer",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ramako_Archer"
+  },
+  {
+    "name_zh": "雷默科狙擊手的紋身",
+    "name_en": "Tattoo of the Ramako Sniper",
+    "base_type_zh": "雷默科狙擊手的紋身",
+    "base_type_en": "Tattoo of the Ramako Sniper",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ramako_Sniper"
+  },
+  {
+    "name_zh": "雷默科偵瞬步的紋身",
+    "name_en": "Tattoo of the Ramako Fleetfoot",
+    "base_type_zh": "雷默科偵瞬步的紋身",
+    "base_type_en": "Tattoo of the Ramako Fleetfoot",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ramako_Fleetfoot"
+  },
+  {
+    "name_zh": "雷默科薩滿的紋身",
+    "name_en": "Tattoo of the Ramako Shaman",
+    "base_type_zh": "雷默科薩滿的紋身",
+    "base_type_en": "Tattoo of the Ramako Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ramako_Shaman"
+  },
+  {
+    "name_zh": "阿呼阿娜的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Ahuana",
+    "base_type_zh": "阿呼阿娜的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Ahuana",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Ahuana"
+  },
+  {
+    "name_zh": "雷默科馬坎加的紋身",
+    "name_en": "Tattoo of the Ramako Makanga",
+    "base_type_zh": "雷默科馬坎加的紋身",
+    "base_type_en": "Tattoo of the Ramako Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooRamako7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Ramako_Makanga"
+  },
+  {
+    "name_zh": "悉妮蔻拉戰士的紋身",
+    "name_en": "Tattoo of the Hinekora Warrior",
+    "base_type_zh": "悉妮蔻拉戰士的紋身",
+    "base_type_en": "Tattoo of the Hinekora Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Hinekora_Warrior"
+  },
+  {
+    "name_zh": "悉妮蔻拉死護衛的紋身",
+    "name_en": "Tattoo of the Hinekora Deathwarden",
+    "base_type_zh": "悉妮蔻拉死護衛的紋身",
+    "base_type_en": "Tattoo of the Hinekora Deathwarden",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Hinekora_Deathwarden"
+  },
+  {
+    "name_zh": "悉妮蔻拉薩滿的紋身",
+    "name_en": "Tattoo of the Hinekora Shaman",
+    "base_type_zh": "悉妮蔻拉薩滿的紋身",
+    "base_type_en": "Tattoo of the Hinekora Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Hinekora_Shaman"
+  },
+  {
+    "name_zh": "悉妮蔻拉說書人的紋身",
+    "name_en": "Tattoo of the Hinekora Storyteller",
+    "base_type_zh": "悉妮蔻拉說書人的紋身",
+    "base_type_en": "Tattoo of the Hinekora Storyteller",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Hinekora_Storyteller"
+  },
+  {
+    "name_zh": "悉妮蔻拉戰鬥王的紋身",
+    "name_en": "Tattoo of the Hinekora Warmonger",
+    "base_type_zh": "悉妮蔻拉戰鬥王的紋身",
+    "base_type_en": "Tattoo of the Hinekora Warmonger",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Hinekora_Warmonger"
+  },
+  {
+    "name_zh": "塔瓦努庫的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Tawhanuku",
+    "base_type_zh": "塔瓦努庫的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Tawhanuku",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Tawhanuku"
+  },
+  {
+    "name_zh": "悉妮蔻拉馬坎加的紋身",
+    "name_en": "Tattoo of the Hinekora Makanga",
+    "base_type_zh": "悉妮蔻拉馬坎加的紋身",
+    "base_type_en": "Tattoo of the Hinekora Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooHinekora7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Hinekora_Makanga"
+  },
+  {
+    "name_zh": "塔赫亞自然的紋身",
+    "name_en": "Tattoo of the Tawhoa Naturalist",
+    "base_type_zh": "塔赫亞自然的紋身",
+    "base_type_en": "Tattoo of the Tawhoa Naturalist",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tawhoa_Naturalist"
+  },
+  {
+    "name_zh": "塔赫亞哨兵的紋身",
+    "name_en": "Tattoo of the Tawhoa Scout",
+    "base_type_zh": "塔赫亞哨兵的紋身",
+    "base_type_en": "Tattoo of the Tawhoa Scout",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tawhoa_Scout"
+  },
+  {
+    "name_zh": "塔赫亞戰士的紋身",
+    "name_en": "Tattoo of the Tawhoa Warrior",
+    "base_type_zh": "塔赫亞戰士的紋身",
+    "base_type_en": "Tattoo of the Tawhoa Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tawhoa_Warrior"
+  },
+  {
+    "name_zh": "塔赫亞藥草師的紋身",
+    "name_en": "Tattoo of the Tawhoa Herbalist",
+    "base_type_zh": "塔赫亞藥草師的紋身",
+    "base_type_en": "Tattoo of the Tawhoa Herbalist",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tawhoa_Herbalist"
+  },
+  {
+    "name_zh": "塔赫亞薩滿的紋身",
+    "name_en": "Tattoo of the Tawhoa Shaman",
+    "base_type_zh": "塔赫亞薩滿的紋身",
+    "base_type_en": "Tattoo of the Tawhoa Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tawhoa_Shaman"
+  },
+  {
+    "name_zh": "瑪塔的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Maata",
+    "base_type_zh": "瑪塔的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Maata",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Maata"
+  },
+  {
+    "name_zh": "塔赫亞馬坎加的紋身",
+    "name_en": "Tattoo of the Tawhoa Makanga",
+    "base_type_zh": "塔赫亞馬坎加的紋身",
+    "base_type_en": "Tattoo of the Tawhoa Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooTawhoa7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Tawhoa_Makanga"
+  },
+  {
+    "name_zh": "瓦拉庫風暴馭者的紋身",
+    "name_en": "Tattoo of the Valako Stormrider",
+    "base_type_zh": "瓦拉庫風暴馭者的紋身",
+    "base_type_en": "Tattoo of the Valako Stormrider",
+    "type": "Metadata/Items/Currency/AncestralTattooValako1",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Valako_Stormrider"
+  },
+  {
+    "name_zh": "瓦拉庫哨兵的紋身",
+    "name_en": "Tattoo of the Valako Scout",
+    "base_type_zh": "瓦拉庫哨兵的紋身",
+    "base_type_en": "Tattoo of the Valako Scout",
+    "type": "Metadata/Items/Currency/AncestralTattooValako2",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Valako_Scout"
+  },
+  {
+    "name_zh": "瓦拉庫戰士的紋身",
+    "name_en": "Tattoo of the Valako Warrior",
+    "base_type_zh": "瓦拉庫戰士的紋身",
+    "base_type_en": "Tattoo of the Valako Warrior",
+    "type": "Metadata/Items/Currency/AncestralTattooValako3",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Valako_Warrior"
+  },
+  {
+    "name_zh": "瓦拉庫護盾大師的紋身",
+    "name_en": "Tattoo of the Valako Shieldbearer",
+    "base_type_zh": "瓦拉庫護盾大師的紋身",
+    "base_type_en": "Tattoo of the Valako Shieldbearer",
+    "type": "Metadata/Items/Currency/AncestralTattooValako4",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Valako_Shieldbearer"
+  },
+  {
+    "name_zh": "瓦拉庫薩滿的紋身",
+    "name_en": "Tattoo of the Valako Shaman",
+    "base_type_zh": "瓦拉庫薩滿的紋身",
+    "base_type_en": "Tattoo of the Valako Shaman",
+    "type": "Metadata/Items/Currency/AncestralTattooValako5",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Valako_Shaman"
+  },
+  {
+    "name_zh": "基洛阿瓦的忠誠紋身",
+    "name_en": "Loyalty Tattoo of Kiloava",
+    "base_type_zh": "基洛阿瓦的忠誠紋身",
+    "base_type_en": "Loyalty Tattoo of Kiloava",
+    "type": "Metadata/Items/Currency/AncestralTattooValako6",
+    "url": "https://poedb.tw/tw/Loyalty_Tattoo_of_Kiloava"
+  },
+  {
+    "name_zh": "瓦拉庫馬坎加的紋身",
+    "name_en": "Tattoo of the Valako Makanga",
+    "base_type_zh": "瓦拉庫馬坎加的紋身",
+    "base_type_en": "Tattoo of the Valako Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooValako7",
+    "url": "https://poedb.tw/tw/Tattoo_of_the_Valako_Makanga"
+  },
+  {
+    "name_zh": "鴿子的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Dove",
+    "base_type_zh": "鴿子的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Dove",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode1",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Dove"
+  },
+  {
+    "name_zh": "天際的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Sky",
+    "base_type_zh": "天際的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Sky",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode2",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Sky"
+  },
+  {
+    "name_zh": "蜥蜴人的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Tuatara",
+    "base_type_zh": "蜥蜴人的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Tuatara",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode3",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Tuatara"
+  },
+  {
+    "name_zh": "劫掠者的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Pillager",
+    "base_type_zh": "劫掠者的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Pillager",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode4",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Pillager"
+  },
+  {
+    "name_zh": "巨龜的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Turtle",
+    "base_type_zh": "巨龜的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Turtle",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode5",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Turtle"
+  },
+  {
+    "name_zh": "歐克的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Oak",
+    "base_type_zh": "歐克的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Oak",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode6",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Oak"
+  },
+  {
+    "name_zh": "靈語者的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Hatungo",
+    "base_type_zh": "靈語者的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Hatungo",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode7",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Hatungo"
+  },
+  {
+    "name_zh": "群的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Flock",
+    "base_type_zh": "群的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Flock",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode8",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Flock"
+  },
+  {
+    "name_zh": "戰爭君王的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Warlord",
+    "base_type_zh": "戰爭君王的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Warlord",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableStr1",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Warlord"
+  },
+  {
+    "name_zh": "山巒的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Mountain",
+    "base_type_zh": "山巒的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Mountain",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableStr2",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Mountain"
+  },
+  {
+    "name_zh": "帕的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Pa",
+    "base_type_zh": "帕的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Pa",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableStr3",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Pa"
+  },
+  {
+    "name_zh": "獵人的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Hunter",
+    "base_type_zh": "獵人的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Hunter",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableDex1",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Hunter"
+  },
+  {
+    "name_zh": "野蠻人的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Barbarian",
+    "base_type_zh": "野蠻人的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Barbarian",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableDex2",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Barbarian"
+  },
+  {
+    "name_zh": "暴徒的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Berserker",
+    "base_type_zh": "暴徒的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Berserker",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableDex3",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Berserker"
+  },
+  {
+    "name_zh": "智者的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Wise",
+    "base_type_zh": "智者的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Wise",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableInt1",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Wise"
+  },
+  {
+    "name_zh": "風暴的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Storm",
+    "base_type_zh": "風暴的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Storm",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableInt2",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Storm"
+  },
+  {
+    "name_zh": "水難的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Flood",
+    "base_type_zh": "水難的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Flood",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialNotableInt3",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Flood"
+  },
+  {
+    "name_zh": "血族的祖靈紋身",
+    "name_en": "Ancestral Tattoo of Bloodlines",
+    "base_type_zh": "血族的祖靈紋身",
+    "base_type_en": "Ancestral Tattoo of Bloodlines",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialUnique1",
+    "url": "https://poedb.tw/tw/Ancestral_Tattoo_of_Bloodlines"
+  },
+  {
+    "name_zh": "馬坎加的尊榮紋身",
+    "name_en": "Honoured Tattoo of the Makanga",
+    "base_type_zh": "馬坎加的尊榮紋身",
+    "base_type_en": "Honoured Tattoo of the Makanga",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialUnique2",
+    "url": "https://poedb.tw/tw/Honoured_Tattoo_of_the_Makanga"
+  },
+  {
+    "name_zh": "軀體的歷練紋身",
+    "name_en": "Journey Tattoo of the Body",
+    "base_type_zh": "軀體的歷練紋身",
+    "base_type_en": "Journey Tattoo of the Body",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialUnique3",
+    "url": "https://poedb.tw/tw/Journey_Tattoo_of_the_Body"
+  },
+  {
+    "name_zh": "心智的歷練紋身",
+    "name_en": "Journey Tattoo of the Mind",
+    "base_type_zh": "心智的歷練紋身",
+    "base_type_en": "Journey Tattoo of the Mind",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialUnique4",
+    "url": "https://poedb.tw/tw/Journey_Tattoo_of_the_Mind"
+  },
+  {
+    "name_zh": "靈魂的歷練紋身",
+    "name_en": "Journey Tattoo of the Soul",
+    "base_type_zh": "靈魂的歷練紋身",
+    "base_type_en": "Journey Tattoo of the Soul",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialUnique5",
+    "url": "https://poedb.tw/tw/Journey_Tattoo_of_the_Soul"
+  },
+  {
+    "name_zh": "馬卡努伊的歷練紋身",
+    "name_en": "Journey Tattoo of Makanui",
+    "base_type_zh": "馬卡努伊的歷練紋身",
+    "base_type_en": "Journey Tattoo of Makanui",
+    "type": "Metadata/Items/Currency/AncestralTattooSpecialUnique6",
+    "url": "https://poedb.tw/tw/Journey_Tattoo_of_Makanui"
+  },
+  {
+    "name_zh": "靈現妖精",
+    "name_en": "Vivid Wisps",
+    "base_type_zh": "靈現妖精",
+    "base_type_en": "Vivid Wisps",
+    "type": "Metadata/Items/Azmeri/AzmeriDustWarden",
+    "url": "https://poedb.tw/tw/Vivid_Wisps"
+  },
+  {
+    "name_zh": "野性妖精",
+    "name_en": "Wild Wisps",
+    "base_type_zh": "野性妖精",
+    "base_type_en": "Wild Wisps",
+    "type": "Metadata/Items/Azmeri/AzmeriDustVoodooShaman",
+    "url": "https://poedb.tw/tw/Wild_Wisps"
+  },
+  {
+    "name_zh": "原始妖精",
+    "name_en": "Primal Wisps",
+    "base_type_zh": "原始妖精",
+    "base_type_en": "Primal Wisps",
+    "type": "Metadata/Items/Azmeri/AzmeriDustPrimalist",
+    "url": "https://poedb.tw/tw/Primal_Wisps"
+  },
+  {
+    "name_zh": "太陽符文",
+    "name_en": "Sun Rune",
+    "base_type_zh": "太陽符文",
+    "base_type_en": "Sun Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune1",
+    "url": "https://poedb.tw/tw/Sun_Rune"
+  },
+  {
+    "name_zh": "邊界符文",
+    "name_en": "Bound Rune",
+    "base_type_zh": "邊界符文",
+    "base_type_en": "Bound Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune2",
+    "url": "https://poedb.tw/tw/Bound_Rune"
+  },
+  {
+    "name_zh": "生命符文",
+    "name_en": "Life Rune",
+    "base_type_zh": "生命符文",
+    "base_type_en": "Life Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune3",
+    "url": "https://poedb.tw/tw/Life_Rune"
+  },
+  {
+    "name_zh": "戰爭符文",
+    "name_en": "War Rune",
+    "base_type_zh": "戰爭符文",
+    "base_type_en": "War Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune4",
+    "url": "https://poedb.tw/tw/War_Rune"
+  },
+  {
+    "name_zh": "河川符文",
+    "name_en": "River Rune",
+    "base_type_zh": "河川符文",
+    "base_type_en": "River Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune5",
+    "url": "https://poedb.tw/tw/River_Rune"
+  },
+  {
+    "name_zh": "寶藏符文",
+    "name_en": "Bounty Rune",
+    "base_type_zh": "寶藏符文",
+    "base_type_en": "Bounty Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune6",
+    "url": "https://poedb.tw/tw/Bounty_Rune"
+  },
+  {
+    "name_zh": "旅途符文",
+    "name_en": "Journey Rune",
+    "base_type_zh": "旅途符文",
+    "base_type_en": "Journey Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune7",
+    "url": "https://poedb.tw/tw/Journey_Rune"
+  },
+  {
+    "name_zh": "山脊符文",
+    "name_en": "Mountain Rune",
+    "base_type_zh": "山脊符文",
+    "base_type_en": "Mountain Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune8",
+    "url": "https://poedb.tw/tw/Mountain_Rune"
+  },
+  {
+    "name_zh": "時間符文",
+    "name_en": "Time Rune",
+    "base_type_zh": "時間符文",
+    "base_type_en": "Time Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune9",
+    "url": "https://poedb.tw/tw/Time_Rune"
+  },
+  {
+    "name_zh": "能量符文",
+    "name_en": "Power Rune",
+    "base_type_zh": "能量符文",
+    "base_type_en": "Power Rune",
+    "type": "Metadata/Items/Currency/KalguuranRune10",
+    "url": "https://poedb.tw/tw/Power_Rune"
+  },
+  {
+    "name_zh": "映像迷霧",
+    "name_en": "Reflecting Mist",
+    "base_type_zh": "映像迷霧",
+    "base_type_en": "Reflecting Mist",
+    "type": "Metadata/Items/Currency/ReflectiveMist",
+    "url": "https://poedb.tw/tw/Reflecting_Mist"
+  },
+  {
+    "name_zh": "河川符文之結",
+    "name_en": "Runegraft of the River",
+    "base_type_zh": "河川符文之結",
+    "base_type_en": "Runegraft of the River",
+    "type": "Metadata/Items/Currency/RunegraftLowLifeRestore",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_River"
+  },
+  {
+    "name_zh": "堡壘符文之結",
+    "name_en": "Runegraft of the Fortress",
+    "base_type_zh": "堡壘符文之結",
+    "base_type_en": "Runegraft of the Fortress",
+    "type": "Metadata/Items/Currency/RunegraftAttributeGlobalDefences",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Fortress"
+  },
+  {
+    "name_zh": "戰鬥者符文之結",
+    "name_en": "Runegraft of the Combatant",
+    "base_type_zh": "戰鬥者符文之結",
+    "base_type_en": "Runegraft of the Combatant",
+    "type": "Metadata/Items/Currency/RunegraftMatchedAttackDamage",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Combatant"
+  },
+  {
+    "name_zh": "左旋符文之結",
+    "name_en": "Runegraft of the Sinistral",
+    "base_type_zh": "左旋符文之結",
+    "base_type_en": "Runegraft of the Sinistral",
+    "type": "Metadata/Items/Currency/RunegraftFlatOffhandAttackTime",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Sinistral"
+  },
+  {
+    "name_zh": "緊密符文之結",
+    "name_en": "Runegraft of the Bound",
+    "base_type_zh": "緊密符文之結",
+    "base_type_en": "Runegraft of the Bound",
+    "type": "Metadata/Items/Currency/RunegraftBootsGloves",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Bound"
+  },
+  {
+    "name_zh": "扭曲符文之結",
+    "name_en": "Runegraft of the Warp",
+    "base_type_zh": "扭曲符文之結",
+    "base_type_en": "Runegraft of the Warp",
+    "type": "Metadata/Items/Currency/RunegraftBuffScaling",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Warp"
+  },
+  {
+    "name_zh": "魂芯符文之結",
+    "name_en": "Runegraft of the Soulwick",
+    "base_type_zh": "魂芯符文之結",
+    "base_type_en": "Runegraft of the Soulwick",
+    "type": "Metadata/Items/Currency/RunegraftSouls",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Soulwick"
+  },
+  {
+    "name_zh": "轟鳴符文之結",
+    "name_en": "Runegraft of Bellows",
+    "base_type_zh": "轟鳴符文之結",
+    "base_type_en": "Runegraft of Bellows",
+    "type": "Metadata/Items/Currency/RunegraftWarcrySpeed",
+    "url": "https://poedb.tw/tw/Runegraft_of_Bellows"
+  },
+  {
+    "name_zh": "寶石工藝符文之結",
+    "name_en": "Runegraft of Gemcraft",
+    "base_type_zh": "寶石工藝符文之結",
+    "base_type_en": "Runegraft of Gemcraft",
+    "type": "Metadata/Items/Currency/RunegraftSupportLevels",
+    "url": "https://poedb.tw/tw/Runegraft_of_Gemcraft"
+  },
+  {
+    "name_zh": "瀆神符文之結",
+    "name_en": "Runegraft of Blasphemy",
+    "base_type_zh": "瀆神符文之結",
+    "base_type_en": "Runegraft of Blasphemy",
+    "type": "Metadata/Items/Currency/RunegraftRandomCurse",
+    "url": "https://poedb.tw/tw/Runegraft_of_Blasphemy"
+  },
+  {
+    "name_zh": "笨拙符文之結",
+    "name_en": "Runegraft of the Gauche",
+    "base_type_zh": "笨拙符文之結",
+    "base_type_en": "Runegraft of the Gauche",
+    "type": "Metadata/Items/Currency/RunegraftOffhandInvert",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Gauche"
+  },
+  {
+    "name_zh": "時間符文之結",
+    "name_en": "Runegraft of Time",
+    "base_type_zh": "時間符文之結",
+    "base_type_en": "Runegraft of Time",
+    "type": "Metadata/Items/Currency/RunegraftCooldownRefresh",
+    "url": "https://poedb.tw/tw/Runegraft_of_Time"
+  },
+  {
+    "name_zh": "背信符文之結",
+    "name_en": "Runegraft of Treachery",
+    "base_type_zh": "背信符文之結",
+    "base_type_en": "Runegraft of Treachery",
+    "type": "Metadata/Items/Currency/RunegraftTreacherousAuras",
+    "url": "https://poedb.tw/tw/Runegraft_of_Treachery"
+  },
+  {
+    "name_zh": "狂飲符文之結",
+    "name_en": "Runegraft of Quaffing",
+    "base_type_zh": "狂飲符文之結",
+    "base_type_en": "Runegraft of Quaffing",
+    "type": "Metadata/Items/Currency/RunegraftLifeFromManaFlasks",
+    "url": "https://poedb.tw/tw/Runegraft_of_Quaffing"
+  },
+  {
+    "name_zh": "重新縫合符文之結",
+    "name_en": "Runegraft of Restitching",
+    "base_type_zh": "重新縫合符文之結",
+    "base_type_en": "Runegraft of Restitching",
+    "type": "Metadata/Items/Currency/RunegraftCritRecoup",
+    "url": "https://poedb.tw/tw/Runegraft_of_Restitching"
+  },
+  {
+    "name_zh": "忠誠符文之結",
+    "name_en": "Runegraft of Loyalty",
+    "base_type_zh": "忠誠符文之結",
+    "base_type_en": "Runegraft of Loyalty",
+    "type": "Metadata/Items/Currency/RunegraftAilmentRedirect",
+    "url": "https://poedb.tw/tw/Runegraft_of_Loyalty"
+  },
+  {
+    "name_zh": "巫印符文之結",
+    "name_en": "Runegraft of the Witchmark",
+    "base_type_zh": "巫印符文之結",
+    "base_type_en": "Runegraft of the Witchmark",
+    "type": "Metadata/Items/Currency/RunegraftSpellLifeCost",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Witchmark"
+  },
+  {
+    "name_zh": "星印符文之結",
+    "name_en": "Runegraft of the Novamark",
+    "base_type_zh": "星印符文之結",
+    "base_type_en": "Runegraft of the Novamark",
+    "type": "Metadata/Items/Currency/RunegraftNovaMarkedTarget",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Novamark"
+  },
+  {
+    "name_zh": "補償符文之結",
+    "name_en": "Runegraft of Recompense",
+    "base_type_zh": "補償符文之結",
+    "base_type_en": "Runegraft of Recompense",
+    "type": "Metadata/Items/Currency/RunegraftChainMana",
+    "url": "https://poedb.tw/tw/Runegraft_of_Recompense"
+  },
+  {
+    "name_zh": "工匠符文之結",
+    "name_en": "Runegraft of the Jeweller",
+    "base_type_zh": "工匠符文之結",
+    "base_type_en": "Runegraft of the Jeweller",
+    "type": "Metadata/Items/Currency/RunegraftDamagePerSocket",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Jeweller"
+  },
+  {
+    "name_zh": "穩定符文之結",
+    "name_en": "Runegraft of Stability",
+    "base_type_zh": "穩定符文之結",
+    "base_type_en": "Runegraft of Stability",
+    "type": "Metadata/Items/Currency/RunegraftUnexciting",
+    "url": "https://poedb.tw/tw/Runegraft_of_Stability"
+  },
+  {
+    "name_zh": "長竿符文之結",
+    "name_en": "Runegraft of the Angler",
+    "base_type_zh": "長竿符文之結",
+    "base_type_en": "Runegraft of the Angler",
+    "type": "Metadata/Items/Currency/RunegraftFishing",
+    "url": "https://poedb.tw/tw/Runegraft_of_the_Angler"
+  },
+  {
+    "name_zh": "巨靈瓦爾寶珠",
+    "name_en": "Djinn-Touched Vaal Orb",
+    "base_type_zh": "巨靈瓦爾寶珠",
+    "base_type_en": "Djinn-Touched Vaal Orb",
+    "type": "Metadata/Items/Currency/CurrencyMoreCorrupt",
+    "url": "https://poedb.tw/tw/Djinn-Touched_Vaal_Orb"
+  },
+  {
+    "name_zh": "映像迷霧",
+    "name_en": "Fading Reflecting Mist",
+    "base_type_zh": "映像迷霧",
+    "base_type_en": "Fading Reflecting Mist",
+    "type": "Metadata/Items/Currency/ReflectiveMistWeak",
+    "url": "https://poedb.tw/tw/Fading_Reflecting_Mist"
+  },
+  {
+    "name_zh": "寶石匠透鏡",
+    "name_en": "Gemcutters Lens",
+    "base_type_zh": "寶石匠透鏡",
+    "base_type_en": "Gemcutters Lens",
+    "type": "Metadata/Items/Currency/CurrencyRerollGem",
+    "url": "https://poedb.tw/tw/Gemcutters_Lens"
+  }
+]

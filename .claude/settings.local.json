@@ -29,7 +29,9 @@
       "Read(/C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Logs/**)",
       "Bash(git log:*)",
       "mcp__playwright__browser_wait_for",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Read(C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source/**)",
+      "Read(C:\\Users\\user\\Downloads\\ExileApi-Compiled-3.26.last\\Plugins\\Source\\PickItV2/**)"
     ],
     "deny": [],
     "ask": []

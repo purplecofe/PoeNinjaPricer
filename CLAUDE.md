@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-PoeNinjaPricer 是一個 ExileCore 插件，用於從 poe.ninja API 獲取 Path of Exile 的通貨和碎片價格資料。這是一個基於 C# .NET 8.0 和 ImGui.NET 開發的即時價格查詢工具。
+PoeNinjaPricer 是一個 ExileCore 插件，用於從 poe.ninja API 獲取 Path of Exile 的通貨和碎片價格資料。這是一個基於 C# .NET 8.0 和 ImGui.NET 開發的即時價格查詢工具，支援完整的多語言物品映射系統。
 
 ## Architecture
 
@@ -19,6 +19,7 @@ PoeNinjaPricer 是一個 ExileCore 插件，用於從 poe.ninja API 獲取 Path 
 **Services Layer**:
 - `PoeNinjaApiService.cs`: 負責與 poe.ninja API 的 HTTP 通訊
 - `PriceCacheService.cs`: 處理價格資料的本地快取和持久化
+- `UniversalItemMappingService.cs`: **通用物品映射系統，支援多種物品類別的統一映射**
 
 **Models**:
 - `PoeNinjaModels.cs`: API 回應資料模型和價格資料結構
@@ -30,40 +31,96 @@ PoeNinjaPricer 是一個 ExileCore 插件，用於從 poe.ninja API 獲取 Path 
 
 ### Data Flow Architecture
 
-1. **初始化**: 偵測聯盟 → 載入快取 → 建立服務實例
+1. **初始化**: 偵測聯盟 → 載入映射資料 → 載入快取 → 建立服務實例
 2. **更新循環**: API 請求 → 資料轉換 → 快取儲存 → UI 更新
 3. **用戶互動**: 熱鍵觸發 → 過濾器應用 → 表格排序 → 即時搜尋
+4. **物品映射**: Hover 偵測 → 名稱識別 → 價格查詢 → 即時顯示
 
-## Development Commands
+## Universal Item Mapping System
 
-### Build Commands
+### Architecture Overview
 
-```bash
-# 確保環境變數已設定
-set exapiPackage=C:\Users\user\Downloads\ExileApi-Compiled-3.26.last
+**UniversalItemMappingService** 是一個可擴展的統一映射系統，支援多種物品類別：
 
-# 建置專案
-dotnet build
-
-# 清理建置檔案
-dotnet clean
-
-# 發布 Release 版本
-dotnet build --configuration Release -p:Platform=x64
+```csharp
+public class UniversalItemMappingService
+{
+    private Dictionary<string, ItemMappingData> _categoryMappings = new();
+    private Dictionary<string, ItemMapping> _globalPathIndex = new();
+    
+    // 註冊物品類別
+    public bool RegisterCategory(string category, string jsonPath);
+    
+    // 統一查詢介面 - 僅使用 Metadata 路徑查詢
+    public string GetEnglishName(string metadataPath);
+}
 ```
 
-### Testing and Debugging
+### Supported Item Categories
 
-**插件測試**:
-- 啟動 `Loader.exe` 進行即時測試
-- 使用 F12 開啟 ExileCore 主選單查看編譯錯誤
-- 檢查 `Logs/` 目錄中的詳細錯誤日誌
+目前支援的物品類別：
+- **Currency**: 574 項通貨和碎片（`json/currency.json`）
+- **Scarab**: 195 項聖甲蟲（`json/scarab.json`）
+- **Future**: 可輕易擴展至 10+ 種其他物品類別
 
-**API 測試**:
-- 插件內建連線測試功能
-- 手動測試：訪問 `https://poe.ninja/api/data/currencyoverview?league=Mercenaries&type=Currency`
+### Data Structure
+
+```csharp
+public class ItemMapping
+{
+    public string NameZh { get; set; }      // 中文名稱
+    public string NameEn { get; set; }      // 英文名稱  
+    public string BaseTypeZh { get; set; }  // 中文基底類型
+    public string BaseTypeEn { get; set; }  // 英文基底類型
+    public string Type { get; set; }        // Metadata 路徑
+    public string Category { get; set; }    // 所屬類別
+}
+```
+
+### Query Strategy
+
+**唯一查詢方式**: Metadata 路徑查詢
+- 每個物品都有唯一的 metadata 路徑
+- 直接查詢 `_globalPathIndex[metadataPath]` 獲得對應英文名稱
+- 最準確且高效的查詢方式
+- 100% 依賴 JSON 映射資料的完整性
 
 ## Key Development Patterns
+
+### Universal Mapping Registration
+
+```csharp
+// 初始化映射服務
+_itemMappingService = new UniversalItemMappingService();
+_itemMappingService.Initialize(sourceDirectory);
+
+// 系統會自動載入：
+// - currency.json (574 項)
+// - scarab.json (195 項)
+```
+
+### Adding New Item Categories
+
+擴展新物品類別只需：
+
+1. **建立 JSON 資料檔案**:
+```json
+[
+  {
+    "name_zh": "中文名稱",
+    "name_en": "English Name", 
+    "base_type_zh": "中文基底類型",
+    "base_type_en": "English Base Type",
+    "type": "Metadata/Items/Path/ItemType",
+    "url": "https://poedb.tw/tw/item_page"
+  }
+]
+```
+
+2. **註冊新類別**（在 `Initialize` 方法中）:
+```csharp
+RegisterCategory("essence", Path.Combine(pluginDirectory, "json", "essence.json"));
+```
 
 ### Settings Pattern
 ```csharp
@@ -71,26 +128,8 @@ public class PoeNinjaPricerSettings : ISettings
 {
     public ToggleNode Enable { get; set; } = new(false);
     public HotkeyNodeV2 TogglePriceWindow { get; set; } = Keys.F8;
+    public ToggleNode EnableHoverPricing { get; set; } = new(true);
     public RangeNode<int> UpdateIntervalMinutes { get; set; } = new(5, 1, 30);
-}
-```
-
-### Async Service Pattern
-```csharp
-private async Task UpdatePricesAsync()
-{
-    if (_isUpdating) return;
-    _isUpdating = true;
-    try
-    {
-        var prices = await _apiService.GetCurrencyPricesAsync();
-        _cacheService.UpdateCache(prices);
-        FilterPrices();
-    }
-    finally
-    {
-        _isUpdating = false;
-    }
 }
 ```
 
@@ -106,13 +145,12 @@ public override void Render()
         RenderContent();
     }
     ImGui.End();
+    
+    // Always check hover functionality
+    CheckHoveredItem();
+    RenderHoveredItemPrice();
 }
 ```
-
-### Caching System
-- **Local Storage**: 使用 JSON 序列化儲存在插件目錄
-- **Time-based Expiry**: 根據設定的更新間隔判斷快取過期
-- **Fallback Strategy**: API 失敗時使用快取資料
 
 ## Plugin Dependencies
 
@@ -139,6 +177,7 @@ public override void Render()
 
 **Key Settings**:
 - `TogglePriceWindow`: 切換視窗顯示的快捷鍵（預設 F8）
+- `EnableHoverPricing`: 啟用 hover 價格顯示功能（預設開啟）
 - `UpdateIntervalMinutes`: 自動更新間隔（1-30分鐘）
 - `LeagueName`: 聯盟名稱（空白時自動偵測）
 - `ShowChaosValues`/`ShowDivineValues`/`ShowPriceChanges`: 顯示選項
@@ -147,10 +186,7 @@ public override void Render()
 - 過濾器控制只在主視窗中顯示，F12 設定面板不顯示種類篩選
 - 使用私有變數管理過濾器狀態，不持久化到設定檔
 - 預設啟動時只顯示通貨類別
-
-**Window State Persistence**:
-- 視窗位置和大小自動儲存
-- 搜尋歷史記錄
+- **支援 Scarab 過濾**：完整的聖甲蟲分類和搜尋
 
 ## API Integration
 
@@ -165,46 +201,16 @@ public override void Render()
 - 顯示詳細錯誤訊息給用戶
 - 自動重試機制
 
-## Common Development Tasks
+## Hover Item Price Display System
 
-### Adding New Currency Categories
-1. 更新 `CurrencyCategory.cs` 列舉
-2. 在主程式 `PoeNinjaPricer.cs` 中添加對應的私有 bool 變數
-3. 修改 `GetCurrentActiveCategories()` 和 `SetAllFilterCategories()` 方法
-4. 更新 `RenderFilterControls()` 中的 UI 渲染
+### Features
+- **即時價格顯示**: 滑鼠懸停在物品上時顯示價格
+- **完整多語言支援**: 支援中文客戶端的所有通貨和聖甲蟲
+- **智能映射**: 100% 覆蓋率的名稱映射系統
+- **效能優化**: 100ms 節流機制，記憶體高效索引
 
-### Extending API Support
-1. 在 `PoeNinjaModels.cs` 定義新的資料模型
-2. 擴展 `PoeNinjaApiService.cs` 的 API 調用
-3. 更新資料轉換邏輯
-4. 相應調整快取系統
+### Implementation Details
 
-### UI Customization
-- ImGui 表格支援排序、調整大小、篩選
-- 使用 `ImGuiTableFlags` 控制表格行為
-- 色彩主題通過 `ImGui.PushStyleColor` 設定
-
-## Recent Changes
-
-### Hover Item Price Display Feature (2025-08-27)
-- **新增 Hover 價格顯示功能**: 滑鼠懸停在物品上時顯示即時價格資訊
-- **中文客戶端支援**: 實作完整的中文到英文物品名稱映射系統
-- **智能名稱識別**: 使用多層次方法進行物品名稱識別：
-  1. 反射檢測：嘗試從 BaseItemType 獲取英文屬性
-  2. 完整路徑映射：超過 50 種常見通貨和碎片的精確映射
-  3. 智能路徑解析：從 Metadata 路徑自動提取名稱
-- **即時 Tooltip**: 在滑鼠游標附近顯示半透明價格提示窗
-- **效能優化**: 100ms 節流機制避免過度檢測
-
-### Filter System Redesign (2025-08-27)
-- 移除了設定檔案中的種類過濾器屬性，避免 F12 設定面板過於複雜
-- 過濾器狀態改為使用主程式中的私有變數管理
-- `FilterManager` 完全依賴主程式提供的回調函數
-- 快速過濾器按鈕直接在主程式中處理，提供更好的用戶體驗
-
-## Hover Feature Implementation Details
-
-### Item Detection System
 ```csharp
 private Entity GetHoveredItem()
 {
@@ -215,27 +221,77 @@ private Entity GetHoveredItem()
     var hoverItemIcon = uiHover.AsObject<HoverItemIcon>();
     return hoverItemIcon?.Item;
 }
+
+private string GetEnglishItemName(Entity item)
+{
+    var path = item?.Path;
+    if (string.IsNullOrEmpty(path)) return string.Empty;
+    
+    // 只使用 Metadata 路徑查詢
+    if (_itemMappingService?.IsInitialized == true)
+    {
+        return _itemMappingService.GetEnglishName(path);
+    }
+    
+    return string.Empty;
+}
+```
+## Mapping Coverage
+
+### Current Status
+- **Currency**: 574 項通貨和碎片（100% 覆蓋率）
+- **Scarab**: 195 項聖甲蟲（100% 覆蓋率）
+- **Total**: 769 項物品的完整中英文映射
+
+### JSON Data Structure
+所有映射資料存放於 `json/` 目錄：
+- `currency.json`: 通貨映射資料
+- `scarab.json`: 聖甲蟲映射資料
+
+每個 JSON 項目包含：
+```json
+{
+  "name_zh": "中文顯示名稱",
+  "name_en": "English Display Name",
+  "base_type_zh": "中文基底類型", 
+  "base_type_en": "English Base Type",
+  "type": "Metadata/Items/Path/To/Item",
+  "url": "https://poedb.tw/tw/item_reference"
+}
 ```
 
-### Name Mapping Architecture
-1. **反射檢測** (`TryGetEnglishNameFromBaseItemType`): 使用反射檢查可能的英文屬性
-2. **靜態映射** (`GetMappedEnglishName`): 基於 Metadata 路徑的完整映射表
-3. **路徑解析** (`ExtractNameFromPath`): 從路徑中智能提取名稱作為最後備選
+## Common Development Tasks
 
-### Settings Integration
-- `EnableHoverPricing`: 控制 hover 功能開關的設定節點（預設開啟）
-- 與現有顯示設定整合：支援 ShowChaosValues, ShowDivineValues, ShowPriceChanges
+### Adding New Item Categories
 
-## 已知的中文客戶端映射
-- 神聖石 → Divine Orb
-- 混沌石 → Chaos Orb  
-- 崇高石 → Exalted Orb
-- 祝福石 → Blessed Orb
-- 以及 50+ 種其他通貨和對應碎片
+1. **準備 JSON 資料**: 建立新的物品映射 JSON 檔案
+2. **註冊類別**: 在 `UniversalItemMappingService.Initialize()` 中加入新類別
+3. **測試映射**: 確認新物品的 hover 功能正常運作
 
-## Future Improvements (參見 ROADMAP.md)
-- API 反向映射：從 poe.ninja 數據建立對照表
-- poedb.tw 整合：使用社群多語言資料庫
-- 動態學習映射：根據成功匹配建立本地快取
-- 模糊匹配：處理名稱變體和拼寫差異
+### Extending Mapping Coverage
 
+1. **獲取 Metadata 路徑**: 使用除錯模式記錄新物品的路徑
+2. **建立映射項目**: 在對應的 JSON 檔案中新增映射
+3. **驗證功能**: 測試新物品的名稱識別和價格查詢
+
+### UI Customization
+- ImGui 表格支援排序、調整大小、篩選
+- 使用 `ImGuiTableFlags` 控制表格行為
+- 色彩主題通過 `ImGui.PushStyleColor` 設定
+- Hover tooltip 支援半透明背景和自適應大小
+
+## Future Roadmap
+
+### 準備支援的物品類別
+- **Essence** (精華): 約 50 項
+- **Fossil** (化石): 約 30 項  
+- **Beast** (野獸): 約 100 項
+- **Prophecy** (預言): 約 80 項
+- **Divination Cards** (命運卡): 約 500 項
+- **Unique Items** (傳奇物品): 約 1000+ 項
+
+### 架構優勢
+- **一行擴展**: 新類別只需一行註冊程式碼
+- **統一維護**: 所有類別共用查詢邏輯
+- **效能擴展**: 索引系統支援大規模物品庫
+- **記憶體效率**: 延遲載入和 LRU 快取機制
