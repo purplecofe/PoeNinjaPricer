@@ -1,0 +1,842 @@
+[
+  {
+    "name_zh": "憎恨之低語精髓",
+    "name_en": "Whispering Essence of Hatred",
+    "base_type_zh": "憎恨之低語精髓",
+    "base_type_en": "Whispering Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred1",
+    "url": "https://poedb.tw/tw/Whispering_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "憎恨之呢喃精髓",
+    "name_en": "Muttering Essence of Hatred",
+    "base_type_zh": "憎恨之呢喃精髓",
+    "base_type_en": "Muttering Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred2",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "憎恨之啼泣精髓",
+    "name_en": "Weeping Essence of Hatred",
+    "base_type_zh": "憎恨之啼泣精髓",
+    "base_type_en": "Weeping Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred3",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "憎恨之哀嚎精髓",
+    "name_en": "Wailing Essence of Hatred",
+    "base_type_zh": "憎恨之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred4",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "憎恨之咆哮精髓",
+    "name_en": "Screaming Essence of Hatred",
+    "base_type_zh": "憎恨之咆哮精髓",
+    "base_type_en": "Screaming Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred5",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "憎恨之尖嘯精髓",
+    "name_en": "Shrieking Essence of Hatred",
+    "base_type_zh": "憎恨之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred6",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "憎恨之破空精髓",
+    "name_en": "Deafening Essence of Hatred",
+    "base_type_zh": "憎恨之破空精髓",
+    "base_type_en": "Deafening Essence of Hatred",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHatred7",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Hatred"
+  },
+  {
+    "name_zh": "悲痛之低語精髓",
+    "name_en": "Whispering Essence of Woe",
+    "base_type_zh": "悲痛之低語精髓",
+    "base_type_en": "Whispering Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe1",
+    "url": "https://poedb.tw/tw/Whispering_Essence_of_Woe"
+  },
+  {
+    "name_zh": "悲痛之呢喃精髓",
+    "name_en": "Muttering Essence of Woe",
+    "base_type_zh": "悲痛之呢喃精髓",
+    "base_type_en": "Muttering Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe2",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Woe"
+  },
+  {
+    "name_zh": "悲痛之啼泣精髓",
+    "name_en": "Weeping Essence of Woe",
+    "base_type_zh": "悲痛之啼泣精髓",
+    "base_type_en": "Weeping Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe3",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Woe"
+  },
+  {
+    "name_zh": "悲痛之哀嚎精髓",
+    "name_en": "Wailing Essence of Woe",
+    "base_type_zh": "悲痛之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe4",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Woe"
+  },
+  {
+    "name_zh": "悲痛之咆哮精髓",
+    "name_en": "Screaming Essence of Woe",
+    "base_type_zh": "悲痛之咆哮精髓",
+    "base_type_en": "Screaming Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe5",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Woe"
+  },
+  {
+    "name_zh": "悲痛之尖嘯精髓",
+    "name_en": "Shrieking Essence of Woe",
+    "base_type_zh": "悲痛之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe6",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Woe"
+  },
+  {
+    "name_zh": "悲痛之破空精髓",
+    "name_en": "Deafening Essence of Woe",
+    "base_type_zh": "悲痛之破空精髓",
+    "base_type_en": "Deafening Essence of Woe",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWoe7",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Woe"
+  },
+  {
+    "name_zh": "貪婪之低語精髓",
+    "name_en": "Whispering Essence of Greed",
+    "base_type_zh": "貪婪之低語精髓",
+    "base_type_en": "Whispering Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed1",
+    "url": "https://poedb.tw/tw/Whispering_Essence_of_Greed"
+  },
+  {
+    "name_zh": "貪婪之呢喃精髓",
+    "name_en": "Muttering Essence of Greed",
+    "base_type_zh": "貪婪之呢喃精髓",
+    "base_type_en": "Muttering Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed2",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Greed"
+  },
+  {
+    "name_zh": "貪婪之啼泣精髓",
+    "name_en": "Weeping Essence of Greed",
+    "base_type_zh": "貪婪之啼泣精髓",
+    "base_type_en": "Weeping Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed3",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Greed"
+  },
+  {
+    "name_zh": "貪婪之哀嚎精髓",
+    "name_en": "Wailing Essence of Greed",
+    "base_type_zh": "貪婪之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed4",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Greed"
+  },
+  {
+    "name_zh": "貪婪之咆哮精髓",
+    "name_en": "Screaming Essence of Greed",
+    "base_type_zh": "貪婪之咆哮精髓",
+    "base_type_en": "Screaming Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed5",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Greed"
+  },
+  {
+    "name_zh": "貪婪之尖嘯精髓",
+    "name_en": "Shrieking Essence of Greed",
+    "base_type_zh": "貪婪之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed6",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Greed"
+  },
+  {
+    "name_zh": "貪婪之破空精髓",
+    "name_en": "Deafening Essence of Greed",
+    "base_type_zh": "貪婪之破空精髓",
+    "base_type_en": "Deafening Essence of Greed",
+    "type": "Metadata/Items/Currency/CurrencyEssenceGreed7",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Greed"
+  },
+  {
+    "name_zh": "輕視之低語精髓",
+    "name_en": "Whispering Essence of Contempt",
+    "base_type_zh": "輕視之低語精髓",
+    "base_type_en": "Whispering Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt1",
+    "url": "https://poedb.tw/tw/Whispering_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "輕視之呢喃精髓",
+    "name_en": "Muttering Essence of Contempt",
+    "base_type_zh": "輕視之呢喃精髓",
+    "base_type_en": "Muttering Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt2",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "輕視之啼泣精髓",
+    "name_en": "Weeping Essence of Contempt",
+    "base_type_zh": "輕視之啼泣精髓",
+    "base_type_en": "Weeping Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt3",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "輕視之哀嚎精髓",
+    "name_en": "Wailing Essence of Contempt",
+    "base_type_zh": "輕視之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt4",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "輕視之咆哮精髓",
+    "name_en": "Screaming Essence of Contempt",
+    "base_type_zh": "輕視之咆哮精髓",
+    "base_type_en": "Screaming Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt5",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "輕視之尖嘯精髓",
+    "name_en": "Shrieking Essence of Contempt",
+    "base_type_zh": "輕視之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt6",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "輕視之破空精髓",
+    "name_en": "Deafening Essence of Contempt",
+    "base_type_zh": "輕視之破空精髓",
+    "base_type_en": "Deafening Essence of Contempt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceContempt7",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Contempt"
+  },
+  {
+    "name_zh": "哀惜之呢喃精髓",
+    "name_en": "Muttering Essence of Sorrow",
+    "base_type_zh": "哀惜之呢喃精髓",
+    "base_type_en": "Muttering Essence of Sorrow",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSorrow1",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Sorrow"
+  },
+  {
+    "name_zh": "哀惜之啼泣精髓",
+    "name_en": "Weeping Essence of Sorrow",
+    "base_type_zh": "哀惜之啼泣精髓",
+    "base_type_en": "Weeping Essence of Sorrow",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSorrow2",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Sorrow"
+  },
+  {
+    "name_zh": "哀惜之哀嚎精髓",
+    "name_en": "Wailing Essence of Sorrow",
+    "base_type_zh": "哀惜之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Sorrow",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSorrow3",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Sorrow"
+  },
+  {
+    "name_zh": "哀惜之咆哮精髓",
+    "name_en": "Screaming Essence of Sorrow",
+    "base_type_zh": "哀惜之咆哮精髓",
+    "base_type_en": "Screaming Essence of Sorrow",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSorrow4",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Sorrow"
+  },
+  {
+    "name_zh": "哀惜之尖嘯精髓",
+    "name_en": "Shrieking Essence of Sorrow",
+    "base_type_zh": "哀惜之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Sorrow",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSorrow5",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Sorrow"
+  },
+  {
+    "name_zh": "哀惜之破空精髓",
+    "name_en": "Deafening Essence of Sorrow",
+    "base_type_zh": "哀惜之破空精髓",
+    "base_type_en": "Deafening Essence of Sorrow",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSorrow6",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Sorrow"
+  },
+  {
+    "name_zh": "憤怒之呢喃精髓",
+    "name_en": "Muttering Essence of Anger",
+    "base_type_zh": "憤怒之呢喃精髓",
+    "base_type_en": "Muttering Essence of Anger",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnger1",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Anger"
+  },
+  {
+    "name_zh": "憤怒之啼泣精髓",
+    "name_en": "Weeping Essence of Anger",
+    "base_type_zh": "憤怒之啼泣精髓",
+    "base_type_en": "Weeping Essence of Anger",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnger2",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Anger"
+  },
+  {
+    "name_zh": "憤怒之哀嚎精髓",
+    "name_en": "Wailing Essence of Anger",
+    "base_type_zh": "憤怒之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Anger",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnger3",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Anger"
+  },
+  {
+    "name_zh": "憤怒之咆哮精髓",
+    "name_en": "Screaming Essence of Anger",
+    "base_type_zh": "憤怒之咆哮精髓",
+    "base_type_en": "Screaming Essence of Anger",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnger4",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Anger"
+  },
+  {
+    "name_zh": "憤怒之尖嘯精髓",
+    "name_en": "Shrieking Essence of Anger",
+    "base_type_zh": "憤怒之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Anger",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnger5",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Anger"
+  },
+  {
+    "name_zh": "憤怒之破空精髓",
+    "name_en": "Deafening Essence of Anger",
+    "base_type_zh": "憤怒之破空精髓",
+    "base_type_en": "Deafening Essence of Anger",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnger6",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Anger"
+  },
+  {
+    "name_zh": "折磨之呢喃精髓",
+    "name_en": "Muttering Essence of Torment",
+    "base_type_zh": "折磨之呢喃精髓",
+    "base_type_en": "Muttering Essence of Torment",
+    "type": "Metadata/Items/Currency/CurrencyEssenceTorment1",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Torment"
+  },
+  {
+    "name_zh": "折磨之啼泣精髓",
+    "name_en": "Weeping Essence of Torment",
+    "base_type_zh": "折磨之啼泣精髓",
+    "base_type_en": "Weeping Essence of Torment",
+    "type": "Metadata/Items/Currency/CurrencyEssenceTorment2",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Torment"
+  },
+  {
+    "name_zh": "折磨之哀嚎精髓",
+    "name_en": "Wailing Essence of Torment",
+    "base_type_zh": "折磨之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Torment",
+    "type": "Metadata/Items/Currency/CurrencyEssenceTorment3",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Torment"
+  },
+  {
+    "name_zh": "折磨之咆哮精髓",
+    "name_en": "Screaming Essence of Torment",
+    "base_type_zh": "折磨之咆哮精髓",
+    "base_type_en": "Screaming Essence of Torment",
+    "type": "Metadata/Items/Currency/CurrencyEssenceTorment4",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Torment"
+  },
+  {
+    "name_zh": "折磨之尖嘯精髓",
+    "name_en": "Shrieking Essence of Torment",
+    "base_type_zh": "折磨之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Torment",
+    "type": "Metadata/Items/Currency/CurrencyEssenceTorment5",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Torment"
+  },
+  {
+    "name_zh": "折磨之破空精髓",
+    "name_en": "Deafening Essence of Torment",
+    "base_type_zh": "折磨之破空精髓",
+    "base_type_en": "Deafening Essence of Torment",
+    "type": "Metadata/Items/Currency/CurrencyEssenceTorment6",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Torment"
+  },
+  {
+    "name_zh": "恐懼之呢喃精髓",
+    "name_en": "Muttering Essence of Fear",
+    "base_type_zh": "恐懼之呢喃精髓",
+    "base_type_en": "Muttering Essence of Fear",
+    "type": "Metadata/Items/Currency/CurrencyEssenceFear1",
+    "url": "https://poedb.tw/tw/Muttering_Essence_of_Fear"
+  },
+  {
+    "name_zh": "恐懼之啼泣精髓",
+    "name_en": "Weeping Essence of Fear",
+    "base_type_zh": "恐懼之啼泣精髓",
+    "base_type_en": "Weeping Essence of Fear",
+    "type": "Metadata/Items/Currency/CurrencyEssenceFear2",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Fear"
+  },
+  {
+    "name_zh": "恐懼之哀嚎精髓",
+    "name_en": "Wailing Essence of Fear",
+    "base_type_zh": "恐懼之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Fear",
+    "type": "Metadata/Items/Currency/CurrencyEssenceFear3",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Fear"
+  },
+  {
+    "name_zh": "恐懼之咆哮精髓",
+    "name_en": "Screaming Essence of Fear",
+    "base_type_zh": "恐懼之咆哮精髓",
+    "base_type_en": "Screaming Essence of Fear",
+    "type": "Metadata/Items/Currency/CurrencyEssenceFear4",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Fear"
+  },
+  {
+    "name_zh": "恐懼之尖嘯精髓",
+    "name_en": "Shrieking Essence of Fear",
+    "base_type_zh": "恐懼之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Fear",
+    "type": "Metadata/Items/Currency/CurrencyEssenceFear5",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Fear"
+  },
+  {
+    "name_zh": "恐懼之破空精髓",
+    "name_en": "Deafening Essence of Fear",
+    "base_type_zh": "恐懼之破空精髓",
+    "base_type_en": "Deafening Essence of Fear",
+    "type": "Metadata/Items/Currency/CurrencyEssenceFear6",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Fear"
+  },
+  {
+    "name_zh": "苦難之啼泣精髓",
+    "name_en": "Weeping Essence of Suffering",
+    "base_type_zh": "苦難之啼泣精髓",
+    "base_type_en": "Weeping Essence of Suffering",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSuffering1",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Suffering"
+  },
+  {
+    "name_zh": "苦難之哀嚎精髓",
+    "name_en": "Wailing Essence of Suffering",
+    "base_type_zh": "苦難之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Suffering",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSuffering2",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Suffering"
+  },
+  {
+    "name_zh": "苦難之咆哮精髓",
+    "name_en": "Screaming Essence of Suffering",
+    "base_type_zh": "苦難之咆哮精髓",
+    "base_type_en": "Screaming Essence of Suffering",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSuffering3",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Suffering"
+  },
+  {
+    "name_zh": "苦難之尖嘯精髓",
+    "name_en": "Shrieking Essence of Suffering",
+    "base_type_zh": "苦難之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Suffering",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSuffering4",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Suffering"
+  },
+  {
+    "name_zh": "苦難之破空精髓",
+    "name_en": "Deafening Essence of Suffering",
+    "base_type_zh": "苦難之破空精髓",
+    "base_type_en": "Deafening Essence of Suffering",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSuffering5",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Suffering"
+  },
+  {
+    "name_zh": "肆虐之啼泣精髓",
+    "name_en": "Weeping Essence of Rage",
+    "base_type_zh": "肆虐之啼泣精髓",
+    "base_type_en": "Weeping Essence of Rage",
+    "type": "Metadata/Items/Currency/CurrencyEssenceRage1",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Rage"
+  },
+  {
+    "name_zh": "肆虐之哀嚎精髓",
+    "name_en": "Wailing Essence of Rage",
+    "base_type_zh": "肆虐之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Rage",
+    "type": "Metadata/Items/Currency/CurrencyEssenceRage2",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Rage"
+  },
+  {
+    "name_zh": "肆虐之咆哮精髓",
+    "name_en": "Screaming Essence of Rage",
+    "base_type_zh": "肆虐之咆哮精髓",
+    "base_type_en": "Screaming Essence of Rage",
+    "type": "Metadata/Items/Currency/CurrencyEssenceRage3",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Rage"
+  },
+  {
+    "name_zh": "肆虐之尖嘯精髓",
+    "name_en": "Shrieking Essence of Rage",
+    "base_type_zh": "肆虐之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Rage",
+    "type": "Metadata/Items/Currency/CurrencyEssenceRage4",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Rage"
+  },
+  {
+    "name_zh": "肆虐之破空精髓",
+    "name_en": "Deafening Essence of Rage",
+    "base_type_zh": "肆虐之破空精髓",
+    "base_type_en": "Deafening Essence of Rage",
+    "type": "Metadata/Items/Currency/CurrencyEssenceRage5",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Rage"
+  },
+  {
+    "name_zh": "雷霆之啼泣精髓",
+    "name_en": "Weeping Essence of Wrath",
+    "base_type_zh": "雷霆之啼泣精髓",
+    "base_type_en": "Weeping Essence of Wrath",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWrath1",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Wrath"
+  },
+  {
+    "name_zh": "雷霆之哀嚎精髓",
+    "name_en": "Wailing Essence of Wrath",
+    "base_type_zh": "雷霆之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Wrath",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWrath2",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Wrath"
+  },
+  {
+    "name_zh": "雷霆之咆哮精髓",
+    "name_en": "Screaming Essence of Wrath",
+    "base_type_zh": "雷霆之咆哮精髓",
+    "base_type_en": "Screaming Essence of Wrath",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWrath3",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Wrath"
+  },
+  {
+    "name_zh": "雷霆之尖嘯精髓",
+    "name_en": "Shrieking Essence of Wrath",
+    "base_type_zh": "雷霆之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Wrath",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWrath4",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Wrath"
+  },
+  {
+    "name_zh": "雷霆之破空精髓",
+    "name_en": "Deafening Essence of Wrath",
+    "base_type_zh": "雷霆之破空精髓",
+    "base_type_en": "Deafening Essence of Wrath",
+    "type": "Metadata/Items/Currency/CurrencyEssenceWrath5",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Wrath"
+  },
+  {
+    "name_zh": "疑惑之啼泣精髓",
+    "name_en": "Weeping Essence of Doubt",
+    "base_type_zh": "疑惑之啼泣精髓",
+    "base_type_en": "Weeping Essence of Doubt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDoubt1",
+    "url": "https://poedb.tw/tw/Weeping_Essence_of_Doubt"
+  },
+  {
+    "name_zh": "疑惑之哀嚎精髓",
+    "name_en": "Wailing Essence of Doubt",
+    "base_type_zh": "疑惑之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Doubt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDoubt2",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Doubt"
+  },
+  {
+    "name_zh": "疑惑之咆哮精髓",
+    "name_en": "Screaming Essence of Doubt",
+    "base_type_zh": "疑惑之咆哮精髓",
+    "base_type_en": "Screaming Essence of Doubt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDoubt3",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Doubt"
+  },
+  {
+    "name_zh": "疑惑之尖嘯精髓",
+    "name_en": "Shrieking Essence of Doubt",
+    "base_type_zh": "疑惑之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Doubt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDoubt4",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Doubt"
+  },
+  {
+    "name_zh": "疑惑之破空精髓",
+    "name_en": "Deafening Essence of Doubt",
+    "base_type_zh": "疑惑之破空精髓",
+    "base_type_en": "Deafening Essence of Doubt",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDoubt5",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Doubt"
+  },
+  {
+    "name_zh": "煎熬之哀嚎精髓",
+    "name_en": "Wailing Essence of Anguish",
+    "base_type_zh": "煎熬之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Anguish",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnguish1",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Anguish"
+  },
+  {
+    "name_zh": "煎熬之咆哮精髓",
+    "name_en": "Screaming Essence of Anguish",
+    "base_type_zh": "煎熬之咆哮精髓",
+    "base_type_en": "Screaming Essence of Anguish",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnguish2",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Anguish"
+  },
+  {
+    "name_zh": "煎熬之尖嘯精髓",
+    "name_en": "Shrieking Essence of Anguish",
+    "base_type_zh": "煎熬之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Anguish",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnguish3",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Anguish"
+  },
+  {
+    "name_zh": "煎熬之破空精髓",
+    "name_en": "Deafening Essence of Anguish",
+    "base_type_zh": "煎熬之破空精髓",
+    "base_type_en": "Deafening Essence of Anguish",
+    "type": "Metadata/Items/Currency/CurrencyEssenceAnguish4",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Anguish"
+  },
+  {
+    "name_zh": "厭惡之哀嚎精髓",
+    "name_en": "Wailing Essence of Loathing",
+    "base_type_zh": "厭惡之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Loathing",
+    "type": "Metadata/Items/Currency/CurrencyEssenceLoathing1",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Loathing"
+  },
+  {
+    "name_zh": "厭惡之咆哮精髓",
+    "name_en": "Screaming Essence of Loathing",
+    "base_type_zh": "厭惡之咆哮精髓",
+    "base_type_en": "Screaming Essence of Loathing",
+    "type": "Metadata/Items/Currency/CurrencyEssenceLoathing2",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Loathing"
+  },
+  {
+    "name_zh": "厭惡之尖嘯精髓",
+    "name_en": "Shrieking Essence of Loathing",
+    "base_type_zh": "厭惡之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Loathing",
+    "type": "Metadata/Items/Currency/CurrencyEssenceLoathing3",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Loathing"
+  },
+  {
+    "name_zh": "厭惡之破空精髓",
+    "name_en": "Deafening Essence of Loathing",
+    "base_type_zh": "厭惡之破空精髓",
+    "base_type_en": "Deafening Essence of Loathing",
+    "type": "Metadata/Items/Currency/CurrencyEssenceLoathing4",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Loathing"
+  },
+  {
+    "name_zh": "刻毒之哀嚎精髓",
+    "name_en": "Wailing Essence of Spite",
+    "base_type_zh": "刻毒之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Spite",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSpite1",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Spite"
+  },
+  {
+    "name_zh": "刻毒之咆哮精髓",
+    "name_en": "Screaming Essence of Spite",
+    "base_type_zh": "刻毒之咆哮精髓",
+    "base_type_en": "Screaming Essence of Spite",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSpite2",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Spite"
+  },
+  {
+    "name_zh": "刻毒之尖嘯精髓",
+    "name_en": "Shrieking Essence of Spite",
+    "base_type_zh": "刻毒之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Spite",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSpite3",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Spite"
+  },
+  {
+    "name_zh": "刻毒之破空精髓",
+    "name_en": "Deafening Essence of Spite",
+    "base_type_zh": "刻毒之破空精髓",
+    "base_type_en": "Deafening Essence of Spite",
+    "type": "Metadata/Items/Currency/CurrencyEssenceSpite4",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Spite"
+  },
+  {
+    "name_zh": "熱情之哀嚎精髓",
+    "name_en": "Wailing Essence of Zeal",
+    "base_type_zh": "熱情之哀嚎精髓",
+    "base_type_en": "Wailing Essence of Zeal",
+    "type": "Metadata/Items/Currency/CurrencyEssenceZeal1",
+    "url": "https://poedb.tw/tw/Wailing_Essence_of_Zeal"
+  },
+  {
+    "name_zh": "熱情之咆哮精髓",
+    "name_en": "Screaming Essence of Zeal",
+    "base_type_zh": "熱情之咆哮精髓",
+    "base_type_en": "Screaming Essence of Zeal",
+    "type": "Metadata/Items/Currency/CurrencyEssenceZeal2",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Zeal"
+  },
+  {
+    "name_zh": "熱情之尖嘯精髓",
+    "name_en": "Shrieking Essence of Zeal",
+    "base_type_zh": "熱情之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Zeal",
+    "type": "Metadata/Items/Currency/CurrencyEssenceZeal3",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Zeal"
+  },
+  {
+    "name_zh": "熱情之破空精髓",
+    "name_en": "Deafening Essence of Zeal",
+    "base_type_zh": "熱情之破空精髓",
+    "base_type_en": "Deafening Essence of Zeal",
+    "type": "Metadata/Items/Currency/CurrencyEssenceZeal4",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Zeal"
+  },
+  {
+    "name_zh": "悽慘之咆哮精髓",
+    "name_en": "Screaming Essence of Misery",
+    "base_type_zh": "悽慘之咆哮精髓",
+    "base_type_en": "Screaming Essence of Misery",
+    "type": "Metadata/Items/Currency/CurrencyEssenceMisery1",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Misery"
+  },
+  {
+    "name_zh": "悽慘之尖嘯精髓",
+    "name_en": "Shrieking Essence of Misery",
+    "base_type_zh": "悽慘之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Misery",
+    "type": "Metadata/Items/Currency/CurrencyEssenceMisery2",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Misery"
+  },
+  {
+    "name_zh": "悽慘之破空精髓",
+    "name_en": "Deafening Essence of Misery",
+    "base_type_zh": "悽慘之破空精髓",
+    "base_type_en": "Deafening Essence of Misery",
+    "type": "Metadata/Items/Currency/CurrencyEssenceMisery3",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Misery"
+  },
+  {
+    "name_zh": "忌憚之咆哮精髓",
+    "name_en": "Screaming Essence of Dread",
+    "base_type_zh": "忌憚之咆哮精髓",
+    "base_type_en": "Screaming Essence of Dread",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDread1",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Dread"
+  },
+  {
+    "name_zh": "忌憚之尖嘯精髓",
+    "name_en": "Shrieking Essence of Dread",
+    "base_type_zh": "忌憚之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Dread",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDread2",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Dread"
+  },
+  {
+    "name_zh": "忌憚之破空精髓",
+    "name_en": "Deafening Essence of Dread",
+    "base_type_zh": "忌憚之破空精髓",
+    "base_type_en": "Deafening Essence of Dread",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDread3",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Dread"
+  },
+  {
+    "name_zh": "傲視之咆哮精髓",
+    "name_en": "Screaming Essence of Scorn",
+    "base_type_zh": "傲視之咆哮精髓",
+    "base_type_en": "Screaming Essence of Scorn",
+    "type": "Metadata/Items/Currency/CurrencyEssenceScorn1",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Scorn"
+  },
+  {
+    "name_zh": "傲視之尖嘯精髓",
+    "name_en": "Shrieking Essence of Scorn",
+    "base_type_zh": "傲視之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Scorn",
+    "type": "Metadata/Items/Currency/CurrencyEssenceScorn2",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Scorn"
+  },
+  {
+    "name_zh": "傲視之破空精髓",
+    "name_en": "Deafening Essence of Scorn",
+    "base_type_zh": "傲視之破空精髓",
+    "base_type_en": "Deafening Essence of Scorn",
+    "type": "Metadata/Items/Currency/CurrencyEssenceScorn3",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Scorn"
+  },
+  {
+    "name_zh": "忌妒之咆哮精髓",
+    "name_en": "Screaming Essence of Envy",
+    "base_type_zh": "忌妒之咆哮精髓",
+    "base_type_en": "Screaming Essence of Envy",
+    "type": "Metadata/Items/Currency/CurrencyEssenceEnvy1",
+    "url": "https://poedb.tw/tw/Screaming_Essence_of_Envy"
+  },
+  {
+    "name_zh": "忌妒之尖嘯精髓",
+    "name_en": "Shrieking Essence of Envy",
+    "base_type_zh": "忌妒之尖嘯精髓",
+    "base_type_en": "Shrieking Essence of Envy",
+    "type": "Metadata/Items/Currency/CurrencyEssenceEnvy2",
+    "url": "https://poedb.tw/tw/Shrieking_Essence_of_Envy"
+  },
+  {
+    "name_zh": "忌妒之破空精髓",
+    "name_en": "Deafening Essence of Envy",
+    "base_type_zh": "忌妒之破空精髓",
+    "base_type_en": "Deafening Essence of Envy",
+    "type": "Metadata/Items/Currency/CurrencyEssenceEnvy3",
+    "url": "https://poedb.tw/tw/Deafening_Essence_of_Envy"
+  },
+  {
+    "name_zh": "浮誇精髓",
+    "name_en": "Essence of Hysteria",
+    "base_type_zh": "浮誇精髓",
+    "base_type_en": "Essence of Hysteria",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHysteria1",
+    "url": "https://poedb.tw/tw/Essence_of_Hysteria"
+  },
+  {
+    "name_zh": "錯亂精髓",
+    "name_en": "Essence of Insanity",
+    "base_type_zh": "錯亂精髓",
+    "base_type_en": "Essence of Insanity",
+    "type": "Metadata/Items/Currency/CurrencyEssenceInsanity1",
+    "url": "https://poedb.tw/tw/Essence_of_Insanity"
+  },
+  {
+    "name_zh": "極恐精髓",
+    "name_en": "Essence of Horror",
+    "base_type_zh": "極恐精髓",
+    "base_type_en": "Essence of Horror",
+    "type": "Metadata/Items/Currency/CurrencyEssenceHorror1",
+    "url": "https://poedb.tw/tw/Essence_of_Horror"
+  },
+  {
+    "name_zh": "譫妄精髓",
+    "name_en": "Essence of Delirium",
+    "base_type_zh": "譫妄精髓",
+    "base_type_en": "Essence of Delirium",
+    "type": "Metadata/Items/Currency/CurrencyEssenceDelirium1",
+    "url": "https://poedb.tw/tw/Essence_of_Delirium"
+  },
+  {
+    "name_zh": "遺忘的污染器皿",
+    "name_en": "Remnant of Corruption",
+    "base_type_zh": "遺忘的污染器皿",
+    "base_type_en": "Remnant of Corruption",
+    "type": "Metadata/Items/Currency/CurrencyCorruptMonolith",
+    "url": "https://poedb.tw/tw/Remnant_of_Corruption"
+  }
+]

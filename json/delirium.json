@@ -1,0 +1,178 @@
+[
+  {
+    "name_zh": "精良之譫妄玉",
+    "name_en": "Fine Delirium Orb",
+    "base_type_zh": "精良之譫妄玉",
+    "base_type_en": "Fine Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbCurrency",
+    "url": "https://poedb.tw/tw/Fine_Delirium_Orb"
+  },
+  {
+    "name_zh": "卓越之譫妄玉",
+    "name_en": "Singular Delirium Orb",
+    "base_type_zh": "卓越之譫妄玉",
+    "base_type_en": "Singular Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbUniques",
+    "url": "https://poedb.tw/tw/Singular_Delirium_Orb"
+  },
+  {
+    "name_zh": "奇術之譫妄玉",
+    "name_en": "Thaumaturge's Delirium Orb",
+    "base_type_zh": "奇術之譫妄玉",
+    "base_type_en": "Thaumaturge's Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbGems",
+    "url": "https://poedb.tw/tw/Thaumaturges_Delirium_Orb"
+  },
+  {
+    "name_zh": "鐵匠之譫妄玉",
+    "name_en": "Blacksmith's Delirium Orb",
+    "base_type_zh": "鐵匠之譫妄玉",
+    "base_type_en": "Blacksmith's Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbWeapons",
+    "url": "https://poedb.tw/tw/Blacksmiths_Delirium_Orb"
+  },
+  {
+    "name_zh": "護甲之譫妄玉",
+    "name_en": "Armoursmith's Delirium Orb",
+    "base_type_zh": "護甲之譫妄玉",
+    "base_type_en": "Armoursmith's Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbArmour",
+    "url": "https://poedb.tw/tw/Armoursmiths_Delirium_Orb"
+  },
+  {
+    "name_zh": "製圖之譫妄玉",
+    "name_en": "Cartographer's Delirium Orb",
+    "base_type_zh": "製圖之譫妄玉",
+    "base_type_en": "Cartographer's Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbMaps",
+    "url": "https://poedb.tw/tw/Cartographers_Delirium_Orb"
+  },
+  {
+    "name_zh": "飾品之譫妄玉",
+    "name_en": "Jeweller's Delirium Orb",
+    "base_type_zh": "飾品之譫妄玉",
+    "base_type_en": "Jeweller's Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbTrinkets",
+    "url": "https://poedb.tw/tw/Jewellers_Delirium_Orb"
+  },
+  {
+    "name_zh": "深淵之譫妄玉",
+    "name_en": "Abyssal Delirium Orb",
+    "base_type_zh": "深淵之譫妄玉",
+    "base_type_en": "Abyssal Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbAbyss",
+    "url": "https://poedb.tw/tw/Abyssal_Delirium_Orb"
+  },
+  {
+    "name_zh": "卡爾葛之譫妄玉",
+    "name_en": "Kalguuran Delirium Orb",
+    "base_type_zh": "卡爾葛之譫妄玉",
+    "base_type_en": "Kalguuran Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbPerandus",
+    "url": "https://poedb.tw/tw/Kalguuran_Delirium_Orb"
+  },
+  {
+    "name_zh": "預感之譫妄玉",
+    "name_en": "Foreboding Delirium Orb",
+    "base_type_zh": "預感之譫妄玉",
+    "base_type_en": "Foreboding Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbHarbinger",
+    "url": "https://poedb.tw/tw/Foreboding_Delirium_Orb"
+  },
+  {
+    "name_zh": "晦澀之譫妄玉",
+    "name_en": "Obscured Delirium Orb",
+    "base_type_zh": "晦澀之譫妄玉",
+    "base_type_en": "Obscured Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbBreach",
+    "url": "https://poedb.tw/tw/Obscured_Delirium_Orb"
+  },
+  {
+    "name_zh": "低語之譫妄玉",
+    "name_en": "Whispering Delirium Orb",
+    "base_type_zh": "低語之譫妄玉",
+    "base_type_en": "Whispering Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbEssences",
+    "url": "https://poedb.tw/tw/Whispering_Delirium_Orb"
+  },
+  {
+    "name_zh": "碎片之譫妄玉",
+    "name_en": "Fragmented Delirium Orb",
+    "base_type_zh": "碎片之譫妄玉",
+    "base_type_en": "Fragmented Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbFragments",
+    "url": "https://poedb.tw/tw/Fragmented_Delirium_Orb"
+  },
+  {
+    "name_zh": "飛掠之譫妄玉",
+    "name_en": "Skittering Delirium Orb",
+    "base_type_zh": "飛掠之譫妄玉",
+    "base_type_en": "Skittering Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbScarabs",
+    "url": "https://poedb.tw/tw/Skittering_Delirium_Orb"
+  },
+  {
+    "name_zh": "石化之譫妄玉",
+    "name_en": "Fossilised Delirium Orb",
+    "base_type_zh": "石化之譫妄玉",
+    "base_type_en": "Fossilised Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbFossils",
+    "url": "https://poedb.tw/tw/Fossilised_Delirium_Orb"
+  },
+  {
+    "name_zh": "聖人之譫妄玉",
+    "name_en": "Diviner's Delirium Orb",
+    "base_type_zh": "聖人之譫妄玉",
+    "base_type_en": "Diviner's Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbDivinationCards",
+    "url": "https://poedb.tw/tw/Diviners_Delirium_Orb"
+  },
+  {
+    "name_zh": "譫妄玉",
+    "name_en": "Delirium Orb",
+    "base_type_zh": "譫妄玉",
+    "base_type_en": "Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbGeneric",
+    "url": "https://poedb.tw/tw/Delirium_Orb"
+  },
+  {
+    "name_zh": "初始之譫妄玉",
+    "name_en": "Primal Delirium Orb",
+    "base_type_zh": "初始之譫妄玉",
+    "base_type_en": "Primal Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbTalismans",
+    "url": "https://poedb.tw/tw/Primal_Delirium_Orb"
+  },
+  {
+    "name_zh": "帝王之譫妄玉",
+    "name_en": "Imperial Delirium Orb",
+    "base_type_zh": "帝王之譫妄玉",
+    "base_type_en": "Imperial Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbLabyrinth",
+    "url": "https://poedb.tw/tw/Imperial_Delirium_Orb"
+  },
+  {
+    "name_zh": "永恆之譫妄玉",
+    "name_en": "Timeless Delirium Orb",
+    "base_type_zh": "永恆之譫妄玉",
+    "base_type_en": "Timeless Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbIncubators",
+    "url": "https://poedb.tw/tw/Timeless_Delirium_Orb"
+  },
+  {
+    "name_zh": "凋落之譫妄玉",
+    "name_en": "Blighted Delirium Orb",
+    "base_type_zh": "凋落之譫妄玉",
+    "base_type_en": "Blighted Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbBlight",
+    "url": "https://poedb.tw/tw/Blighted_Delirium_Orb"
+  },
+  {
+    "name_zh": "挑戰之譫妄玉",
+    "name_en": "Challenging Delirium Orb",
+    "base_type_zh": "挑戰之譫妄玉",
+    "base_type_en": "Challenging Delirium Orb",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionOrbMetamorphosis",
+    "url": "https://poedb.tw/tw/Challenging_Delirium_Orb"
+  }
+]

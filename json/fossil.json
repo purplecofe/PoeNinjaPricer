@@ -1,0 +1,202 @@
+[
+  {
+    "name_zh": "暴炎化石",
+    "name_en": "Scorched Fossil",
+    "base_type_zh": "暴炎化石",
+    "base_type_en": "Scorched Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingFire",
+    "url": "https://poedb.tw/tw/Scorched_Fossil"
+  },
+  {
+    "name_zh": "寒風化石",
+    "name_en": "Frigid Fossil",
+    "base_type_zh": "寒風化石",
+    "base_type_en": "Frigid Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingCold",
+    "url": "https://poedb.tw/tw/Frigid_Fossil"
+  },
+  {
+    "name_zh": "金鋼化石",
+    "name_en": "Metallic Fossil",
+    "base_type_zh": "金鋼化石",
+    "base_type_en": "Metallic Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingLightning",
+    "url": "https://poedb.tw/tw/Metallic_Fossil"
+  },
+  {
+    "name_zh": "鋸齒化石",
+    "name_en": "Jagged Fossil",
+    "base_type_zh": "鋸齒化石",
+    "base_type_en": "Jagged Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingPhysical",
+    "url": "https://poedb.tw/tw/Jagged_Fossil"
+  },
+  {
+    "name_zh": "特異化石",
+    "name_en": "Aberrant Fossil",
+    "base_type_zh": "特異化石",
+    "base_type_en": "Aberrant Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingChaos",
+    "url": "https://poedb.tw/tw/Aberrant_Fossil"
+  },
+  {
+    "name_zh": "原始化石",
+    "name_en": "Pristine Fossil",
+    "base_type_zh": "原始化石",
+    "base_type_en": "Pristine Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingLife",
+    "url": "https://poedb.tw/tw/Pristine_Fossil"
+  },
+  {
+    "name_zh": "稠密化石",
+    "name_en": "Dense Fossil",
+    "base_type_zh": "稠密化石",
+    "base_type_en": "Dense Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingDefences",
+    "url": "https://poedb.tw/tw/Dense_Fossil"
+  },
+  {
+    "name_zh": "斑駁化石",
+    "name_en": "Corroded Fossil",
+    "base_type_zh": "斑駁化石",
+    "base_type_en": "Corroded Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingBleedPoison",
+    "url": "https://poedb.tw/tw/Corroded_Fossil"
+  },
+  {
+    "name_zh": "三相化石",
+    "name_en": "Prismatic Fossil",
+    "base_type_zh": "三相化石",
+    "base_type_en": "Prismatic Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingElemental",
+    "url": "https://poedb.tw/tw/Prismatic_Fossil"
+  },
+  {
+    "name_zh": "神幻化石",
+    "name_en": "Aetheric Fossil",
+    "base_type_zh": "神幻化石",
+    "base_type_en": "Aetheric Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingCasterMods",
+    "url": "https://poedb.tw/tw/Aetheric_Fossil"
+  },
+  {
+    "name_zh": "利齒化石",
+    "name_en": "Serrated Fossil",
+    "base_type_zh": "利齒化石",
+    "base_type_en": "Serrated Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingAttackMods",
+    "url": "https://poedb.tw/tw/Serrated_Fossil"
+  },
+  {
+    "name_zh": "明透化石",
+    "name_en": "Lucent Fossil",
+    "base_type_zh": "明透化石",
+    "base_type_en": "Lucent Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingMana",
+    "url": "https://poedb.tw/tw/Lucent_Fossil"
+  },
+  {
+    "name_zh": "顫慄化石",
+    "name_en": "Shuddering Fossil",
+    "base_type_zh": "顫慄化石",
+    "base_type_en": "Shuddering Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingSpeed",
+    "url": "https://poedb.tw/tw/Shuddering_Fossil"
+  },
+  {
+    "name_zh": "畛域化石",
+    "name_en": "Bound Fossil",
+    "base_type_zh": "畛域化石",
+    "base_type_en": "Bound Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingMinionsAuras",
+    "url": "https://poedb.tw/tw/Bound_Fossil"
+  },
+  {
+    "name_zh": "華麗化石",
+    "name_en": "Opulent Fossil",
+    "base_type_zh": "華麗化石",
+    "base_type_en": "Opulent Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingQuality",
+    "url": "https://poedb.tw/tw/Opulent_Fossil"
+  },
+  {
+    "name_zh": "靈巧化石",
+    "name_en": "Deft Fossil",
+    "base_type_zh": "靈巧化石",
+    "base_type_en": "Deft Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingEnchant",
+    "url": "https://poedb.tw/tw/Deft_Fossil"
+  },
+  {
+    "name_zh": "根本化石",
+    "name_en": "Fundamental Fossil",
+    "base_type_zh": "根本化石",
+    "base_type_en": "Fundamental Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingSockets",
+    "url": "https://poedb.tw/tw/Fundamental_Fossil"
+  },
+  {
+    "name_zh": "雕琢化石",
+    "name_en": "Faceted Fossil",
+    "base_type_zh": "雕琢化石",
+    "base_type_en": "Faceted Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingGemLevel",
+    "url": "https://poedb.tw/tw/Faceted_Fossil"
+  },
+  {
+    "name_zh": "血漬化石",
+    "name_en": "Bloodstained Fossil",
+    "base_type_zh": "血漬化石",
+    "base_type_en": "Bloodstained Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingVaal",
+    "url": "https://poedb.tw/tw/Bloodstained_Fossil"
+  },
+  {
+    "name_zh": "鏤空化石",
+    "name_en": "Hollow Fossil",
+    "base_type_zh": "鏤空化石",
+    "base_type_en": "Hollow Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingAbyss",
+    "url": "https://poedb.tw/tw/Hollow_Fossil"
+  },
+  {
+    "name_zh": "破裂化石",
+    "name_en": "Fractured Fossil",
+    "base_type_zh": "破裂化石",
+    "base_type_en": "Fractured Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingMirror",
+    "url": "https://poedb.tw/tw/Fractured_Fossil"
+  },
+  {
+    "name_zh": "雕紋化石",
+    "name_en": "Glyphic Fossil",
+    "base_type_zh": "雕紋化石",
+    "base_type_en": "Glyphic Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingCorruptEssence",
+    "url": "https://poedb.tw/tw/Glyphic_Fossil"
+  },
+  {
+    "name_zh": "紊亂化石",
+    "name_en": "Tangled Fossil",
+    "base_type_zh": "紊亂化石",
+    "base_type_en": "Tangled Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingRandom",
+    "url": "https://poedb.tw/tw/Tangled_Fossil"
+  },
+  {
+    "name_zh": "神聖化石",
+    "name_en": "Sanctified Fossil",
+    "base_type_zh": "神聖化石",
+    "base_type_en": "Sanctified Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingLuckyModRolls",
+    "url": "https://poedb.tw/tw/Sanctified_Fossil"
+  },
+  {
+    "name_zh": "鑲金化石",
+    "name_en": "Gilded Fossil",
+    "base_type_zh": "鑲金化石",
+    "base_type_en": "Gilded Fossil",
+    "type": "Metadata/Items/Currency/CurrencyDelveCraftingSellPrice",
+    "url": "https://poedb.tw/tw/Gilded_Fossil"
+  }
+]

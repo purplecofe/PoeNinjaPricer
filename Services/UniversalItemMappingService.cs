@@ -83,10 +83,17 @@ public class UniversalItemMappingService
     {
         try
         {
-            // 註冊預設的物品類別
             RegisterCategory("currency", Path.Combine(pluginDirectory, "json", "currency.json"));
             RegisterCategory("scarab", Path.Combine(pluginDirectory, "json", "scarab.json"));
             RegisterCategory("fragments", Path.Combine(pluginDirectory, "json", "fragments.json"));
+            RegisterCategory("delirium", Path.Combine(pluginDirectory, "json", "delirium.json"));
+            RegisterCategory("vial", Path.Combine(pluginDirectory, "json", "vial.json"));
+            RegisterCategory("blessing", Path.Combine(pluginDirectory, "json", "blessing.json"));
+            RegisterCategory("breach", Path.Combine(pluginDirectory, "json", "breach.json"));
+            RegisterCategory("oil", Path.Combine(pluginDirectory, "json", "oil.json"));
+            RegisterCategory("fossil", Path.Combine(pluginDirectory, "json", "fossil.json"));
+            RegisterCategory("catalyst", Path.Combine(pluginDirectory, "json", "catalyst.json"));
+            RegisterCategory("essence", Path.Combine(pluginDirectory, "json", "essence.json"));
             
             // 建立全域路徑索引
             BuildGlobalPathIndex();

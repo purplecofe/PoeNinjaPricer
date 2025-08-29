@@ -1,0 +1,74 @@
+[
+  {
+    "name_zh": "覺醒之罈",
+    "name_en": "Vial of Awakening",
+    "base_type_zh": "覺醒之罈",
+    "base_type_en": "Vial of Awakening",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialPoison",
+    "url": "https://poedb.tw/tw/Vial_of_Awakening"
+  },
+  {
+    "name_zh": "因果之罈",
+    "name_en": "Vial of Consequence",
+    "base_type_zh": "因果之罈",
+    "base_type_en": "Vial of Consequence",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialMinion",
+    "url": "https://poedb.tw/tw/Vial_of_Consequence"
+  },
+  {
+    "name_zh": "統御之罈",
+    "name_en": "Vial of Dominance",
+    "base_type_zh": "統御之罈",
+    "base_type_en": "Vial of Dominance",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialTrap",
+    "url": "https://poedb.tw/tw/Vial_of_Dominance"
+  },
+  {
+    "name_zh": "命運之罈",
+    "name_en": "Vial of Fate",
+    "base_type_zh": "命運之罈",
+    "base_type_en": "Vial of Fate",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialFire",
+    "url": "https://poedb.tw/tw/Vial_of_Fate"
+  },
+  {
+    "name_zh": "獻祭之罈",
+    "name_en": "Vial of Sacrifice",
+    "base_type_zh": "獻祭之罈",
+    "base_type_en": "Vial of Sacrifice",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialBossAmulet",
+    "url": "https://poedb.tw/tw/Vial_of_Sacrifice"
+  },
+  {
+    "name_zh": "召喚之罈",
+    "name_en": "Vial of Summoning",
+    "base_type_zh": "召喚之罈",
+    "base_type_en": "Vial of Summoning",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialHealing",
+    "url": "https://poedb.tw/tw/Vial_of_Summoning"
+  },
+  {
+    "name_zh": "亡靈之罈",
+    "name_en": "Vial of the Ghost",
+    "base_type_zh": "亡靈之罈",
+    "base_type_en": "Vial of the Ghost",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialBossFlask",
+    "url": "https://poedb.tw/tw/Vial_of_the_Ghost"
+  },
+  {
+    "name_zh": "儀式之罈",
+    "name_en": "Vial of the Ritual",
+    "base_type_zh": "儀式之罈",
+    "base_type_en": "Vial of the Ritual",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialLightning",
+    "url": "https://poedb.tw/tw/Vial_of_the_Ritual"
+  },
+  {
+    "name_zh": "超越之罈",
+    "name_en": "Vial of Transcendence",
+    "base_type_zh": "超越之罈",
+    "base_type_en": "Vial of Transcendence",
+    "type": "Metadata/Items/Currency/CurrencyIncursionVialBossJewel",
+    "url": "https://poedb.tw/tw/Vial_of_Transcendence"
+  }
+]

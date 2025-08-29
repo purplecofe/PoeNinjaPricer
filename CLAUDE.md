@@ -59,9 +59,18 @@ public class UniversalItemMappingService
 ### Supported Item Categories
 
 Currently supported item categories:
-- **Currency**: 574 currencies and fragments (`json/currency.json`)
-- **Scarab**: 195 scarabs (`json/scarab.json`)
-- **Future**: Can easily extend to 10+ other item categories
+- **Currency**: 359 currencies and fragments (`json/currency.json`)
+- **Scarab**: 123 scarabs (`json/scarab.json`)
+- **Fragments**: 93 map device recipe fragments (`json/fragments.json`)
+- **Essence**: 105 essence league items (`json/essence.json`)
+- **Delirium**: 22 delirium orb items (`json/delirium.json`)
+- **Vial**: 9 vial items (`json/vial.json`)
+- **Blessing**: 5 blessing items (`json/blessing.json`)
+- **Breach**: 13 breach splinter items (`json/breach.json`)
+- **Oil**: 16 oil items (`json/oil.json`)
+- **Fossil**: 25 fossil items (`json/fossil.json`)
+- **Catalyst**: 11 catalyst items (`json/catalyst.json`)
+- **Total**: 11 categories with 781 items
 
 ### Data Structure
 
@@ -239,14 +248,32 @@ private string GetEnglishItemName(Entity item)
 ## Mapping Coverage
 
 ### Current Status
-- **Currency**: 574 currencies and fragments (100% coverage)
-- **Scarab**: 195 scarabs (100% coverage)
-- **Total**: 769 items with complete Chinese-English mapping
+- **Map Fragments**: 93 items (100% coverage) ✅
+- **Essence**: 105 items (100% coverage) ✅  
+- **Currency**: 574 currencies and fragments (100% coverage) ✅
+- **Scarab**: 195 scarabs (100% coverage) ✅
+- **Delirium Orbs**: 22 items (100% coverage) ✅
+- **Vials**: 9 items (100% coverage) ✅
+- **Blessings**: 5 items (100% coverage) ✅
+- **Breach Splinters**: 13 items (100% coverage) ✅
+- **Oils**: 16 items (100% coverage) ✅
+- **Fossils**: 25 items (100% coverage) ✅
+- **Catalysts**: 11 items (100% coverage) ✅
+- **Total**: 781 items with complete Chinese-English mapping
 
 ### JSON Data Structure
 All mapping data stored in `json/` directory:
+- `fragments.json`: Map device recipe fragments
+- `essence.json`: Essence league items
 - `currency.json`: Currency mapping data
 - `scarab.json`: Scarab mapping data
+- `delirium.json`: Delirium orb items
+- `vial.json`: Vial items
+- `blessing.json`: Blessing items
+- `breach.json`: Breach splinter items
+- `oil.json`: Oil items
+- `fossil.json`: Fossil items
+- `catalyst.json`: Catalyst items
 
 Each JSON item contains:
 ```json
@@ -280,11 +307,129 @@ Each JSON item contains:
 - Color themes set through `ImGui.PushStyleColor`
 - Hover tooltips support translucent background and adaptive sizing
 
+## Universal PoeDB Scraper System
+
+### Overview
+A flexible, configuration-driven scraper system that can crawl multiple PoeDB item categories using a single universal program. This eliminates the need for separate Python scripts for each item category.
+
+### Architecture
+- **Universal Scraper**: `scraper/universal_poedb_scraper.py`
+- **Configuration File**: `scraper/scraper_configs.json`
+- **Output Directory**: `json/` (standardized JSON format)
+
+### Supported Categories
+
+Currently configured for 11 item categories:
+
+| Category | Items Count | Status | Output File |
+|----------|-------------|---------|-------------|
+| Map Fragments | 93 items | ✅ Complete & Integrated | `fragments.json` |
+| Essence | 105 items | ✅ Complete & Integrated | `essence.json` |
+| Currency | 574 items | ✅ Complete & Integrated | `currency.json` |
+| Scarabs | 195 items | ✅ Complete & Integrated | `scarab.json` |
+| Delirium Orbs | 22 items | ✅ Complete & Integrated | `delirium.json` |
+| Vials | 9 items | ✅ Complete & Integrated | `vial.json` |
+| Blessings | 5 items | ✅ Complete & Integrated | `blessing.json` |
+| Breach Splinters | 13 items | ✅ Complete & Integrated | `breach.json` |
+| Oils | 16 items | ✅ Complete & Integrated | `oil.json` |
+| Fossils | 25 items | ✅ Complete & Integrated | `fossil.json` |
+| Catalysts | 11 items | ✅ Complete & Integrated | `catalyst.json` |
+
+### Usage
+
+**List available categories:**
+```bash
+cd scraper
+python universal_poedb_scraper.py --list
+```
+
+**Scrape single category:**
+```bash
+python universal_poedb_scraper.py --category essence
+```
+
+**Scrape multiple categories:**
+```bash
+python universal_poedb_scraper.py --category essence fossil oil
+```
+
+**Scrape all configured categories:**
+```bash
+python universal_poedb_scraper.py --all
+```
+
+### Configuration Format
+
+Each category requires configuration in `scraper_configs.json`:
+
+```json
+{
+  "category_name": {
+    "base_url": "https://poedb.tw/tw/PageName#SectionID",
+    "container_selector": "#SectionID > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/output.json",
+    "category_name": "Display Name"
+  }
+}
+```
+
+### Features
+
+1. **Unified Architecture**: One scraper handles all PoeDB categories
+2. **Configuration-Driven**: Add new categories by modifying JSON config
+3. **Progress Management**: Auto-saves progress every 10 items
+4. **Error Handling**: Robust timeout and retry mechanisms  
+5. **Standardized Output**: All outputs follow the same JSON schema
+6. **Intelligent Parsing**: Adapts to both table and div-based page structures
+
+### Adding New Categories
+
+1. **Analyze Target Page**: Identify container and link selectors
+2. **Update Configuration**: Add new entry to `scraper_configs.json`
+3. **Test Scraping**: Run `python universal_poedb_scraper.py --category new_category`
+4. **Register in Mapping Service**: Add to `UniversalItemMappingService.Initialize()`
+
+### Example Configuration Entry
+
+```json
+"new_category": {
+  "base_url": "https://poedb.tw/tw/ItemPage#SectionName",
+  "container_selector": "#SectionName > div > div",
+  "link_selector": "div > div.flex-shrink-0 > a",
+  "output_file": "../json/new_category.json",
+  "category_name": "New Category Name"
+}
+```
+
+### Output JSON Schema
+
+All scraped data follows this standardized format:
+
+```json
+[
+  {
+    "name_zh": "Chinese Display Name",
+    "name_en": "English Display Name", 
+    "base_type_zh": "Chinese Base Type",
+    "base_type_en": "English Base Type",
+    "type": "Metadata/Items/Path/To/Item",
+    "url": "https://poedb.tw/tw/item_page"
+  }
+]
+```
+
 ## Future Roadmap
 
 ### Item Categories Ready for Support
-- **Essence**: ~50 items
-- **Fossil**: ~30 items  
+With the Universal Scraper System, the following categories can be easily added:
+- **Fossil**: ~30 items (Configuration ready)
+- **Oil**: ~12 items (Configuration ready)
+- **Catalyst**: ~10 items (Configuration ready)
+- **Delirium Orbs**: ~50 items (Configuration ready)
+- **Vials**: ~30 items (Configuration ready)
+- **Blessings**: ~20 items (Configuration ready)
+- **Breach Splinters**: ~15 items (Configuration ready)
 - **Beast**: ~100 items
 - **Prophecy**: ~80 items
 - **Divination Cards**: ~500 items

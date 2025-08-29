@@ -1,0 +1,42 @@
+[
+  {
+    "name_zh": "夏烏拉的祝福",
+    "name_en": "Blessing of Chayula",
+    "base_type_zh": "夏烏拉的祝福",
+    "base_type_en": "Blessing of Chayula",
+    "type": "Metadata/Items/Currency/CurrencyBreachUpgradeUniqueChaos",
+    "url": "https://poedb.tw/tw/Blessing_of_Chayula"
+  },
+  {
+    "name_zh": "艾許的祝福",
+    "name_en": "Blessing of Esh",
+    "base_type_zh": "艾許的祝福",
+    "base_type_en": "Blessing of Esh",
+    "type": "Metadata/Items/Currency/CurrencyBreachUpgradeUniqueLightning",
+    "url": "https://poedb.tw/tw/Blessing_of_Esh"
+  },
+  {
+    "name_zh": "托沃的祝福",
+    "name_en": "Blessing of Tul",
+    "base_type_zh": "托沃的祝福",
+    "base_type_en": "Blessing of Tul",
+    "type": "Metadata/Items/Currency/CurrencyBreachUpgradeUniqueCold",
+    "url": "https://poedb.tw/tw/Blessing_of_Tul"
+  },
+  {
+    "name_zh": "烏爾尼多的祝福",
+    "name_en": "Blessing of Uul-Netol",
+    "base_type_zh": "烏爾尼多的祝福",
+    "base_type_en": "Blessing of Uul-Netol",
+    "type": "Metadata/Items/Currency/CurrencyBreachUpgradeUniquePhysical",
+    "url": "https://poedb.tw/tw/Blessing_of_Uul-Netol"
+  },
+  {
+    "name_zh": "索伏的祝福",
+    "name_en": "Blessing of Xoph",
+    "base_type_zh": "索伏的祝福",
+    "base_type_en": "Blessing of Xoph",
+    "type": "Metadata/Items/Currency/CurrencyBreachUpgradeUniqueFire",
+    "url": "https://poedb.tw/tw/Blessing_of_Xoph"
+  }
+]

@@ -50,13 +50,14 @@ public enum CurrencyCategory : long
     Beasts = 1L << 31,            
     Essences = 1L << 32,         
     Vials = 1L << 33,            
+    Catalysts = 1L << 34,        
     
-    Others = 1L << 34,           
+    Others = 1L << 35,           
     
     All = Currency | Fragments | UniqueIdols | Runecrafts | AllflameEmbers | Tattoos | Omens | DivinationCards | Artifacts | Oils | Incubators |
           UniqueWeapons | UniqueArmours | UniqueAccessories | UniqueFlasks | UniqueJewels | UniqueTinctures | UniqueRelics | SkillGems | ClusterJewels |
           Maps | BlightedMaps | BlightRavagedMaps | UniqueMaps | DeliriumOrbs | Invitations | Scarabs | Memories |
-          BaseTypes | Fossils | Resonators | Beasts | Essences | Vials | Others
+          BaseTypes | Fossils | Resonators | Beasts | Essences | Vials | Catalysts | Others
 }
 
 public static class CurrencyCategoryExtensions
@@ -106,6 +107,7 @@ public static class CurrencyCategoryExtensions
             CurrencyCategory.Beasts => "Beasts",
             CurrencyCategory.Essences => "Essences",
             CurrencyCategory.Vials => "Vials",
+            CurrencyCategory.Catalysts => "Catalysts",
             
             CurrencyCategory.Others => "Others",
             CurrencyCategory.All => "All",
@@ -259,7 +261,26 @@ public static class CurrencyClassifier
         { "Remnant of Corruption", CurrencyCategory.Essences },
         
         
-        { "Vial", CurrencyCategory.Vials }
+        { "Vial", CurrencyCategory.Vials },
+        
+        // 催化劑相關
+        { "Catalyst", CurrencyCategory.Catalysts },
+        { "Turbulent Catalyst", CurrencyCategory.Catalysts },
+        { "Imbued Catalyst", CurrencyCategory.Catalysts },
+        { "Abrasive Catalyst", CurrencyCategory.Catalysts },
+        { "Tempering Catalyst", CurrencyCategory.Catalysts },
+        { "Fertile Catalyst", CurrencyCategory.Catalysts },
+        { "Prismatic Catalyst", CurrencyCategory.Catalysts },
+        { "Intrinsic Catalyst", CurrencyCategory.Catalysts },
+        { "Noxious Catalyst", CurrencyCategory.Catalysts },
+        { "Accelerating Catalyst", CurrencyCategory.Catalysts },
+        { "Unstable Catalyst", CurrencyCategory.Catalysts },
+        { "Tainted Catalyst", CurrencyCategory.Catalysts },
+        
+        // 額外的Breach/Fragment物品
+        { "Simulacrum", CurrencyCategory.Fragments },
+        { "Ritual", CurrencyCategory.Fragments },
+        { "Crescent", CurrencyCategory.Fragments }
     };
 
     public static CurrencyCategory GetCategory(string itemName)

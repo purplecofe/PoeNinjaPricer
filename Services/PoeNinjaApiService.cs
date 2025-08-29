@@ -53,7 +53,49 @@ public class PoeNinjaApiService : IDisposable
             var scarabData = await GetScarabDataAsync();
             if (scarabData != null)
             {
-                prices.AddRange(ConvertScarabToCurrencyPrices(scarabData));
+                prices.AddRange(ConvertItemToCurrencyPrices(scarabData));
+            }
+
+            // 獲取油瓶
+            var oilData = await GetOilDataAsync();
+            if (oilData != null)
+            {
+                prices.AddRange(ConvertItemToCurrencyPrices(oilData));
+            }
+
+            // 獲取化石
+            var fossilData = await GetFossilDataAsync();
+            if (fossilData != null)
+            {
+                prices.AddRange(ConvertItemToCurrencyPrices(fossilData));
+            }
+
+            // 獲取精髓
+            var essenceData = await GetEssenceDataAsync();
+            if (essenceData != null)
+            {
+                prices.AddRange(ConvertItemToCurrencyPrices(essenceData));
+            }
+
+            // 獲取譫妄玉
+            var deliriumData = await GetDeliriumOrbDataAsync();
+            if (deliriumData != null)
+            {
+                prices.AddRange(ConvertItemToCurrencyPrices(deliriumData));
+            }
+
+            // 獲取罈物品
+            var vialData = await GetVialDataAsync();
+            if (vialData != null)
+            {
+                prices.AddRange(ConvertItemToCurrencyPrices(vialData));
+            }
+
+            // 嘗試獲取催化劑（如果有獨立端點的話）
+            var catalystData = await GetCatalystDataAsync();
+            if (catalystData != null)
+            {
+                prices.AddRange(ConvertItemToCurrencyPrices(catalystData));
             }
         }
         catch (Exception ex)
@@ -154,15 +196,15 @@ public class PoeNinjaApiService : IDisposable
     }
 
     /// <summary>
-    /// 獲取聖甲蟲資料
+    /// 通用的物品資料獲取方法
     /// </summary>
-    private async Task<ItemOverviewResponse> GetScarabDataAsync()
+    private async Task<ItemOverviewResponse> GetItemDataAsync(string itemType)
     {
         try
         {
-            var url = $"{ItemBaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type=Scarab";
+            var url = $"{ItemBaseUrl}?league={Uri.EscapeDataString(_leagueName)}&type={itemType}";
             if (_isDebugEnabled?.Invoke() == true)
-                DebugWindow.LogMsg($"PoeNinjaPricer: Fetching Scarab data from {url}");
+                DebugWindow.LogMsg($"PoeNinjaPricer: Fetching {itemType} data from {url}");
 
             var response = await _httpClient.GetStringAsync(url);
             var data = JsonConvert.DeserializeObject<ItemOverviewResponse>(response);
@@ -170,36 +212,104 @@ public class PoeNinjaApiService : IDisposable
             if (data?.Lines?.Count > 0)
             {
                 if (_isDebugEnabled?.Invoke() == true)
-                    DebugWindow.LogMsg($"PoeNinjaPricer: Successfully fetched {data.Lines.Count} Scarab entries");
+                    DebugWindow.LogMsg($"PoeNinjaPricer: Successfully fetched {data.Lines.Count} {itemType} entries");
                 return data;
             }
             else
             {
-                DebugWindow.LogError($"PoeNinjaPricer: No data received for Scarab");
+                DebugWindow.LogError($"PoeNinjaPricer: No data received for {itemType}");
                 return null;
             }
         }
         catch (HttpRequestException ex)
         {
-            DebugWindow.LogError($"PoeNinjaPricer: HTTP error fetching Scarab - {ex.Message}");
+            DebugWindow.LogError($"PoeNinjaPricer: HTTP error fetching {itemType} - {ex.Message}");
             throw;
         }
         catch (JsonException ex)
         {
-            DebugWindow.LogError($"PoeNinjaPricer: JSON parsing error for Scarab - {ex.Message}");
+            DebugWindow.LogError($"PoeNinjaPricer: JSON parsing error for {itemType} - {ex.Message}");
             throw;
         }
         catch (TaskCanceledException ex)
         {
-            DebugWindow.LogError($"PoeNinjaPricer: Request timeout for Scarab - {ex.Message}");
+            DebugWindow.LogError($"PoeNinjaPricer: Request timeout for {itemType} - {ex.Message}");
             throw;
         }
     }
 
     /// <summary>
-    /// 將聖甲蟲資料轉換為價格資料
+    /// 獲取聖甲蟲資料
     /// </summary>
-    private List<CurrencyPrice> ConvertScarabToCurrencyPrices(ItemOverviewResponse data)
+    private async Task<ItemOverviewResponse> GetScarabDataAsync()
+    {
+        return await GetItemDataAsync("Scarab");
+    }
+
+    /// <summary>
+    /// 獲取油瓶資料
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetOilDataAsync()
+    {
+        return await GetItemDataAsync("Oil");
+    }
+
+    /// <summary>
+    /// 獲取化石資料
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetFossilDataAsync()
+    {
+        return await GetItemDataAsync("Fossil");
+    }
+
+    /// <summary>
+    /// 獲取精髓資料
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetEssenceDataAsync()
+    {
+        return await GetItemDataAsync("Essence");
+    }
+
+    /// <summary>
+    /// 獲取譫妄玉資料
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetDeliriumOrbDataAsync()
+    {
+        return await GetItemDataAsync("DeliriumOrb");
+    }
+
+    /// <summary>
+    /// 獲取罈物品資料
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetVialDataAsync()
+    {
+        return await GetItemDataAsync("Vial");
+    }
+
+    /// <summary>
+    /// 獲取催化劑資料
+    /// 注意：催化劑可能包含在Currency或Fragment類型中，而非獨立端點
+    /// 這裡先嘗試作為獨立端點，如果失敗則從Fragment中獲取
+    /// </summary>
+    private async Task<ItemOverviewResponse> GetCatalystDataAsync()
+    {
+        try
+        {
+            // 先嘗試獨立的Catalyst端點
+            return await GetItemDataAsync("Catalyst");
+        }
+        catch
+        {
+            // 如果失敗，可能催化劑包含在Fragment中，這裡返回null
+            // Fragment已經在主方法中處理
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// 通用的物品資料轉換為價格資料方法
+    /// </summary>
+    private List<CurrencyPrice> ConvertItemToCurrencyPrices(ItemOverviewResponse data)
     {
         var prices = new List<CurrencyPrice>();
 
@@ -221,6 +331,14 @@ public class PoeNinjaApiService : IDisposable
         }
 
         return prices;
+    }
+
+    /// <summary>
+    /// 將聖甲蟲資料轉換為價格資料（向後兼容）
+    /// </summary>
+    private List<CurrencyPrice> ConvertScarabToCurrencyPrices(ItemOverviewResponse data)
+    {
+        return ConvertItemToCurrencyPrices(data);
     }
 
     /// <summary>

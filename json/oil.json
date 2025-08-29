@@ -1,0 +1,130 @@
+[
+  {
+    "name_zh": "汙染油瓶",
+    "name_en": "Tainted Oil",
+    "base_type_zh": "汙染油瓶",
+    "base_type_en": "Tainted Oil",
+    "type": "Metadata/Items/Currency/MushruneCorrupt",
+    "url": "https://poedb.tw/tw/Tainted_Oil"
+  },
+  {
+    "name_zh": "映像油瓶",
+    "name_en": "Reflective Oil",
+    "base_type_zh": "映像油瓶",
+    "base_type_en": "Reflective Oil",
+    "type": "Metadata/Items/Currency/MushruneMirror",
+    "url": "https://poedb.tw/tw/Reflective_Oil"
+  },
+  {
+    "name_zh": "三相之油",
+    "name_en": "Prismatic Oil",
+    "base_type_zh": "三相之油",
+    "base_type_en": "Prismatic Oil",
+    "type": "Metadata/Items/Currency/MushruneUber",
+    "url": "https://poedb.tw/tw/Prismatic_Oil"
+  },
+  {
+    "name_zh": "清透油瓶",
+    "name_en": "Clear Oil",
+    "base_type_zh": "清透油瓶",
+    "base_type_en": "Clear Oil",
+    "type": "Metadata/Items/Currency/Mushrune1",
+    "url": "https://poedb.tw/tw/Clear_Oil"
+  },
+  {
+    "name_zh": "深褐油瓶",
+    "name_en": "Sepia Oil",
+    "base_type_zh": "深褐油瓶",
+    "base_type_en": "Sepia Oil",
+    "type": "Metadata/Items/Currency/Mushrune2",
+    "url": "https://poedb.tw/tw/Sepia_Oil"
+  },
+  {
+    "name_zh": "琥珀油瓶",
+    "name_en": "Amber Oil",
+    "base_type_zh": "琥珀油瓶",
+    "base_type_en": "Amber Oil",
+    "type": "Metadata/Items/Currency/Mushrune3",
+    "url": "https://poedb.tw/tw/Amber_Oil"
+  },
+  {
+    "name_zh": "翠綠油瓶",
+    "name_en": "Verdant Oil",
+    "base_type_zh": "翠綠油瓶",
+    "base_type_en": "Verdant Oil",
+    "type": "Metadata/Items/Currency/Mushrune4",
+    "url": "https://poedb.tw/tw/Verdant_Oil"
+  },
+  {
+    "name_zh": "清綠油瓶",
+    "name_en": "Teal Oil",
+    "base_type_zh": "清綠油瓶",
+    "base_type_en": "Teal Oil",
+    "type": "Metadata/Items/Currency/Mushrune5",
+    "url": "https://poedb.tw/tw/Teal_Oil"
+  },
+  {
+    "name_zh": "碧藍油瓶",
+    "name_en": "Azure Oil",
+    "base_type_zh": "碧藍油瓶",
+    "base_type_en": "Azure Oil",
+    "type": "Metadata/Items/Currency/Mushrune6",
+    "url": "https://poedb.tw/tw/Azure_Oil"
+  },
+  {
+    "name_zh": "靛青油瓶",
+    "name_en": "Indigo Oil",
+    "base_type_zh": "靛青油瓶",
+    "base_type_en": "Indigo Oil",
+    "type": "Metadata/Items/Currency/Mushrune6b",
+    "url": "https://poedb.tw/tw/Indigo_Oil"
+  },
+  {
+    "name_zh": "奼紫油瓶",
+    "name_en": "Violet Oil",
+    "base_type_zh": "奼紫油瓶",
+    "base_type_en": "Violet Oil",
+    "type": "Metadata/Items/Currency/Mushrune7",
+    "url": "https://poedb.tw/tw/Violet_Oil"
+  },
+  {
+    "name_zh": "緋紅油瓶",
+    "name_en": "Crimson Oil",
+    "base_type_zh": "緋紅油瓶",
+    "base_type_en": "Crimson Oil",
+    "type": "Metadata/Items/Currency/Mushrune8",
+    "url": "https://poedb.tw/tw/Crimson_Oil"
+  },
+  {
+    "name_zh": "漆黑油瓶",
+    "name_en": "Black Oil",
+    "base_type_zh": "漆黑油瓶",
+    "base_type_en": "Black Oil",
+    "type": "Metadata/Items/Currency/Mushrune9",
+    "url": "https://poedb.tw/tw/Black_Oil"
+  },
+  {
+    "name_zh": "乳白油瓶",
+    "name_en": "Opalescent Oil",
+    "base_type_zh": "乳白油瓶",
+    "base_type_en": "Opalescent Oil",
+    "type": "Metadata/Items/Currency/Mushrune10",
+    "url": "https://poedb.tw/tw/Opalescent_Oil"
+  },
+  {
+    "name_zh": "純銀油瓶",
+    "name_en": "Silver Oil",
+    "base_type_zh": "純銀油瓶",
+    "base_type_en": "Silver Oil",
+    "type": "Metadata/Items/Currency/Mushrune11",
+    "url": "https://poedb.tw/tw/Silver_Oil"
+  },
+  {
+    "name_zh": "金黃油瓶",
+    "name_en": "Golden Oil",
+    "base_type_zh": "金黃油瓶",
+    "base_type_en": "Golden Oil",
+    "type": "Metadata/Items/Currency/Mushrune12",
+    "url": "https://poedb.tw/tw/Golden_Oil"
+  }
+]

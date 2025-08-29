@@ -1,0 +1,90 @@
+[
+  {
+    "name_zh": "洶湧的催化劑",
+    "name_en": "Turbulent Catalyst",
+    "base_type_zh": "洶湧的催化劑",
+    "base_type_en": "Turbulent Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityElemental",
+    "url": "https://poedb.tw/tw/Turbulent_Catalyst"
+  },
+  {
+    "name_zh": "充能的催化劑",
+    "name_en": "Imbued Catalyst",
+    "base_type_zh": "充能的催化劑",
+    "base_type_en": "Imbued Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityCaster",
+    "url": "https://poedb.tw/tw/Imbued_Catalyst"
+  },
+  {
+    "name_zh": "研磨的催化劑",
+    "name_en": "Abrasive Catalyst",
+    "base_type_zh": "研磨的催化劑",
+    "base_type_en": "Abrasive Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityAttack",
+    "url": "https://poedb.tw/tw/Abrasive_Catalyst"
+  },
+  {
+    "name_zh": "冶鍊的催化劑",
+    "name_en": "Tempering Catalyst",
+    "base_type_zh": "冶鍊的催化劑",
+    "base_type_en": "Tempering Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityDefense",
+    "url": "https://poedb.tw/tw/Tempering_Catalyst"
+  },
+  {
+    "name_zh": "富饒的催化劑",
+    "name_en": "Fertile Catalyst",
+    "base_type_zh": "富饒的催化劑",
+    "base_type_en": "Fertile Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityResource",
+    "url": "https://poedb.tw/tw/Fertile_Catalyst"
+  },
+  {
+    "name_zh": "多稜的催化劑",
+    "name_en": "Prismatic Catalyst",
+    "base_type_zh": "多稜的催化劑",
+    "base_type_en": "Prismatic Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityResistance",
+    "url": "https://poedb.tw/tw/Prismatic_Catalyst"
+  },
+  {
+    "name_zh": "本質的催化劑",
+    "name_en": "Intrinsic Catalyst",
+    "base_type_zh": "本質的催化劑",
+    "base_type_en": "Intrinsic Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityAttribute",
+    "url": "https://poedb.tw/tw/Intrinsic_Catalyst"
+  },
+  {
+    "name_zh": "毒性催化劑",
+    "name_en": "Noxious Catalyst",
+    "base_type_zh": "毒性催化劑",
+    "base_type_en": "Noxious Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityPhysicalChaos",
+    "url": "https://poedb.tw/tw/Noxious_Catalyst"
+  },
+  {
+    "name_zh": "加速催化劑",
+    "name_en": "Accelerating Catalyst",
+    "base_type_zh": "加速催化劑",
+    "base_type_en": "Accelerating Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualitySpeed",
+    "url": "https://poedb.tw/tw/Accelerating_Catalyst"
+  },
+  {
+    "name_zh": "易變催化劑",
+    "name_en": "Unstable Catalyst",
+    "base_type_zh": "易變催化劑",
+    "base_type_en": "Unstable Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityCritical",
+    "url": "https://poedb.tw/tw/Unstable_Catalyst"
+  },
+  {
+    "name_zh": "玷汙催化劑",
+    "name_en": "Tainted Catalyst",
+    "base_type_zh": "玷汙催化劑",
+    "base_type_en": "Tainted Catalyst",
+    "type": "Metadata/Items/Currency/CurrencyJewelleryQualityVaal",
+    "url": "https://poedb.tw/tw/Tainted_Catalyst"
+  }
+]

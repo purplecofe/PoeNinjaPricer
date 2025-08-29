@@ -1,0 +1,106 @@
+[
+  {
+    "name_zh": "索伏裂片",
+    "name_en": "Splinter of Xoph",
+    "base_type_zh": "索伏裂片",
+    "base_type_en": "Splinter of Xoph",
+    "type": "Metadata/Items/Currency/CurrencyBreachFireShard",
+    "url": "https://poedb.tw/tw/Splinter_of_Xoph"
+  },
+  {
+    "name_zh": "托沃裂片",
+    "name_en": "Splinter of Tul",
+    "base_type_zh": "托沃裂片",
+    "base_type_en": "Splinter of Tul",
+    "type": "Metadata/Items/Currency/CurrencyBreachColdShard",
+    "url": "https://poedb.tw/tw/Splinter_of_Tul"
+  },
+  {
+    "name_zh": "艾許裂片",
+    "name_en": "Splinter of Esh",
+    "base_type_zh": "艾許裂片",
+    "base_type_en": "Splinter of Esh",
+    "type": "Metadata/Items/Currency/CurrencyBreachLightningShard",
+    "url": "https://poedb.tw/tw/Splinter_of_Esh"
+  },
+  {
+    "name_zh": "烏爾尼多裂片",
+    "name_en": "Splinter of Uul-Netol",
+    "base_type_zh": "烏爾尼多裂片",
+    "base_type_en": "Splinter of Uul-Netol",
+    "type": "Metadata/Items/Currency/CurrencyBreachPhysicalShard",
+    "url": "https://poedb.tw/tw/Splinter_of_Uul-Netol"
+  },
+  {
+    "name_zh": "夏烏拉裂片",
+    "name_en": "Splinter of Chayula",
+    "base_type_zh": "夏烏拉裂片",
+    "base_type_en": "Splinter of Chayula",
+    "type": "Metadata/Items/Currency/CurrencyBreachChaosShard",
+    "url": "https://poedb.tw/tw/Splinter_of_Chayula"
+  },
+  {
+    "name_zh": "永恆卡魯裂片",
+    "name_en": "Timeless Karui Splinter",
+    "base_type_zh": "永恆卡魯裂片",
+    "base_type_en": "Timeless Karui Splinter",
+    "type": "Metadata/Items/Currency/CurrencyLegionKaruiShard",
+    "url": "https://poedb.tw/tw/Timeless_Karui_Splinter"
+  },
+  {
+    "name_zh": "永恆馬拉克斯裂片",
+    "name_en": "Timeless Maraketh Splinter",
+    "base_type_zh": "永恆馬拉克斯裂片",
+    "base_type_en": "Timeless Maraketh Splinter",
+    "type": "Metadata/Items/Currency/CurrencyLegionMarakethShard",
+    "url": "https://poedb.tw/tw/Timeless_Maraketh_Splinter"
+  },
+  {
+    "name_zh": "永恆不朽帝國裂片",
+    "name_en": "Timeless Eternal Empire Splinter",
+    "base_type_zh": "永恆不朽帝國裂片",
+    "base_type_en": "Timeless Eternal Empire Splinter",
+    "type": "Metadata/Items/Currency/CurrencyLegionEternalEmpireShard",
+    "url": "https://poedb.tw/tw/Timeless_Eternal_Empire_Splinter"
+  },
+  {
+    "name_zh": "永恆聖宗裂片",
+    "name_en": "Timeless Templar Splinter",
+    "base_type_zh": "永恆聖宗裂片",
+    "base_type_en": "Timeless Templar Splinter",
+    "type": "Metadata/Items/Currency/CurrencyLegionTemplarShard",
+    "url": "https://poedb.tw/tw/Timeless_Templar_Splinter"
+  },
+  {
+    "name_zh": "永恆瓦爾裂片",
+    "name_en": "Timeless Vaal Splinter",
+    "base_type_zh": "永恆瓦爾裂片",
+    "base_type_en": "Timeless Vaal Splinter",
+    "type": "Metadata/Items/Currency/CurrencyLegionVaalShard",
+    "url": "https://poedb.tw/tw/Timeless_Vaal_Splinter"
+  },
+  {
+    "name_zh": "幻像斷片",
+    "name_en": "Simulacrum Splinter",
+    "base_type_zh": "幻像斷片",
+    "base_type_en": "Simulacrum Splinter",
+    "type": "Metadata/Items/Currency/CurrencyAfflictionShard",
+    "url": "https://poedb.tw/tw/Simulacrum_Splinter"
+  },
+  {
+    "name_zh": "祭祀裂片",
+    "name_en": "Ritual Splinter",
+    "base_type_zh": "祭祀裂片",
+    "base_type_en": "Ritual Splinter",
+    "type": "Metadata/Items/Currency/CurrencyRitualSplinter",
+    "url": "https://poedb.tw/tw/Ritual_Splinter"
+  },
+  {
+    "name_zh": "新月裂片",
+    "name_en": "Crescent Splinter",
+    "base_type_zh": "新月裂片",
+    "base_type_en": "Crescent Splinter",
+    "type": "Metadata/Items/MapFragments/CurrencyMavenKeyFragment",
+    "url": "https://poedb.tw/tw/Crescent_Splinter"
+  }
+]
