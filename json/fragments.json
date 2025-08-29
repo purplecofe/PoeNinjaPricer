@@ -1,0 +1,746 @@
+[
+  {
+    "name_zh": "女神祭品",
+    "name_en": "Offering to the Goddess",
+    "base_type_zh": "女神祭品",
+    "base_type_en": "Offering to the Goddess",
+    "type": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddess",
+    "url": "https://poedb.tw/tw/Offering_to_the_Goddess"
+  },
+  {
+    "name_zh": "女神獻禮",
+    "name_en": "Tribute to the Goddess",
+    "base_type_zh": "女神獻禮",
+    "base_type_en": "Tribute to the Goddess",
+    "type": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddessTribute",
+    "url": "https://poedb.tw/tw/Tribute_to_the_Goddess"
+  },
+  {
+    "name_zh": "女神之贈",
+    "name_en": "Gift to the Goddess",
+    "base_type_zh": "女神之贈",
+    "base_type_en": "Gift to the Goddess",
+    "type": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddessGift",
+    "url": "https://poedb.tw/tw/Gift_to_the_Goddess"
+  },
+  {
+    "name_zh": "女神奉獻",
+    "name_en": "Dedication to the Goddess",
+    "base_type_zh": "女神奉獻",
+    "base_type_en": "Dedication to the Goddess",
+    "type": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddessDedication",
+    "url": "https://poedb.tw/tw/Dedication_to_the_Goddess"
+  },
+  {
+    "name_zh": "午夜的奉獻",
+    "name_en": "Sacrifice at Midnight",
+    "base_type_zh": "午夜的奉獻",
+    "base_type_en": "Sacrifice at Midnight",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment1_1",
+    "url": "https://poedb.tw/tw/Sacrifice_at_Midnight"
+  },
+  {
+    "name_zh": "黎明的奉獻",
+    "name_en": "Sacrifice at Dawn",
+    "base_type_zh": "黎明的奉獻",
+    "base_type_en": "Sacrifice at Dawn",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment1_2",
+    "url": "https://poedb.tw/tw/Sacrifice_at_Dawn"
+  },
+  {
+    "name_zh": "正午的奉獻",
+    "name_en": "Sacrifice at Noon",
+    "base_type_zh": "正午的奉獻",
+    "base_type_en": "Sacrifice at Noon",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment1_3",
+    "url": "https://poedb.tw/tw/Sacrifice_at_Noon"
+  },
+  {
+    "name_zh": "黃昏的奉獻",
+    "name_en": "Sacrifice at Dusk",
+    "base_type_zh": "黃昏的奉獻",
+    "base_type_en": "Sacrifice at Dusk",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment1_4",
+    "url": "https://poedb.tw/tw/Sacrifice_at_Dusk"
+  },
+  {
+    "name_zh": "凡人的憤怒",
+    "name_en": "Mortal Rage",
+    "base_type_zh": "凡人的憤怒",
+    "base_type_en": "Mortal Rage",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment2_1",
+    "url": "https://poedb.tw/tw/Mortal_Rage"
+  },
+  {
+    "name_zh": "凡人的希望",
+    "name_en": "Mortal Hope",
+    "base_type_zh": "凡人的希望",
+    "base_type_en": "Mortal Hope",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment2_2",
+    "url": "https://poedb.tw/tw/Mortal_Hope"
+  },
+  {
+    "name_zh": "凡人的無知",
+    "name_en": "Mortal Ignorance",
+    "base_type_zh": "凡人的無知",
+    "base_type_en": "Mortal Ignorance",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment2_3",
+    "url": "https://poedb.tw/tw/Mortal_Ignorance"
+  },
+  {
+    "name_zh": "凡人的哀傷",
+    "name_en": "Mortal Grief",
+    "base_type_zh": "凡人的哀傷",
+    "base_type_en": "Mortal Grief",
+    "type": "Metadata/Items/MapFragments/CurrencyVaalFragment2_4",
+    "url": "https://poedb.tw/tw/Mortal_Grief"
+  },
+  {
+    "name_zh": "希伯之鑰",
+    "name_en": "Eber's Key",
+    "base_type_zh": "希伯之鑰",
+    "base_type_en": "Eber's Key",
+    "type": "Metadata/Items/MapFragments/CurrencyProphecyFragment1",
+    "url": "https://poedb.tw/tw/Ebers_Key"
+  },
+  {
+    "name_zh": "伊瑞之鑰",
+    "name_en": "Yriel's Key",
+    "base_type_zh": "伊瑞之鑰",
+    "base_type_en": "Yriel's Key",
+    "type": "Metadata/Items/MapFragments/CurrencyProphecyFragment2",
+    "url": "https://poedb.tw/tw/Yriels_Key"
+  },
+  {
+    "name_zh": "茵雅之鑰",
+    "name_en": "Inya's Key",
+    "base_type_zh": "茵雅之鑰",
+    "base_type_en": "Inya's Key",
+    "type": "Metadata/Items/MapFragments/CurrencyProphecyFragment3",
+    "url": "https://poedb.tw/tw/Inyas_Key"
+  },
+  {
+    "name_zh": "福庫爾之鑰",
+    "name_en": "Volkuur's Key",
+    "base_type_zh": "福庫爾之鑰",
+    "base_type_en": "Volkuur's Key",
+    "type": "Metadata/Items/MapFragments/CurrencyProphecyFragment4",
+    "url": "https://poedb.tw/tw/Volkuurs_Key"
+  },
+  {
+    "name_zh": "鳳凰斷片",
+    "name_en": "Fragment of the Phoenix",
+    "base_type_zh": "鳳凰斷片",
+    "base_type_en": "Fragment of the Phoenix",
+    "type": "Metadata/Items/MapFragments/CurrencyShaperFragment1",
+    "url": "https://poedb.tw/tw/Fragment_of_the_Phoenix"
+  },
+  {
+    "name_zh": "牛頭斷片",
+    "name_en": "Fragment of the Minotaur",
+    "base_type_zh": "牛頭斷片",
+    "base_type_en": "Fragment of the Minotaur",
+    "type": "Metadata/Items/MapFragments/CurrencyShaperFragment2",
+    "url": "https://poedb.tw/tw/Fragment_of_the_Minotaur"
+  },
+  {
+    "name_zh": "奇美拉斷片",
+    "name_en": "Fragment of the Chimera",
+    "base_type_zh": "奇美拉斷片",
+    "base_type_en": "Fragment of the Chimera",
+    "type": "Metadata/Items/MapFragments/CurrencyShaperFragment3",
+    "url": "https://poedb.tw/tw/Fragment_of_the_Chimera"
+  },
+  {
+    "name_zh": "九頭蛇斷片",
+    "name_en": "Fragment of the Hydra",
+    "base_type_zh": "九頭蛇斷片",
+    "base_type_en": "Fragment of the Hydra",
+    "type": "Metadata/Items/MapFragments/CurrencyShaperFragment4",
+    "url": "https://poedb.tw/tw/Fragment_of_the_Hydra"
+  },
+  {
+    "name_zh": "奴役斷片",
+    "name_en": "Fragment of Enslavement",
+    "base_type_zh": "奴役斷片",
+    "base_type_en": "Fragment of Enslavement",
+    "type": "Metadata/Items/MapFragments/CurrencyElderFragment1",
+    "url": "https://poedb.tw/tw/Fragment_of_Enslavement"
+  },
+  {
+    "name_zh": "根除斷片",
+    "name_en": "Fragment of Eradication",
+    "base_type_zh": "根除斷片",
+    "base_type_en": "Fragment of Eradication",
+    "type": "Metadata/Items/MapFragments/CurrencyElderFragment2",
+    "url": "https://poedb.tw/tw/Fragment_of_Eradication"
+  },
+  {
+    "name_zh": "干擾斷片",
+    "name_en": "Fragment of Constriction",
+    "base_type_zh": "干擾斷片",
+    "base_type_en": "Fragment of Constriction",
+    "type": "Metadata/Items/MapFragments/CurrencyElderFragment3",
+    "url": "https://poedb.tw/tw/Fragment_of_Constriction"
+  },
+  {
+    "name_zh": "淨化斷片",
+    "name_en": "Fragment of Purification",
+    "base_type_zh": "淨化斷片",
+    "base_type_en": "Fragment of Purification",
+    "type": "Metadata/Items/MapFragments/CurrencyElderFragment4",
+    "url": "https://poedb.tw/tw/Fragment_of_Purification"
+  },
+  {
+    "name_zh": "恐懼斷片",
+    "name_en": "Fragment of Terror",
+    "base_type_zh": "恐懼斷片",
+    "base_type_en": "Fragment of Terror",
+    "type": "Metadata/Items/MapFragments/CurrencyUberElderFragment1",
+    "url": "https://poedb.tw/tw/Fragment_of_Terror"
+  },
+  {
+    "name_zh": "空虛斷片",
+    "name_en": "Fragment of Emptiness",
+    "base_type_zh": "空虛斷片",
+    "base_type_en": "Fragment of Emptiness",
+    "type": "Metadata/Items/MapFragments/CurrencyUberElderFragment2",
+    "url": "https://poedb.tw/tw/Fragment_of_Emptiness"
+  },
+  {
+    "name_zh": "雕塑斷片",
+    "name_en": "Fragment of Shape",
+    "base_type_zh": "雕塑斷片",
+    "base_type_en": "Fragment of Shape",
+    "type": "Metadata/Items/MapFragments/CurrencyUberElderFragment3",
+    "url": "https://poedb.tw/tw/Fragment_of_Shape"
+  },
+  {
+    "name_zh": "智慧斷片",
+    "name_en": "Fragment of Knowledge",
+    "base_type_zh": "智慧斷片",
+    "base_type_en": "Fragment of Knowledge",
+    "type": "Metadata/Items/MapFragments/CurrencyUberElderFragment4",
+    "url": "https://poedb.tw/tw/Fragment_of_Knowledge"
+  },
+  {
+    "name_zh": "索伏裂痕石",
+    "name_en": "Xoph's Breachstone",
+    "base_type_zh": "索伏裂痕石",
+    "base_type_en": "Xoph's Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentFire",
+    "url": "https://poedb.tw/tw/Xophs_Breachstone"
+  },
+  {
+    "name_zh": "托沃裂痕石",
+    "name_en": "Tul's Breachstone",
+    "base_type_zh": "托沃裂痕石",
+    "base_type_en": "Tul's Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentCold",
+    "url": "https://poedb.tw/tw/Tuls_Breachstone"
+  },
+  {
+    "name_zh": "艾許裂痕石",
+    "name_en": "Esh's Breachstone",
+    "base_type_zh": "艾許裂痕石",
+    "base_type_en": "Esh's Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentLightning",
+    "url": "https://poedb.tw/tw/Eshs_Breachstone"
+  },
+  {
+    "name_zh": "烏爾尼多裂痕石",
+    "name_en": "Uul-Netol's Breachstone",
+    "base_type_zh": "烏爾尼多裂痕石",
+    "base_type_en": "Uul-Netol's Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentPhysical",
+    "url": "https://poedb.tw/tw/Uul-Netols_Breachstone"
+  },
+  {
+    "name_zh": "夏烏拉裂痕石",
+    "name_en": "Chayula's Breachstone",
+    "base_type_zh": "夏烏拉裂痕石",
+    "base_type_en": "Chayula's Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentChaos",
+    "url": "https://poedb.tw/tw/Chayulas_Breachstone"
+  },
+  {
+    "name_zh": "古典遺鑰",
+    "name_en": "Ancient Reliquary Key",
+    "base_type_zh": "古典遺鑰",
+    "base_type_en": "Ancient Reliquary Key",
+    "type": "Metadata/Items/MapFragments/ClassicVaultKey",
+    "url": "https://poedb.tw/tw/Ancient_Reliquary_Key"
+  },
+  {
+    "name_zh": "馬雷葛蘿的地圖",
+    "name_en": "Maligaro's Map",
+    "base_type_zh": "馬雷葛蘿的地圖",
+    "base_type_en": "Maligaro's Map",
+    "type": "Metadata/Items/QuestItems/Act7/MaligaroMap",
+    "url": "https://poedb.tw/tw/Maligaros_Map"
+  },
+  {
+    "name_zh": "古朽遺鑰",
+    "name_en": "Timeworn Reliquary Key",
+    "base_type_zh": "古朽遺鑰",
+    "base_type_en": "Timeworn Reliquary Key",
+    "type": "Metadata/Items/MapFragments/340VaultKey",
+    "url": "https://poedb.tw/tw/Timeworn_Reliquary_Key"
+  },
+  {
+    "name_zh": "遺忘遺鑰",
+    "name_en": "Forgotten Reliquary Key",
+    "base_type_zh": "遺忘遺鑰",
+    "base_type_en": "Forgotten Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberVenariusVaultKey",
+    "url": "https://poedb.tw/tw/Forgotten_Reliquary_Key"
+  },
+  {
+    "name_zh": "吞噬遺鑰",
+    "name_en": "Visceral Reliquary Key",
+    "base_type_zh": "吞噬遺鑰",
+    "base_type_en": "Visceral Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberEaterOfWorldsVaultKey",
+    "url": "https://poedb.tw/tw/Visceral_Reliquary_Key"
+  },
+  {
+    "name_zh": "閃耀遺鑰",
+    "name_en": "Shiny Reliquary Key",
+    "base_type_zh": "閃耀遺鑰",
+    "base_type_en": "Shiny Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberMavenVaultKey",
+    "url": "https://poedb.tw/tw/Shiny_Reliquary_Key"
+  },
+  {
+    "name_zh": "文書遺鑰",
+    "name_en": "Archive Reliquary Key",
+    "base_type_zh": "文書遺鑰",
+    "base_type_en": "Archive Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberSearingExarchVaultKey",
+    "url": "https://poedb.tw/tw/Archive_Reliquary_Key"
+  },
+  {
+    "name_zh": "地窖遺鑰",
+    "name_en": "Oubliette Reliquary Key",
+    "base_type_zh": "地窖遺鑰",
+    "base_type_en": "Oubliette Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberSirusVaultKey",
+    "url": "https://poedb.tw/tw/Oubliette_Reliquary_Key"
+  },
+  {
+    "name_zh": "宇宙遺鑰",
+    "name_en": "Cosmic Reliquary Key",
+    "base_type_zh": "宇宙遺鑰",
+    "base_type_en": "Cosmic Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberShaperVaultKey",
+    "url": "https://poedb.tw/tw/Cosmic_Reliquary_Key"
+  },
+  {
+    "name_zh": "腐化遺鑰",
+    "name_en": "Decaying Reliquary Key",
+    "base_type_zh": "腐化遺鑰",
+    "base_type_en": "Decaying Reliquary Key",
+    "type": "Metadata/Items/MapFragments/UberUberElderVaultKey",
+    "url": "https://poedb.tw/tw/Decaying_Reliquary_Key"
+  },
+  {
+    "name_zh": "虛誕遺鑰",
+    "name_en": "Voidborn Reliquary Key",
+    "base_type_zh": "虛誕遺鑰",
+    "base_type_en": "Voidborn Reliquary Key",
+    "type": "Metadata/Items/MapFragments/VoidbornVaultKey",
+    "url": "https://poedb.tw/tw/Voidborn_Reliquary_Key"
+  },
+  {
+    "name_zh": "索伏無暇裂痕石",
+    "name_en": "Xoph's Flawless Breachstone",
+    "base_type_zh": "索伏無暇裂痕石",
+    "base_type_en": "Xoph's Flawless Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentFire5",
+    "url": "https://poedb.tw/tw/Xophs_Flawless_Breachstone"
+  },
+  {
+    "name_zh": "托沃無暇裂痕石",
+    "name_en": "Tul's Flawless Breachstone",
+    "base_type_zh": "托沃無暇裂痕石",
+    "base_type_en": "Tul's Flawless Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentCold5",
+    "url": "https://poedb.tw/tw/Tuls_Flawless_Breachstone"
+  },
+  {
+    "name_zh": "艾許無暇裂痕石",
+    "name_en": "Esh's Flawless Breachstone",
+    "base_type_zh": "艾許無暇裂痕石",
+    "base_type_en": "Esh's Flawless Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentLightning5",
+    "url": "https://poedb.tw/tw/Eshs_Flawless_Breachstone"
+  },
+  {
+    "name_zh": "烏爾尼多無暇裂痕石",
+    "name_en": "Uul-Netol's Flawless Breachstone",
+    "base_type_zh": "烏爾尼多無暇裂痕石",
+    "base_type_en": "Uul-Netol's Flawless Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentPhysical5",
+    "url": "https://poedb.tw/tw/Uul-Netols_Flawless_Breachstone"
+  },
+  {
+    "name_zh": "夏烏拉無暇裂痕石",
+    "name_en": "Chayula's Flawless Breachstone",
+    "base_type_zh": "夏烏拉無暇裂痕石",
+    "base_type_en": "Chayula's Flawless Breachstone",
+    "type": "Metadata/Items/MapFragments/CurrencyBreachFragmentChaos5",
+    "url": "https://poedb.tw/tw/Chayulas_Flawless_Breachstone"
+  },
+  {
+    "name_zh": "永恆卡魯徽印",
+    "name_en": "Timeless Karui Emblem",
+    "base_type_zh": "永恆卡魯徽印",
+    "base_type_en": "Timeless Karui Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentKarui",
+    "url": "https://poedb.tw/tw/Timeless_Karui_Emblem"
+  },
+  {
+    "name_zh": "永恆不朽帝國徽印",
+    "name_en": "Timeless Eternal Emblem",
+    "base_type_zh": "永恆不朽帝國徽印",
+    "base_type_en": "Timeless Eternal Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentEternal",
+    "url": "https://poedb.tw/tw/Timeless_Eternal_Emblem"
+  },
+  {
+    "name_zh": "永恆聖宗徽印",
+    "name_en": "Timeless Templar Emblem",
+    "base_type_zh": "永恆聖宗徽印",
+    "base_type_en": "Timeless Templar Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentTemplar",
+    "url": "https://poedb.tw/tw/Timeless_Templar_Emblem"
+  },
+  {
+    "name_zh": "永恆瓦爾徽印",
+    "name_en": "Timeless Vaal Emblem",
+    "base_type_zh": "永恆瓦爾徽印",
+    "base_type_en": "Timeless Vaal Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentVaal",
+    "url": "https://poedb.tw/tw/Timeless_Vaal_Emblem"
+  },
+  {
+    "name_zh": "永恆馬拉克斯徽印",
+    "name_en": "Timeless Maraketh Emblem",
+    "base_type_zh": "永恆馬拉克斯徽印",
+    "base_type_en": "Timeless Maraketh Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentMaraketh",
+    "url": "https://poedb.tw/tw/Timeless_Maraketh_Emblem"
+  },
+  {
+    "name_zh": "無情的永恆卡魯徽印",
+    "name_en": "Unrelenting Timeless Karui Emblem",
+    "base_type_zh": "無情的永恆卡魯徽印",
+    "base_type_en": "Unrelenting Timeless Karui Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentKaruiUber",
+    "url": "https://poedb.tw/tw/Unrelenting_Timeless_Karui_Emblem"
+  },
+  {
+    "name_zh": "無情的永恆馬拉克斯徽印",
+    "name_en": "Unrelenting Timeless Maraketh Emblem",
+    "base_type_zh": "無情的永恆馬拉克斯徽印",
+    "base_type_en": "Unrelenting Timeless Maraketh Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentMarakethUber",
+    "url": "https://poedb.tw/tw/Unrelenting_Timeless_Maraketh_Emblem"
+  },
+  {
+    "name_zh": "無情的永恆不朽帝國徽印",
+    "name_en": "Unrelenting Timeless Eternal Emblem",
+    "base_type_zh": "無情的永恆不朽帝國徽印",
+    "base_type_en": "Unrelenting Timeless Eternal Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentEternalUber",
+    "url": "https://poedb.tw/tw/Unrelenting_Timeless_Eternal_Emblem"
+  },
+  {
+    "name_zh": "無情的永恆聖宗徽印",
+    "name_en": "Unrelenting Timeless Templar Emblem",
+    "base_type_zh": "無情的永恆聖宗徽印",
+    "base_type_en": "Unrelenting Timeless Templar Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentTemplarUber",
+    "url": "https://poedb.tw/tw/Unrelenting_Timeless_Templar_Emblem"
+  },
+  {
+    "name_zh": "無情的永恆瓦爾徽印",
+    "name_en": "Unrelenting Timeless Vaal Emblem",
+    "base_type_zh": "無情的永恆瓦爾徽印",
+    "base_type_en": "Unrelenting Timeless Vaal Emblem",
+    "type": "Metadata/Items/MapFragments/CurrencyLegionFragmentVaalUber",
+    "url": "https://poedb.tw/tw/Unrelenting_Timeless_Vaal_Emblem"
+  },
+  {
+    "name_zh": "幻像異界",
+    "name_en": "Simulacrum",
+    "base_type_zh": "幻像異界",
+    "base_type_en": "Simulacrum",
+    "type": "Metadata/Items/MapFragments/CurrencyAfflictionFragment",
+    "url": "https://poedb.tw/tw/Simulacrum"
+  },
+  {
+    "name_zh": "釋界之邀：塑型",
+    "name_en": "Maven's Invitation: The Formed",
+    "base_type_zh": "釋界之邀：塑型",
+    "base_type_en": "Maven's Invitation: The Formed",
+    "type": "Metadata/Items/MapFragments/Maven/MavenMapVoid1",
+    "url": "https://poedb.tw/tw/Mavens_Invitation%3A_The_Formed"
+  },
+  {
+    "name_zh": "釋界之邀：遺忘",
+    "name_en": "Maven's Invitation: The Forgotten",
+    "base_type_zh": "釋界之邀：遺忘",
+    "base_type_en": "Maven's Invitation: The Forgotten",
+    "type": "Metadata/Items/MapFragments/Maven/MavenMapVoid3",
+    "url": "https://poedb.tw/tw/Mavens_Invitation%3A_The_Forgotten"
+  },
+  {
+    "name_zh": "釋界之邀：隱匿",
+    "name_en": "Maven's Invitation: The Hidden",
+    "base_type_zh": "釋界之邀：隱匿",
+    "base_type_en": "Maven's Invitation: The Hidden",
+    "type": "Metadata/Items/MapFragments/Maven/MavenMapVoid4",
+    "url": "https://poedb.tw/tw/Mavens_Invitation%3A_The_Hidden"
+  },
+  {
+    "name_zh": "釋界之邀：尊師殺手",
+    "name_en": "Maven's Invitation: The Elderslayers",
+    "base_type_zh": "釋界之邀：尊師殺手",
+    "base_type_en": "Maven's Invitation: The Elderslayers",
+    "type": "Metadata/Items/MapFragments/Maven/MavenMapVoid6",
+    "url": "https://poedb.tw/tw/Mavens_Invitation%3A_The_Elderslayers"
+  },
+  {
+    "name_zh": "釋界之邀：輿圖",
+    "name_en": "Maven's Invitation: The Atlas",
+    "base_type_zh": "釋界之邀：輿圖",
+    "base_type_en": "Maven's Invitation: The Atlas",
+    "type": "Metadata/Items/MapFragments/Maven/MavenMapAtlas1",
+    "url": "https://poedb.tw/tw/Mavens_Invitation%3A_The_Atlas"
+  },
+  {
+    "name_zh": "釋界之令",
+    "name_en": "The Maven's Writ",
+    "base_type_zh": "釋界之令",
+    "base_type_en": "The Maven's Writ",
+    "type": "Metadata/Items/MapFragments/CurrencyMavenKey",
+    "url": "https://poedb.tw/tw/The_Mavens_Writ"
+  },
+  {
+    "name_zh": "瓦爾遺鑰",
+    "name_en": "Vaal Reliquary Key",
+    "base_type_zh": "瓦爾遺鑰",
+    "base_type_en": "Vaal Reliquary Key",
+    "type": "Metadata/Items/MapFragments/VaalVaultKey",
+    "url": "https://poedb.tw/tw/Vaal_Reliquary_Key"
+  },
+  {
+    "name_zh": "阿茲瓦特史記",
+    "name_en": "Chronicle of Atzoatl",
+    "base_type_zh": "阿茲瓦特史記",
+    "base_type_en": "Chronicle of Atzoatl",
+    "type": "Metadata/Items/Incursion/ItemisedTemple",
+    "url": "https://poedb.tw/tw/Chronicle_of_Atzoatl"
+  },
+  {
+    "name_zh": "最後通牒雕刻",
+    "name_en": "Inscribed Ultimatum",
+    "base_type_zh": "最後通牒雕刻",
+    "base_type_en": "Inscribed Ultimatum",
+    "type": "Metadata/Items/Ultimatum/ItemisedTrial",
+    "url": "https://poedb.tw/tw/Inscribed_Ultimatum"
+  },
+  {
+    "name_zh": "神聖之花",
+    "name_en": "Sacred Blossom",
+    "base_type_zh": "神聖之花",
+    "base_type_en": "Sacred Blossom",
+    "type": "Metadata/Items/MapFragments/CurrencyHarvestBossKey",
+    "url": "https://poedb.tw/tw/Sacred_Blossom"
+  },
+  {
+    "name_zh": "奧赫茲明刻紋",
+    "name_en": "Al-Hezmin's Crest",
+    "base_type_zh": "奧赫茲明刻紋",
+    "base_type_en": "Al-Hezmin's Crest",
+    "type": "Metadata/Items/MapFragments/CurrencySirusFragment1",
+    "url": "https://poedb.tw/tw/Al-Hezmins_Crest"
+  },
+  {
+    "name_zh": "巴倫刻紋",
+    "name_en": "Baran's Crest",
+    "base_type_zh": "巴倫刻紋",
+    "base_type_en": "Baran's Crest",
+    "type": "Metadata/Items/MapFragments/CurrencySirusFragment2",
+    "url": "https://poedb.tw/tw/Barans_Crest"
+  },
+  {
+    "name_zh": "圖拉克斯刻紋",
+    "name_en": "Drox's Crest",
+    "base_type_zh": "圖拉克斯刻紋",
+    "base_type_en": "Drox's Crest",
+    "type": "Metadata/Items/MapFragments/CurrencySirusFragment3",
+    "url": "https://poedb.tw/tw/Droxs_Crest"
+  },
+  {
+    "name_zh": "維羅提尼亞刻紋",
+    "name_en": "Veritania's Crest",
+    "base_type_zh": "維羅提尼亞刻紋",
+    "base_type_en": "Veritania's Crest",
+    "type": "Metadata/Items/MapFragments/CurrencySirusFragment4",
+    "url": "https://poedb.tw/tw/Veritanias_Crest"
+  },
+  {
+    "name_zh": "纏繞之邀",
+    "name_en": "Writhing Invitation",
+    "base_type_zh": "纏繞之邀",
+    "base_type_en": "Writhing Invitation",
+    "type": "Metadata/Items/MapFragments/Primordial/QuestTangleKey",
+    "url": "https://poedb.tw/tw/Writhing_Invitation"
+  },
+  {
+    "name_zh": "尖嘯之邀",
+    "name_en": "Screaming Invitation",
+    "base_type_zh": "尖嘯之邀",
+    "base_type_en": "Screaming Invitation",
+    "type": "Metadata/Items/MapFragments/Primordial/QuestTangleBossKey",
+    "url": "https://poedb.tw/tw/Screaming_Invitation"
+  },
+  {
+    "name_zh": "極地之邀",
+    "name_en": "Polaric Invitation",
+    "base_type_zh": "極地之邀",
+    "base_type_en": "Polaric Invitation",
+    "type": "Metadata/Items/MapFragments/Primordial/QuestCleansingFireKey",
+    "url": "https://poedb.tw/tw/Polaric_Invitation"
+  },
+  {
+    "name_zh": "熾熱之邀",
+    "name_en": "Incandescent Invitation",
+    "base_type_zh": "熾熱之邀",
+    "base_type_en": "Incandescent Invitation",
+    "type": "Metadata/Items/MapFragments/Primordial/QuestCleansingFireBossKey",
+    "url": "https://poedb.tw/tw/Incandescent_Invitation"
+  },
+  {
+    "name_zh": "鏡像碑牌",
+    "name_en": "Mirrored Tablet",
+    "base_type_zh": "鏡像碑牌",
+    "base_type_en": "Mirrored Tablet",
+    "type": "Metadata/Items/Lake/Tablet",
+    "url": "https://poedb.tw/tw/Mirrored_Tablet"
+  },
+  {
+    "name_zh": "史前遺跡",
+    "name_en": "Primeval Remnant",
+    "base_type_zh": "史前遺跡",
+    "base_type_en": "Primeval Remnant",
+    "type": "Metadata/Items/MapFragments/Crucible",
+    "url": "https://poedb.tw/tw/Primeval_Remnant"
+  },
+  {
+    "name_zh": "史前遺跡",
+    "name_en": "Primordial Remnant",
+    "base_type_zh": "史前遺跡",
+    "base_type_en": "Primordial Remnant",
+    "type": "Metadata/Items/MapFragments/CrucibleUber",
+    "url": "https://poedb.tw/tw/Primordial_Remnant"
+  },
+  {
+    "name_zh": "宇宙碎片",
+    "name_en": "Cosmic Fragment",
+    "base_type_zh": "宇宙碎片",
+    "base_type_en": "Cosmic Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeyShaper",
+    "url": "https://poedb.tw/tw/Cosmic_Fragment"
+  },
+  {
+    "name_zh": "腐朽碎片",
+    "name_en": "Decaying Fragment",
+    "base_type_zh": "腐朽碎片",
+    "base_type_en": "Decaying Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeyUberElder",
+    "url": "https://poedb.tw/tw/Decaying_Fragment"
+  },
+  {
+    "name_zh": "覺醒碎片",
+    "name_en": "Awakening Fragment",
+    "base_type_zh": "覺醒碎片",
+    "base_type_en": "Awakening Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeySirus",
+    "url": "https://poedb.tw/tw/Awakening_Fragment"
+  },
+  {
+    "name_zh": "追憶碎片",
+    "name_en": "Synthesising Fragment",
+    "base_type_zh": "追憶碎片",
+    "base_type_en": "Synthesising Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeyCortex",
+    "url": "https://poedb.tw/tw/Synthesising_Fragment"
+  },
+  {
+    "name_zh": "現實碎片",
+    "name_en": "Reality Fragment",
+    "base_type_zh": "現實碎片",
+    "base_type_en": "Reality Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeyMaven",
+    "url": "https://poedb.tw/tw/Reality_Fragment"
+  },
+  {
+    "name_zh": "吞噬碎片",
+    "name_en": "Devouring Fragment",
+    "base_type_zh": "吞噬碎片",
+    "base_type_en": "Devouring Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeyEater",
+    "url": "https://poedb.tw/tw/Devouring_Fragment"
+  },
+  {
+    "name_zh": "熾熱碎片",
+    "name_en": "Blazing Fragment",
+    "base_type_zh": "熾熱碎片",
+    "base_type_en": "Blazing Fragment",
+    "type": "Metadata/Items/MapFragments/CurrencyUberBossKeyExarch",
+    "url": "https://poedb.tw/tw/Blazing_Fragment"
+  },
+  {
+    "name_zh": "謁見國王",
+    "name_en": "An Audience With The King",
+    "base_type_zh": "謁見國王",
+    "base_type_en": "An Audience With The King",
+    "type": "Metadata/Items/MapFragments/RitualBossFragment",
+    "url": "https://poedb.tw/tw/An_Audience_With_The_King"
+  },
+  {
+    "name_zh": "密教獎章",
+    "name_en": "Syndicate Medallion",
+    "base_type_zh": "密教獎章",
+    "base_type_en": "Syndicate Medallion",
+    "type": "Metadata/Items/MapFragments/CurrencyMastermindsLair",
+    "url": "https://poedb.tw/tw/Syndicate_Medallion"
+  },
+  {
+    "name_zh": "創傷之迴響",
+    "name_en": "Echo of Trauma",
+    "base_type_zh": "創傷之迴響",
+    "base_type_en": "Echo of Trauma",
+    "type": "Metadata/Items/MapFragments/AtlasMemory/CurrencyFearKey",
+    "url": "https://poedb.tw/tw/Echo_of_Trauma"
+  },
+  {
+    "name_zh": "敬畏之迴響",
+    "name_en": "Echo of Reverence",
+    "base_type_zh": "敬畏之迴響",
+    "base_type_en": "Echo of Reverence",
+    "type": "Metadata/Items/MapFragments/AtlasMemory/CurrencyBenevolenceKey",
+    "url": "https://poedb.tw/tw/Echo_of_Reverence"
+  },
+  {
+    "name_zh": "孤獨之迴響",
+    "name_en": "Echo of Loneliness",
+    "base_type_zh": "孤獨之迴響",
+    "base_type_en": "Echo of Loneliness",
+    "type": "Metadata/Items/MapFragments/AtlasMemory/CurrencyIgnoranceKey",
+    "url": "https://poedb.tw/tw/Echo_of_Loneliness"
+  }
+]

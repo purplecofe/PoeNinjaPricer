@@ -4,10 +4,7 @@ Hi! I compiled **poe.ninja API** to use in projects
 
 ### Active League Names
 
-- `Settlers`
-- `Standard`
-- `Hardcore`
-- `Necropolis`
+- `Mercenaries`
 
 JS Libraries I Prepared
 - poe-api-manager [NPM](https://www.npmjs.com/package/poe-api-manager) [Github](https://github.com/ayberkgezer/poe-api-manager)

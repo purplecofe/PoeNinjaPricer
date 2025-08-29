@@ -86,6 +86,7 @@ public class UniversalItemMappingService
             // 註冊預設的物品類別
             RegisterCategory("currency", Path.Combine(pluginDirectory, "json", "currency.json"));
             RegisterCategory("scarab", Path.Combine(pluginDirectory, "json", "scarab.json"));
+            RegisterCategory("fragments", Path.Combine(pluginDirectory, "json", "fragments.json"));
             
             // 建立全域路徑索引
             BuildGlobalPathIndex();
