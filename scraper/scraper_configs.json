@@ -1,0 +1,79 @@
+{
+  "map_fragments": {
+    "base_url": "https://poedb.tw/tw/Map_Fragments#MapDeviceRecipes",
+    "container_selector": "#MapDeviceRecipes > div > div > table > tbody",
+    "link_selector": "td:nth-child(1) a",
+    "output_file": "../json/fragments.json",
+    "category_name": "地圖裝置配方"
+  },
+  "currency": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency",
+    "container_selector": "#可堆疊通貨物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/currency.json",
+    "category_name": "可堆疊通貨"
+  },
+  "essence": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#精髓聯盟",
+    "container_selector": "#精髓聯盟 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/essence.json",
+    "category_name": "精髓聯盟"
+  },
+  "delirium": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#譫妄玉物品",
+    "container_selector": "#譫妄玉物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/delirium.json",
+    "category_name": "譫妄玉物品"
+  },
+  "vial": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#罈物品",
+    "container_selector": "#罈物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/vial.json",
+    "category_name": "罈物品"
+  },
+  "blessing": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#祝福物品",
+    "container_selector": "#祝福物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/blessing.json",
+    "category_name": "祝福物品"
+  },
+  "breach": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#裂片物品",
+    "container_selector": "#裂片物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/breach.json",
+    "category_name": "裂片物品"
+  },
+  "oil": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#油瓶物品",
+    "container_selector": "#油瓶物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/oil.json",
+    "category_name": "油瓶物品"
+  },
+  "fossil": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#化石物品",
+    "container_selector": "#化石物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/fossil.json",
+    "category_name": "化石物品"
+  },
+  "catalyst": {
+    "base_url": "https://poedb.tw/tw/Stackable_Currency#催化劑物品",
+    "container_selector": "#催化劑物品 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/catalyst.json",
+    "category_name": "催化劑物品"
+  },
+  "scarab": {
+    "base_url": "https://poedb.tw/tw/Scarab",
+    "container_selector": "#聖甲蟲 > div > div",
+    "link_selector": "div > div.flex-shrink-0 > a",
+    "output_file": "../json/scarab.json",
+    "category_name": "聖甲蟲"
+  }
+}
