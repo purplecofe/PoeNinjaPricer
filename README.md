@@ -4,13 +4,14 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 
 ## Features
 
-- **Real-time Price Queries**: Fetch current league currency and fragment prices from poe.ninja
-- **Hover Item Price Display**: Show item prices instantly when hovering over items in-game
-- **Chinese Client Support**: Full support for Chinese game client with intelligent name mapping
+- **Real-time Price Queries**: Fetch current league prices for 11 item categories from poe.ninja
+- **Hover Item Price Display**: Show item prices instantly when hovering over 781 supported items in-game
+- **Universal Item Mapping**: Complete Chinese-English mapping system supporting multiple item categories
+- **Multi-category Support**: Currency, Scarabs, Fragments, Essence, Delirium Orbs, Vials, Blessings, Breach Splinters, Oils, Fossils, and Catalysts
 - **Auto Update**: Configurable auto-update interval (default 5 minutes)
 - **Smart Caching**: Local cache system to reduce API requests and support offline usage
 - **Advanced Filter System**: Multiple category filters for different item types
-- **Search Filtering**: Quick search for specific currencies
+- **Search Filtering**: Quick search for specific items across all categories
 - **Dynamic Divine Rate**: Auto-calculated and updated Divine Orb exchange rates
 - **Customizable UI**: Adjustable display columns and window sizing
 
@@ -25,14 +26,15 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 6. Adjust basic settings in F12 panel (update interval, display options, etc.)
 
 ### Hover Price Display
-1. Hover your mouse over any currency or fragment in your inventory
+1. Hover your mouse over any supported item (currency, scarab, fragment, essence, etc.) in your inventory
 2. A tooltip will appear showing:
    - Item name
    - Chaos Orb value
    - Divine Orb value (if applicable)  
    - 24-hour price change (if available)
-3. The feature automatically works with Chinese and English game clients
-4. Can be disabled in F12 settings panel via "Enable Hover Pricing"
+3. Supports 781 items across 11 categories with complete Chinese-English mapping
+4. The feature automatically works with Chinese and English game clients
+5. Can be disabled in F12 settings panel via "Enable Hover Pricing"
 
 ## Configuration Options
 
@@ -53,15 +55,24 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 ## Supported Data Types
 
 **Currently Implemented**:
-- **Currency**: Basic currencies (Chaos Orb, Exalted Orb, Divine Orb, etc.) ✅
-- **Fragments**: Map fragments and other fragment items ✅  
-- **Scarabs**: All scarab types with detailed category classification ✅
+- **Currency**: Basic currencies (359 items - Chaos Orb, Exalted Orb, Divine Orb, etc.) ✅
+- **Scarabs**: All scarab types (123 items) with detailed category classification ✅
+- **Fragments**: Map device recipe fragments (93 items) ✅
+- **Essence**: Essence league items (105 items) ✅
+- **Delirium Orbs**: Delirium orb items (22 items) ✅
+- **Vials**: Vial items (9 items) ✅
+- **Blessings**: Blessing items (5 items) ✅
+- **Breach Splinters**: Breach splinter items (13 items) ✅
+- **Oils**: Oil items (16 items) ✅
+- **Fossils**: Fossil items (25 items) ✅
+- **Catalysts**: Catalyst items (11 items) ✅
+
+**Total**: 11 categories with 781 items with complete Chinese-English mapping
 
 **TODO - Requires Additional API Integration**:
 
 *Main Categories*:
 - **Divination Cards**: TODO - Requires divination card API endpoint
-- **Oils**: TODO - Requires oils API endpoint 
 - **Incubators**: TODO - Requires incubators API endpoint
 - **Unique Idols**: TODO - Requires unique idols API endpoint
 - **Runecrafts**: TODO - Requires runecrafts API endpoint
@@ -86,16 +97,12 @@ An ExileCore plugin for querying Path of Exile currency prices using the poe.nin
 - **Blighted Maps**: TODO - Requires blighted maps API endpoint
 - **Blight Ravaged Maps**: TODO - Requires blight ravaged maps API endpoint
 - **Unique Maps**: TODO - Requires unique maps API endpoint
-- **Delirium Orbs**: TODO - Requires delirium orbs API endpoint
 - **Invitations**: TODO - Requires invitations API endpoint
 - **Memories**: TODO - Requires memories API endpoint
 
 *Crafting Related*:
-- **Fossils**: TODO - Requires fossils API endpoint
 - **Resonators**: TODO - Requires resonators API endpoint
-- **Essences**: TODO - Requires essences API endpoint
 - **Beasts**: TODO - Requires beasts API endpoint
-- **Vials**: TODO - Requires vials API endpoint
 - **Base Types**: TODO - Requires base types API endpoint
 
 ## Troubleshooting
